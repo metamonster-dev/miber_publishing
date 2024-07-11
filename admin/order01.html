@@ -194,7 +194,7 @@
 
     <article id="search_result">
         <div class="btn_area">
-            <button >송장수정</button>
+            <button onclick="open_modal('#order_modal2')">송장수정</button>
             <button >주문확인</button>
             <button >배송처리</button>
             <button >판매취소</button>
@@ -233,7 +233,7 @@
                 <tbody>
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td><button class="in_btn" onclick="open_modal()">상세</button></td>
+                        <td><button class="in_btn" onclick="open_modal('#order_detail')">상세</button></td>
                         <td>2024061269149171</td>
                         <td>2024061269103312</td>
                         <td>택배</td>
@@ -242,7 +242,7 @@
                                 <option>선택</option>
                             </select>
                         </td>
-                        <td><input type="text"></td>
+                        <td>111111111111</td>
                         <td>2024-06-12 13:49:10</td>
                         <td>신용카드</td>
                         <td>배송준비</td>
@@ -367,9 +367,42 @@
             <button onclick="close_modal()"> 닫기</button>
         </div>
     </article>
+
+    <article id="order_modal2" class="order_modal fullpage_modal">
+      <div class="board">
+        <a class="circle_btn"  onclick="close_modal()"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <p class="title">송장수정</p>
+        <table class="table_defalt">
+          <tr>
+            <th>주문번호</th>
+            <th>상품주문번호</th>
+            <th>배송방법</th>
+            <th>택배사</th>
+            <th>송장번호</th>
+          </tr>
+          <tr>
+            <td>2024061269149171</td>
+            <td>2024061269149171</td>
+            <td>택배</td>
+            <td>
+              <select>
+                <option>한진택배</option>
+              </select>
+            </td>
+            <td>
+              <input value="111111111">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_area">
+          <button onclick="close_modal()"> 취소</button>
+          <button type="submit">수정</button>
+        </div>
+      </div>
+    </article>
     <script>
-      function open_modal(){
-         $('#order_detail').addClass('on');
+      function open_modal(modal_id){
+         $(modal_id).addClass('on');
       }
         $('.modal_close').on("click",function(){
             $('.fullpage_modal').removeClass('on');

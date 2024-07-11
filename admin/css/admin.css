@@ -321,6 +321,8 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 #order_detail > .board {overflow-y: scroll;}
 #order_detail .title{margin:40px 0 16px}
 .order_table td{text-align: left;}
+#order_modal2 .board{height:390px;overflow:hidden;top:200px}
+
 
 /*콘텐츠관리*/
 .tab_menu {display:flex;margin-bottom:16px}
