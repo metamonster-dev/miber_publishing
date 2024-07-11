@@ -23,7 +23,7 @@ label .comment span{font-size:10px}
 .comment{line-height:18px;}
 .btn_area{display:flex;justify-content: flex-end;align-items:center;gap:4px;margin-bottom:20px;gap:4px !important}
 .btn_area.btm{justify-content:flex-start !important;}
-.btn_area button{min-width:120px;}
+.btn_area button{min-width:80px;}
 .title{font-size:17px;margin-bottom:24px;color:#000}
 .warnning-txt{color:#f53232;display:none;}
 .warnning-txt2{color:#f53232;margin-bottom:5px}
