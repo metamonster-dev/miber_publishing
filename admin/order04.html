@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>주문관리 / 교환관리</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
+  <link rel="stylesheet" href="../css/font-awesome.min.css"> <!--fontawsome-->
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/custom.css" />
+  <link rel="stylesheet" href="../admin/css/admin.css" />
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+
+<body>
+<div id="order04" class="admin_common">
+  <!----======== 관리자 레이아웃 상단    ========---->
+  <section id="admin_header_wrap">
+    <div id="admin_top_area">
+      <div class="user_area">
+        <p class="welcome"><b>관리자</b>님 안녕하세요.</p>
+        <button onclick="location.href='login.html'">로그아웃</button>
+      </div>
+    </div>
+    <div id="admin_side_area">
+      <div class="logo_area">
+        <a href="/admin/dashboard.html">
+        <img class="logo" src="./img/logo_w.png" alt="logo.png">
+        <p>ADMIN</p>
+        </a>
+      </div>
+      <div class="side_btm_area">
+        <!--메뉴-->
+        <ul id="adm_nav">
+          <!--DEPTH 1-->
+          <li class="adm_nav_depth1"><a href="dashboard.html">대시보드</a></li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">회원관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="member01.html">일반회원</a></li>
+              <li><a href="member02.html">정회원</a></li>
+              <li><a href="member03.html">탈퇴회원</a></li>
+              <li><a href="member04.html">정회원 승인</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">서비스관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="service01.html">상담예약</a></li>
+              <li><a href="service02.html">프로그램</a></li>
+              <li><a href="service03.html">컨시어지</a></li>
+              <li><a href="service04.html">미션</a></li>
+              <li><a href="service05.html">변화 그래프</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">상품관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="product01.html">상품관리</a></li>
+              <li><a href="product02.html">카테고리 관리</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">주문관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="order01.html">주문관리</a></li>
+              <li><a href="order02.html">구매확정</a></li>
+              <li><a href="order03.html">취소관리</a></li>
+              <li><a href="order04.html">교환관리</a></li>
+              <li><a href="order05.html">반품관리</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">컨텐츠관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="contents01.html">미베르소개</a></li>
+              <li><a href="contents02.html">프로그램</a></li>
+              <li><a href="contents03.html">지점안내</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">결제관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="payment01.html">포스관리</a></li>
+              <li><a href="payment02.html">적립금내역</a></li>
+              <li><a href="payment03.html">마일리지내역</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">게시판관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="board01.html">공지사항</a></li>
+              <li><a href="board02.html">자주하는질문</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth1"><a href="review.html">리뷰관리</a></li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">문의관리<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="inquiry01.html">상품문의</a></li>
+              <li><a href="inquiry02.html">1:1문의</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">설정<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="preferences01.html">배너관리</a></li>
+              <li><a href="preferences02.html">팝업관리</a></li>
+              <li><a href="preferences03.html">계정관리</a></li>
+              <li><a href="preferences04.html">기본설정</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+    $('.adm_nav_depth1').click(function() {
+      $(this).siblings('.adm_nav_depth2_ul').slideToggle();
+      $(this).parent().siblings().find('.adm_nav_depth2_ul').slideUp();
+    });
+    </script>
+  </section>
+  <!----======== 관리자 레이아웃 상단 끝 ========---->
+  <section id="admin_contents_wrap">
+    <!----======== 내용부분    ========---->
+    <p class="title">주문관리 / 교환관리 </p>
+    <article class="board">
+        <div class="filter_wrap">
+            <div>
+                <p class="name">조회기간</p>
+                <select>
+                    <option>결제일</option>
+                    <option>주문확인일</option>
+                    <option>배송처리일</option>
+                </select>
+                <input type="date"> - <input type="date"> 
+                <ul class="filter_select2">
+                    <li class="on">오늘</li>
+                    <li>1주일</li>
+                    <li>1개월</li>
+                    <li>3개월</li>
+                    <li>6개월</li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter_wrap">
+            <div>
+                <p>검색어</p>
+                <select>
+                    <option>전체</option>
+                    <option>전체</option>
+                    <option>전체</option>
+                </select>
+                <input class="text" style="width:340px">
+            </div>
+        </div>
+        <div class="filter_wrap">
+            <div>
+                <p>처리상태</p>
+                <ul class="filter_select">
+                <li class="on">전체</li>
+                <li>교환신청</li>
+                <li>수거중</li>
+                <li>수거완료</li>
+                <li>교환완료</li>
+                <li>교환거절</li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn_area">
+            <button><i class="fa fa-search" aria-hidden="true"></i>검색</button>
+            <button><i class="fa fa-repeat" aria-hidden="true"></i>초기화</button>
+        </div>
+    </article>
+
+    <article id="search_result">
+        <div class="btn_area">
+            <button>상품수거</button>
+            <button>수거완료</button>
+            <button onclick="open_modal('#order_detail2')">교환완료</button>
+            <button onclick="open_modal('#order_detail3')">교환거절</button>
+            <button class="green"><i class="fa fa-download" aria-hidden="true"></i>엑셀 다운로드</button>
+        </div>
+        <div id="order01_list">
+            <table  class="table_defalt">
+                <thead>
+                    <tr>
+                        <th width="50px"><input type="checkbox"></th>
+                        <th width="80px">관리</th>
+                        <th width="200px">상품주문번호</th>
+                        <th width="200px">주문번호</th>
+                        <th width="120px">처리상태</th>
+                        <th width="120px">수거 택배사</th>
+                        <th width="200px">수거 송장번호</th>
+                        <th width="120px">결제일시</th>
+                        <th width="120px">결제수단</th>
+                        <th width="120px">교환신청일</th>
+                        <th width="120px">수거완료일</th>
+                        <th width="120px">상품번호</th>
+                        <th width="360px">상품명</th>
+                        <th width="120px">옵션정보</th>
+                        <th width="120px">수량</th>
+                        <th width="120px">옵션가격</th>
+                        <th width="120px">상품가격</th>
+                        <th width="120px">주문금액</th>
+                        <th width="120px">교환완료일</th>
+                        <th width="120px">교환거절일</th>
+                        <th width="120px">구매자ID</th>
+                        <th width="120px">구매자명</th>
+                        <th width="120px">구매자 연락처</th>
+                        <th width="120px">수령인</th>
+                        <th width="120px">수령인 연락처</th>
+                        <th width="300px">교환지</th>
+                        <th width="300px">배송메모</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><button class="in_btn" onclick="open_modal('#order_detail')">상세</button></td>
+                        <td>2024061269149171</td>
+                        <td>2024061269103312</td>
+                        <td>교환신청</td>
+                        <td>
+                            <select>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>2024-06-12 13:49:10</td>
+                        <td>신용카드</td>
+                        <td>2024-06-12 13:49:10</td>
+                        <td>2024-06-12 13:49:10</td>
+                        <td>qwer</td>
+                        <td>마케토 마카다미아 정과 견과류정과 무설탕 키토 비건 다이어트</td>
+                        <td>마케토 옵션 : 100g</td>
+                        <td>1</td>
+                        <td>1,000</td>
+                        <td>25,000</td>
+                        <td>26,000</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>(우편번호) 기본주소 + 상세주소</td>
+                        <td>없음</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+    <div class="page_wrap">
+        <ul class="paging_btn">
+          <li class="side_left"><a><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+          <li><a class="on">1</a></li>
+          <li><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>4</a></li>
+          <li><a>5</a></li>
+          <li class="side_right"><a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    <!----======== 내용부분 끝 ========---->
+  </section>
+    <article id="order_detail" class="order_modal fullpage_modal">
+        <div class="board">
+            <a class="circle_btn"  onclick="close_modal()"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <p class="title">주문 상세정보</p>
+            <p class="order_number">상품주문번호 : <span>2024061215270331</span></p>
+            <table class="order_table table_defalt">
+              <tr>
+                <th>상품명</th>
+                <td colspan="3">상품번호 <br/> 마케토 마카다미아 정과 견과류정과 무설탕 키토 비건 다이어트</td>
+              </tr>
+              <tr>
+                <th>구매자 ID</th>
+                <td colspan="3">qwer@gmail.com</td>
+              </tr>
+              <tr>
+                <th>구매자 명</th>
+                <td>홍길동</td>
+                <th>구매자 연락처</th>
+                <td>010-1234-5678</td>
+              </tr>
+              <tr>
+                <th>상품가격</th>
+                <td>25,000</td>
+                <th>옵션정보</th>
+                <td>마케토 옵션 : 100g(1,000)</td>
+              </tr>
+            </table>
+            <p class="title">결제정보</p>
+            <table class="order_table table_defalt">
+              <tr>
+                <th>배송비</th>
+                <td>0</td>
+                <th>적립금</th>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th>주문수량</th>
+                <td>1</td>
+                <th>총 결제금액</th>
+                <td>26,000</td>
+              </tr>
+              <tr>
+                <th>결제일시</th>
+                <td>2024-06-12 13:49:10</td>
+                <th>결제수단</th>
+                <td>신용카드</td>
+              </tr>
+            </table>
+            <p class="title">배송정보</p>
+            <table class="order_table table_defalt">
+              <tr>
+                <th>상품 수거일</th>
+                <td>2024-06-12 13:49:10</td>
+                <th>수거 완료일</th>
+                <td>2024-06-12 13:49:10</td>
+              </tr>
+              <tr>
+                <th>수거 택배사</th>
+                <td>우체국</td>
+                <th>수거 송장번호</th>
+                <td>45695318400</td>
+              </tr>
+              <tr>
+                <th>재배송 택배사</th>
+                <td>-</td>
+                <th>재배송 송장번호</th>
+                <td>-</td>
+              </tr>
+            </table>
+            <p class="title">교환지 정보</p>
+            <table class="order_table table_defalt">
+              <tr>
+                <th>수령인</th>
+                <td>홍길동</td>
+                <th>수령인 연락처</th>
+                <td>010-1234-5678</td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td colspan="3">(우편번호)기본주소+상세주소</td>
+              </tr>
+              <tr>
+                <th>배송 메모</th>
+                <td colspan="3">없음</td>
+              </tr>
+            </table>
+            <p class="title">교환 정보</p>
+            <table class="order_table table_defalt">
+                <tr>
+                    <th>처리 상태</th>
+                    <td>교환 신청</td>
+                    <th>교환 신청일</th>
+                    <td>2024-06-12 13:49:10</td>
+                </tr>
+                <tr>
+                    <th>교환사유</th>
+                    <td colspan="3">단순변심/상세사유</td>
+                </tr>
+                <tr>
+                    <th>교환 완료일</th>
+                    <td>2024-06-12 13:49:10</td>
+                    <th>교환 거절일</th>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>완료사유</th>
+                    <td colspan="3">-</td>
+                </tr>
+                <tr>
+                    <th>거절사유</th>
+                    <td colspan="3">-</td>
+                </tr>
+            </table>
+            <p class="title">관리자메모</p>
+            <input type="text" style="width:100%">
+            <div class="btn_area">
+                <button type="submit"> 저장</button>
+                <button onclick="close_modal()"> 닫기</button>
+            </div>
+        </div>
+    </article>
+    <article id="order_detail2" class="order_modal fullpage_modal">
+        <div class="board">
+            <a class="circle_btn"  onclick="close_modal()"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <p class="title">교환완료</p>
+            <form id="order4_form">
+                <div class="label_wrap">
+                    <label>
+                        <p class="label_name2">교환택배사</p>
+                        <select>
+                            <option disabled selected hidden>택배사선택</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </label>
+                    <label>
+                        <p class="label_name2">교환 송장번호</p>
+                        <input type="text" placeholder="송장번호 입력">
+                    </label>
+                </div>
+                <label>
+                    <p class="label_name2">완료 사유</p>
+                    <input type="text">
+                </label>
+            </form>
+            <div class="btn_area">
+                <button type="submit">확인</button>
+                <button onclick="close_modal()"> 닫기</button>
+            </div>
+        </div>
+    </article>
+    <article id="order_detail3" class="order_modal fullpage_modal">
+        <div class="board">
+            <a class="circle_btn"  onclick="close_modal()"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <p class="title">교환 거절</p>
+            <form id="order4_form">
+                <div class="label_wrap">
+                    <label>
+                        <p class="label_name2">재배송 택배사</p>
+                        <select>
+                            <option disabled selected hidden>택배사선택</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </label>
+                    <label>
+                        <p class="label_name2">재배송 송장번호</p>
+                        <input type="text" placeholder="송장번호 입력">
+                    </label>
+                </div>
+                <label>
+                    <p class="label_name2">거절 사유</p>
+                    <input type="text">
+                </label>
+            </form>
+            <div class="btn_area">
+                <button type="submit">확인</button>
+                <button onclick="close_modal()"> 닫기</button>
+            </div>
+        </div>
+    </article>
+    <script>
+        function open_modal(order_detail){
+            $(order_detail).addClass('on');
+        }
+        $('.modal_close').on("click",function(){
+            $('.fullpage_modal').removeClass('on');
+        })
+        function close_modal(){
+            $('.fullpage_modal').removeClass('on');
+        }
+    </script>
+  <!----======== 관리자 레이아웃 하단    ========---->
+  <section id="admin_footer_wrap">
+    <div></div>
+  </section>
+  <!----======== 관리자 레이아웃 하단 끝 ========---->
+</div>
+</body>
+</html>
