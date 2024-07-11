@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>어드민레이아웃</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
+  <link rel="stylesheet" href="../css/font-awesome.min.css"> <!--fontawsome-->
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/custom.css" />
+  <link rel="stylesheet" href="../admin/css/admin.css" />
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+
+<body>
+<div class="admin_common">
+  <!----======== 관리자 레이아웃 상단    ========---->
+  <section id="admin_header_wrap">
+    <div id="admin_top_area">
+      <div class="user_area">
+        <p class="welcome"><b>관리자</b>님 안녕하세요.</p>
+        <button onclick="location.href='login.html'">로그아웃</button>
+      </div>
+    </div>
+    <div id="admin_side_area">
+      <div class="logo_area">
+        <a href="/admin/dashboard.html">
+        <img class="logo" src="./img/logo_w.png" alt="logo.png">
+        <p>ADMIN</p>
+        </a>
+      </div>
+      <div class="side_btm_area">
+        <!--메뉴-->
+        <ul id="adm_nav">
+          <!--DEPTH 1-->
+          <li class="adm_nav_depth1"><a href="dashboard.html">대시보드</a></li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">회원관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="member01.html">일반회원</a></li>
+              <li><a href="member02.html">정회원</a></li>
+              <li><a href="member03.html">탈퇴회원</a></li>
+              <li><a href="member04.html">정회원 승인</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">서비스관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="service01.html">상담예약</a></li>
+              <li><a href="service02.html">프로그램</a></li>
+              <li><a href="service03.html">컨시어지</a></li>
+              <li><a href="service04.html">미션</a></li>
+              <li><a href="service05.html">변화 그래프</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">상품관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="product01.html">상품관리</a></li>
+              <li><a href="product02.html">카테고리 관리</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">주문관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="order01.html">주문관리</a></li>
+              <li><a href="order02.html">구매확정</a></li>
+              <li><a href="order03.html">취소관리</a></li>
+              <li><a href="order04.html">교환관리</a></li>
+              <li><a href="order05.html">반품관리</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">컨텐츠관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="contents01.html">미베르소개</a></li>
+              <li><a href="contents02.html">프로그램</a></li>
+              <li><a href="contents03.html">지점안내</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">결제관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="payment01.html">포스관리</a></li>
+              <li><a href="payment02.html">적립금내역</a></li>
+              <li><a href="payment03.html">마일리지내역</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">게시판관리 <i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="board01.html">공지사항</a></li>
+              <li><a href="board02.html">자주하는질문</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth1"><a href="review.html">리뷰관리</a></li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">문의관리<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="inquiry01.html">상품문의</a></li>
+              <li><a href="inquiry02.html">1:1문의</a></li>
+            </ul>
+          </li>
+          <li class="adm_nav_depth2_group">
+            <p class="adm_nav_depth1">설정<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+            <!--DEPTH 2-->
+            <ul class="adm_nav_depth2_ul">
+              <li><a href="preferences01.html">배너관리</a></li>
+              <li><a href="preferences02.html">팝업관리</a></li>
+              <li><a href="preferences03.html">계정관리</a></li>
+              <li><a href="preferences04.html">기본설정</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+    $('.adm_nav_depth1').click(function() {
+      $(this).siblings('.adm_nav_depth2_ul').slideToggle();
+      $(this).parent().siblings().find('.adm_nav_depth2_ul').slideUp();
+    });
+    </script>
+  </section>
+  <!----======== 관리자 레이아웃 상단 끝 ========---->
+  <section id="admin_contents_wrap">
+    <!----======== 내용부분 ========---->
+  </section>
+  <!----======== 관리자 레이아웃 하단    ========---->
+  <section id="admin_footer_wrap">
+    <div></div>
+  </section>
+  <!----======== 관리자 레이아웃 하단 끝 ========---->
+</div>
+</body>
+</html>
