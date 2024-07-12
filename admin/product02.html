@@ -161,14 +161,15 @@
       <tbody id="categoryTable">
       </tbody>
   </table>
-    <script>
-        $(document).ready(function() {
+  <script>
+  $(document).ready(function() {
             let categoryTable = $('#categoryTable');
             let date = new Date().toISOString().split('T')[0];
 
             window.addCategory = function(type, el) {
                 let newRow;
                 let parentRow = $(el).closest('tr');
+                let lastSibling;
                 if (type === 'depth1') {
                     newRow = `
                         <tr class="depth1">
@@ -189,6 +190,10 @@
                         </tr>`;
                     categoryTable.append(newRow);
                 } else if (type === 'depth2') {
+                    lastSibling = parentRow;
+                    while (lastSibling.next().hasClass('depth2') || lastSibling.next().hasClass('depth3')) {
+                        lastSibling = lastSibling.next();
+                    }
                     newRow = `
                         <tr class="depth2">
                             <td class="space"></td>
@@ -207,8 +212,12 @@
                                 <button class="in_btn save" onclick="saveRow(this)">완료</button>
                             </td>
                         </tr>`;
-                    parentRow.after(newRow);
+                    lastSibling.after(newRow);
                 } else if (type === 'depth3') {
+                    lastSibling = parentRow;
+                    while (lastSibling.next().hasClass('depth3')) {
+                        lastSibling = lastSibling.next();
+                    }
                     newRow = `
                         <tr class="depth3">
                             <td colspan="2"></td>
@@ -226,7 +235,7 @@
                                 <button class="in_btn save" onclick="saveRow(this)">완료</button>
                             </td>
                         </tr>`;
-                    parentRow.after(newRow);
+                    lastSibling.after(newRow);
                 }
             }
 
@@ -284,8 +293,7 @@
                 alert('변경사항이 저장되었습니다.');
             }
         });
-
-    </script>
+  </script>
     
     <!----======== 내용부분 끝 ========---->
   </section>
