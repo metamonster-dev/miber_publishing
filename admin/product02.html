@@ -184,7 +184,7 @@
                             <td class="in_btn_area">
                                 <button class="in_btn" onclick="addCategory('depth2', this)">하위 분류 추가</button>
                                 <button class="in_btn" onclick="deleteRow(this)">삭제</button>
-                                <button class="in_btn" onclick="saveRow(this)">완료</button>
+                                <button class="in_btn save" onclick="saveRow(this)">완료</button>
                             </td>
                         </tr>`;
                     categoryTable.append(newRow);
@@ -204,7 +204,7 @@
                             <td class="in_btn_area">
                                 <button class="in_btn" onclick="addCategory('depth3', this)">하위 분류 추가</button>
                                 <button class="in_btn" onclick="deleteRow(this)">삭제</button>
-                                <button class="in_btn" onclick="saveRow(this)">완료</button>
+                                <button class="in_btn save" onclick="saveRow(this)">완료</button>
                             </td>
                         </tr>`;
                     parentRow.after(newRow);
@@ -223,7 +223,7 @@
                             <td>${date}</td>
                             <td class="in_btn_area">
                                 <button class="in_btn" onclick="deleteRow(this)">삭제</button>
-                                <button class="in_btn" onclick="saveRow(this)">완료</button>
+                                <button class="in_btn save" onclick="saveRow(this)">완료</button>
                             </td>
                         </tr>`;
                     parentRow.after(newRow);
@@ -280,7 +280,7 @@
             window.saveAll = function(){
                 categoryTable.find('input').prop('readonly', true);
                 categoryTable.find('select').prop('disabled', true);
-                $(el).text('수정').attr('onclick', 'editRow(this)');
+                categoryTable.find('button.save').text('수정').attr('onclick', 'editRow(this)');
                 alert('변경사항이 저장되었습니다.');
             }
         });
