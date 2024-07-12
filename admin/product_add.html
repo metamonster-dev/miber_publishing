@@ -372,12 +372,24 @@
                 });
             </script>
             <p class="label_name mt_40">상품정보</p>
-            <p class="label_name2">상품상태</p>
-            <ul class="filter_select mb_20">
-                <li class="on">설정안함</li>
-                <li>BEST</li>
-                <li>신상품</li>
-            </ul>
+            <div class="label_wrap">
+                <div>
+                <p class="label_name2 required">상품상태</p>
+                <ul class="filter_select3 mb_20">
+                    <li class="on"><label><input type="hidden" name="product_status" value="설정안함"checked >설정안함</label></li>
+                    <li><label><input type="hidden" name="product_status">BEST</label></li>
+                    <li><label><input type="hidden" name="product_status" value="신상품">신상품</label></li>
+                </ul>
+                </div>
+                <div>
+                <p class="label_name2 required">구매대상</p>
+                <ul class="filter_select3 mb_20">
+                    <li class="on"><label><input type="hidden" name="product_target" value="전체" checked>전체</label></li>
+                    <li><label><input type="hidden" name="product_target" value="정회원">정회원</label></li>
+                    <li><label><input type="hidden" name="product_target" value="일반회원">일반회원</label></li>
+                </ul>
+                </div>
+            </div>
             <label>
                 <p class="label_name2 required">제조사</p>
                 <input type="text" required>
@@ -457,18 +469,24 @@
                 <input type="text" required>
             </label>
             <p class="label_name mt_40">배송</p>
-            <p class="label_name2">배송방법</p>
-            <ul class="filter_select mb_20">
-                <li class="on">택배</li>
-                <li>직접배송</li>
-                <li>방문수령</li>
-                <li>퀵서비스</li>
+            <p class="label_name2 required">배송방법</p>
+            <ul class="filter_select3 mb_20">
+                <li class="on"><label><input type="hidden" name="delivery_method" checked>택배</label></li>
+                <li><label><input type="hidden" name="delivery_method">직접배송</label></li>
+                <li><label><input type="hidden" name="delivery_method">방문수령</label></li>
+                <li><label><input type="hidden" name="delivery_method">퀵서비스</label></li>
             </ul>
-            <p class="label_name2">상품별 배송비</p>
-            <ul class="filter_select mb_20">
-                <li class="on">무료</li>
-                <li>조건부 무료</li>
-                <li>유료</li>
+            <P class="label_name2 required ">택배사</P>
+            <select class="mb_20">
+                <option>선택</option>
+                <option>선택</option>
+                <option>선택</option>
+            </select>
+            <p class="label_name2 required">상품별 배송비</p>
+            <ul class="filter_select3 mb_20">
+                <li class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
+                <li><label><input type="hidden" name="delivery_fee" value="조겅부 무료" >조건부 무료</label></li>
+                <li><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
             </ul>
             <label>
                 <p class="label_name2 required">기본 배송비</p>
@@ -491,7 +509,11 @@
                 <p class="address mb_5"><span><input type="text" style="width:100px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:322px" readonly disabled></p>
                 <input type="text">
             </label>
-           
+           </form>
+           <div class="btn_area btm mt_40">
+                <button type="button">목록</button>
+                <button type="submit">완료</button>
+            </div>
     </article>
     <!----======== 내용부분 끝 ========---->
   </section>

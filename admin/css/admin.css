@@ -102,8 +102,12 @@ input[type="checkbox"]{width:12px;height:12px;}
 .filter_wrap2{width:100%;display:flex;justify-content:space-between;align-items:center;gap:80px;}
 .filter_wrap2 > div{display:flex;align-items:center;gap:8px;}
 .filter_wrap2 p{width:60px;color:#000}
+.filter_select3{display:flex;}
+.filter_select3 li label{width:120px;height:36px;display:flex;justify-content:center;align-items:center;border:1px solid #ccc;border-right:0;}
+.filter_select3 li:last-child label{border-right:1px solid #ddd;}
+.filter_select3 li.on label{color:#fff;background:#222;}
 .filter_select{display:flex;}
-.filter_select li{width:120px;height:36px;display:flex;justify-content:center;align-items:center;border:1px solid #ccc;border-right:0;}
+.filter_select li{width:120px;height:36px;display:flex;justify-content:center;align-items:center;border:1px solid #ccc;border-right:0 ;}
 .filter_select li:last-child{border-right:1px solid #ddd;}
 .filter_select li.on{color:#fff;background:#222;}
 .filter_select2{display:flex;}
