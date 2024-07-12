@@ -147,7 +147,7 @@
     <!----======== 내용부분    ========---->
     <p class="title">설정 / 배너관리</p>
    
-    <form class="preferences_form board_write">
+    <form class="preferences_form board_write board">
       <lable>
         <p class="label_name required">구분</p>
         <select>
@@ -186,20 +186,18 @@
         <input type="text" required>
       </lable>
 
-      <label>
-        <p class="label_name required">노출여부</p>
-        <input type="hidden">  
-        <ul class="filter_select">
-            <li class="on">노출</li>
-            <li>미노출</li>
-        </ul>
-      </label>
-      <div class="btm btn_area">
-        <button onclick="location.href='preferences01.html'">목록</button>
-        <button type="submit">저장</button>
-      </div>
-      
+      <p class="label_name required">노출여부</p>
+      <input type="hidden">  
+      <ul class="filter_select3">     
+          <li class="on"><label><input type="hidden" name="" checked>노출</label></li>
+          <li><label><input type="hidden" name="">미노출</li>
+      </ul>
     </form>
+    <div class="btm btn_area mt_40">
+      <button onclick="location.href='preferences01.html'">목록</button>
+      <button type="submit">저장</button>
+    </div>
+    
     <!----======== 내용부분 끝 ========---->
   </section>
   <script>

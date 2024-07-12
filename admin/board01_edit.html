@@ -147,7 +147,7 @@
     <!----======== 내용부분    ========---->
     <p class="title">게시판관리 / 공지사항</p>
    
-    <form class="board_write">
+    <form class="board_write board">
       <label>
         <p class="label_name2 required">제목</p>
         <input required type="text">
@@ -160,10 +160,6 @@
         <p class="label_name2 required">등록일</p>
         <input  type="text" value="2024-06-17" disabled readonly required>
       </label>
-      <div class="btm btn_area">
-        <button onclick="location.href='board01.html'">목록</button>
-        <button type="submit">저장</button>
-      </div>
       <script>
           // 탭 메뉴 기능
           $('.tab_menu li').on('click', function() {
@@ -183,6 +179,10 @@
           });
       </script>
     </form>
+    <div class="btm btn_area mt_40">
+      <button onclick="location.href='board01.html'">목록</button>
+      <button type="submit">저장</button>
+    </div>
     <!----======== 내용부분 끝 ========---->
   </section>
   <!----======== 관리자 레이아웃 하단    ========---->

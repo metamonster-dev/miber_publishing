@@ -147,7 +147,7 @@
     <!----======== 내용부분    ========---->
     <p class="title">게시판관리 / 공지사항</p>
    
-    <form class="board_write">
+    <form class="board_write board">
       <label>
         <p class="label_name2 required">제목</p>
         <input required type="text">
@@ -156,10 +156,6 @@
       <article id="contents_programs" class="editor_wrap on">
           <div id="content"></div>
       </article>
-      <div class="btm btn_area">
-        <button onclick="location.href='board01.html'">목록</button>
-        <button type="submit">저장</button>
-      </div>
       <script>
         const editor = new toastui.Editor({
             el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
@@ -171,6 +167,10 @@
         });
       </script>
     </form>
+    <div class="btm btn_area mt_40">
+      <button onclick="location.href='board01.html'">목록</button>
+      <button type="submit">저장</button>
+    </div>
     <!----======== 내용부분 끝 ========---->
   </section>
   <!----======== 관리자 레이아웃 하단    ========---->

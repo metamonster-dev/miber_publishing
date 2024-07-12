@@ -1,4 +1,6 @@
 /*==== 어드민 공통 레이아웃 ====*/
+body{min-width:1500px;} /*어드민페이지에서만 적용*/
+
 *{font-size:12px;line-height:24px;font-weight:600;color:#666;}
 a{cursor: pointer;}
 article{margin-bottom:40px}
@@ -358,4 +360,4 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .date_wrap > p {margin-top:22px;font-weight:800;font-size:15px;}
 .preferences_form input[type='date']{width:180px}
 .preferences_form input[type="password"]{width:217px}
-.preferences_form .label_name2{margin-top:16px;margin-bottom:8px}
+.preferences_form .label_name2{margin-bottom:8px}
