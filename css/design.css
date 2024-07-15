@@ -3,4 +3,316 @@
 /* 실제 작업 css 파일 */
 
 /*===== STYLES =====*/
+.warnning-txt{color:#FF4242 !important}
 
+/*(공통) 폼*/
+.form_defalt{width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.form_defalt label{width:100%;margin-bottom:16px;display:flex;align-items: flex-start;gap:50px}
+.form_defalt input{width:100%;height:46px;line-height:46px;padding:0 16px;border:1px solid #E0E0E2;border-radius:4px;}
+.form_defalt input::placeholder{font-size:14px;color:#b0b0b0;font-weight:400;}
+.form_defalt .label_name{width:100px;font-size:16px;font-weight:700;margin-top:12px;letter-spacing: -0.02em;flex: none;}
+.form_defalt .input_wrap{width:100%;display:flex;justify-content:space-between;gap:0 10px;position:relative;flex-wrap: wrap;}
+.form_defalt .input_wrap input{flex:1;}
+.form_defalt .input_wrap button{width:115px;height:46px;border:1px solid #3D3935;text-align:center;line-height:46px;font-size:14px;font-weight:700;border-radius:4px;}
+.form_defalt .input_wrap .input_text{position:absolute}
+.form_defalt .radio_area{display:flex;height: 46px;line-height: 46px;gap:20px}
+.form_defalt .radio_area .checked{color:#3D3935}
+.form_defalt .radio_area li{color:#B0B0B0}
+.comment{width:100%;display:none;margin-top:10px;padding-left:6px;font-size:12px;font-weight:400;color:#b0b0b0;transition:.3s;}
+.comment.on{display:block;}
+.checkbox{width:100%;display:flex;align-items:center;font-size:14px;}
+.checkbox input[type="checkbox"]{width:16px;height:16px;margin-right:5px;line-height: 16px;}
+.checkbox input[type="checkbox"]:checked{accent-color:#3D3935;}
+.input_text{font-size:14px;font-weight:400;color:#b0b0b0;top: 50%;left: 114px;transform: translateY(-50%);}
+.input_text .timer{color:#FF4242}
+button[type="submit"], button.next{width:100%;height:56px;line-height:56px;background:#3D3935;color:#fff;font-weight:800;font-size:16px;border-radius:4px;}
+button[type="submit"]:disabled, button.next:disabled{background:#DCDCDC}
+input[type="radio"],input[type="checkbox"]{width:16px;height:16px;border-radius:50%;margin-right:5px;}
+input[type="radio"]:checked, input[type="checkbox"]:checked{accent-color:#3D3935;border:1px solid #3D3935}
+.tab_menu{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #E0E0E2}
+.tab_menu li{width:50%;}
+.tab_menu li a{width:100%;padding:10px 0;text-align:center;display:block;color:#b0b0b0;font-weight:800;;}
+.tab_menu li.on a{border-bottom:2px solid #3D3935;color:#000}
+.article_line{display:block;width:100%;height:6px;margin:32px auto;background:#f7f7f7;}
+.table_defalt {width:100%;border-collapse: collapse;border: 0;border-bottom: 1px solid #E0E0E2;table-layout: fixed;}
+.table_defalt th, .table_defalt td {font-size:14px;border: 1px solid #ddd;text-align:center;padding:16px 8px;margin: 0;}
+.table_defalt tbody tr:last-child th, .table_defalt tbody tr:last-child td {border-bottom: 0;}
+.table_defalt tbody th:first-child,.table_defalt tbody td:first-child{border-left:none}
+.table_defalt tbody th:last-child,.table_defalt tbody td:last-child{border-right:none}
+.table_defalt thead{border-top:2px solid #000}
+.table_defalt th {background:#F7F7F7;font-size:14px;font-weight:800;}
+.table_defalt td {background: #fff;color: #000;}
+.table_defalt td.text_left{text-align:left;}
+.table_defalt td input{width:100%;}
+.table_defalt td input:read-only{background:#f2f2f2;}
+.table_defalt button.in_btn{width:100%}
+.route{font-size:}
+/*이미지모달*/
+.img_modal{position:fixed;top:0;left:0;display:none;width:100%;height:100vh;background:#171719BD;justify-content:center;align-items: center;}
+.img_modal.on{display:flex;}
+.img_modal .img_area{width:840px;height:fit-content;border-radius:10px;position:relative;overflow:hidden;}
+.img_modal .img_area a{position:absolute;top:15px;right:15px;cursor:pointer;}
+.img_modal .img_area img{width:100%;}
+/*필터*/
+.filter_wrap{display:flex;justify-content: space-between;gap:8px;line-height:36px;margin-bottom:32px}
+.filter_slect {position: relative;width:182px}
+.filter_slect .trigger {display: flex;align-items: center;position: relative;height:36px;line-height:36px;padding:0 8px;border: 1px solid #E0E0E2;cursor: pointer;border-radius:4px;}
+.filter_slect .trigger:after {content:'';position: absolute;top:0px;right: 0;width:36px;height:36px;background:url('../img/icon_dropdown.svg') center center no-repeat;transform:scaleY(-1) rotate(180deg);}
+.filter_slect.active .trigger:after {transform:scaleY(1);}
+.filter_slect .trigger_txt {overflow: hidden;font-size: 14px;font-weight:700;color: #ACACAC;white-space: nowrap; text-overflow: ellipsis;}
+.filter_slect.select .trigger_txt {color: #5C5C5C;}
+.filter_slect .option {display: none;position: absolute;top: calc(100% - -9px);width:100%;;max-height:500px;background: #fff;border: 1px solid #E0E0E2;z-index: 1;overflow-y: auto;border-radius:4px;}
+.filter_slect .option > li {padding:0 8px;font-size: 14px;font-weight:700;line-height:42px;color:#5C5C5C;cursor: pointer;}
+.filter_slect .option > li:hover {background: #F2F2F2;}
+.filter_checkbox{display:flex;gap:7px}
+.filter_checkbox label{height:36px;line-height:36px;text-align:center;padding:0 16px;border:1px solid #E0E0E2;border-radius:4px;color:#5C5C5C;font-size:14px;font-weight:700;cursor: pointer;}
+.filter_checkbox label.checked{color:#DA4E37;border:1px solid #DA4E37}
+.filter_wrap input[type="date"]{width:160px;height:36px;font-size:14px;font-weight:700;line-height:36px;color:#000000;padding:0 16px;border:1px solid #E0E0E2;border-radius:4px;}
+.filter_wrap button.lookup{height:36px;font-size:14px;font-weight:700;line-height:36px;color:#DA4E37;padding:0 16px;border:1px solid #DA4E37;border-radius:4px;}
+/*--페이지--*/
+.page_wrap{display:flex;justify-content: center;align-items: center;margin:50px 0 0}
+.paging_btn{display:flex;}
+.paging_btn li a{width:34px;height:34px;border:1px solid #E0E0E2;font-weight:400;font-size:14px;border-right:0;display:flex;justify-content: center;align-items: center;cursor: pointer;}
+.paging_btn li:last-child a{border-right:1px solid #E0E0E2}
+.paging_btn li a.on{color:#000;background:#E0E0E2;}
+.paging_btn li i{color:#999}
+
+
+
+
+/* 중앙 560배경 요소*/
+.gray_bg{width:100%;min-height:100vh;background: #F7F7F7;display:flex;justify-content:center;align-items: center;}
+.center_contentrs{width:560px;min-height:100vh;padding:50px 30px;background:#fff;}
+.center_contentrs h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
+.center_contentrs2{width:560px;min-height:100vh;padding:50px 0;background:#fff;}
+.center_contentrs2 h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
+.center_contentrs2 .padding_wrap{padding:50px 30px 0}
+/*로그인*/
+#Login_area{display:flex;align-items: center;flex-direction: column;}
+#Login_area .logo{margin-bottom:50px}
+#Login .checkbox{display: block;margin:32px auto;}
+#Login form label:nth-child(2){margin-bottom:0}
+.login_bt_menu{margin:32px auto;display: flex;justify-content:center;align-items:center;}
+.login_bt_menu li a{padding:0 30px;position:relative;cursor: pointer;}
+.login_bt_menu li a::after{content:'';display:inline-block;width:1px;height:10px;background:#E0E0E2;position:absolute;top:50%;right:0;transform:translateY(-50%);}
+.login_bt_menu li:last-child a::after{display:none;}
+.login_sns_wrap{width:100%;;padding-top:32px; border-top:1px solid #E0E0E2;position:relative}
+.login_sns_wrap .or_line{position:absolute;top: -11px;left: 50%;transform: translateX(-50%);text-align:center;display:block;width:20px;height:20px;line-height:20px;background:#fff;color:#DCDCDC;}
+.login_sns_wrap ul{display:flex;flex-direction: column;align-items: center;gap:10px}
+.login_sns_wrap ul li{width:100%;}
+.login_sns_wrap ul li a{display:block;text-align:center;width:100%;border:1px solid #e0e0e2;padding:16px;font-size:16px;font-weight:700;}
+.login_sns_wrap ul li a.sns_naver{background:url('../img/naver.svg')16px center no-repeat}
+.login_sns_wrap ul li a.sns_kakao{background:url('../img/kakao.svg')16px center no-repeat}
+/*회원가입*/
+#signup_form label:nth-child(3){margin-bottom:0}
+#Signup button.next{margin-top:50px}
+.agreement_area{margin-top:50px;padding:50px 0 0;border-top:1px solid #E0E0E2}
+.all_checked{font-size:16px;font-weight:800;}
+.agreement_list{margin-top:10px}
+.agreement_list li{display:flex;justify-content: space-between;flex-wrap:wrap;align-items:center}
+.agreement_list > li > label{width:70%;padding:0 16px;line-height:48px;font-size:14px;}
+.agreement_list > li > label input{margin-left:8px;}
+.agreement_list li a{font-size:14px;text-decoration:underline;color:#666666}
+.inner_checked_list{height:30px;line-height:30px;padding-left:42px;display:flex;gap:8px;}
+.inner_checked_list li{font-size:14px;}
+
+
+/*=======마이페이지======*/
+.no_data{display:flex;justify-content:center;align-items:center;margin:50px auto;font-size:16px;}
+.callout{width:100%;margin-bottom:32px;padding:16px 0;text-align:center;font-size:16px;font-weight:800;color:#DA4E37;background: #DA4E370A; }
+/*마이페이지 레이아웃*/
+.MypageContents_wrap{padding:50px 0;display:flex;justify-content:center;gap:50px;}
+.MypageContents_wrap .MypageContents_aside{width:165px;}
+.MypageContents_wrap .MypageContents {width:985px;}
+.MypageContents_wrap h3{width:100%;margin-bottom:32px;padding-bottom:12px;font-size:24px;font-weight:800;border-bottom:2px solid #000;}
+.MypageContents_wrap h4{font-size:18px;font-weight:800;margin-bottom:32px;}
+article > h4{margin-bottom:20px !important}
+/*마이페이지 - 어사이드 메뉴*/
+.MypageContents_wrap .MypageContents_aside .aside_title{font-size:24px;font-weight:800;height:41px;margin-bottom:20px}
+.MypageContents_wrap .MypageContents_aside .aside_nav_title{font-size:18px;font-weight:800;margin-bottom:16px}
+.MypageContents_wrap .MypageContents_aside .aside_nav{margin-bottom:24px;display:flex;flex-direction: column;gap:10px;}
+.MypageContents_wrap .MypageContents_aside .aside_nav li a{font-size:14px;color: #9B9B9B;}
+.MypageContents_wrap .MypageContents_aside .aside_nav li.on a{font-weight:700;color:#000}
+/*마이페이지 테이블*/
+.mypage_table {width:100%;border-collapse: collapse;border: 0;border-bottom: 1px solid #ddd;table-layout: fixed;}
+.mypage_table th, .mypage_table td {border: 1px solid #E0E0E2;text-align:center;padding:16px 5px;margin: 0;font-size:14px}
+.mypage_table tbody tr:last-child th, .mypage_table tbody tr:last-child td {border-bottom: 0;}
+.mypage_table tbody tr th:last-child, .mypage_table tbody tr td:last-child{border-right:0;}
+.mypage_table tbody tr th:first-child, .mypage_table tbody tr td:first-child{border-left:0;}
+.mypage_table th {background:#DA4E370F;color:#DA4E37;font-weight:700;}
+.mypage_table td {background: #fff;color:#000;}
+.mypage_table td.text_left{text-align:left;}
+.mypage_table td input{width:100%;}
+.mypage_table td input:read-only{background:#f2f2f2;}
+
+
+/*== 마이페이지- 나의서비스==*/
+/*변화그래프*/
+#My_service01 h4{margin-bottom:0}
+#My_service01 .mypage_table{margin-bottom:32px}
+#My_service01 .mypage_table tr:nth-child(2) {font-weight:700;}
+.chart_wrap{width:480px;height:300px;}
+.chart{height:300px;}
+/*나의미션*/
+.reservation_date_time{display:flex;justify-content:space-between;gap:52px}
+.reservation_date_time #datepicker2{width:440px;}
+.time_select{width:50%}
+.time_select .select{display:flex;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin-top:16px}
+.time_select .select input[type=radio]+label{width:120px;padding:0 20px}
+.time_select .pika-single{display:block !important;position:static;z-index: 9999;}
+.mission_top{display:flex;padding-bottom:9px;justify-content:space-between;border-bottom:1px solid #ccc;}
+.select_date_result{width:80%;font-size:20px;border:0;font-weight:800;color:#5C5C5C;}
+.achievement_rate{font-weight:800;font-size:20px;color:#FF4242}
+.mission_list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.mission_list li{height:26px;line-height:26px;font-size:15px;display:flex;justify-content:space-between}
+.mission_list .status{font-weight:700;display:flex;justify-content:center;align-items:center;}
+.mission_list li.clear .status{color:#FF4242}
+.mission_list li.clear .status::after{content:'';display:inline-block;width:12px;height:12px;margin-left:2px;background:url('../img/icon_mission_clear.svg')no-repeat center;}
+.mission_list li.unclear{background:#B0B0B00F;color:#666666}
+/*상담예약*/
+.reservation_top{display:flex;padding-bottom:9px;justify-content:space-between;border-bottom:1px solid #ccc;}
+.reservation_list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.reservation_list li{height:26px;line-height:26px;font-size:15px;display:flex;justify-content:space-between}
+.reservation_list .status{font-weight:800;display:flex;justify-content:center;align-items:center;}
+.reservation_list .time{font-weight:800;display:flex;justify-content:center;align-items:center;color:#FF4242}
+/* 날짜 선택 캘린더 UI커스텀 */
+.datepicker .ui-datepicker{font-family:'NanumSquare', sans-serif;width:100% !important;}
+.datepicker .ui-widget-header { border: 0px solid #dddddd; background: #fff;} 
+.datepicker .ui-datepicker-calendar>thead>tr>th { font-size: 14px !important;} 
+.datepicker .ui-datepicker .ui-datepicker-header { position: relative; padding: 10px 0; } 
+.datepicker .ui-state-default,
+.datepicker .ui-widget-content .ui-state-default,
+.datepicker .ui-widget-header .ui-state-default,
+.datepicker .ui-button,
+.datepicker .ui-button.ui-state-disabled:hover,
+.datepicker .ui-button.ui-state-disabled:active {margin:0 auto;border:0;width: 30px;height: 30px;border-radius: 50%;line-height:27px;font-weight: normal; text-align: center; } 
+.datepicker .ui-datepicker .ui-datepicker-title { margin: 0 0em; line-height: 16px; text-align: center; font-size: 14px; padding: 0px; font-weight: bold; } 
+.datepicker .ui-datepicker { display: none; background-color: #fff; border-radius: 4px;margin-left: 0px; margin-right: 0px; padding: 20px; padding-bottom: 10px; width: 300px;} 
+.datepicker .ui-widget.ui-widget-content { border: 1px solid #eee; } 
+.datepicker:focus > .ui-datepicker { display: block; } 
+.datepicker .ui-datepicker-prev,
+.datepicker .ui-datepicker-next { cursor: pointer; top:2px} 
+.datepicker .ui-datepicker-next { float: right; } 
+.datepicker .ui-state-disabled { cursor: auto; color: hsla(0, 0%, 80%, 1); } 
+.datepicker .ui-datepicker .ui-datepicker-title, .ui-datepicker-title span{ text-align: center;font-size:12px; } 
+.datepicker .ui-datepicker-calendar { width: 100%;margin:13px 0 8px} 
+.datepicker .ui-datepicker-calendar>thead>tr>th { padding: 5px; font-size: 20px; font-weight: 400; } 
+.datepicker .ui-datepicker-calendar>tbody>tr>td>a { color: #000; font-size: 12px !important; font-weight: bold !important; text-decoration: none;}
+.datepicker .ui-datepicker-calendar>tbody>tr>.ui-state-disabled:hover { cursor: auto; background-color: #fff; } 
+.datepicker .ui-datepicker-calendar>tbody>tr>td { border-radius: 100%; width: 44px; height: 30px; cursor: pointer; padding: 5px; font-weight: 100; text-align: center; font-size: 12px; } 
+.datepicker .ui-widget-content .ui-state-default{background:#fff}
+.datepicker .ui-widget-header .ui-icon { background-image: url('./btns.png'); } 
+.datepicker .ui-icon-circle-triangle-e { background-position: -20px 0px; background-size: 36px; } 
+.datepicker .ui-icon-circle-triangle-w { background-position: -0px -0px; background-size: 36px; } 
+.datepicker .ui-datepicker-calendar>tbody>tr>td:first-child a { color: #f53232 } 
+.datepicker .ui-datepicker-calendar>tbody>tr>td:last-child a { color: #006bff } 
+.datepicker .ui-datepicker-calendar>thead>tr>th:first-child { color: #f53232 !important; } 
+.datepicker .ui-datepicker-calendar>thead>tr>th:last-child { color: #006bff !important; } 
+.datepicker .inp:focus { outline: none; background-color: #eee; } 
+.datepicker .ui-datepicker-today a{background:#7e7e7e !important;color:#fff !important}
+.datepicker .ui-state-active, .datepicker .ui-widget-content .ui-state-active{color:#fff !important; background:#FF4242  !important; ;} 
+.datepicker .ui-corner-all:hover{background:#fff;}
+.datepicker .ui-datepicker-next-hover, .datepicker .ui-datepicker-prev-hover{top:2px;border:0}
+.datepicker .ui-datepicker-next-hover{right:2px}
+.datepicker .ui-datepicker-prev-hover{left:2px}
+/*프로그램*/
+.program ul{display:flex;flex-direction: column;gap:16px}
+.program ul li{display: flex;align-items:center;gap:25px;}
+.program ul li .program_name{width:134px;height:46px;border:1px solid #3d3935;text-align:center;line-height:46px;text-align:center;font-size:16px;font-weight:800;border-radius:4px;}
+.program ul li .program_last{font-size:14px;font-weight:700;color:#5c5c5c;line-height:21px;}
+.program ul li .program_remaining{font-size:14px;font-weight:400;color:#000;line-height:21px;}
+.program ul li .program_remaining span{font-weight:700;color:#DA4E37;}
+.usage_details table td:nth-child(1){font-weight:700;}
+.usage_details table td:last-child{font-weight:800;}
+/*컨시어지*/
+.concierge_top{padding-bottom:9px;border-bottom:1px solid #ccc;}
+.concierge ul{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.concierge ul li{display:flex;justify-content:space-between;}
+.concierge ul li .tit{font-size:15px;font-weight:400;}
+.concierge ul li .txt{font-size:16px;font-weight:800;color:#000}
+.concierge ul li .txt.accent{color:#FF4242}
+.concierge ul li .img_area{width:100%;height:328px;border:1px solid #e0e0e2;border-radius:10px;overflow:hidden;}
+.concierge ul li .img_area img{width:100%;}
+
+
+/*== 마이페이지- 쇼핑활동==*/
+/*주문/배송*/
+#my_order01_table td:nth-child(2){text-align:left;}
+#my_order01_table p{font-size:14px;font-weight:700;}
+#my_order01_table th:first-child span{display:block;color:#5C5C5C;font-weight:400;}
+#my_order01_table .order_number, #my_order01_table .delivery_number{font-size:14px;font-weight:400;text-decoration:underline;cursor: pointer;}
+#my_order01_table .order_delivery{font-size:14px;font-weight:400;color:#5C5C5C}
+#my_order01_table .order_delivery strong{font-size:15px;font-weight:800;color:#DA4E37;}
+#my_order01_table td{padding:32px 12px}
+.in_btn{margin-top:10px;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:6px}
+.in_btn button{padding:0 10px;height:36px;border:1px solid #E0E0E2;border-radius:4px;font-size:14px;font-weight:700;color:#5c5c5c;display:flex;justify-content:center;align-items:center;gap:10px}
+.in_btn button img {display:inline-block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+o
+/*===== 반응형 =====*/
+
+/* 반응형 max 1400px */
+@media (max-width: 1399.98px) {
+}
+
+/* 반응형 max 1200px xl */
+@media (max-width: 1199.98px) {
+}
+
+/* 반응형 max 992px lg */
+@media (max-width: 991.98px) {
+}
+
+/* 반응형 max 767px md */
+@media (max-width: 767.98px) {
+}
+
+/* 반응형 max 576px sm */
+@media (max-width: 575.98px) {
+/*공통폼*/
+button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
+.form_defalt label{flex-direction: column;gap:8px}
+.form_defalt .label_name{ font-size:14px;margin-top:0}
+.form_defalt .input_wrap button{width:100px;}
+.form_defalt input{font-size:14px}
+.comment{font-size:11px}
+.input_text{font-size:14px;left:74px}
+.tab_menu{margin-top:32px;padding:0 16px}
+.tab_menu li a{font-size:14px;}
+/*로그인*/
+#Login .checkbox{margin:30px 0}
+.center_contentrs{padding:50px 16px}
+.center_contentrs h2{font-size:18px}
+.center_contentrs2{padding:50px 0}
+.center_contentrs2 .padding_wrap{padding:32px 16px}
+.center_contentrs2 h2{font-size:18px;margin-bottom:0}
+.login_bt_menu li a{font-size:12px;padding: 0 25px;}
+/*회원가입*/
+.all_checked{font-size:14px;font-weight:400;}
+.agreement_list > li > label{width:80%;padding:0 0 0 10px;font-size:12px}
+.agreement_list > li > label input{margin-left:0}
+.agreement_list li a{font-size:12px}
+.inner_checked_list li{font-size:12px;}
+/*찾기*/
+
+}
+/* 반응형 max 374px */
+@media (max-width: 374.98px) {
+/*로그인*/
+.login_bt_menu li a{font-size:12px;padding: 0 20px;}
+.login_sns_wrap ul li a{font-size:14px;padding:0;height:46px;line-height:46px;}
+}

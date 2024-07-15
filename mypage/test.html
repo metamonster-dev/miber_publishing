@@ -1,39 +1,104 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>test</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
-  <link rel="stylesheet" href="../css/font-awesome.min.css"> <!--fontawsome-->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/custom.css" />
-  <link rel="stylesheet" href="../css/design.css" />
-  <!-- JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Hidden Object Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<style>
-body{display:flex;justify-content:center;align-items:center;}
-.frame{border:5px solid red;width:360px;height:300px;overflow:hidden;background:url('../img/test.webp')no-repeat center;}
-.frame img{}
-</style>
-<!--======컨텐츠=====-->
-<div class="frame">
-    <canvas>
-    </canvas>
-</div>
-<!--======컨텐츠=====-->
+    <h1>숨은그림찾기 게임</h1>
+    <div id="controls">
+        <button id="zoom-in">확대</button>
+        <button id="zoom-out">축소</button>
+    </div>
+    <div id="game-board">
+        <img src="hidden_object.jpg" id="hidden-object" class="hidden">
+        <img src="game_background.jpg" id="game-background">
+    </div>
+    <div id="message"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#game-board {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* 이미지 확대 시, 게임 보드 크기를 넘지 않도록 설정 */
+}
+
+#game-background {
+    width: 600px;
+    height: 400px;
+    transition: transform 0.3s ease; /* 이미지 확대/축소 애니메이션 */
+}
+
+#hidden-object {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease; /* 이미지 확대/축소 애니메이션 */
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+}
+</style>
+
+<script>
+    $(document).ready(function() {
+    let zoomLevel = 1;
+
+    $('#zoom-in').on('click', function() {
+        zoomLevel += 0.1;
+        updateZoom();
+    });
+
+    $('#zoom-out').on('click', function() {
+        zoomLevel = Math.max(1, zoomLevel - 0.1);
+        updateZoom();
+    });
+
+    function updateZoom() {
+        $('#game-background').css('transform', `scale(${zoomLevel})`);
+        $('#hidden-object').css('transform', `scale(${zoomLevel})`);
+    }
+
+    $('#game-background').on('click', function(event) {
+        const offset = $(this).offset();
+        const x = (event.pageX - offset.left) / zoomLevel;
+        const y = (event.pageY - offset.top) / zoomLevel;
+        
+        const object = $('#hidden-object');
+        const objectX = object.position().left;
+        const objectY = object.position().top;
+        const objectWidth = object.width();
+        const objectHeight = object.height();
+        
+        if (x >= objectX && x <= objectX + objectWidth &&
+            y >= objectY && y <= objectY + objectHeight) {
+            object.removeClass('hidden');
+            $('#message').text('축하합니다! 숨겨진 객체를 찾았습니다!');
+        } else {
+            $('#message').text('다시 시도하세요!');
+        }
+    });
+});
+</script>

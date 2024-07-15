@@ -91,7 +91,7 @@
             <button class="lookup">조회</button>
         </div>
         <h4>주문/배송 내역</h4>
-        <table class="table_defalt">
+        <table id="my_order01_table" class="table_defalt">
             <thead>
                 <tr>
                     <th width="173px">주문일자<span>[주문번호]</span></th>
@@ -104,11 +104,11 @@
             <tbody>
                 <tr>
                     <td>
-                        2024-05-11
-                        <p>[20240511-0295]</p>
-                        <ul>
-                            <li><button type="button">교환신청</button></li>
-                            <li><button type="button">반품신청</button></li>
+                        <p class="order_date">2024-05-11</p>
+                        <a class="order_number">[20240511-0295]</a>
+                        <ul class="in_btn">
+                            <li><button type="button">교환신청 <img src="../img/icon_next.svg"></button></li>
+                            <li><button type="button">반품신청 <img src="../img/icon_next.svg"></button></li>
                         </ul>
                     </td>
                     <td>
@@ -117,18 +117,85 @@
                     </td>
                     <td>1</td>
                     <td class="order_price">25,000원</td>
-                    <td>
-                        <p class="order_delivery">배송완료</p>
+                    <td class="order_delivery">
+                        <strong>배송완료</strong>
                         <p>한진택배</p>
-                        <p>[45621333215]</p>
+                        <a class="delivery_number">[45621333215]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="order_date">2024-05-11</p>
+                        <a class="order_number">[20240511-0295]</a>
+                    </td>
+                    <td>
+                        <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                        <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    </td>
+                    <td>1</td>
+                    <td class="order_price">25,000원</td>
+                    <td class="order_delivery">
+                        <strong>배송완료</strong>
+                        <p>한진택배</p>
+                        <a class="delivery_number">[45621333215]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="order_date">2024-05-11</p>
+                        <a class="order_number">[20240511-0295]</a>
+                        <ul class="in_btn">
+                            <li><button type="button">취소신청 <img src="../img/icon_next.svg"></button></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                        <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    </td>
+                    <td>1</td>
+                    <td class="order_price">25,000원</td>
+                    <td  class="order_delivery">
+                        <strong>상품준비</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="order_date">2024-05-11</p>
+                        <a class="order_number">[20240511-0295]</a>
+                        <ul class="in_btn">
+                            <li><button type="button">취소신청 <img src="../img/icon_next.svg"></button></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                        <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    </td>
+                    <td>1</td>
+                    <td class="order_price">25,000원</td>
+                    <td  class="order_delivery">
+                        <strong>상품준비</strong>
                     </td>
                 </tr>
             </tbody>
         </table>
-
-
-
-
+        <div class="page_wrap">
+            <ul class="paging_btn">
+              <li class="side_left"><a><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+              <li class="side_left"><a><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+              <li><a class="on">1</a></li>
+              <li><a>2</a></li>
+              <li><a>3</a></li>
+              <li><a>4</a></li>
+              <li><a>5</a></li>
+              <li><a>6</a></li>
+              <li><a>7</a></li>
+              <li><a>8</a></li>
+              <li><a>9</a></li>
+              <li><a>10</a></li>
+              <li class="side_left"><a><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+              <li class="side_right"><a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
         <script>
             $(window).on('load', function() {
                 selectCus();

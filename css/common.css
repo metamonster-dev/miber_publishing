@@ -6,7 +6,6 @@
   주로 안 바뀌는 것
   header(hd), footer(ft)
 */
-body{min-width:1500px;}
 /* 반응형 max 1400px */
 @media (max-width: 1399.98px) {
 }
@@ -25,6 +24,11 @@ body{min-width:1500px;}
 
 /* 반응형 max 576px sm */
 @media (max-width: 575.98px) {
+/*로그인*/
+.center_contentrs{padding:50px 16px}
+.center_contentrs2{padding:50px 0}
+.center_contentrs2 .padding_wrap{padding:50px 16px}
+.login_bt_menu li a{font-size:12px;}
 }
 
 /* 반응형 max 374px */
