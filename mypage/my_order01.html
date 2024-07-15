@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>변화그래프</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
+  <link rel="stylesheet" href="../css/font-awesome.min.css"> <!--fontawsome-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/custom.css" />
+  <link rel="stylesheet" href="../css/design.css" />
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+<!--======컨텐츠=====-->
+
+<section class="MypageContents_wrap">
+    <!--마이페이지 사이드메뉴-->
+    <section class="MypageContents_aside">
+        <p class="aside_title">마이페이지</p>
+        <p class="aside_nav_title">쇼핑활동</p>
+        <ul class="aside_nav">
+            <li class="on"><a href="../mypage/my_order01.html">주문/배송</a></li>
+            <li><a href="../mypage/my_order02.html">취소/교환/반품</a></li>
+            <li><a href="../mypage/my_order03.html">찜목록</a></li>
+            <li><a href="../mypage/my_order04.html">장바구니</a></li>
+        </ul>
+        <p class="aside_nav_title">회원정보</p>
+        <ul class="aside_nav">
+            <li><a href="../mypage/my_page01.html">정보수정</a></li>
+            <li><a href="../mypage/my_page02.html">배송지관리</a></li>
+            <li><a href="../mypage/my_page03.html">회원탈퇴</a></li>
+        </ul>
+        <p class="aside_nav_title">혜택</p>
+        <ul class="aside_nav">
+            <li><a href="../mypage/my_benefits01.html">적립금</a></li>
+            <li><a href="../mypage/my_benefits02.html">마일리지</a></li>
+            <li><a href="../mypage/my_benefits03.html">정회원 안내</a></li>
+        </ul>
+        <p class="aside_nav_title">상품리뷰</p>
+        <ul class="aside_nav">
+            <li><a href="../mypage/my_review01.html">내가 작성한 리뷰</a></li>
+            <li><a href="../mypage/my_review02.html">작성 가능한 리뷰</a></li>
+        </ul>
+        <p class="aside_nav_title">고객센터</p>
+        <ul class="aside_nav">
+            <li><a href="../mypage/my_inquiry01.html">1:1 문의</a></li>
+            <li><a href="../mypage/my_inquiry02.html">상품문의</a></li>
+        </ul>
+    </section>
+
+    <section id="My_order01" class="MypageContents">
+        <h3>주문/배송</h3>
+        <h4>주문/배송 조회</h4>
+        <div class="filter_wrap">
+            <div class="filter_slect select ">
+                <input type="hidden" class="opt_val" value="">
+                <div class="trigger">
+                    <span class="trigger_txt">전체</span>
+                </div>
+                <ul class="option">
+                    <li data-value="전체">전체</li>
+                    <li data-value="결제완료">결제완료</li>
+                    <li data-value="상품준비">상품준비</li>
+                    <li data-value="배송중">배송중</li>
+                    <li data-value="배송완료">배송완료</li>
+                </ul>
+            </div>
+            <ul class="filter_checkbox">
+                <li><label><input type="hidden" value="오늘">오늘</label></li>
+                <li><label><input type="hidden" value="1주일">1주일</label></li>
+                <li><label><input type="hidden" value="1개월">오늘</label></li>
+                <li><label class="checked"><input type="hidden" value="3개월" checked>3개월</label></li>
+                <li><label><input type="hidden" value="6개월">6개월</label></li>
+            </ul>
+            <input type="date">
+            ~
+            <input type="date">
+            <button class="lookup">조회</button>
+        </div>
+        <h4>주문/배송 내역</h4>
+        <table class="table_defalt">
+            <thead>
+                <tr>
+                    <th width="173px">주문일자<span>[주문번호]</span></th>
+                    <th>상품정보</th>
+                    <th width="136px">수량</th>
+                    <th width="136px">상품구매금액</th>
+                    <th width="136px">주문상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        2024-05-11
+                        <p>[20240511-0295]</p>
+                        <ul>
+                            <li><button type="button">교환신청</button></li>
+                            <li><button type="button">반품신청</button></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                        <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    </td>
+                    <td>1</td>
+                    <td class="order_price">25,000원</td>
+                    <td>
+                        <p class="order_delivery">배송완료</p>
+                        <p>한진택배</p>
+                        <p>[45621333215]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <script>
+            $(window).on('load', function() {
+                selectCus();
+            })
+    
+            function selectCus() {
+                $('.filter_slect').each(function() {
+                    const $select = $(this);
+                    const $selectTrigger = $select.find('.trigger');
+                    const $options = $select.find('.option');
+                    const $hiddenInput = $select.find('.opt_val');
+    
+                    //select option 열기
+                    $selectTrigger.click(function() {
+                        $options.toggle();
+                        $select.toggleClass('active');
+                        $('.filter_slect').not($select).find('.option').hide();
+                        $('.filter_slect').not($select).removeClass('active');
+                    });
+    
+                    //option 선택
+                    $options.find('li').click(function() {
+                        const value = $(this).data('value');
+                        const text = $(this).text();
+                        $select.find('.trigger_txt').text(text);
+                        $options.hide();
+                        $select.removeClass('active');
+                        //옵션 선택했을 때 클래스 추가
+                        if (value != '') {
+                            $select.addClass('select')
+                        } else {
+                            $select.removeClass('select')
+                        }
+                        // hidden 필드에 선택한 값을 설정
+                        $hiddenInput.val(value);
+                    });
+                });
+    
+                //select 영역 외 다른곳을 누르면 select 닫힘
+                $(document).click(function(e) {
+                    if (!$(e.target).closest('.filter_slect').length) {
+                        $('.filter_slect .option').hide();
+                        $('.filter_slect').removeClass('active');
+                    }
+                });
+    
+            }
+    
+        </script>
+    </section>
+    
+    
+</section>
+<!--======컨텐츠=====-->
+
+</body>
+</html>
