@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>나의 미션</title>
+  <title>취소/교환/반품</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -22,7 +22,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
   <script src="../js/common.js"></script>
 </head>
 <body>
@@ -32,19 +31,9 @@
     <!--마이페이지 사이드메뉴-->
     <section class="MypageContents_aside">
         <p class="aside_title">마이페이지</p>
-        <!--정회원일때만 노출 ↓↓↓-->
-        <p class="aside_nav_title">나의서비스</p>
-        <ul class="aside_nav">
-            <li><a href="../mypage/my_service01.html">변화그래프</a></li>
-            <li class="on"><a href="../mypage/my_service02.html">나의 미션</a></li>
-            <li><a href="../mypage/my_service03.html">상담예약</a></li>
-            <li><a href="../mypage/my_service04.html">프로그램</a></li>
-            <li><a href="../mypage/my_service05.html">컨시어지</a></li>
-        </ul>
-        <!--정회원일때만 노출 ↑↑↑-->
         <p class="aside_nav_title">쇼핑활동</p>
         <ul class="aside_nav">
-            <li><a href="../mypage/my_order01.html">주문/배송</a></li>
+            <li  class="on"><a href="../mypage/my_order01.html">주문/배송</a></li>
             <li><a href="../mypage/my_order02.html">취소/교환/반품</a></li>
             <li><a href="../mypage/my_order03.html">찜목록</a></li>
             <li><a href="../mypage/my_order04.html">장바구니</a></li>
@@ -73,9 +62,61 @@
         </ul>
     </section>
 
-    <section id="My_service01" class="MypageContents">
-        <h3>메뉴이름</h3>
-    </section>
+    <section id="my_order_cancle" class="MypageContents">
+        <h3>취소신청</h3>
+        <h4>주문 상품 정보</h4>
+        <table id="my_order_cancle_table"  class="table_defalt thead_border_none order_table ">
+            <thead>
+            <tr>
+                <th width="173px">주문일자<span>[주문번호]</span></th>
+                <th>상품정보</th>
+                <th width="136px">수량</th>
+                <th width="136px">상품구매금액</th>
+                <th width="136px">주문상태</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <p class="order_date">2024-05-11</p>
+                    <a href="../mypage/my_order01_detail01.html" class="order_number">[20240511-0295]</a>
+                </td>
+                <td>
+                    <div class="product_area">
+                        <input type="checkbox">
+                        <div class="img_area">
+                            <img src="../img/temp/product01.png" alt="상품썸네일">
+                        </div>
+                        <div class="txt_area">
+                            <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                            <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                        </div>
+                    </div>
+                </td>
+                <td>1</td>
+                <td class="order_price">25,000원</td>
+                <td class="order_delivery">
+                    <strong>결제완료</strong>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="article_line"></div>
+        <h4>취소사유</h4>
+        <table class="table_text">
+            <tr>
+                <th>사유</th>
+                <td>
+                    <textarea placeholder="취소 사유 입력"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="article_line"></div>
+        <div class="bottom_btn btn_area">
+            <button class="white_btn">취소신청</button>
+            <button onclick='location.href="../mypage/my_order01.html"' class="black_btn ">목록보기</button>
+        </div>
+        </section>
 </section>
 <!--======컨텐츠=====-->
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>주문/배송</title>
+  <title>취소/교환/반품</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -33,8 +33,8 @@
         <p class="aside_title">마이페이지</p>
         <p class="aside_nav_title">쇼핑활동</p>
         <ul class="aside_nav">
-            <li class="on"><a href="../mypage/my_order01.html">주문/배송</a></li>
-            <li><a href="../mypage/my_order02.html">취소/교환/반품</a></li>
+            <li><a href="../mypage/my_order01.html">주문/배송</a></li>
+            <li class="on"><a href="../mypage/my_order02.html">취소/교환/반품</a></li>
             <li><a href="../mypage/my_order03.html">찜목록</a></li>
             <li><a href="../mypage/my_order04.html">장바구니</a></li>
         </ul>
@@ -62,9 +62,9 @@
         </ul>
     </section>
 
-    <section id="My_order01" class="MypageContents">
-        <h3>주문/배송</h3>
-        <h4>주문/배송 조회</h4>
+    <section id="My_order02" class="MypageContents">
+        <h3>취소/교환/반품</h3>
+        <h4>취소/교환/반품 조회</h4>
         <div class="filter_wrap">
             <div class="filter_slect select ">
                 <input type="hidden" class="opt_val" value="">
@@ -92,7 +92,7 @@
             <button class="lookup">조회</button>
         </div>
         <h4>주문/배송 내역</h4>
-        <table id="my_order01_table" class="table_defalt">
+        <table id="my_order01_table" class="table_defalt ">
             <thead>
                 <tr>
                     <th width="173px">주문일자<span>[주문번호]</span></th>
@@ -100,17 +100,15 @@
                     <th width="136px">수량</th>
                     <th width="136px">상품구매금액</th>
                     <th width="136px">주문상태</th>
+                    <th width="136px">취소/교환/반품</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <!--취소-->
                     <td>
                         <p class="order_date">2024-05-11</p>
-                        <a href="../mypage/my_order01_detail01.html" class="order_number">[20240511-0295]</a>
-                        <ul class="in_btn_area">
-                            <li><button type="button" class="in_btn" onclick="location.href='../mypage/my_order_change_write.html'">교환신청 <img src="../img/icon_next.svg"></button></li>
-                            <li><button type="button" class="in_btn" onclick="location.href='../mypage/my_order_return_write.html'">반품신청 <img src="../img/icon_next.svg"></button></li>
-                        </ul>
+                        <a href="../mypage/my_order_cancel.html" class="order_number">[20240511-0295]</a>
                     </td>
                     <td>
                         <div class="txt_area">
@@ -120,16 +118,14 @@
                     </td>
                     <td>1</td>
                     <td class="order_price">25,000원</td>
-                    <td class="order_delivery">
-                        <strong>배송완료</strong>
-                        <p>한진택배</p>
-                        <a class="delivery_number">[45621333215]</a>
-                    </td>
+                    <td class="order_status"><strong>결제완료</strong></td>
+                    <td class="order_delivery"><strong>취소</strong></td>
                 </tr>
                 <tr>
+                    <!--교환-->
                     <td>
                         <p class="order_date">2024-05-11</p>
-                        <a href="../mypage/my_order01_detail01.html" class="order_number">[20240511-0295]</a>
+                        <a href="../mypage/my_order_change.html" class="order_number">[20240511-0295]</a>
                     </td>
                     <td>
                         <div class="txt_area">
@@ -139,19 +135,14 @@
                     </td>
                     <td>1</td>
                     <td class="order_price">25,000원</td>
-                    <td class="order_delivery">
-                        <strong>배송중</strong>
-                        <p>한진택배</p>
-                        <a class="delivery_number">[45621333215]</a>
-                    </td>
+                    <td class="order_status"><strong>배송완료</strong></td>
+                    <td class="order_delivery"><strong>교환</strong></td>
                 </tr>
                 <tr>
+                    <!--반품-->
                     <td>
                         <p class="order_date">2024-05-11</p>
-                        <a href="../mypage/my_order01_detail02.html" class="order_number">[20240511-0295]</a>
-                        <ul class="in_btn_area">
-                            <li><button type="button"  class="in_btn" onclick="location.href='../mypage/my_order_cancel_write.html'">취소신청 <img src="../img/icon_next.svg"></button></li>
-                        </ul>
+                        <a href="../mypage/my_order_return.html" class="order_number">[20240511-0295]</a>
                     </td>
                     <td>
                         <div class="txt_area">
@@ -161,17 +152,14 @@
                     </td>
                     <td>1</td>
                     <td class="order_price">25,000원</td>
-                    <td  class="order_delivery">
-                        <strong>상품준비</strong>
-                    </td>
+                    <td class="order_status"><strong>배송완료</strong></td>
+                    <td  class="order_delivery"><strong>반품</strong></td>
                 </tr>
                 <tr>
+                    <!--반품-->
                     <td>
                         <p class="order_date">2024-05-11</p>
-                        <a href="../mypage/my_order01_detail02.html" class="order_number">[20240511-0295]</a>
-                        <ul class="in_btn_area">
-                            <li><button type="button"  class="in_btn" onclick="location.href='../mypage/my_order_cancel_write.html'">취소신청 <img src="../img/icon_next.svg"></button></li>
-                        </ul>
+                        <a href="../mypage/my_order_return.html" class="order_number">[20240511-0295]</a>
                     </td>
                     <td>
                         <div class="txt_area">
@@ -181,30 +169,29 @@
                     </td>
                     <td>1</td>
                     <td class="order_price">25,000원</td>
-                    <td  class="order_delivery">
-                        <strong>결제완료</strong>
-                    </td>
+                    <td class="order_status"><strong>결제완료</strong></td>
+                    <td  class="order_delivery"><strong>반품</strong></td>
                 </tr>
             </tbody>
         </table>
         <div class="page_wrap">
             <ul class="paging_btn">
-              <li class="side_left"><a><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-              <li class="side_left"><a><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-              <li><a class="on">1</a></li>
-              <li><a>2</a></li>
-              <li><a>3</a></li>
-              <li><a>4</a></li>
-              <li><a>5</a></li>
-              <li><a>6</a></li>
-              <li><a>7</a></li>
-              <li><a>8</a></li>
-              <li><a>9</a></li>
-              <li><a>10</a></li>
-              <li class="side_left"><a><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-              <li class="side_right"><a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                <li class="side_left"><a><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                <li class="side_left"><a><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                <li><a class="on">1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>6</a></li>
+                <li><a>7</a></li>
+                <li><a>8</a></li>
+                <li><a>9</a></li>
+                <li><a>10</a></li>
+                <li class="side_left"><a><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class="side_right"><a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
             </ul>
-          </div>
+        </div>
         <script>
             $(window).on('load', function() {
                 selectCus();
