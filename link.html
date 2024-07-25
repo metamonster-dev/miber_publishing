@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/custom.css" />
@@ -28,6 +28,7 @@ body{padding:40px 20px}
 h1{font-size:18px;padding:10px;border-bottom:1px solid #ccc;font-weight:600;margin-bottom:16px}
 a{color:#007bff;text-decoration: underline;}
 h2{margin-bottom:20px;padding:20px;background:#666;color:#fff}
+h2 span{font-size:14px;opacity:.7;}
 .table_defalt {width:100%;border-collapse: collapse;border: 0;border-bottom: 1px solid #ddd;table-layout: fixed;font-size:14px}
 .table_defalt th, .table_defalt td {border: 1px solid #ddd;text-align:center;padding: 8px;margin: 0;}
 .table_defalt tbody tr:last-child th, .table_defalt tbody tr:last-child td {border-bottom: 0;}
@@ -38,336 +39,679 @@ h2{margin-bottom:20px;padding:20px;background:#666;color:#fff}
 .table_defalt td input:read-only{background:#f2f2f2;}
 .table_defalt button.in_btn{width:100%}
 .space{background:#f2f2f2 !important;height:36px;}
+.tap_menu{margin-bottom:16px;display:flex;gap:8px}
+.tap_menu li{padding:0 8px 5px;cursor: pointer;}
+.tap_menu li.on{font-weight:800;border-bottom:2px solid #000}
+section {display: none;}
+section.on{display:block;}
 </style>
 <h1>미베르 퍼블리싱 화면</h1>
-<h2>ADMIN</h2>
-<table class="table_defalt">
-    <thead>
-        <tr>
-            <th width="80px">번호</th>
-            <th width="20%">화면구분</th>
-            <th>화면명</th>
-            <th>링크</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="count"></td>
-            <td>로그인</td>
-            <td>로그인</td>
-            <td><a href="./admin/login.html">./admin/login.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="2">대시보드</td>
-            <td>대시보드</td>
-            <td><a target="_blank" href="./admin/dashboard.html">./admin/dashboard.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>레이아웃</td>
-            <td><a target="_blank" href="./admin_layout.html">./admin_layout.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="8">회원관리</td>
-            <td>일반회원</td>
-            <td><a target="_blank" href="./admin/member01.html">./admin/member01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>일반회원 - 상세보기</td>
-            <td><a target="_blank" href="./admin/member01_detail.html">./admin/member01_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>정회원</td>
-            <td><a target="_blank" href="./admin/member02.html">./admin/member02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>정회원 - 상세보기</td>
-            <td><a target="_blank" href="./admin/member02_detail.html">./admin/member02_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>탈퇴회원</td>
-            <td><a target="_blank" href="./admin/member03.html">./admin/member03.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>탈퇴회원 - 상세보기</td>
-            <td><a target="_blank" href="./admin/member03_detail.html">./admin/member03_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>정회원 승인</td>
-            <td><a target="_blank" href="./admin/member04.html">./admin/member04.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>정회원 승인 - 상세보기</td>
-            <td><a target="_blank" href="./admin/member04_detail.html">./admin/member04_detail.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="9">서비스 관리</td>
-            <td>상담예약</td>
-            <td><a target="_blank" href="./admin/service01.html">./admin/service01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>프로그램</td>
-            <td><a target="_blank" href="./admin/service02.html">./admin/service02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>프로그램 - 상세</td>
-            <td><a target="_blank" href="./admin/service02_detail.html">./admin/service02_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>컨시어지</td>
-            <td><a target="_blank" href="./admin/service03.html">./admin/service03.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>컨시어지 - 상세</td>
-            <td><a target="_blank" href="./admin/service03_detail.html">./admin/service03_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>미션</td>
-            <td><a target="_blank" href="./admin/service04.html">./admin/service04.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>미션 - 상세</td>
-            <td><a target="_blank" href="./admin/service04_detail.html">./admin/service04_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>변화 그래프</td>
-            <td><a target="_blank" href="./admin/service05.html">./admin/service05.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>변화 그래프 - 상세</td>
-            <td><a target="_blank" href="./admin/service05_detail.html">./admin/service05_detail.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="4">상품관리</td>
-            <td>상품관리</td>
-            <td><a target="_blank" href="./admin/product01.html">./admin/product01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>상품관리 - 상품등록</td>
-            <td><a target="_blank" href="./admin/product_add.html">./admin/product_add.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>상품관리 - 상품상세보기(Edit)</td>
-            <td><a target="_blank" href="./admin/product_detail.html">./admin/product_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>상품관리 - 카테고리관리</td>
-            <td><a target="_blank" href="./admin/product02.html">./admin/product02.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="5">주문관리</td>
-            <td>주문관리</td>
-            <td><a target="_blank" href="./admin/order01.html">./admin/order01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>구매확정</td>
-            <td><a target="_blank" href="./admin/order02.html">./admin/order02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>취소관리</td>
-            <td><a target="_blank" href="./admin/order03.html">./admin/order03.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>교환관리</td>
-            <td><a target="_blank" href="./admin/order04.html">./admin/order04.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>반품관리</td>
-            <td><a target="_blank" href="./admin/order05.html">./admin/order05.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="3">컨텐츠관리</td>
-            <td>미베르소개</td>
-            <td><a target="_blank" href="./admin/contents01.html">./admin/contents01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>프로그램</td>
-            <td><a target="_blank" href="./admin/contents02.html">./admin/contents02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>지점안내</td>
-            <td><a target="_blank" href="./admin/contents03.html">./admin/contents03.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="6">게시판관리</td>
-            <td>공지사항</td>
-            <td><a target="_blank" href="./admin/board01.html">./admin/board01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>공지사항 - 등록</td>
-            <td><a target="_blank" href="./admin/board01_write.html">./admin/board01_write.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>공지사항 - 수정</td>
-            <td><a target="_blank" href="./admin/board01_edit.html">./admin/board01_edit.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>자주하는 질문</td>
-            <td><a target="_blank" href="./admin/board02.html">./admin/board02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>자주하는 질문 - 등록</td>
-            <td><a target="_blank" href="./admin/board02_write.html">./admin/board02_write.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>자주하는 질문 - 수정</td>
-            <td><a target="_blank" href="./admin/board02_edit.html">./admin/board02_edit.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="2">리뷰관리</td>
-            <td>리뷰관리</td>
-            <td><a target="_blank" href="./admin/review.html">./admin/review.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>리뷰관리 - 상세보기</td>
-            <td><a target="_blank" href="./admin/review_detail.html">./admin/review_detail.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="4">문의관리</td>
-            <td>상품문의</td>
-            <td><a target="_blank" href="./admin/inquiry01.html">./admin/inquiry01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>상품문의 - 상세보기</td>
-            <td><a target="_blank" href="./admin/inquiry01_detail.html">./admin/inquiry01_detail.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>1:1문의</td>
-            <td><a target="_blank" href="./admin/inquiry02.html">./admin/inquiry02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>1:1문의 - 상세보기</td>
-            <td><a target="_blank" href="./admin/inquiry02_detail.html">./admin/inquiry02_detail.html</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="space"></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td rowspan="10">설정</td>
-            <td>배너관리</td>
-            <td><a target="_blank" href="./admin/preferences01.html">./admin/preferences01.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>배너관리 - 신규등록</td>
-            <td><a target="_blank" href="./admin/preferences01_write.html">./admin/preferences01_write.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>배너관리 - 수정</td>
-            <td><a target="_blank" href="./admin/preferences01_edit.html">./admin/preferences01_edit.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>팝업관리</td>
-            <td><a target="_blank" href="./admin/preferences02.html">./admin/preferences02.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>팝업관리 - 신규등록</td>
-            <td><a target="_blank" href="./admin/preferences02_write.html">./admin/preferences02_write.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>팝업관리 - 수정</td>
-            <td><a target="_blank" href="./admin/preferences02_edit.html">./admin/preferences02_edit.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>계정관리</td>
-            <td><a target="_blank" href="./admin/preferences03.html">./admin/preferences03.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>계정관리 - 신규등록</td>
-            <td><a target="_blank" href="./admin/preferences03_write.html">./admin/preferences03_write.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>계정관리 - 수정</td>
-            <td><a target="_blank" href="./admin/preferences03_edit.html">./admin/preferences03_edit.html</a></td>
-        </tr>
-        <tr>
-            <td class="count"></td>
-            <td>기본설정</td>
-            <td><a target="_blank" href="./admin/preferences04.html">./admin/preferences04.html</a></td>
-        </tr>
-    </tbody>
-</table>
+<ul class="tap_menu">
+    <li class="on" data-name="tap01">ADMIN</li>
+    <li data-name="tap02">마이페이지</li>
+    <li data-name="tap03">로그인/회원가입</li>
+</ul>
+<section id="tap01" class="on">
+    <h2>ADMIN</h2>
+    <table class="table_defalt">
+        <thead>
+            <tr>
+                <th width="80px">번호</th>
+                <th width="20%">화면구분</th>
+                <th>화면명</th>
+                <th>링크</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="count"></td>
+                <td>관리자 로그인</td>
+                <td>관리자 로그인</td>
+                <td><a href="./admin/login.html">./admin/login.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="2">대시보드</td>
+                <td>대시보드</td>
+                <td><a target="_blank" href="./admin/dashboard.html">./admin/dashboard.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>레이아웃</td>
+                <td><a target="_blank" href="./admin_layout.html">./admin_layout.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="8">회원관리</td>
+                <td>일반회원</td>
+                <td><a target="_blank" href="./admin/member01.html">./admin/member01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>일반회원 - 상세보기</td>
+                <td><a target="_blank" href="./admin/member01_detail.html">./admin/member01_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>정회원</td>
+                <td><a target="_blank" href="./admin/member02.html">./admin/member02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>정회원 - 상세보기</td>
+                <td><a target="_blank" href="./admin/member02_detail.html">./admin/member02_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>탈퇴회원</td>
+                <td><a target="_blank" href="./admin/member03.html">./admin/member03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>탈퇴회원 - 상세보기</td>
+                <td><a target="_blank" href="./admin/member03_detail.html">./admin/member03_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>정회원 승인</td>
+                <td><a target="_blank" href="./admin/member04.html">./admin/member04.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>정회원 승인 - 상세보기</td>
+                <td><a target="_blank" href="./admin/member04_detail.html">./admin/member04_detail.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="9">서비스 관리</td>
+                <td>상담예약</td>
+                <td><a target="_blank" href="./admin/service01.html">./admin/service01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>프로그램</td>
+                <td><a target="_blank" href="./admin/service02.html">./admin/service02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>프로그램 - 상세</td>
+                <td><a target="_blank" href="./admin/service02_detail.html">./admin/service02_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>컨시어지</td>
+                <td><a target="_blank" href="./admin/service03.html">./admin/service03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>컨시어지 - 상세</td>
+                <td><a target="_blank" href="./admin/service03_detail.html">./admin/service03_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>미션</td>
+                <td><a target="_blank" href="./admin/service04.html">./admin/service04.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>미션 - 상세</td>
+                <td><a target="_blank" href="./admin/service04_detail.html">./admin/service04_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>변화 그래프</td>
+                <td><a target="_blank" href="./admin/service05.html">./admin/service05.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>변화 그래프 - 상세</td>
+                <td><a target="_blank" href="./admin/service05_detail.html">./admin/service05_detail.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="4">상품관리</td>
+                <td>상품관리</td>
+                <td><a target="_blank" href="./admin/product01.html">./admin/product01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>상품관리 - 상품등록</td>
+                <td><a target="_blank" href="./admin/product_add.html">./admin/product_add.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>상품관리 - 상품상세보기(Edit)</td>
+                <td><a target="_blank" href="./admin/product_detail.html">./admin/product_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>상품관리 - 카테고리관리</td>
+                <td><a target="_blank" href="./admin/product02.html">./admin/product02.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="5">주문관리</td>
+                <td>주문관리</td>
+                <td><a target="_blank" href="./admin/order01.html">./admin/order01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>구매확정</td>
+                <td><a target="_blank" href="./admin/order02.html">./admin/order02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>취소관리</td>
+                <td><a target="_blank" href="./admin/order03.html">./admin/order03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>교환관리</td>
+                <td><a target="_blank" href="./admin/order04.html">./admin/order04.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>반품관리</td>
+                <td><a target="_blank" href="./admin/order05.html">./admin/order05.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="3">컨텐츠관리</td>
+                <td>미베르소개</td>
+                <td><a target="_blank" href="./admin/contents01.html">./admin/contents01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>프로그램</td>
+                <td><a target="_blank" href="./admin/contents02.html">./admin/contents02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>지점안내</td>
+                <td><a target="_blank" href="./admin/contents03.html">./admin/contents03.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="6">게시판관리</td>
+                <td>공지사항</td>
+                <td><a target="_blank" href="./admin/board01.html">./admin/board01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>공지사항 - 등록</td>
+                <td><a target="_blank" href="./admin/board01_write.html">./admin/board01_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>공지사항 - 수정</td>
+                <td><a target="_blank" href="./admin/board01_edit.html">./admin/board01_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>자주하는 질문</td>
+                <td><a target="_blank" href="./admin/board02.html">./admin/board02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>자주하는 질문 - 등록</td>
+                <td><a target="_blank" href="./admin/board02_write.html">./admin/board02_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>자주하는 질문 - 수정</td>
+                <td><a target="_blank" href="./admin/board02_edit.html">./admin/board02_edit.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="2">리뷰관리</td>
+                <td>리뷰관리</td>
+                <td><a target="_blank" href="./admin/review.html">./admin/review.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>리뷰관리 - 상세보기</td>
+                <td><a target="_blank" href="./admin/review_detail.html">./admin/review_detail.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="4">문의관리</td>
+                <td>상품문의</td>
+                <td><a target="_blank" href="./admin/inquiry01.html">./admin/inquiry01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>상품문의 - 상세보기</td>
+                <td><a target="_blank" href="./admin/inquiry01_detail.html">./admin/inquiry01_detail.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1문의</td>
+                <td><a target="_blank" href="./admin/inquiry02.html">./admin/inquiry02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1문의 - 상세보기</td>
+                <td><a target="_blank" href="./admin/inquiry02_detail.html">./admin/inquiry02_detail.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="10">설정</td>
+                <td>배너관리</td>
+                <td><a target="_blank" href="./admin/preferences01.html">./admin/preferences01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>배너관리 - 신규등록</td>
+                <td><a target="_blank" href="./admin/preferences01_write.html">./admin/preferences01_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>배너관리 - 수정</td>
+                <td><a target="_blank" href="./admin/preferences01_edit.html">./admin/preferences01_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>팝업관리</td>
+                <td><a target="_blank" href="./admin/preferences02.html">./admin/preferences02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>팝업관리 - 신규등록</td>
+                <td><a target="_blank" href="./admin/preferences02_write.html">./admin/preferences02_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>팝업관리 - 수정</td>
+                <td><a target="_blank" href="./admin/preferences02_edit.html">./admin/preferences02_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>계정관리</td>
+                <td><a target="_blank" href="./admin/preferences03.html">./admin/preferences03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>계정관리 - 신규등록</td>
+                <td><a target="_blank" href="./admin/preferences03_write.html">./admin/preferences03_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>계정관리 - 수정</td>
+                <td><a target="_blank" href="./admin/preferences03_edit.html">./admin/preferences03_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>기본설정</td>
+                <td><a target="_blank" href="./admin/preferences04.html">./admin/preferences04.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="tap02">
+    <h2>마이페이지 <span>※현재 PC작업만 완료되어있습니다.</span></h2>
+    <table class="table_defalt">
+        <thead>
+            <tr>
+                <th width="80px">번호</th>
+                <th width="20%">화면구분</th>
+                <th>화면명</th>
+                <th>링크</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td>공통</td>
+                <td>마이페이지 UI</td>
+                <td><a href="./mypage/mypage_ui.html">./mypage/mypage_ui.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="5">나의 서비스</td>
+                <td>변화그래프</td>
+                <td><a href="./mypage/my_service01.html">./mypage/my_service01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>나의 미션</td>
+                <td><a href="./mypage/my_service02.html">./mypage/my_service02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>상담예약</td>
+                <td><a href="./mypage/my_service03.html">./mypage/my_service03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>프로그램</td>
+                <td><a href="./mypage/my_service04.html">./mypage/my_service04.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>컨시어지</td>
+                <td><a href="./mypage/my_service05.html">./mypage/my_service05.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="12">쇼핑활동</td>
+                <td>주문/배송</td>
+                <td><a href="./mypage/my_order01.html">./mypage/my_order01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>주문/배송 - 상세(배송완료)</td>
+                <td><a href="./mypage/my_order01_detail01.html">./mypage/my_order01_detail01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>주문/배송 - 상세(구매확정)</td>
+                <td><a href="./mypage/my_order01_detail02.html">./mypage/my_order01_detail02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>취소/교환/반품</td>
+                <td><a href="./mypage/my_order02.html">./mypage/my_order02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>찜목록</td>
+                <td><a href="./mypage/my_order03.html">./mypage/my_order03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>장바구니</td>
+                <td><a href="./mypage/my_order04.html">./mypage/my_order04.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>취소신청</td>
+                <td><a href="./mypage/my_order_cancel_write.html">./mypage/my_order_cancel_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>취소</td>
+                <td><a href="./mypage/my_order_cancel.html">./mypage/my_order_cancel.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>교환신청</td>
+                <td><a href="./mypage/my_order_change_write.html">./mypage/my_order_change_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>교환</td>
+                <td><a href="./mypage/my_order_change.html">./mypage/my_order_change.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>반품신청</td>
+                <td><a href="./mypage/my_order_return_write.html">./mypage/my_order_return_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>반품</td>
+                <td><a href="./mypage/my_order_return.html">./mypage/my_order_return.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="4">회원정보</td>
+                <td>정보수정</td>
+                <td><a href="./mypage/my_page01.html">./mypage/my_page01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>배송지관리</td>
+                <td><a href="./mypage/my_page02.html">./mypage/my_page02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>회원탈퇴</td>
+                <td><a href="./mypage/my_page03.html">./mypage/my_page03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>회원탈퇴 ( 이용중인 프로그램이 있을때 )</td>
+                <td><a href="./mypage/my_page03_2.html">./mypage/my_page03_2.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="2">혜택</td>
+                <td>적립금</td>
+                <td><a href="./mypage/my_benefits01.html">./mypage/my_benefits01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>마일리지</td>
+                <td><a href="./mypage/my_benefits02.html">./mypage/my_benefits02.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="2">상품리뷰</td>
+                <td>내가 작성한 리뷰</td>
+                <td><a href="./mypage/my_review01.html">./mypage/my_review01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>작성 가능한 리뷰</td>
+                <td><a href="./mypage/my_review02.html">./mypage/my_review02.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="5">고객센터</td>
+                <td>1:1 문의</td>
+                <td><a href="./mypage/my_inquiry01.html">./mypage/my_inquiry01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1 문의 작성</td>
+                <td><a href="./mypage/my_inquiry01_write.html">./mypage/my_inquiry01_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1 문의 상세 - 답변대기</td>
+                <td><a href="./mypage/my_inquiry01_view.html">./mypage/my_inquiry01_view.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1 문의 상세 - 답변완료</td>
+                <td><a href="./mypage/my_inquiry01_view2.html">./mypage/my_inquiry01_view2.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>상품문의</td>
+                <td><a href="./mypage/my_inquiry02.html">./mypage/my_inquiry02.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+             <!---->
+             <tr>
+                <td class="count"></td>
+                <td rowspan="5">팝업</td>
+                <td>주문수정</td>
+                <td><a href="./mypage/order_edit1.html">./mypage/order_edit1.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>주문수정(옵션)</td>
+                <td><a href="./mypage/order_edit1.html">./mypage/order_edit1.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>영수증</td>
+                <td><a href="./mypage/receipt.html">./mypage/receipt.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>리뷰수정</td>
+                <td><a href="./mypage/review_edit.html">./mypage/review_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>리뷰작성</td>
+                <td><a href="./mypage/review_write.html">./mypage/review_write.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+        </tbody>
+    </table>
+</section>
+<section id="tap03">
+    <h2>로그인/회원가입 <span>※현재 PC작업만 완료되어있습니다.</span></h2>
+    <table class="table_defalt">
+        <thead>
+            <tr>
+                <th width="80px">번호</th>
+                <th width="20%">화면구분</th>
+                <th>화면명</th>
+                <th>링크</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td>로그인</td>
+                <td>로그인</td>
+                <td><a href="./login/login.html">./login/login.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="4">회원가입</td>
+                <td>회원가입1-1</td>
+                <td><a href="./login/signup1-1.html">./login/signup1-1.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>회원가입1-2</td>
+                <td><a href="./login/signup1-2.html">./login/signup1-2.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>회원가입2-1</td>
+                <td><a href="./login/signup2-1.html">./login/signup2-1.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>회원가입2-2</td>
+                <td><a href="./login/signup2-2.html">./login/signup2-2.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="count"></td>
+                <td rowspan="3">계정찾기</td>
+                <td>아이디 찾기</td>
+                <td><a href="./login/find_id.html">./login/find_id.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>비밀번호 찾기1</td>
+                <td><a href="./login/find_pw.html">./login/find_pw.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>비밀번호 찾기2</td>
+                <td><a href="./login/find_pw2.html">./login/find_pw2.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <!---->
+            
+        </tbody>
+    </table>
+</section>
 <script>
-   $('.count').each(function(i) {
-        $(this).text(i+ 1);
-    })
+
+    // 각 테이블에서 .count 엘리먼트에 순서를 매기는 함수
+    function updateCounts() {
+        $('.table_defalt').each(function() {
+            $(this).find('.count').each(function(index) {
+                $(this).text(index + 1);
+            });
+        });
+    }
+    // 페이지 로드 시 각 테이블에 순서를 매김
+    updateCounts();
+
+
+    // 탭 메뉴 클릭 이벤트
+    $('.tap_menu li').click(function() {
+        var tabId = $(this).attr('data-name'); 
+        $('.tap_menu li').removeClass('on');
+        $(this).addClass('on'); 
+        $('section').removeClass('on');
+        $('#' + tabId).addClass('on'); 
+    });
 </script>
 </body>
 </html>

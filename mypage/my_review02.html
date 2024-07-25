@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>나의 미션</title>
+  <title>작성 가능한 리뷰</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -35,7 +35,7 @@
         <p class="aside_nav_title">나의서비스</p>
         <ul class="aside_nav">
             <li><a href="../mypage/my_service01.html">변화그래프</a></li>
-            <li class="on"><a href="../mypage/my_service02.html">나의 미션</a></li>
+            <li><a href="../mypage/my_service02.html">나의 미션</a></li>
             <li><a href="../mypage/my_service03.html">상담예약</a></li>
             <li><a href="../mypage/my_service04.html">프로그램</a></li>
             <li><a href="../mypage/my_service05.html">컨시어지</a></li>
@@ -63,7 +63,7 @@
         <p class="aside_nav_title">상품리뷰</p>
         <ul class="aside_nav">
             <li><a href="../mypage/my_review01.html">내가 작성한 리뷰</a></li>
-            <li><a href="../mypage/my_review02.html">작성 가능한 리뷰</a></li>
+            <li class="on"><a href="../mypage/my_review02.html">작성 가능한 리뷰</a></li>
         </ul>
         <p class="aside_nav_title">고객센터</p>
         <ul class="aside_nav">
@@ -72,51 +72,55 @@
         </ul>
     </section>
 
-    <section id="My_service02" class="MypageContents">
-        <h3>나의 미션</h3>
-        <div class="reservation_date_time">
-            <div class="calendar_area">
-                <!--캘린더 영역-->
-                <div id="datepicker2" class="datepicker"></div>
-                <p class="comment"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>예약 마감은 예약 시간 2시간 전 입니다.</p>
-            </div>
-            <div class="time_select">
-                <!--캘린더에서 선택한 날짜에 따라서 아래 내용변경되게-->
-                <div class="mission_top"><input type="text" class="select_date_result" readonly> <span class="achievement_rate">80%</span></div>
-                <ul class="mission_list">
-                    <li class="clear"><p><span class="count">1</span>. 아침 산책 30분</p><div class="status">달성</div></li>
-                    <li class="clear"><p><span class="count">2</span>. 식사시간 12:00 ~ 20:00</p><div class="status">달성</div></li>
-                    <li class="unclear"><p><span class="count">3</span>. 식사 시에 계란 3개 섭취</p><div class="status">미달성</div></li>
-                    <li class="unclear"><p><span class="count">4</span>. 식사 시에 계란 3개 섭취</p><div class="status">미달성</div></li>
-                </ul>
-            </div>
+    <section id="my_review02" class="MypageContents review">
+       <h3>작성 가능한 리뷰</h3>
+       <h5>주문 상품 정보</h5>
+       <ul class="product_list02">
+            <li>
+                <div class="product_area">
+                    <div class="img_area">
+                        <img src="../img/temp/product02.jpg" alt="상품썸네일">
+                    </div>
+                    <div class="txt_area">
+                        <p class="product_name">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                        <p class="prodcut_price">19,500원</p>
+                    </div>
+                </div>
+                <button type="button" onclick='location.href="../mypage/review_edit.html"'class="in_btn">상품 리뷰<img src="../img/icon_next.svg"></button>
+
+            </li>
+            <li>
+                <div class="product_area">
+                    <div class="img_area">
+                        <img src="../img/temp/product01.png" alt="상품썸네일">
+                    </div>
+                    <div class="txt_area">
+                        <p class="product_name">마케토 마카다미아 정과 견과류정과 무설탕 키토 비건 다이어트</p>
+                        <p class="product_option">마케토 옵션 : 100g (옵션가격) | 1개</p>
+                        <p class="prodcut_price">19,500원</p>
+                    </div>
+                </div>
+                <button type="button" onclick='location.href="../mypage/review_edit.html"'class="in_btn">상품 리뷰<img src="../img/icon_next.svg"></button>
+            </li>
+        </ul>
+        <div class="page_wrap">
+            <ul class="paging_btn">
+                <li class="side_left"><a><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                <li class="side_left"><a><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                <li><a class="on">1</a></li> 
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>6</a></li>
+                <li><a>7</a></li>
+                <li><a>8</a></li>
+                <li><a>9</a></li>
+                <li><a>10</a></li>
+                <li class="side_left"><a><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class="side_right"><a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
-        <script>
-            $.datepicker.setDefaults({
-                //dateFormat: 'yymmdd',  // 20240000
-                dateFormat: 'yy'+'년'+'mm'+'월'+'dd'+'일', // 2024년00월00일 
-                prevText: '이전 달',
-                nextText: '다음 달',
-                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-                showMonthAfterYear: true,
-                yearSuffix: '년'
-            });
-            $( "#datepicker2" ).datepicker({
-                onSelect: function(dateString) {
-                    $('.select_date_result').val(dateString);
-                }
-            });
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-            var yyyy = today.getFullYear();
-            today = yyyy + '년' + mm + '월' + dd + '일';
-            $(".select_date_result").val(today);
-        </script>
     </section>
 </section>
 <!--======컨텐츠=====-->
