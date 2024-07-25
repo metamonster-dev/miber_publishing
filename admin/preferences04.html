@@ -10,9 +10,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
-  <link rel="stylesheet" href="../css/font-awesome.min.css"> <!--fontawsome-->
   <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.css" />
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="../css/custom.css" />
@@ -21,6 +20,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="../js/common.js"></script>
   <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
   <script src="../js/common.js"></script>
 </head>
@@ -54,7 +54,7 @@
               <li><a href="member01.html">일반회원</a></li>
               <li><a href="member02.html">정회원</a></li>
               <li><a href="member03.html">탈퇴회원</a></li>
-              <li><a href="member04.html">정회원 승인</a></li>
+              
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -215,6 +215,38 @@
         <p class="label_name required">리뷰 적립금 설정</p>
         <input type="text" value="1,000" required>
     </label>
+    <P class="label_name">반품/교환</P>
+    <div class="label_wrap">
+      <p class="label_name2  required">반품/교환 택배사</p>
+      <select>
+          <option>한진택배</option>
+      </select>
+    </div>
+    <div class="label_wrap">
+      <p class="label_name2  required">반품/교환 택배사</p>
+      <select>
+          <option>한진택배</option>
+      </select>
+    </div>
+  <div class="label_wrap">
+      <label>
+          <p class="label_name2 required">반품 배송비(편도)</p>
+          <input type="text" required>
+      </label>
+      <label>
+          <p class="label_name2 required">교환 배송비(왕복)</p>
+          <input type="tel" required>
+      </label>
+  </div>
+  
+  <div class="label_wrap">
+      <label>
+          <p class="label_name2  required">반품/교환지</p>
+          <input type="text" readonly disabled style="width:370px" required>
+          <input type="button" value="주소검색" style="width:80px;margin-right:10px;" required>
+          <input type="text" value="7층" >
+      </label>
+    </div>
     </form>
 
     <button type="submit" class="mt_40">저장</button>
