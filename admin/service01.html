@@ -256,7 +256,7 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><button class="in_btn" onclick="goto_next()">선택</button></td>
+                        <td><button class="in_btn" onclick="goto_next(member_reservation2)">선택</button></td>
                         <td>일반회원</td>
                         <td>dmonster@gmail.com</td>
                         <td>홍길동</td>
@@ -267,7 +267,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><button class="in_btn" onclick="goto_next()">선택</button></td>
+                        <td><button class="in_btn" onclick="goto_next(member_reservation3)">선택</button></td>
                         <td>정회원</td>
                         <td>dmonster@gmail.com</td>
                         <td>홍길동</td>
@@ -291,18 +291,9 @@
             </div>
         </div>
 
-        <div id="member_reservation2" class="board next">
-            <a class="circle_btn back_btn" onclick="goto_prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-            <!--<p class="title">상담신청</p>
-            <div class="select">
-                <input type="radio" id="type01" name="reservation_type" checked><label for="type01">신규 상담</label>
-                <input type="radio" id="type02" name="reservation_type"><label for="type02">정회원 상담</label>
-                <input type="radio" id="type03" name="reservation_type"><label for="type03">산소챔버</label>
-                <input type="radio" id="type04" name="reservation_type"><label for="type04">마사지</label>
-                <input type="radio" id="type05" name="reservation_type"><label for="type05">크라이오</label>
-                <p class="comment"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>동시 예약 인원 안내 : 신규상담 2명, 정회원상담 2명, 산소챔버 2명, 마사지 3명, 크라이오 1명</p>
-            </div> -->
-            <!--상담신청폼 1 : 신규회원-->
+        <!--상담신청폼 1 : 신규회원-->
+        <div id="member_reservation2" class="board next member_reservation">
+            <a class="circle_btn back_btn" onclick="goto_prev(member_reservation2)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
             <p class="title">일시선택</p>
             <div class="reservation_date_time">
                 <div class="calendar_area">
@@ -334,12 +325,23 @@
                 <div class="time_select">
                     <!--캘린더에서 선택한 날짜에 따라서 아래 내용변경되게-->
                     <div><input type="text" class="select_date_result" readonly placeholder="캘린더에서 예약날짜를 선택해주세요"></div>
-                    <div class="select">
-                        <input type="radio" id="09:00" name="reservation_time" checked><label for="09:00">09:00</label> <!-- 선택 -->
-                        <input type="radio" id="10:00" name="reservation_time" disabled><label for="10:00">10:00</label> <!-- 선택불가 -->
-                        <input type="radio" id="11:00" name="reservation_time"><label for="11:00">11:00</label>
-                        <input type="radio" id="12:00" name="reservation_time"><label for="12:00">12:00</label>
-                        <input type="radio" id="13:00" name="reservation_time"><label for="13:00">13:00</label>
+                    <div class="select2">
+                        <label for="10:00"><input type="radio" id="10:00" name="reservation_time" checked>10:00</label> <!-- 선택 -->
+                        <label for="11:00"><input type="radio" id="11:00" name="reservation_time" disabled>11:00</label> <!-- 선택불가 -->
+                        <label for="11:30"><input type="radio" id="11:30" name="reservation_time">11:30</label>
+                        <label for="12:00"><input type="radio" id="12:00" name="reservation_time">12:00</label>
+                        <label for="12:30"><input type="radio" id="12:30" name="reservation_time">12:30</label>
+                        <label for="13:00"><input type="radio" id="13:00" name="reservation_time">13:00</label>
+                        <label for="13:30"><input type="radio" id="13:30" name="reservation_time">13:30</label>
+                        <label for="14:00"><input type="radio" id="14:00" name="reservation_time">14:00</label>
+                        <label for="14:30"><input type="radio" id="14:30" name="reservation_time">14:30</label>
+                        <label for="15:00"><input type="radio" id="15:00" name="reservation_time">15:00</label>
+                        <label for="15:30"><input type="radio" id="15:30" name="reservation_time">15:30</label>
+                        <label for="16:00"><input type="radio" id="16:00" name="reservation_time">16:00</label>
+                        <label for="16:30"><input type="radio" id="16:30" name="reservation_time">16:30</label>
+                        <label for="17:00"><input type="radio" id="17:00" name="reservation_time">17:00</label>
+                        <label for="17:30"><input type="radio" id="17:30" name="reservation_time">17:30</label>
+                        <label for="18:00"><input type="radio" id="18:00" name="reservation_time">18:00</label>
                     </div>
                 </div>
             </div>
@@ -379,12 +381,80 @@
             <button type="submit" onclick="close_modal()">확인</button>
         </div>
         
+
+        <!--상담신청폼 2 : 정회원-->
+        <div id="member_reservation3" class="board next member_reservation">
+          <a class="circle_btn back_btn" onclick="goto_prev(member_reservation3)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+          <p class="title">일시선택</p>
+          <div class="reservation_date_time">
+              <div class="calendar_area">
+                  <!--캘린더 영역-->
+                  <div id="datepicker3" class="datepicker"></div>
+                  <p class="comment"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>예약 마감은 예약 시간 2시간 전 입니다.</p>
+                  <script>
+                      $.datepicker.setDefaults({
+                          //dateFormat: 'yymmdd',  // 20240000
+                          dateFormat: 'yy'+'년'+'mm'+'월'+'dd'+'일', // 2024년00월00일 
+                          prevText: '이전 달',
+                          nextText: '다음 달',
+                          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                          monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                          dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                          dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                          showMonthAfterYear: true,
+                          yearSuffix: '년'
+                      });
+                      $( "#datepicker3" ).datepicker({
+                          onSelect: function(dateString) {
+                              $('.select_date_result').val(dateString);
+                          },
+                          minDate: 0
+                      });
+                  </script>
+              </div>
+              <div class="time_select">
+                  <!--캘린더에서 선택한 날짜에 따라서 아래 내용변경되게-->
+                  <div><input type="text" class="select_date_result" readonly placeholder="캘린더에서 예약날짜를 선택해주세요"></div>
+                  <div class="select2">
+                    <label for="10:00"><input type="radio" id="10:00" name="reservation_time" checked>10:00</label> <!-- 선택 -->
+                    <label for="11:00"><input type="radio" id="11:00" name="reservation_time" disabled>11:00</label> <!-- 선택불가 -->
+                    <label for="11:30"><input type="radio" id="11:30" name="reservation_time">11:30</label>
+                    <label for="12:00"><input type="radio" id="12:00" name="reservation_time">12:00</label>
+                    <label for="12:30"><input type="radio" id="12:30" name="reservation_time">12:30</label>
+                    <label for="13:00"><input type="radio" id="13:00" name="reservation_time">13:00</label>
+                    <label for="13:30"><input type="radio" id="13:30" name="reservation_time">13:30</label>
+                    <label for="14:00"><input type="radio" id="14:00" name="reservation_time">14:00</label>
+                    <label for="14:30"><input type="radio" id="14:30" name="reservation_time">14:30</label>
+                    <label for="15:00"><input type="radio" id="15:00" name="reservation_time">15:00</label>
+                    <label for="15:30"><input type="radio" id="15:30" name="reservation_time">15:30</label>
+                    <label for="16:00"><input type="radio" id="16:00" name="reservation_time">16:00</label>
+                    <label for="16:30"><input type="radio" id="16:30" name="reservation_time">16:30</label>
+                    <label for="17:00"><input type="radio" id="17:00" name="reservation_time">17:00</label>
+                    <label for="17:30"><input type="radio" id="17:30" name="reservation_time">17:30</label>
+                    <label for="18:00"><input type="radio" id="18:00" name="reservation_time">18:00</label>
+                  </div>
+              </div>
+          </div>
+
+          
+          <p class="title">상담구분</p>
+          <div class="select">
+              <input type="radio" id="type01" name="reservation_type" checked><label for="type01">신규 상담</label>
+              <input type="radio" id="type02" name="reservation_type"><label for="type02">정회원 상담</label>
+              <input type="radio" id="type03" name="reservation_type"><label for="type03">산소챔버</label>
+              <input type="radio" id="type04" name="reservation_type"><label for="type04">마사지</label>
+              <input type="radio" id="type05" name="reservation_type"><label for="type05">크라이오</label>
+          </div>
+          
+          <button type="submit" onclick="close_modal()" class="mt_100">확인</button>
+      </div>
         <script>
-            function goto_next() {
-                $('#member_reservation2').removeClass('next');
+            function goto_next(id) {
+                $(id).removeClass('next');
             }
-            function goto_prev() {
-                $('#member_reservation2').addClass('next');
+            function goto_prev(id) {
+              $(id).addClass('next');
             }
             $('.modal_close').on("click",function(){
                 $('.fullpage_modal').removeClass('on');
@@ -414,7 +484,7 @@
                         <th width="120px">생년월일</th>
                         <th width="120px">성별</th>
                         <th width="120px">예약일시</th>
-                     </tr>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>

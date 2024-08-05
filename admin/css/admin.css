@@ -24,9 +24,10 @@ label .comment span{font-size:10px}
 .comment i{margin-right:10px;}
 .comment{line-height:18px;}
 .btn_area{display:flex;justify-content: flex-end;align-items:center;gap:4px;margin-bottom:20px;gap:4px !important}
+.btn_area.left{justify-content:flex-start;}
 .btn_area.btm{justify-content:flex-start !important;}
 .btn_area button{min-width:80px;}
-.title{font-size:17px;margin-bottom:24px;color:#000}
+.title{font-size:22px;margin-bottom:24px;color:#000;font-weight:800;}
 .warnning-txt{color:#f53232;display:none;}
 .warnning-txt2{color:#f53232;margin-bottom:5px}
 .warnning-txt2 i{color:#f53232;}
@@ -34,7 +35,7 @@ label .comment span{font-size:10px}
 select{width:107px}
 .green{background:#00ac47;color:#fff}
 input[type="checkbox"]{width:12px;height:12px;}
-input:read-only{background:#ccc; user-select:none}
+input:read-only{background:#e4e4e4; user-select:none}
 /* 보드 박스 디자인 공통 */
 .board{padding:20px;border:1px solid #ccc;background:#fff;border-radius:5px;}
 .board_name{font-size:14px;font-weight:700;margin-bottom:16px;position:relative;color:#000}
@@ -129,7 +130,7 @@ input:read-only{background:#ccc; user-select:none}
 .in_btn_area button.in_btn{float:left;}
 button.in_btn.accent{color: #006bff;border:1px solid #006bff;background:#f2f7ff}
 label.imgfile{width:176px;height:176px;display:flex;flex-direction: column;justify-content: center;align-items:center;border:1px solid #EEEEEE;background:#fafafa;border-radius:10px;border:1px dotted #ccc;position:relative;overflow:hidden;}
-label.imgfile i{font-size:32px}
+label.imgfile i{font-size:20px}
 .imgfile img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
 input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
 .table2 th {background:#212529;color:#fff}
@@ -137,14 +138,15 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .table2 .depth1{background:#f1f5ff !important;}
 .table2 .depth2{background:#e6eaf5 !important}
 .table2 .depth3{background:#d8dbe5 !important;}
-.option_top_area{display:flex;justify-content:space-between;}
-.option_top_area .filter_top_area{display: flex;align-items:center;gap:16px;}
+.option_top_area{display:flex;justify-content:space-between;margin-bottom:16px}
+.option_top_area .left{display:flex;gap:8px;align-items:center;}
+.option_top_area .filter_top_area{display: flex;justify-content:flex-end;align-items:center;gap:16px;}
 .option_top_area .filter_top_area input{width:160px;margin-left:8px;}
-
-
-
-
-
+#addOption{width:220px;}
+.option_wrap{display:none;}
+.option_add_wrap{margin-bottom:30px}
+#optionEdit{background:#e5e5e5;padding:16px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc}
+#optionEdit .label_wrap{margin-bottom:0;padding:0 16px;}
 
 /*--회원관리--*/
 /*--회원관리--*/
@@ -175,17 +177,25 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .fullpage_modal .btn_area{margin-bottom:0;}
 
 /*서비스관리 - 상담예약*/
-#member_reservation2{overflow-y:scroll;}
-#member_reservation2.next{left:150%;transition:.5s}
-#member_reservation2 > div{margin-bottom:32px}
-#member_reservation2 .comment{margin-top:6px}
-#member_reservation2 button[type="submit"]{width:100%;}
+.member_reservation{overflow-y:scroll;z-index:1;opacity:1;}
+.member_reservation.next{left:55%;transition:.3s;opacity:0;z-index:-1;}
+.member_reservation > div{margin-bottom:32px}
+.member_reservation .comment{margin-top:6px}
+.member_reservation button[type="submit"]{width:100%;}
+.select2 {margin:20px 0 8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;}
+.select2 label input{margin-right:8px;}
+.select2 label:has(input[type=radio]){display: inline-block;cursor: pointer;height:48px;width:23%;border: 1px solid #ccc;border-radius:5px;line-height:48px;text-align: center;font-weight:bold;font-size:13px;}
+.select2 label:has(input[type=radio]){background-color: #fff;color:#000}
+.select2 label:has(input:disabled){background:#a7a7a7;color:#ddd}
+
 .select {margin:0 0 8px}
 .select input[type=radio]{display: none;}
-.select input[type=radio]+label{display: inline-block;cursor: pointer;height:36px;width:157px;border: 1px solid #ccc;border-radius:5px;line-height:36px;text-align: center;font-weight:bold;font-size:13px;}
+.select input[type=radio]+label{display: inline-block;cursor: pointer;height:48px;width:157px;border: 1px solid #ccc;border-radius:5px;line-height:48px;text-align: center;font-weight:bold;font-size:13px;}
 .select input[type=radio]+label{background-color: #fff;color:#000}
 .select input[type=radio]:checked+label{background-color:#374a65;color: #fff;}
 .select input:disabled+label{background:#a7a7a7;color:#ddd}
+
+
 
 #type01_from{width:100%;margin-bottom:60px;display:flex;flex-wrap: wrap;justify-content: space-between;gap:16px}
 #type01_from label{display:flex;align-items:center;gap:16px}
@@ -281,13 +291,17 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 #mission_area input[type="checkbox"]{width:26px;height:26px;}
 
 /*변화그래프*/
-#service05_detail_table .in_btn_area{width:inherit;;border:0}
+#service05_detail_table .in_btn_area{width:inherit;border:0}
 .table_wrap{overflow-x:scroll;}
 #service05_detail_table{width:inherit;overflow-x:scroll;}
 #service05_detail_table .in_btn_area{border:0}
 #service05_detail_table th{width:100px;}
 #service05_detail_table td{width:160px;}
 
+/*컨시어지*/
+.addImg_wrap{display:flex;gap:16px}
+#Edit_concierge .label_wrap input{width:470px;}
+#Edit_concierge textarea{width:955px;height:120px}
 
 
 /*상품관리*/
@@ -322,6 +336,9 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 
 .delivery_type{display: none;}
 .delivery_type.on{display:block;}
+
+.delivery_fee{display: none;}
+.delivery_fee.on{display:block;}
 
 /*주문관리*/
 #order01_list{overflow-x:scroll;}

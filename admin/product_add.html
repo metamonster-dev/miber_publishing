@@ -180,121 +180,141 @@ $('.adm_nav_depth1').click(function() {
             </label>
         </div>
         <p class="label_name">옵션</p>
-        <div class="option_top_area">
-            <div>
-                <ul class="filter_select mb_20">
-                    <li class="on">설정</li>
-                    <li>설정안함</li>
-                </ul>
-            </div>
-            <div class="filter_top_area">
-                <p>옵션가<input type="text"></p>
-                <p>재고수량<input type="text"></p>
-                <p>사용여부
-                    <select disabled>
-                        <option>Y</option>
-                        <option>N</option>
-                    </select>
-                </p>
-                <p><button class="in_btn">옵션일괄적용</button></p>
-            </div>
+        <div>
+            <ul class="filter_select mb_20" id="optionView">
+                <li>설정</li>
+                <li class="on">설정안함</li>
+            </ul>
         </div>
-        <div class="option_area">
-        <table id="option_table" class="table_defalt">
-            <thead>
-                <tr>
-                    <th width="50px"><input type="checkbox"></th>
-                    <th>옵션명</th>
-                    <th>옵션값</th>
-                    <th>옵션가</th>
-                    <th>재고수량</th>
-                    <th>판매상태</th>
-                    <th>사용여부</th>
-                    <th>삭제</th>
-                </tr>
-            </thead>
-            <tbody id="productOptionTable">
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td><input value="마케도 옵션"  placeholder="옵션명입력" readonly></td>
-                    <td><input value="100g" readonly></td>
-                    <td><input value="0" readonly></td>
-                    <td><input value="0" readonly></td>
-                    <td>
-                        <select disabled>
-                            <option>판매</option>
-                            <option>비판매</option>
+        <div class="option_wrap">
+            
+            <div class="option_add_wrap">
+                <div class="option_top_area">
+                    <div class="left">
+                        <P class="label_name2 required ">옵션설정</P>
+                        <select id="optionEdit_count">
+                            <option>1개</option>
+                            <option>2개</option>
+                            <option>3개</option>
                         </select>
-                    </td>
-                    <td>
+                    </div>
+                    <button type="button" id="addOption">옵션 목록 적용</button>
+                </div>
+                <ul id="optionEdit" >
+                    <li class="label_wrap">
+                        <label>
+                            <p class="label_name2">옵션명</p>
+                            <input type="text" style="width:220px">
+                        </label>
+                        <label>
+                            <p class="label_name2">옵션값</p>
+                            <input type="text">
+                        </label>
+                    </li>
+                </ul>
+                <script>
+                // 초기 상태로 1개 항목을 생성
+                updateOptionList();
+
+                // 선택박스의 값이 변경될 때마다 업데이트
+                $('#optionEdit_count').change(function() {
+                    updateOptionList();
+                });
+
+                function updateOptionList() {
+                    // 선택된 개수 가져오기
+                    const itemCount = parseInt($('#optionEdit_count').val());
+                    // 현재 li 요소 개수 가져오기
+                    const currentCount = $('#optionEdit li').length;
+                    if (itemCount > currentCount) {
+                        // 추가할 필요가 있는 경우
+                        for (let i = currentCount; i < itemCount; i++) {
+                            $('#optionEdit').append(`
+                                <li class="label_wrap">
+                                    <label>
+                                        <input type="text" style="width:220px">
+                                    </label>
+                                    <label>
+                                        <input type="text">
+                                    </label>
+                                </li>
+                            `);
+                        }
+                    } else if (itemCount < currentCount) {
+                        // 제거할 필요가 있는 경우
+                        $('#optionEdit li').slice(itemCount).remove();
+                    }
+                }
+                </script>
+            </div>
+            <div class="option_top_area">
+                <button class="in_btn">선택삭제</button>
+                <div class="filter_top_area">
+                    <p>옵션가<input type="text"></p>
+                    <p>재고수량<input type="text"></p>
+                    <p>사용여부
                         <select disabled>
                             <option>Y</option>
                             <option>N</option>
                         </select>
-                    </td>
-                    <td class="in_btn_area">
-                        <button type="button" class="in_btn" onclick="editRow(this)">수정</button>
-                        <button type="button" class="in_btn" onclick="deleteRow(this)">삭제</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <button type="button" class="table_add_btn" onclick="addRow()"> + 옵션추가 </button>
-        <button type="button" class="in_btn accent mt_20" onclick="completeEdit()" > 옵션 설정 완료</button>
-        <script>
-            function addRow() {
-            const table = document.getElementById('productOptionTable');
-            if (table.rows.length >= 3) {
-                alert("최대 3개의 옵션만 추가할 수 있습니다.");
-            return;
-            }
-            const newRow = table.insertRow();
-            newRow.innerHTML = `
-                <td><input type="checkbox"></td>
-                    <td><input value="" placeholder="옵션명 입력"></td>
-                    <td><input value="" placeholder="옵션값 입력"></td>
-                    <td><input value="" placeholder="옵션가 입력"></td>
-                    <td><input value="" placeholder="재고수량 입력" ></td>
-                    <td>
-                        <select>
-                            <option>판매</option>
-                            <option>비판매</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select>
-                            <option>Y</option>
-                            <option>N</option>
-                        </select>
-                    </td>
-                    <td class="in_btn_area">
-                        <button type="button" class="in_btn" onclick="editRow(this)">수정</button>
-                        <button type="button" class="in_btn" onclick="deleteRow(this)">삭제</button>
-                    </td>
-            `;
-            }
-    
-            function editRow(button) {
-                const row = button.parentElement.parentElement;
-                const inputs = row.querySelectorAll('input');
-                const selects = row.querySelectorAll('select');
-                inputs.forEach(input => input.removeAttribute('readonly'));
-                selects.forEach(select => select.removeAttribute('disabled'))
-            }
-    
-            function deleteRow(button) {
-                const row = button.parentElement.parentElement;
-                row.remove();
-            }
-    
-            function completeEdit() {
-                const table = document.getElementById('productOptionTable');
-                const inputs = table.querySelectorAll('input');
-                const selects = table.querySelectorAll('select');
-                inputs.forEach(input => input.setAttribute('readonly', true));
-                selects.forEach(select => select.setAttribute('disabled', true));
-            }
-        </script>
+                    </p>
+                    <button type="button" class="in_btn">옵션 일괄 적용</button>
+                </div>
+            </div>
+            <div class="option_area">
+                <table id="option_table" class="table_defalt">
+                    <thead>
+                        <tr>
+                            <th width="50px"><input type="checkbox"></th>
+                            <th>옵션명</th>
+                            <th>옵션값</th>
+                            <th>옵션가</th>
+                            <th>재고수량</th>
+                            <th>판매상태</th>
+                            <th>사용여부</th>
+                            <th>삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productOptionTable">
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>마케도옵션</td>
+                            <td>100g</td>
+                            <td><input value="0" readonly></td>
+                            <td><input value="0" readonly></td>
+                            <td>
+                                <select disabled>
+                                    <option>판매</option>
+                                    <option>비판매</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select disabled>
+                                    <option>Y</option>
+                                    <option>N</option>
+                                </select>
+                            </td>
+                            <td class="in_btn_area">
+                                <button type="button" class="in_btn" onclick="editRow(this)">수정</button>
+                                <button type="button" class="in_btn" onclick="deleteRow(this)">삭제</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <script>
+                $('#optionView li').click(function() {
+                    // 클릭된 항목에 'on' 클래스를 추가하고, 다른 항목에서 'on' 클래스를 제거
+                    $(this).addClass('on').siblings().removeClass('on');
+                    
+                    // '설정'이 클릭되면 .option_wrap을 보이게 하고, '설정안함'이 클릭되면 숨김
+                    if ($(this).text().trim() === '설정') {
+                        $('.option_wrap').slideDown();
+                    } else if ($(this).text().trim() === '설정안함') {
+                        $('.option_wrap').slideUp();
+                    }
+                    });
+            </script>
         </div>
         <p class="label_name mt_40">상품이미지</p>
         <div class="imgfile_wrap mt_15">
@@ -498,27 +518,56 @@ $('.adm_nav_depth1').click(function() {
                 <option>선택</option>
             </select>
             <p class="label_name2">상품별 배송비</p>
-            <ul class="filter_select3 mb_20">
-                <li class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="조겅부 무료" >조건부 무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
+            <ul class="filter_select3 mb_20" id="deliveryFee">
+                <li data-target="01" class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
+                <li data-target="02"><label><input type="hidden" name="delivery_fee" value="조건부 무료" >조건부 무료</label></li>
+                <li data-target="03"><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
             </ul>
-            <label>
-                <p class="label_name2 required">기본 배송비</p>
-                <input type="text" required>
-            </label>
-            <label>
-                <p class="label_name2 required">배송비 조건</p>
-                <span><input type="text" > 원 이상 무료</span>
-            </label>
-            <label>
-                <p class="label_name2">제주/도서산간 추가배송비</p>
-                <input type="text">
-            </label>
-            <label>
-                <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
-                <input type="text">
-            </label>
+            <!--배송비 무료-->
+            <div class="delivery_fee 01 on">
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 조건부 무료-->
+            <div class="delivery_fee 02">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2 required">배송비 조건</p>
+                    <span><input type="text" > 원 이상 무료</span>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 유료 -->
+            <div class="delivery_fee 03">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
             <label>
                 <p class="label_name2 required">출고지</p>
                 <p class="address mb_5"><span><input type="text" style="width:100px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:322px" readonly disabled></p>
@@ -528,27 +577,56 @@ $('.adm_nav_depth1').click(function() {
         <!--직접배송-->
         <div class="delivery_type 02">
             <p class="label_name2">상품별 배송비</p>
-            <ul class="filter_select3 mb_20">
-                <li class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="조겅부 무료" >조건부 무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
+            <ul class="filter_select3 mb_20" id="deliveryFee">
+                <li data-target="01" class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
+                <li data-target="02"><label><input type="hidden" name="delivery_fee" value="조건부 무료" >조건부 무료</label></li>
+                <li data-target="03"><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
             </ul>
-            <label>
-                <p class="label_name2 required">기본 배송비</p>
-                <input type="text" required>
-            </label>
-            <label>
-                <p class="label_name2 required">배송비 조건</p>
-                <span><input type="text" > 원 이상 무료</span>
-            </label>
-            <label>
-                <p class="label_name2">제주/도서산간 추가배송비</p>
-                <input type="text">
-            </label>
-            <label>
-                <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
-                <input type="text">
-            </label>
+            <!--배송비 무료-->
+            <div class="delivery_fee 01 on">
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 조건부 무료-->
+            <div class="delivery_fee 02">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2 required">배송비 조건</p>
+                    <span><input type="text" > 원 이상 무료</span>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 유료 -->
+            <div class="delivery_fee 03">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
             <label>
                 <p class="label_name2 required">출고지</p>
                 <p class="address mb_5"><span><input type="text" style="width:100px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:322px" readonly disabled></p>
@@ -563,27 +641,56 @@ $('.adm_nav_depth1').click(function() {
                 <input type="text">
             </label>
             <p class="label_name2">상품별 배송비</p>
-            <ul class="filter_select3 mb_20">
-                <li class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="조겅부 무료" >조건부 무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
+            <ul class="filter_select3 mb_20" id="deliveryFee">
+                <li data-target="01" class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
+                <li data-target="02"><label><input type="hidden" name="delivery_fee" value="조건부 무료" >조건부 무료</label></li>
+                <li data-target="03"><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
             </ul>
-            <label>
-                <p class="label_name2 required">기본 배송비</p>
-                <input type="text" required>
-            </label>
-            <label>
-                <p class="label_name2 required">배송비 조건</p>
-                <span><input type="text" > 원 이상 무료</span>
-            </label>
-            <label>
-                <p class="label_name2">제주/도서산간 추가배송비</p>
-                <input type="text">
-            </label>
-            <label>
-                <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
-                <input type="text">
-            </label>
+            <!--배송비 무료-->
+            <div class="delivery_fee 01 on">
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 조건부 무료-->
+            <div class="delivery_fee 02">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2 required">배송비 조건</p>
+                    <span><input type="text" > 원 이상 무료</span>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 유료 -->
+            <div class="delivery_fee 03">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
             <label>
                 <p class="label_name2 required">출고지</p>
                 <p class="address mb_5"><span><input type="text" style="width:100px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:322px" readonly disabled></p>
@@ -599,27 +706,56 @@ $('.adm_nav_depth1').click(function() {
                 <li><label><input type="hidden" name="delivery_method_quick">인천</label></li>
             </ul>
             <p class="label_name2 required">상품별 배송비</p>
-            <ul class="filter_select3 mb_20">
-                <li class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="조겅부 무료" >조건부 무료</label></li>
-                <li><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
+            <ul class="filter_select3 mb_20" id="deliveryFee">
+                <li data-target="01" class="on"><label><input type="hidden" name="delivery_fee" value="무료" checked>무료</label></li>
+                <li data-target="02"><label><input type="hidden" name="delivery_fee" value="조건부 무료" >조건부 무료</label></li>
+                <li data-target="03"><label><input type="hidden" name="delivery_fee" value="유료" >유료</label></li>
             </ul>
-            <label>
-                <p class="label_name2 required">기본 배송비</p>
-                <input type="text" required>
-            </label>
-            <label>
-                <p class="label_name2 required">배송비 조건</p>
-                <span><input type="text" > 원 이상 무료</span>
-            </label>
-            <label>
-                <p class="label_name2">제주/도서산간 추가배송비</p>
-                <input type="text">
-            </label>
-            <label>
-                <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
-                <input type="text">
-            </label>
+            <!--배송비 무료-->
+            <div class="delivery_fee 01 on">
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 조건부 무료-->
+            <div class="delivery_fee 02">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2 required">배송비 조건</p>
+                    <span><input type="text" > 원 이상 무료</span>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
+            <!--배송비 유료 -->
+            <div class="delivery_fee 03">
+                <label>
+                    <p class="label_name2 required">기본 배송비</p>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <p class="label_name2">제주/도서산간 추가배송비</p>
+                    <input type="text">
+                </label>
+                <label>
+                    <p class="label_name2">지역별 차등 배송비(제주/.도서산간 제외)</p>
+                    <input type="text">
+                </label>
+            </div>
             <label>
                 <p class="label_name2 required">출고지</p>
                 <p class="address mb_5"><span><input type="text" style="width:100px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:322px" readonly disabled></p>
@@ -627,7 +763,7 @@ $('.adm_nav_depth1').click(function() {
             </label>
         </div>
         <script>
-            /* 배송토글*/
+            /* 배송비토글*/
             $('#deliveryType li').on('click', function() {
             var targetClass = $(this).data('target');
                 // 모든 delivery_type 섹션 숨기기
@@ -639,7 +775,24 @@ $('.adm_nav_depth1').click(function() {
                 // 선택된 li 항목에만 'on' 클래스 추가
                 $(this).addClass('on');
             });
+            /* 배송토글*/
+            $('#deliveryFee li').on('click', function() {
+            var targetClass = $(this).data('target');
+                // 모든 delivery_type 섹션 숨기기
+                $('.delivery_fee').removeClass('on');
+                // 선택된 delivery_type 섹션만 표시하기
+                $('.delivery_fee.' + targetClass).addClass('on');
+                // 모든 li 항목에서 'on' 클래스 제거
+                $('#deliveryFee li').removeClass('on');
+                // 선택된 li 항목에만 'on' 클래스 추가
+                $(this).addClass('on');
+            });
         </script>
+        <p class="label_name mt_40 required">진열상태</p>
+        <ul class="filter_select3 mb_20">
+            <li class="on"><label><input type="hidden" checked>진열</label></li>
+            <li><label><input type="hidden" >미진열</label></li>
+        </ul>
         </form>
         <div class="btn_area btm mt_40">
             <button type="button">목록</button>
