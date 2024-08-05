@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>상품관리 - 상품관리 - 상품수정</title>
+  <title>컨텐츠관리 / 프로그램</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -20,9 +20,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script src="../js/common.js"></script>
   <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -94,6 +93,7 @@
               <li><a href="contents01.html">미베르소개</a></li>
               <li><a href="contents02.html">프로그램</a></li>
               <li><a href="contents03.html">지점안내</a></li>
+              <li><a href="contents04.html">M-Box</a></li>
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -146,36 +146,76 @@
   <section id="admin_contents_wrap">
     <!----======== 내용부분    ========---->
     <p class="title">컨텐츠관리 / 프로그램</p>
+
     <ul class="tab_menu">
-        <li class="on" data-target="contents_programs">프로그램 소개</li>
+      <li class="on" data-target="program1">Body Styling</li>
+      <li data-target="program2">3:1코칭</li>
+      <li data-target="program3">M-Box</li>
+      <li data-target="program4">기기관리</li>
     </ul>
 
-    <article id="contents_programs" class="editor_wrap on">
-        <div id="content"></div>
-        <button type="submit" class="mt_40">저장</button>
-    </article>
+  <article id="program1" class="editor_wrap on">
+      <div id="content"></div>
+      <button type="submit" class="mt_40">저장</button>
+  </article>
+  <article id="program2" class="editor_wrap">
+      <div id="content2"></div>
+      <button type="submit" class="mt_40">저장</button>
+  </article>
+  <article id="program3" class="editor_wrap">
+      <div id="content3"></div>
+      <button type="submit" class="mt_40">저장</button>
+  </article>
+  <article id="program4" class="editor_wrap">
+    <div id="content4"></div>
+    <button type="submit" class="mt_40">저장</button>
+  </article>
 
-    <script>
-        // 탭 메뉴 기능
-        $('.tab_menu li').on('click', function() {
-            $('.tab_menu li').removeClass('on');
-            $('.editor_wrap').removeClass('on');
+  <script>
+      // 탭 메뉴 기능
+      $('.tab_menu li').on('click', function() {
+          $('.tab_menu li').removeClass('on');
+          $('.editor_wrap').removeClass('on');
 
-            $(this).addClass('on');
-            $('#' + $(this).data('target')).addClass('on');
-        });
-        const editor = new toastui.Editor({
-            el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
-            height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
-            initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
-            initialValue: '프로그램 내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
-            previewStyle: 'vertical',                // 마크다운 프리뷰 스타일 (tab || vertical)
+          $(this).addClass('on');
+          $('#' + $(this).data('target')).addClass('on');
+      });
+      const editor = new toastui.Editor({
+          el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
+          height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+          initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+          initialValue: 'Body Styling 내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+          previewStyle: 'vertical',                // 마크다운 프리뷰 스타일 (tab || vertical)
 
-        });
-    </script>
-    
-    <!----======== 내용부분 끝 ========---->
-  </section>
+      });
+      const editor2 = new toastui.Editor({
+          el: document.querySelector('#content2'), // 에디터를 적용할 요소 (컨테이너)
+          height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+          initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+          initialValue: '3:1코칭 내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+          previewStyle: 'vertical',                // 마크다운 프리뷰 스타일 (tab || vertical)
+
+      });
+      const editor3 = new toastui.Editor({
+          el: document.querySelector('#content3'), // 에디터를 적용할 요소 (컨테이너)
+          height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+          initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+          initialValue: 'M-Box 내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+          previewStyle: 'vertical',                // 마크다운 프리뷰 스타일 (tab || vertical)
+
+      });
+      const editor4 = new toastui.Editor({
+          el: document.querySelector('#content4'), // 에디터를 적용할 요소 (컨테이너)
+          height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+          initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+          initialValue: '기기관리 내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+          previewStyle: 'vertical',                // 마크다운 프리뷰 스타일 (tab || vertical)
+
+      });
+  </script>
+  
+  <!----======== 내용부분 끝 ========---->
+</section>
   <!----======== 관리자 레이아웃 하단    ========---->
   <section id="admin_footer_wrap">
     <div></div>

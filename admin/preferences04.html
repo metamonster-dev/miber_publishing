@@ -20,9 +20,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script src="../js/common.js"></script>
   <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -94,6 +93,7 @@
               <li><a href="contents01.html">미베르소개</a></li>
               <li><a href="contents02.html">프로그램</a></li>
               <li><a href="contents03.html">지점안내</a></li>
+              <li><a href="contents04.html">M-Box</a></li>
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -188,10 +188,21 @@
             <input type="text" value="평일 08:30~17:30, 점심 11:30~12:30, 주말/공휴일 휴무">
         </label>
     </div>
-    <p class="label_name required">개인정보 처리방침</p>
-    <div id="content"></div>
-    <p class="label_name required">서비스 이용약관</p>
-    <div id="content2"></div>
+    <div class="toggle_wrap">
+      <div class="tit_area">
+        <p class="label_name required">개인정보 처리방침 </p> 
+        <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+      </div>
+      <div id="content" class="editor_wrap"></div>
+    </div>
+    
+    <div class="toggle_wrap">
+      <div class="tit_area">
+      <p class="label_name required">서비스 이용약관 </p>
+      <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+      </div>
+      <div id="content2" class="editor_wrap"></div>
+    </div>
     
     <script>
         const editor = new toastui.Editor({
@@ -210,18 +221,24 @@
               previewStyle: 'vertical',            // 마크다운 프리뷰 스타일 (tab || vertical)
 
           });
+          $('.toggle_wrap').on('click', function() {
+                var content = $(this).find('div[id^="content"]');
+                
+                // 현재 클릭된 토글을 제외한 다른 모든 콘텐츠를 닫기
+                $('.toggle_wrap').not($(this)).removeClass('active').find('div[id^="content"]').slideUp();
+                $('.toggle_wrap').not($(this)).find('i').removeClass('fa-sort-asc').addClass('fa-sort-desc');
+                
+                // 클릭된 토글의 콘텐츠를 열기/닫기
+                $(this).toggleClass('active');
+                content.slideToggle();
+                $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
+            });
     </script>
     <label>
         <p class="label_name required">리뷰 적립금 설정</p>
         <input type="text" value="1,000" required>
     </label>
     <P class="label_name">반품/교환</P>
-    <div class="label_wrap">
-      <p class="label_name2  required">반품/교환 택배사</p>
-      <select>
-          <option>한진택배</option>
-      </select>
-    </div>
     <div class="label_wrap">
       <p class="label_name2  required">반품/교환 택배사</p>
       <select>

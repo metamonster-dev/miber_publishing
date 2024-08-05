@@ -19,8 +19,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script src="../js/common.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -92,6 +91,7 @@
               <li><a href="contents01.html">미베르소개</a></li>
               <li><a href="contents02.html">프로그램</a></li>
               <li><a href="contents03.html">지점안내</a></li>
+              <li><a href="contents04.html">M-Box</a></li>
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -201,14 +201,14 @@
                     <button class="in_btn" onclick="editRow(this)">수정</button>
                     <button class="in_btn" onclick="deleteRow(this)">삭제</button>
                 </td>
-                <td class="text_left"><input value="1회차 관리" readonly></td>
+                <td class="text_left" style="border-left: 0;"><input value="1회차 관리" readonly></td>
                 <td><input value="2024-04-22" readonly></td>
                 <td><input value="2" readonly></td>
             </tr>
         </tbody>
     </table>
     <script>
-     function addRow() {
+    function addRow() {
         const table = document.getElementById('service03Table');
         const newRow = table.insertRow();
         newRow.innerHTML = `

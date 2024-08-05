@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>상품관리 - 상품관리 - 상품수정</title>
+  <title>컨텐츠관리 / 지점안내</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -20,9 +20,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script src="../js/common.js"></script>
   <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -220,19 +219,23 @@
                 }
                 });
             </script>
-           
+
         </div>
         <p class="comment"> * 1000×1000 px <br/>* jpg, png 파일만 등록가능</p>
 
         <p class="title mt_40">오시는길</p>
         <label>
-            <p class="label_name2 required">주소</p>
-            <p class="address mb_5"><span><input type="text" style="width:80px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:220px" readonly disabled></p>
-            <input type="text">
+            <p class="label_name2 required">전화번호</p>
+            <input type="tel" required>
         </label>
         <label>
-            <p class="label_name2 required">전화번호</p>
-            <input type="text" required>
+          <p class="label_name2 required">교통편</p>
+          <input type="text" required>
+        </label>
+        <label>
+          <p class="label_name2 required">주소</p>
+          <p class="address mb_5"><span><input type="text" style="width:80px" readonly disabled><button type="button" class="in_btn">우편번호</button></span><input type="text" style="width:220px" readonly disabled></p>
+          <input type="text">
         </label>
         </form>
         <div class="btm btn_area mt_40">

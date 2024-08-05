@@ -20,9 +20,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script src="../js/common.js"></script>
   <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -94,6 +93,7 @@
               <li><a href="contents01.html">미베르소개</a></li>
               <li><a href="contents02.html">프로그램</a></li>
               <li><a href="contents03.html">지점안내</a></li>
+              <li><a href="contents04.html">M-Box</a></li>
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -146,24 +146,83 @@
   <section id="admin_contents_wrap">
     <!----======== 내용부분    ========---->
     <p class="title">설정 / 배너관리</p>
-   
     <form class="preferences_form board_write board">
       <lable>
-        <p class="label_name required">구분</p>
-        <select>
-            <option disabled selected >선택</option>
-            <option value="메인">메인</option>
-            <option value="미베르소개">미베르소개</option>
-            <option value="프로그램">프로그램</option>
-            <option value="지점안내">지점안내</option>
-            <option value="상담신청">상담신청</option>
-            <option value="미베르몰">미베르몰</option>
-        </select>
-      </lable>
-      <lable>
-        <p class="label_name required">제목</p>
+        <p class="label_name required">슬로건 문구</p>
         <input type="text" required>
       </lable>
+      <p class="label_name">서브 문구 (최대5개까지등록가능)</p>
+
+      <ul class="sub_title_edit_wrap">
+        <li class="sub_title_edit">
+          <lable>
+            <p class="label_name2">내용</p>
+            <input type="text" required>
+          </lable>
+          <lable>
+            <p class="label_name2">링크주소</p>
+            <input type="text" required>
+          </lable>
+          <lable>
+            <p class="label_name2">타겟</p>
+            <select>
+              <option>현재창</option>
+              <option>새창</option>
+            </select>
+          </lable>
+          <div class="edit_list">
+            <a class="list_remove"> - </a>
+            <a class="list_add"> + </a>
+          </div>
+        </li>
+      </ul>
+
+      <script>
+        $(document).ready(function() {
+            const maxListItems = 5;
+
+            // 추가 버튼 클릭 시
+            $('.sub_title_edit_wrap').on('click', '.list_add', function() {
+                const $wrap = $('.sub_title_edit_wrap');
+                const $lastItem = $wrap.find('.sub_title_edit').last();
+                const itemCount = $wrap.find('.sub_title_edit').length;
+                // 리스트 수가 최대치에 도달하지 않았는지 확인
+                if (itemCount < maxListItems) {
+                    // 새 항목 추가
+                    const $newItem = $lastItem.clone().find('input').val('').end();
+                    $wrap.append($newItem);
+                }
+                // 버튼 상태 업데이트
+                updateButtonState();
+            });
+
+            // 삭제 버튼 클릭 시
+            $('.sub_title_edit_wrap').on('click', '.list_remove', function() {
+                const $wrap = $('.sub_title_edit_wrap');
+                const $thisItem = $(this).closest('.sub_title_edit');
+                // 리스트 항목이 하나일 때는 삭제하지 않음
+                if ($wrap.find('.sub_title_edit').length > 1) {
+                    $thisItem.remove();
+                }
+                // 버튼 상태 업데이트
+                updateButtonState();
+            });
+
+            // 버튼 상태 업데이트 함수
+            function updateButtonState() {
+                const $wrap = $('.sub_title_edit_wrap');
+                const itemCount = $wrap.find('.sub_title_edit').length;
+                // 삭제 버튼 활성화 상태 설정
+                $wrap.find('.list_remove').toggleClass('disabled', itemCount <= 1);
+                // 추가 버튼 활성화 상태 설정
+                $wrap.find('.list_add').toggleClass('disabled', itemCount >= maxListItems);
+            }
+
+            // 초기 상태 업데이트
+            updateButtonState();
+        });
+    </script>
+
       <p class="label_name required">이미지</p>
       <div class="imgfile_wrap mt_15">  
         <div>

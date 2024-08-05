@@ -19,8 +19,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script src="../js/common.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -92,6 +91,7 @@
               <li><a href="contents01.html">미베르소개</a></li>
               <li><a href="contents02.html">프로그램</a></li>
               <li><a href="contents03.html">지점안내</a></li>
+              <li><a href="contents04.html">M-Box</a></li>
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -256,7 +256,7 @@
     </div>
     <script>
       // 수정 버튼 이벤트
-      $(document).on('click', '.editBtn', function() {
+      $('#service05_detail_table').on('click', '.editBtn', function() {
           const index = $(this).closest('td').index();
           $('tr').each(function() {
               $(this).find('td').eq(index-1).find('input').removeAttr('readonly');
@@ -265,7 +265,7 @@
       });
 
       // 완료 버튼 이벤트
-      $(document).on('click', '.completeBtn', function() {
+      $('#service05_detail_table').on('click', '.completeBtn', function() {
           const index = $(this).closest('td').index();
           $('tr').each(function() {
               $(this).find('td').eq(index-1).find('input').attr('readonly', 'readonly');
@@ -274,10 +274,10 @@
       });
 
       // 삭제 버튼 이벤트
-      $(document).on('click', '.deleteBtn', function() {
+      $('#service05_detail_table').on('click', '.deleteBtn', function() {
           const index = $(this).closest('td').index();
-          $('tr').each(function() {
-              $(this).find('td').eq(index-1).find('input').val('');
+          $('#service05_detail_table tr').each(function() {
+              $(this).find('td').eq(index-1).remove();
           });
       });
 

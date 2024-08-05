@@ -34,7 +34,7 @@ label .comment span{font-size:10px}
 select{width:107px}
 .green{background:#00ac47;color:#fff}
 input[type="checkbox"]{width:12px;height:12px;}
-
+input:read-only{background:#ccc; user-select:none}
 /* 보드 박스 디자인 공통 */
 .board{padding:20px;border:1px solid #ccc;background:#fff;border-radius:5px;}
 .board_name{font-size:14px;font-weight:700;margin-bottom:16px;position:relative;color:#000}
@@ -128,7 +128,7 @@ input[type="checkbox"]{width:12px;height:12px;}
 .in_btn_area{display:flex;gap:4px;width:100%;height:100%;border-left:0 !important;border-top:0 !important;border-bottom:1px solid #ccc}
 .in_btn_area button.in_btn{float:left;}
 button.in_btn.accent{color: #006bff;border:1px solid #006bff;background:#f2f7ff}
-label.imgfile{width:176px;height:176px;display:flex;flex-direction: column;justify-content: center;align-items:center;border:1px solid #EEEEEE;background:#fafafa;border-radius:10px;border:1px dotted #ccc;position:relative}
+label.imgfile{width:176px;height:176px;display:flex;flex-direction: column;justify-content: center;align-items:center;border:1px solid #EEEEEE;background:#fafafa;border-radius:10px;border:1px dotted #ccc;position:relative;overflow:hidden;}
 label.imgfile i{font-size:32px}
 .imgfile img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
 input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
@@ -137,6 +137,15 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .table2 .depth1{background:#f1f5ff !important;}
 .table2 .depth2{background:#e6eaf5 !important}
 .table2 .depth3{background:#d8dbe5 !important;}
+.option_top_area{display:flex;justify-content:space-between;}
+.option_top_area .filter_top_area{display: flex;align-items:center;gap:16px;}
+.option_top_area .filter_top_area input{width:160px;margin-left:8px;}
+
+
+
+
+
+
 /*--회원관리--*/
 /*--회원관리--*/
 #member01 article{margin-bottom:20px}
@@ -272,9 +281,9 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 #mission_area input[type="checkbox"]{width:26px;height:26px;}
 
 /*변화그래프*/
-#service05_detail_table .in_btn_area{border:0}
+#service05_detail_table .in_btn_area{width:inherit;;border:0}
 .table_wrap{overflow-x:scroll;}
-#service05_detail_table{width:100%;overflow-x:scroll;}
+#service05_detail_table{width:inherit;overflow-x:scroll;}
 #service05_detail_table .in_btn_area{border:0}
 #service05_detail_table th{width:100px;}
 #service05_detail_table td{width:160px;}
@@ -295,7 +304,7 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .label_name{font-size:14px;margin-bottom:8px; font-weight:800;color:#000}
 .label_name2{font-size:13px;font-weight:600;padding-left:5px;margin-bottom:8px;}
 #option_table input[type="checkbox"]{width:15px;height:15px;}
-.label_wrap{display:flex;justify-content: flex-start;gap:16px;}
+.label_wrap{display:flex;justify-content: flex-start;gap:16px;margin-bottom:16px}
 .label_wrap > label{width:fit-content;}
 .imgfile_wrap{display:flex;gap:16px}
 .required::after{content:'*';color:#f53232;margin-left:4px}
@@ -310,6 +319,10 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 #categoryTable .depth_wrap .table_3{width:80px;}
 #categoryTable .depth_wrap .table_4{width:80px;}
 #categoryTable .depth_wrap .table_5{width:220px;}
+
+.delivery_type{display: none;}
+.delivery_type.on{display:block;}
+
 /*주문관리*/
 #order01_list{overflow-x:scroll;}
 .order_modal > .board{overflow-y: scroll;}
@@ -361,3 +374,10 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .preferences_form input[type='date']{width:180px}
 .preferences_form input[type="password"]{width:217px}
 .preferences_form .label_name2{margin-bottom:8px}
+.toggle_wrap{border-bottom:1px solid #ccc;}
+.tit_area{display: flex;justify-content: space-between;height: 50px;align-items:center; background:#fff;}
+#preferences04 .editor_wrap{background:#f7f9fc;padding:32px}
+.sub_title_edit{display: flex;justify-content:flex-start;gap:8px;align-items:flex-end;}
+.edit_list{display:flex;align-items:flex-end;gap:4px}
+.edit_list a{display:flex;justify-content:center;align-items:center;width:36px;height:36px;border:1px solid #ccc; border-radius:4px;}
+.sub_title_edit_wrap{display:flex;flex-direction:column;gap:8px;}

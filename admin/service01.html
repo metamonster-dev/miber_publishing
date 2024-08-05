@@ -25,7 +25,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.14/index.global.min.js'></script>
-  <script src="../js/common.js"></script>
+  <script src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -97,6 +97,7 @@
               <li><a href="contents01.html">미베르소개</a></li>
               <li><a href="contents02.html">프로그램</a></li>
               <li><a href="contents03.html">지점안내</a></li>
+              <li><a href="contents04.html">M-Box</a></li>
             </ul>
           </li>
           <li class="adm_nav_depth2_group">
@@ -153,9 +154,12 @@
         <div class="btn_area">
             <button onclick="open_modal1()">상담예약</button>
             <select>
-                <option>전체</option>
-                <option>전체</option>
-                <option>전체</option>
+              <option>전체</option>
+              <option>신규상담</option>
+              <option>정회원 상담</option>
+              <option>산소챔버</option>
+              <option>마사지</option>
+              <option>컨시어지</option>
             </select>
         </div>
         <!--
@@ -247,7 +251,7 @@
                         <th width="120px">생년월일</th>
                         <th width="120px">성별</th>
                         <th>메모</th>
-                     </tr>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -289,7 +293,7 @@
 
         <div id="member_reservation2" class="board next">
             <a class="circle_btn back_btn" onclick="goto_prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-            <p class="title">상담신청</p>
+            <!--<p class="title">상담신청</p>
             <div class="select">
                 <input type="radio" id="type01" name="reservation_type" checked><label for="type01">신규 상담</label>
                 <input type="radio" id="type02" name="reservation_type"><label for="type02">정회원 상담</label>
@@ -297,39 +301,8 @@
                 <input type="radio" id="type04" name="reservation_type"><label for="type04">마사지</label>
                 <input type="radio" id="type05" name="reservation_type"><label for="type05">크라이오</label>
                 <p class="comment"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>동시 예약 인원 안내 : 신규상담 2명, 정회원상담 2명, 산소챔버 2명, 마사지 3명, 크라이오 1명</p>
-            </div>
+            </div> -->
             <!--상담신청폼 1 : 신규회원-->
-            <p class="title">추가정보</p>
-            <form id="type01_from" class="form">
-                <label class="short">
-                    <p>키</p>
-                    <input type="text" placeholder="키 입력">
-                </label>
-                <label class="short">
-                    <p>체중</p>
-                    <input type="number" placeholder="체중 입력">
-                </label>
-                <label class="short">
-                    <p>감량목표</p>
-                    <input type="number" placeholder="감량목표 입력">
-                </label>
-                <label class="short">
-                    <p>직업</p>
-                    <input type="text" placeholder="직업 입력">
-                </label>
-                <label class="fit">
-                    <p>과거 다이어트 경험</p>
-                    <textarea placeholder="과거 다이어트 경험 입력"></textarea>
-                </label>
-                <label class="fit">
-                    <p>병력사항 및 <br/>신체 특이사항</p>
-                    <textarea placeholder="병력사항 및 신체 특이사항 입력"></textarea>
-                </label>
-                <label class="fit">
-                    <p>섭취중인 <br/>약이나 영양제</p>
-                    <textarea placeholder="섭취중인 약이나 영양제 입력"></textarea>
-                </label>
-            </form>
             <p class="title">일시선택</p>
             <div class="reservation_date_time">
                 <div class="calendar_area">
@@ -370,6 +343,39 @@
                     </div>
                 </div>
             </div>
+
+            <p class="title">상담정보</p>
+            <form id="type01_from" class="form">
+                <label class="short">
+                    <p>키</p>
+                    <input type="text" placeholder="키 입력">
+                </label>
+                <label class="short">
+                    <p>체중</p>
+                    <input type="number" placeholder="체중 입력">
+                </label>
+                <label class="short">
+                    <p>감량목표</p>
+                    <input type="number" placeholder="감량목표 입력">
+                </label>
+                <label class="short">
+                    <p>직업</p>
+                    <input type="text" placeholder="직업 입력">
+                </label>
+                <label class="fit">
+                    <p>과거 다이어트 경험</p>
+                    <textarea placeholder="과거 다이어트 경험 입력"></textarea>
+                </label>
+                <label class="fit">
+                    <p>병력사항 및 <br/>신체 특이사항</p>
+                    <textarea placeholder="병력사항 및 신체 특이사항 입력"></textarea>
+                </label>
+                <label class="fit">
+                    <p>섭취중인 <br/>약이나 영양제</p>
+                    <textarea placeholder="섭취중인 약이나 영양제 입력"></textarea>
+                </label>
+            </form>
+            
             <button type="submit" onclick="close_modal()">확인</button>
         </div>
         
