@@ -146,30 +146,29 @@
   <section id="admin_contents_wrap">
     <!----======== 내용부분    ========---->
     <p class="title">설정 / 배너관리</p>
-   
+  
     <form class="preferences_form board_write board">
       <lable>
-        <p class="label_name required">슬로건 문구</p>
-        <input type="text" required>
+        <p class="label_name">제목문구</p>
+        <input type="text">
       </lable>
-      <p class="label_name">서브 문구 (최대5개까지등록가능)</p>
-
+      <p class="label_name">슬로건문구</p>
+      <div class="label_wrap">
+        <lable>
+          <p class="label_name2 required">메인문구</p>
+          <input type="text" required>
+        </lable>
+        <lable>
+          <p class="label_name2 required">서브문구</p>
+          <input type="text" required>
+        </lable>
+      </div>
+      <p class="label_name">본문 문구 (최대5개까지등록가능)</p>
+      <p class="label_name2">내용</p>
       <ul class="sub_title_edit_wrap">
         <li class="sub_title_edit">
           <lable>
-            <p class="label_name2">내용</p>
             <input type="text" required>
-          </lable>
-          <lable>
-            <p class="label_name2">링크주소</p>
-            <input type="text" required>
-          </lable>
-          <lable>
-            <p class="label_name2">타겟</p>
-            <select>
-              <option>현재창</option>
-              <option>새창</option>
-            </select>
           </lable>
           <div class="edit_list">
             <a class="list_remove"> - </a>
