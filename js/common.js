@@ -1,18 +1,21 @@
 //AOS 애니메이션
-$( document ).ready(function() {
+$(document).ready(function () {
     AOS.init();
-});
+
+
+
+
 
 //팝업띄우기
 function openPopup(Popupname) {
-     var popupW = 550;
-     var popupH = 890;
-     var left = 2600;
-     var top = 10;
-     window.open(Popupname, '', 'width=' + popupW + ',height=' + popupH + ',left=' + left + ',top=' + top + ',scrollbars=yes,resizable=no,toolbar=no,titlebar=no,menubar=no,location=no');
- }
+    var popupW = 550;
+    var popupH = 890;
+    var left = 2600;
+    var top = 10;
+    window.open(Popupname, '', 'width=' + popupW + ',height=' + popupH + ',left=' + left + ',top=' + top + ',scrollbars=yes,resizable=no,toolbar=no,titlebar=no,menubar=no,location=no');
+}
 
- $(window).on('load', function() {
+$(window).on('load', function() {
     selectCus();
 });
 
@@ -81,4 +84,46 @@ $('input[name="imgfile"]').on('change', function(event) {
         };
         reader.readAsDataURL(file);
     }
+});
+
+
+//스크롤방지
+function scrollDisable(){
+    $('html, body').addClass('hidden');
+}
+function scrollAble(){
+    $('html, body').removeClass('hidden');
+}
+
+//메인UI
+//모바일 메뉴바열기
+$('#Menubar').click(function(event) {
+    $('html, body').toggleClass('hidden');
+    $('.mobile_nav_wrap').toggleClass('on')
+    });
+    
+    //모바일 아코디언메뉴
+    $('.mobile_nav_depth1').click(function() {
+    const $this = $(this);
+    const $dropdownIcon = $this.find('.dropdown_icon');
+    const $menu = $this.siblings('.mobile_nav_depth2_ul');
+
+    $('.mobile_nav_depth1').removeClass('on');
+    $this.removeClass('on');
+    const isOpen = $menu.is(':visible');
+    // 모든 하위 메뉴를 닫음
+    $('.mobile_nav_depth2_ul').slideUp();
+    // 모든 드롭다운 아이콘을 기본 상태로 되돌림
+    $('.dropdown_icon').css('transform', 'rotate(0deg)');
+    
+    if (!isOpen) {
+    // 클릭된 메뉴가 열려 있지 않다면 열기
+    $menu.slideDown();
+    $this.addClass('on');
+    $dropdownIcon.css('transform', 'rotate(180deg)');
+    }
+});
+
+
+
 });

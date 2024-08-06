@@ -1,0 +1,46 @@
+.pagecommon{width:100%;}
+.pagecommon .page_header{margin:50px auto;}
+.pagecommon .page_header .tab{display:flex;justify-content:center;align-items:center;gap:10px}
+.pagecommon .page_header .tab li a{display:block;width:260px;height:56px;line-height:56px;text-align:center;background:#f7f7f7;color: #9b9b9b;font-weight:800;font-size:20px;border-radius:500px}
+.pagecommon .page_header .tab li.on a{border:1px solid #DA4E37;color:#DA4E37;background:#fff;}
+.pagecommon .md_contents{width:1200px;margin:0 auto 100px;}
+.pagecommon p{font-size: 18px;font-weight: 400;line-height: 27px;letter-spacing: -0.01em;text-align: left;color:#5C5C5C}
+.pagecommon h3{font-size:32px;font-weight:800;margin:50px 0 16px}
+.pagecommon h4{font-size:24px;font-weight:800;margin:50px 0 16px}
+.pagecommon .step ul{display:flex;flex-direction:column;}
+.pagecommon .step ul li{font-size:24px;font-weight:700;line-height:36px;color:#666666;}
+.pagecommon .step ul li .tit{color:#000}
+
+/*미베르소개*/
+#About01 .txt01{font-size:32px;font-weight:700;width:100%;max-width:1200px;margin:0 auto 50px;text-align:left;color:#DA4E37;}
+#About01 .about_contents{display:flex;flex-direction:column;}
+#About01 .about_contents li:nth-child(2n){background:#fff;}
+#About01 .about_contents li:nth-child(1), #About01 .about_contents li:nth-child(2n+1){background:#CAA68B0F}
+#About01 .content_wrap{width:100%;max-width:1200px;margin:0 auto;padding:100px 0;display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;}
+#About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:row}
+#About01 .count{display:inline-block;font-size:24px;font-weight:800;padding-bottom:8px;border-bottom:2px solid #DA4E37;color:#DA4E37;margin-bottom:20px}
+#About01 .txt_area p{font-size:24px;font-weight:800;color:#3D3935}
+
+/*미베르소개 - 이념과 가치*/
+#About02 .page_contents{background:#CAA68B0F;width:100%;padding:100px;}
+#About02 .content_wrap{width:100%;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+#About02 .txt_arae .tit{font-size:40px;font-weight:800;color: #3D3935;margin-bottom:20px;line-height: 42px;}
+#About02 .txt_arae p{font-size:16px;font-weight:400;line-height:24px;color:#5C5C5C}
+
+/*프로그램 - Body Styling*/
+#Programs01 .page_contents > img{margin-bottom:50px}
+
+/*프로그램 - 3:1코칭*/
+#Programs02 .programs02_steps{margin:50px auto}
+#Programs02 .programs02_steps ul{display:flex;justify-content:flex-start;gap:133px}
+#Programs02 .programs02_steps ul li{display:flex;flex-direction:column;align-items:center;width:200px;position:relative}
+#Programs02 .programs02_steps ul li::after{content:'';display:block;width:20px;height:20px;background:url(./img/icon_step.svg)no-repeat center;position:absolute;left:245px;top:50%}
+#Programs02 .programs02_steps ul li:last-child::after{display:none;}
+#Programs02 .programs02_steps ul li .img_wrap_round{width:150px;height:150px;border-radius:50%;background:#F7F7F7;display:flex;justify-content:center;align-items:center;margin:30px auto}
+#Programs02 .programs02_steps p{font-size:20px;font-weight:700;}
+#Programs02 .programs02_steps .step{font-weight:800;color:#DA4E37;}
+#Programs02  .programs02_content{display:flex;background:#F7F7F7;padding:80px;justify-content: space-between;}
+#Programs02 .programs02_content .tit{font-size:20px;font-weight:700;width:165px;height:46px;line-height:46px;border:1px solid #DA4E37;border-radius:500px;color:#DA4E37;margin-bottom:20px;display:block;text-align:center;}
+#Programs02 .programs02_content ul{display:flex;flex-direction:column;gap:20px;}
+#Programs02 .programs02_content li{display:flex;flex-direction:column;font-size:24px;font-weight:700;}
+#Programs02 .programs02_content li span{font-size:16px;font-weight:800;color:#DA4E37;}
