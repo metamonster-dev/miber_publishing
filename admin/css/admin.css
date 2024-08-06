@@ -210,7 +210,7 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .time_select .select{display:flex;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin-top:16px}
 .time_select .select input[type=radio]+label{width:120px;padding:0 20px}
 .time_select .pika-single{display:block !important;position:static;z-index: 9999;}
-.select_date_result{width:100%;border:0;border-bottom:1px solid #ccc; border-radius:0;font-weight:800;color:#000;}
+.select_date_result{width:100%;border:0;border-bottom:1px solid #ccc;font-size:20px;border-radius:0;font-weight:800;color:#000;background:#fff !important;padding:16px}
 
 /* 상담예약 날짜 선택 캘린더 UI커스텀 */
 .datepicker .ui-datepicker{font-family:'NanumSquare', sans-serif;width:100% !important}
