@@ -5,7 +5,7 @@ html {scroll-behavior: smooth; /* 부드러운 스크롤 */}
 .mainVisual .txt_wrap{width:100%;;max-width:1638px;display:flex;flex-direction:column;justify-content:center;align-items: flex-start;color:#fff}
 .mainVisual .txt01{font-size:24px;font-family:"Pretendard Variable";margin-bottom:20px}
 .mainVisual .txt02{font-size:74px;line-height:85px;font-family: 'Albra Display TRIAL', sans-serif;position:relative;margin-bottom:50px}
-.mainVisual .txt02 span{font-size:50px;font-family:"Pretendard Variable";display:block;}
+.mainVisual .txt04{font-size:50px;font-family:"Pretendard Variable";display:block;}
 .mainVisual .line{display:block;width:30px;height:2px;background:#fff;margin-bottom:26px}
 .mainVisual .txt03{font-size:24px;font-family:'Marcellus', sans-serif;line-height:33px;margin-bottom:20px}
 .mainVisual .txt03:last-child{margin-bottom:0}

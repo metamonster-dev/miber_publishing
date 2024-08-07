@@ -142,6 +142,7 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 
 /*===========================================================================*/
 /*메인 레이아웃*/
+header{background:#EFECEA;}
 .header_bar{width:100%;height:97px;border-bottom:1px solid #E0E0E2;display:flex;justify-content:center;align-items:center;overflow:hidden;}
 .header_wrap_pc{display:flex;max-width:1200px;width:100%;;justify-content: space-between;align-items:center;}
 .header_wrap_m{display:none;}
@@ -615,7 +616,7 @@ table input[type="checkbox"]{width:inherit !important;}
 .header_bar{height:60px;padding:0 16px}
 .header_wrap_pc{display:none;}
 .header_wrap_m{display:flex;justify-content:space-between;align-items: center;width:100%;}
-h1 {width:70px;}
+h1 {width:180px;}
 h1 > img{width:100%;}
 .mobile_nav_wrap{display:block;height:100vh;transform:translateX(-100%);transition:.6s;z-index:999;}
 .mobile_nav_wrap.on{display:block;transform:translateX(0);}
