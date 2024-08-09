@@ -124,6 +124,19 @@ $('#Menubar').click(function(event) {
     }
 });
 
+$('.filter_checkbox label').on('click', function() {
+    // 현재 클릭된 label에 checked 클래스 추가
+    $(this).addClass('checked');
+
+    // 클릭된 label을 제외한 다른 label에서 checked 클래스 제거
+    $('.filter_checkbox label').not($(this)).removeClass('checked');
+
+    // 클릭된 label의 체크박스만 체크 상태로 변경
+    $(this).find('input').prop('checked', true);
+
+    // 클릭된 label을 제외한 나머지 체크박스는 체크 해제
+    $('.filter_checkbox input').not($(this).find('input')).prop('checked', false);
+});
 
 
 });
