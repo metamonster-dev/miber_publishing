@@ -24,7 +24,6 @@
   <script src="../js/common.js"></script>
 </head>
 <body>
-<!--======컨텐츠=====-->
 
 <section class="MypageContents_wrap">
     <!--마이페이지 사이드메뉴-->
@@ -61,7 +60,7 @@
         </ul>
     </section>
 
-    <section id="My_order02" class="MypageContents">
+    <section id="My_order02" class="MypageContents pc">
         <h3>취소/교환/반품</h3>
         <h4>취소/교환/반품 조회</h4>
         <div class="filter_wrap">
@@ -90,7 +89,7 @@
             <input type="date">
             <button class="lookup">조회</button>
         </div>
-        <h4>주문/배송 내역</h4>
+        <h4>취소/교환/반품 내역</h4>
         <table id="my_order01_table" class="table_defalt ">
             <thead>
                 <tr>
@@ -175,8 +174,8 @@
         </table>
         <div class="page_wrap">
             <ul class="paging_btn">
-                <li class="side_left"><a><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-                <li class="side_left"><a><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                <li class="side_left"><a><img src="../img/icon_page_prev2.svg"></a></li>
+                <li class="side_left"><a><img src="../img/icon_page_prev.svg"></a></li>
                 <li><a class="on">1</a></li>
                 <li><a>2</a></li>
                 <li><a>3</a></li>
@@ -187,15 +186,147 @@
                 <li><a>8</a></li>
                 <li><a>9</a></li>
                 <li><a>10</a></li>
-                <li class="side_left"><a><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li class="side_right"><a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                <li class="side_left"><a><img src="../img/icon_page_next.png"></a></li>
+                <li class="side_right"><a><img src="../img/icon_page_next2.svg"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="My_order01" class="MypageContents m">
+        <div class="top_area">
+            <p >취소/교환/반품 조회</p>
+            <a class="filter_btn"><img src="../img/icon_dropdown3.svg"></a>
+        </div>
+        <div class="filter_wrap">
+            <div class="filter_slect select ">
+                <input type="hidden" class="opt_val" value="">
+                <div class="trigger">
+                    <span class="trigger_txt">전체</span>
+                </div>
+                <ul class="option">
+                    <li data-value="전체">전체</li>
+                    <li data-value="취소">취소</li>
+                    <li data-value="교환">교환</li>
+                    <li data-value="반품">반품</li>
+                </ul>
+            </div>
+            <ul class="filter_checkbox">
+                <li><label><input type="hidden" value="오늘">오늘</label></li>
+                <li><label><input type="hidden" value="1주일">1주일</label></li>
+                <li><label><input type="hidden" value="1개월">1개월</label></li>
+                <li><label class="checked"><input type="hidden" value="3개월" checked>3개월</label></li>
+                <li><label><input type="hidden" value="6개월">6개월</label></li>
+            </ul>
+            <input type="date">
+            ~
+            <input type="date">
+            <button class="lookup">조회</button>
+        </div>
+        <script>
+            $('.m .filter_wrap').hide();
+            $('.m .filter_btn').click(function() {
+                $('.m .filter_wrap').slideToggle();
+                $(this).find('img').toggleClass('rotate');
+            });
+        </script>
+
+        <ul class="table_list">
+            <li>
+                <div class="top_area">
+                    <p class="order_number">20240511-0295</p>
+                    <p class="order_status">취소</p>
+                </div>
+                <div>
+                    <p class="order_date">2024-05-11</p>
+                    <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                    <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                    <div class="order_delivery">
+                        <p>한진택배</p>
+                        <a class="delivery_number">45621333215</a>
+                    </div>
+                    <div class="text_box">결제완료</div>
+                </div>
+                <div class="btn_area">
+                    <button class="in_btn">교환신청</button>
+                    <button class="in_btn">반품신청</button>
+                </div>
+            </li>
+            <li>
+                <div class="top_area">
+                    <p class="order_number">20240511-0295</p>
+                    <p class="order_status">교환</p>
+                </div>
+                <div>
+                    <p class="order_date">2024-05-11</p>
+                    <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                    <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                    <div class="order_delivery">
+                        <p>한진택배</p>
+                        <a class="delivery_number">45621333215</a>
+                    </div>
+                </div>
+                <div class="text_box">배송완료</div>
+            </li>
+            <li>
+                <div class="top_area">
+                    <p class="order_number">20240511-0295</p>
+                    <p class="order_status">반품</p>
+                </div>
+                <div>
+                    <p class="order_date">2024-05-11</p>
+                    <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                    <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                    <div class="order_delivery">
+                        <p>한진택배</p>
+                        <a class="delivery_number">45621333215</a>
+                    </div>
+                </div>
+                <div class="text_box">배송완료</div>
+                <div class="btn_area">
+                    <button class="in_btn">취소신청</button>
+                </div>
+            </li>
+            <li>
+                <div class="top_area">
+                    <p class="order_number">20240511-0295</p>
+                    <p class="order_status">반품</p>
+                </div>
+                <div>
+                    <p class="order_date">2024-05-11</p>
+                    <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                    <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                    <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                    <div class="order_delivery">
+                        <p>한진택배</p>
+                        <a class="delivery_number">[45621333215]</a>
+                    </div>
+                </div>
+                <div class="text_box">결제완료</div>
+                <div class="btn_area">
+                    <button class="in_btn">취소신청</button>
+                </div>
+            </li>
+        </ul>
+        <div class="page_wrap">
+            <ul class="paging_btn">
+                <li class="side_left"><a><img src="../img/icon_page_prev2.svg"></a></li>
+                <li class="side_left"><a><img src="../img/icon_page_prev.svg"></a></li>
+                <li><a class="on">1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="side_left"><a><img src="../img/icon_page_next.png"></a></li>
+                <li class="side_right"><a><img src="../img/icon_page_next2.svg"></a></li>
             </ul>
         </div>
     </section>
     
     
 </section>
-<!--======컨텐츠=====-->
 
 </body>
 </html>

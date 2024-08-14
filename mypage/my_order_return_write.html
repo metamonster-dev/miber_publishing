@@ -24,7 +24,6 @@
   <script src="../js/common.js"></script>
 </head>
 <body>
-<!--======컨텐츠=====-->
 
 <section class="MypageContents_wrap">
     <!--마이페이지 사이드메뉴-->
@@ -61,7 +60,7 @@
         </ul>
     </section>
 
-    <section id="my_order_change" class="MypageContents">
+    <section id="my_order_change" class="MypageContents pc">
         <h3>반품 신청</h3>
         <h4>주문 상품 정보</h4>
         <table id="my_order_change_table"  class="table_defalt thead_border_none  order_table">
@@ -217,8 +216,157 @@
         </script>
 
         </section>
+
+        <section id="my_order_change" class="MypageContents m">
+            <h3>반품 신청</h3>
+            <h4>주문 상품 정보</h4>
+            <ul class="table_list m">
+                <li>
+                    <!--해당영역 동일 주문번호중 첫번째에서만 적용 / 이후 생략-->
+                    <div class="top_area">
+                        <p class="order_number">20240511-0295</p>
+                        <p class="order_status">배송완료</p>
+                    </div>
+                    <!---->
+                    <div class="md_area">
+                        <input type="checkbox">
+                        <div class="img_area">
+                            <img src="../img/temp/product01.png" alt="상품썸네일">
+                        </div>
+                        <div class="txt_area">
+                            <p class="order_date">2024-05-11</p>
+                            <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                            <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                            <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li> 
+                    <div class="md_area">
+                        <input type="checkbox">
+                        <div class="img_area">
+                            <img src="../img/temp/product01.png" alt="상품썸네일">
+                        </div>
+                        <div class="txt_area">
+                            <p class="order_date">2024-05-11</p>
+                            <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                            <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                            <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="article_line"></div>
+            <h4>반품사유</h4>
+            <table class="table_text type2">
+                <tr>
+                    <th>사유 선택</th>
+                </tr>
+                <tr>
+                    <td class="radio_area">
+                        <label class="checked"><input type="radio" checked name="reson">오배송</label>
+                        <label><input type="radio" name="reson">파손</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>사유</th>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea placeholder="취소 사유 입력"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이미지 첨부</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <label class="imgfile">
+                                <img class="icon" src="../img/icon_plus.svg">
+                                <input name="imgfile" type="file" accept=".png, .jpg">
+                            </label>
+                            <p class="comment on">* 10MB 이하 JPG, PNG만 등록 가능합니다.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <h4>반품지 정보</h4>
+            <table class="table_text type2">
+                <tr>
+                    <th>수령인</th>
+                </tr>
+                <tr>
+                    <td><input type="text" value="홍길동"></td>
+                </tr>
+                <tr>
+                    <th>수령인 연락처</th>
+                </tr>
+                <tr>
+                    <td><input type="text" value="010-1234-5678"></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="address">
+                            <input type="text" readonly>
+                            <button class="in_btn">주소찾기</button>
+                            <input type="text" readonly>
+                            <input type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>배송메모</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="filter_slect">
+                            <input type="hidden" class="opt_val" value="">
+                            <div class="trigger">
+                                <span class="trigger_txt">배송메모 선택</span>
+                            </div>
+                            <ul class="option">
+                                <li data-value="배송메모선택">배송메모 선택</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="article_line"></div>
+            <div class="bottom_btn btn_area">
+                <button class="white_btn">반품신청</button>
+                <button onclick='location.href="../mypage/my_order01.html"' class="black_btn ">목록보기</button>
+            </div>
+            <script>
+                $('.close_btn').on('click',function(){
+                    window.close();
+                });
+                $('input[name="imgfile"]').on('change', function(event) {
+                const input = event.target;
+                const label = $(input).parent();
+                const file = input.files[0];
+        
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = $('<img>').attr('src', e.target.result);
+                        // 기존의 이미지가 있으면 제거
+                        label.find('img').remove();
+                        // 새 이미지를 추가
+                        label.append(img);
+                        // 아이콘지우기
+                        label.find('i').hide();
+                    };
+                    reader.readAsDataURL(file);
+                }
+                });
+            </script>
+    
+            </section>
 </section>
-<!--======컨텐츠=====-->
 
 </body>
 </html>

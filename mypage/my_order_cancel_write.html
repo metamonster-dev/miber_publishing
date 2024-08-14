@@ -24,7 +24,6 @@
   <script src="../js/common.js"></script>
 </head>
 <body>
-<!--======컨텐츠=====-->
 
 <section class="MypageContents_wrap">
     <!--마이페이지 사이드메뉴-->
@@ -61,7 +60,7 @@
         </ul>
     </section>
 
-    <section id="my_order_cancle" class="MypageContents">
+    <section id="my_order_cancle" class="MypageContents pc">
         <h3>취소신청</h3>
         <h4>주문 상품 정보</h4>
         <table id="my_order_cancle_table"  class="table_defalt thead_border_none order_table ">
@@ -116,8 +115,48 @@
             <button onclick='location.href="../mypage/my_order01.html"' class="black_btn ">목록보기</button>
         </div>
         </section>
+
+        <section id="my_order_cancle" class="MypageContents m">
+            <h3>취소신청</h3>
+            <ul class="table_list m">
+                <li>
+                    <div class="top_area">
+                        <p class="order_number">20240511-0295</p>
+                        <p class="order_status">상품준비</p>
+                    </div>
+                    <div class="md_area">
+                        <input type="checkbox">
+                        <div class="img_area">
+                            <img src="../img/temp/product01.png" alt="상품썸네일">
+                        </div>
+                        <div class="txt_area">
+                            <p class="order_date">2024-05-11</p>
+                            <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                            <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                            <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="article_line"></div>
+            <h5>취소사유</h5>
+            <table class="table_text">
+                <tr>
+                    <th>사유</th>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea placeholder="취소 사유 입력"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="article_line"></div>
+            <div class="bottom_btn btn_area">
+                <button class="white_btn">취소신청</button>
+                <button onclick='location.href="../mypage/my_order01.html"' class="black_btn ">목록보기</button>
+            </div>
+            </section>
 </section>
-<!--======컨텐츠=====-->
 
 </body>
 </html>

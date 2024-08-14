@@ -24,7 +24,6 @@
   <script src="../js/common.js"></script>
 </head>
 <body>
-<!--======컨텐츠=====-->
 
 <section class="MypageContents_wrap">
     <!--마이페이지 사이드메뉴-->
@@ -61,7 +60,7 @@
         </ul>
     </section>
 
-    <section id="my_order_change" class="MypageContents">
+    <section id="my_order_change" class="MypageContents pc">
         <h3>교환</h3>
         <h4>주문 상품 정보</h4>
         <table id="my_order_change_table"  class="table_defalt thead_border_none  order_table">
@@ -204,8 +203,116 @@
             })
         </script>
         </section>
+
+        <section id="my_order_change" class="MypageContents m">
+            <h3>교환</h3>
+            <h4>주문 상품 정보</h4>
+            <ul class="table_list m">
+                <li>
+                    <!--해당영역 동일 주문번호중 첫번째에서만 적용 / 이후 생략-->
+                    <div class="top_area">
+                        <p class="order_number">20240511-0295</p>
+                        <p class="order_status">배송완료</p>
+                    </div>
+                    <!---->
+                    <div class="md_area">
+                        <div class="img_area">
+                            <img src="../img/temp/product01.png" alt="상품썸네일">
+                        </div>
+                        <div class="txt_area">
+                            <p class="order_date">2024-05-11</p>
+                            <p class="order_name">마케토 마카다미아 정과 경과류정과 무설탕 키토 비건 다이어트</p>
+                            <p class="order_option">마케토 옵션 : 100g (옵션가격)</p>
+                            <p class="order_price">25,000원<span>/ 수량 1개</span></p>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="article_line"></div>
+            <h4>교환사유</h4>
+            <table class="table_text">
+                <tr>
+                    <th>사유 선택</th>
+                    <td>오배송</td>
+                </tr>
+                <tr>
+                    <th>사유</th>
+                    <td>교환 사유 입니다.</td>
+                </tr>
+                <tr>
+                    <th>이미지</th>
+                    <td>
+                        <div class="img_preview">
+                            <img src="../img/temp/product01.png">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="article_line"></div>
+            <h4>교환지 정보</h4>
+            <table class="table_text">
+                <tr>
+                    <th>수령인</th>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <th>우편번호</th>
+                    <td>03737</td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td>서울 구로구 디지털로 32길 30 15층 1509호</td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td>010-1234-5678</td>
+                </tr>
+                <tr>
+                    <th>배송메모</th>
+                    <td>없음</td>
+                </tr>
+            </table>
+            <div class="article_line"></div>
+            <h4>교환사유</h4>
+            <table class="table_text">
+                <tr>
+                    <th>처리상태</th>
+                    <td>교환신청</td>
+                </tr>
+                <tr>
+                    <th>신청일</th>
+                    <td>2024-06-12 15:20:10</td>
+                </tr>
+                <tr>
+                    <th>완료/거절일</th>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>완료/거절 사유</th>
+                    <td>-</td>
+                </tr>            
+            </table>
+            <div class="article_line"></div>
+            <div class="bottom_btn btn_area">
+                <button onclick='location.href="../mypage/my_order02.html"' class="black_btn ">목록보기</button>
+            </div>
+            <div class="modal">
+                <div class="img_veiw">
+                    <a class="close_btn"><img src="../img/icon_close.svg"></a>
+                    <img src="../img/temp/product01.png" alt="컨시어지임시이미지">
+                </div>
+            </div>
+            <script>
+                $('.close_btn').on('click',function(){
+                    $('.modal').removeClass('on');
+                })
+                $('.img_preview').on('click',function(){
+                    $('.modal').addClass('on');
+                })
+            </script>
+            </section>
 </section>
-<!--======컨텐츠=====-->
 
 </body>
 </html>

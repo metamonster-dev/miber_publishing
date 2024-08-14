@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>정보수정</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/custom.css" />
-  <link rel="stylesheet" href="../css/design.css" />
-  <!-- JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-  <script src="../js/common.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>정보수정</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--AOS 애니메이션-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!--스와이퍼-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/custom.css" />
+<link rel="stylesheet" href="../css/design.css" />
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<script src="../js/common.js"></script>
 </head>
 <body>
-<!--======컨텐츠=====-->
 
 <section class="MypageContents_wrap">
     <!--마이페이지 사이드메뉴-->
@@ -72,7 +71,7 @@
         </ul>
     </section>
 
-    <section id="my_page01" class="MypageContents">
+    <section id="my_page01" class="MypageContents pc">
         <h3>정보수정</h3>
         <table class="table_text">
             <tr>
@@ -170,6 +169,113 @@
             </form>
         </div>
     </div>
+
+
+    <!--모바일-->
+
+    <section id="my_page01" class="MypageContents m">
+        <h3>정보수정</h3>
+        <table class="table_text">
+            <tr>
+                <th>이름</th>
+                <td>홍길동</td>
+            </tr>
+            <tr>
+                <th>휴대폰번호</th>
+                <td>010-1234-5678 <a class="modal_edit_btn">변경</a></td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td>남자</td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td>1989-05-27</td>
+            </tr>
+            <tr>
+                <th>아이디(이메일)</th>
+                <td>abc1234@naver.com</td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><a class="password_edit_btn">변경</a></td>
+            </tr>
+            <tr class="password_edit">
+                <th>새비밀번호</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr class="password_edit">
+                <th>새비밀번호 확인</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th colspan="2">주소</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="address">
+                        <input type="text" readonly>
+                        <button class="in_btn">주소찾기</button>
+                        <input type="text" readonly>
+                        <input type="text" class="full">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>마케팅 활용 동의</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="text_wrap">
+                        <div class="label_wrap">
+                            <label class="checkbox"><input type="checkbox">이메일</label>
+                            <label class="checkbox"><input type="checkbox">문자</label>
+                        </div>
+                        <a>내용보기</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="article_line"></div>
+        <div class="bottom_btn btn_area">
+            <button type="submit" class="black_btn ">확인</button>
+        </div>
+    </section>
+    <div class="modal">
+        <div class="modal_edit">
+            <div class="top_area">
+                <p class="tit">휴대폰번호 변경</p>
+                <a class="close_btn"><img src="../img/icon_close2.svg" ></a>
+            </div>
+            <p>변경한 휴대폰번호를 입력하고<br/>인증번호를 입력해 주세요.</p>
+            <form id="signup_form" class="form_defalt">
+                <label>
+                <p class="label_name">이름</p>
+                <div class="input_wrap">
+                    <input type="text" placeholder="이름입력">
+                    <p class="comment warnning-txt">이름을 입력해주세요.</p>
+                </div>
+                </label>
+                <label>
+                <p class="label_name">휴대폰번호</p>
+                <div class="input_wrap">
+                    <input type="text" placeholder="'-'없이 숫자만 입력">
+                    <button type="button">인증번호 발송</button>
+                    <p class="comment warnning-txt">휴대폰번호를 입력해주세요.</p>
+                </div>
+                </label>
+                <label>
+                <p class="label_name">인증번호</p>
+                <div class="input_wrap">
+                    <p class="input_text">유효시간 <span class="timer">04:59</span></p>
+                    <input type="text">
+                    <button type="button">휴대폰 인증</button>
+                </div>
+                </label>
+            </form>
+        </div>
+    </div>
+    
     <script>
         $('.close_btn').on('click',function(){
             $('.modal').removeClass('on');
@@ -187,8 +293,10 @@
             }
         });
     </script>
+    </section>
 </section>
-<!--======컨텐츠=====-->
+
+
 
 </body>
 </html>
