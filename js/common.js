@@ -2,10 +2,6 @@
 $(document).ready(function () {
     AOS.init();
 
-
-
-
-
 //팝업띄우기
 function openPopup(Popupname) {
     var popupW = 550;
