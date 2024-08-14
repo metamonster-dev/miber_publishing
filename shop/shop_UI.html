@@ -11,9 +11,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-<link rel="stylesheet" href="./css/common.css" />
-<link rel="stylesheet" href="./css/custom.css" />
-<link rel="stylesheet" href="./css/design.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/custom.css" />
+<link rel="stylesheet" href="../css/design.css" />
 <!-- JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -23,7 +23,7 @@
 <div class="header_bar">
 
     <div class="header_wrap_pc">
-        <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>
+        <h1><img src="../img/logo_b.png" alt="미베르로고">미베르</h1>
         <ul class="header_nav">
             <li>
                 <a>미베르 소개</a>
@@ -63,9 +63,9 @@
         </ul>
         <div class="nav_depth2_bg"></div>
         <ul class="user_menu">
-            <li><a href="#"><img src="./img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
-            <li><a href="#"><img src="./img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
-            <li><a href="#"><img src="./img/icon_user03.svg " alt="문의하기"><span class="soundOnly">문의하기</span></a></li>
+            <li><a href="#"><img src="../img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
+            <li><a href="#"><img src="../img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
+            <li><a href="#"><img src="../img/icon_user03.svg " alt="문의하기"><span class="soundOnly">문의하기</span></a></li>
         </ul>
     </div>
     <script>
@@ -82,15 +82,21 @@
         });
     </script>
     <div class="header_wrap_m">
-        <a id="Menubar"><img src="./img/icon_menubar.svg"><span class="soundOnly">메뉴</span></a>
-        <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>
+        <a id="Menubar"><img src="../img/icon_menubar.svg"><span class="soundOnly">메뉴</span></a>
+        <a id="shop_menu_btn">식품</a>
         <ul class="user_menu">
-            <li><a href="#"><img src="./img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
-            <li><a href="#"><img src="./img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
+            <li><a href="#"><img src="../img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
+            <li><a href="#"><img src="../img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
         </ul>
     </div>
 </div>
 
+<div class="shop_mobile_menu">
+    <ul>
+        <li>전체</li>
+        <li>식품</li>
+    </ul>
+</div>
 
 
 <div class="mobile_nav_wrap">
@@ -118,7 +124,7 @@
     <div class="mobile_nav">
         <ul>
             <li class="mobile_nav_depth2_group">
-                <p class="mobile_nav_depth1">미베르 소개<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
+                <p class="mobile_nav_depth1">미베르 소개<span class="dropdown_icon"><img src="../img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
                 <!--DEPTH 2-->
                 <ul class="mobile_nav_depth2_ul">
                     <li><a href="#">소개</a></li>
@@ -127,7 +133,7 @@
                 </ul>
             </li>
             <li class="mobile_nav_depth2_group">
-                <p class="mobile_nav_depth1">프로그램<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
+                <p class="mobile_nav_depth1">프로그램<span class="dropdown_icon"><img src="../img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
                 <!--DEPTH 2-->
                 <ul class="mobile_nav_depth2_ul">
                     <li><a href="#">소개</a></li>
@@ -145,7 +151,7 @@
             <a class="mobile_nav_depth1" href="">M-Box</a>
             </li>
             <li class="mobile_nav_depth2_group">
-                <p class="mobile_nav_depth1">미베르몰<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
+                <p class="mobile_nav_depth1">미베르몰<span class="dropdown_icon"><img src="../img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
                 <!--DEPTH 2-->
                 <ul class="mobile_nav_depth2_ul">
                     <li><a href="#">전체</a></li>
@@ -201,13 +207,18 @@
             </ul>
         </section>
     </div>
-    <script>  
+    <script> 
+        //모바일 SHOP 메뉴열기
+        $('.shop_mobile_menu').hide();
+        $('#shop_menu_btn').click(function(event) {
+        event.preventDefault();
+        $('.shop_mobile_menu').slideToggle();
+        });
         //모바일 메뉴바열기
         $('#Menubar').click(function(event) {
         event.preventDefault();
         $('.mobile_nav_wrap').toggleClass('on')
         });
-        
         // md_menu 클릭 이벤트
         $('.md_menu #menu_all').click(function(event) {
             event.preventDefault();
@@ -289,9 +300,9 @@
     </div>
 </div>
 <ul class="footer_sns">
-    <li><img src="./img/icon_sns1.svg" alt="인스타그램"><span class="soundOnly">인스타그램</span></li>
-    <li><img src="./img/icon_sns2.svg" alt="네이버밴드"><span class="soundOnly">네이버밴드</span></li>
-    <li><img src="./img/icon_sns3.svg" alt="카카오톡"><span class="soundOnly">카카오톡</span></li>
+    <li><img src="../img/icon_sns1.svg" alt="인스타그램"><span class="soundOnly">인스타그램</span></li>
+    <li><img src="../img/icon_sns2.svg" alt="네이버밴드"><span class="soundOnly">네이버밴드</span></li>
+    <li><img src="../img/icon_sns3.svg" alt="카카오톡"><span class="soundOnly">카카오톡</span></li>
 </ul>
 </div>
 </footer>

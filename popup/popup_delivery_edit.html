@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>미배르 / 배송지 수정</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/custom.css" />
+<link rel="stylesheet" href="../css/design.css" />
+<link rel="stylesheet" href="./popup.css" />
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../js/common.js"></script>
+</head>
+<body>
+<div id="Popup_delivery_edit" class="shopcommon Popup">
+    <div class="tit_area">
+        <h2 class="popup_tit">배송지 수정</h2>
+        <a href="" class="close_btn"><img src="../img/icon_close2.svg"></a>
+    </div>
+    <form class="form02">
+        <ul class="form_list">
+            <li>
+                <p class="label_tit">수령인</p>
+                <label>
+                    <input type="text" value="홍길동">
+                    <a class="close_btn"><img src="../img/icon_close3.svg"></a>
+                </label>
+            </li>
+
+            <li>
+            <p class="label_tit">연락처</p>
+                <label>
+                    <input type="text" value="010-1234-5678">
+                    <a class="close_btn"><img src="../img/icon_close3.svg"></a>
+                </label>
+            </li>
+
+            <li>
+                <p class="label_tit">배송지명(선택)</p>
+                <label>
+                    <input type="text" value="회사">
+                    <a class="close_btn"><img src="../img/icon_close3.svg"></a>
+                </label>
+            </li>
+
+            <li>
+                <div class="top_area">
+                    <p class="label_tit">주소</p>
+                    <button class="in_btn">주소찾기</button>
+                </div>
+                <label>       
+                    <input type="text" value="서울특별시 서대문구 경기대로 26-26">
+                    <a class="close_btn"><img src="../img/icon_close3.svg"></a>
+                </label>
+            </li>
+
+            <li>
+                <p class="label_tit">상세주소</p>
+                <label>
+                    <input type="text" value="15층">
+                    <a class="close_btn"><img src="../img/icon_close3.svg"></a>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_wrap"><input type="checkbox">기본배송지로 설정</label>
+            </li>
+        </ul>
+    </form>
+    
+    <button type="submit">배송지 저장</button>
+</div>
+
+</body>
+</html> 

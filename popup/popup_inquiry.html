@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>미배르 / 상품문의</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/custom.css" />
+<link rel="stylesheet" href="../css/design.css" />
+<link rel="stylesheet" href="./popup.css" />
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../js/common.js"></script>
+</head>
+<body>
+<div id="Popup_inquiry" class="shopcommon Popup">
+    <div class="tit_area">
+        <h2 class="popup_tit">상품문의</h2>
+        <a href="" class="close_btn"><img src="../img/icon_close2.svg"></a>
+    </div>
+    <div class="textarea_wrap">
+        <label>
+            <textarea id="product_inquiry" maxlength="1000" placeholder="문의하실 내용을 입력해주세요."></textarea>
+            <p class="count_wrap"><span class="count">0</span>/1000</p>
+        </label>
+    </div>
+    <div class="btn_area">
+        <button class="white_btn">취소</button>
+        <button type="submit">등록</button>
+    </div>
+</div>
+
+<script>
+    $("#product_inquiry").keyup(function(e) {
+		var content = $(this).val();
+		$(".count").text(content.length);
+	});
+</script>
+
+</body>
+</html> 

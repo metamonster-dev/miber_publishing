@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>미배르몰 / 상품상세</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/custom.css" />
+<link rel="stylesheet" href="../css/design.css" />
+<link rel="stylesheet" href="./shop.css" />
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../js/common.js"></script>
+</head>
+<body>
+<div id="Shopitem_pc" class="shopcommon">
+    <section class="item_top_area">
+        <div class="img_wrap">
+            <div class="swiper item_view">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/item_img01.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/item_img02.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/item_img03.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/item_img04.png" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper item_nav">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/item_img01.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/item_img02.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/item_img03.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/item_img04.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper(".item_nav", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".item_view", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            });
+        </script>
+        <div class="item_info">
+            <div class="info01">
+                <p class="item_name">마케토 마카다미아 정과 견과류정과 무설탕 키토 비건 다이어트 [원산지:호주]</p>
+                <p class="star_rating"><img src="../img/star-filled.svg">4.7<span class="count">(133)</span></p>
+                <p class="price"><span>25,000</span>원</p>
+            </div>
+            <div class="info02">
+                <ul class="info_wrap">
+                    <li>
+                        <p class="tit">배송정보</p>
+                        <div class="delivery">
+                            <p>택배배송 | <b>4,000</b>원<span class="red"> (주문시 결제)</span> · 한진택배</p>
+                            <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">옵션선택</p>
+                        <div class="option_wrap">
+                            <div class="filter_slect select ">
+                                <input type="hidden" class="opt_val" value="">
+                                <div class="trigger">
+                                    <span class="trigger_txt">마케토 옵션</span>
+                                </div>
+                                <ul class="option">
+                                    <li data-value="마케토옵션">100g</li>
+                                    <li data-value="마케토옵션" class="soldout">150g(품절)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="option_total">
+                                <ul class="option_list">
+                                    <li>100g</li>
+                                </ul>
+                                <div class="quantity_wrap">
+                                    <div class="quantity">
+                                        <button type="button" class="minus_btn"> <img src="../img/icon_minus.svg" alt="-"> </button>
+                                        <div class="count">1</div>
+                                        <button type="button" class="plus_btn"> <img src="../img/icon_plus2.svg" alt="+"> </button>
+                                    </div>
+                                    <p class="option_price"><span>19,500</span>원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="total">
+                        <p class="total_tit">총 상품 금액</p>
+                        <div>
+                            <p>총 수량 1개 | </p>
+                            <p class="total_price"><span>25,000</span>원</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn_wrap">
+                <button type="submit">구매하기</button>
+                <div class="btn_area">
+                    <button class="white_btn wish_btn"><img src="../img/icon_wish.svg">찜하기</button>
+                    <button class="white_btn cart_btn"><img src="../img/icon_cart.svg">장바구니</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--상단 스크롤 고정 구매모달-->
+    <section class="sticky_item_info">
+        <!--상품에 옵션 없을때 type01 노출-->
+        <div class="info_wrap type01 ">
+            <div class="item_wrap">
+                <div class="img_area">
+                    <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                </div>
+                <div class="txt_area">
+                    <p class="product_name">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                    <p class="product_price"><span>19,500</span>원</p>
+                </div>
+            </div>
+            <button type="submit" class="black_btn">구매하기</button>
+        </div>
+        <!--상품에 옵션 없을때 type02 노출-->
+        <div class="type02 d-none">
+            <div class="info_wrap">
+                <div class="item_wrap">
+                    <div class="img_area">
+                        <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                    </div>
+                    <div class="txt_area">
+                        <p class="product_name">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                        <p class="product_price"><span>19,500</span>원</p>
+                    </div>
+                </div>
+                <img src="../img/icon_close2.svg">
+            </div>
+            <div class="product_option_wrap">
+                <div class="box01 delivery">
+                    <p>택배배송 | <b>4,000</b>원<span class="red"> (주문시 결제)</span> · 한진택배</p>
+                    <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
+                </div>
+                <div  class="box02 total">
+                    <div class="total_price_wrap">
+                        <p class="total_tit">총 상품 금액</p>
+                        <div class="right">
+                            <p>총 수량 1개</p>
+                            <p class="total_price"><span>25,000</span>원</p>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <button type="submit">구매하기</button>
+                        <div class="btn_area">
+                            <button class="white_btn wish_btn"><img src="../img/icon_wish.svg">찜하기</button>
+                            <button class="white_btn cart_btn"><img src="../img/icon_cart.svg">장바구니</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="tab_menu">
+            <li data-tabid="detail01" class="on">상세정보</li>
+            <li data-tabid="detail02">리뷰<span class="count">&nbsp;133</span></li>
+            <li data-tabid="detail03">상품문의<span class="count">&nbsp;4</span></li>
+            <li data-tabid="detail04">반품/교환 문의</li>
+        </ul>
+    </section>
+
+    <!--상세보기 본문-->
+    <section class="item_detail_wrap">
+        <!--상세보기 탭메뉴-->
+        <ul class="tab_menu">
+            <li data-tabid="detail01" class="on">상세정보</li>
+            <li data-tabid="detail02">리뷰<span class="count">&nbsp;133</span></li>
+            <li data-tabid="detail03">상품문의<span class="count">&nbsp;4</span></li>
+            <li data-tabid="detail04">반품/교환 문의</li>
+        </ul>
+        <!--상품정보-->
+        <div id="detail01">
+            <p class="tit">상품정보</p>
+            <table class="table_defalt">
+                <tr>
+                    <th>상품번호</th>
+                    <td>8097117204</td>
+                    <th>상품상태</th>
+                    <td>베스트</td>
+                </tr>
+                <tr>
+                    <th>제조사</th>
+                    <td>미베르다이어트</td>
+                    <th>모델명</th>
+                    <td>저스트피넛버터</td>
+                </tr>
+                <tr>
+                    <th>브랜딩</th>
+                    <td>미베르다이어트</td>
+                    <th>원산지</th>
+                    <td>미국</td>
+                </tr>
+                <tr>
+                    <th>중량</th>
+                    <td>330g</td>
+                    <th>&nbsp;</th>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <!--상품상세 본문영역-->
+            <div class="detail_contents">
+                <img src="img/item_detail.jpg">
+            </div>
+            <div class="btn_area">
+                <button id="product_more" class="white_btn">상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg"></button>
+            </div>
+            <p class="tit">상품정보 제공고시</p>
+            <table class="table_defalt">
+                <tr>
+                    <th>식품 위생법에 따른 표시사항</th>
+                    <td>
+                        <ul class="list_style">
+                            <li>제품명</li>
+                            <li>식품의 유형</li>
+                            <li>생산자</li>
+                            <li>소재지</li>
+                            <li>제조연월일</li>
+                            <li>소비기한 또는 품질유지기한</li>
+                            <li>포장단위별 내용물의 용량(중량), 수량</li>
+                            <li>포장단위별 수량</li>
+                            <li>원재료명 (｢농수산물의 원산지 표시 등에 관한 법률｣에 따른 원산지 표시 포함) 및 함량</li>
+                            <li>영양성분</li>
+                            <li>유전자변형식품에 해당하는 경우의 표시</li>
+                            <li>소비자안전을 위한 주의사항</li>
+                            <li>수입식품의 경우</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="gray">
+                            <li>상품상세 참조</li>
+                            <li>상품상세 참조</li>
+                            <li>상품상세 참조</li>
+                            <li>상품상세 참조</li>
+                            <li>주문일로부터 20일 이내</li>
+                            <li>개봉후 5개월</li>
+                            <li>330g</li>
+                            <li>상품상세 참조</li>
+                            <li>마카다미아, 에리스리톨, 나한과추출물, 아보카도오일, 시나몬파우더, 천일염</li>
+                            <li>상품상세 참조</li>
+                            <li>해당사항 없음</li>
+                            <li>상품상세 참조</li>
+                            <li>해당사항 없음</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <td colspan="2">상품상세 참조</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!--리뷰-->
+        <div id="detail02">
+            <p class="tit">상품리뷰</p>
+            <div class="review_info">
+                <ul class="review_info_wrap">
+                    <li>
+                        <p class="tit">총 평점</p>
+                        <div class="star_rating">
+                            <img src="../img/star-filled.svg">
+                            <img src="../img/star-filled.svg">
+                            <img src="../img/star-filled.svg">
+                            <img src="../img/star-filled.svg">
+                            <img src="../img/star-filled.svg">
+                        </div>
+                        <p class="rating"><span>4.7</span> / 5</p>
+                    </li>
+                    <li>
+                        <p class="tit">전체리뷰</p>
+                        <img src="../img/icon_reveiw_b.svg" alt="리뷰">
+                        <p class="count">133</p>
+                    </li>
+                    <li>
+                        <p class="tit">평점 비율</p>
+                        <ul class="graph">
+                            <li>
+                                <p class="graph_count">50</p>
+                                <div><span data-height="80" class="red"></span></div>
+                                <p>5점</p>
+                            </li>
+                            <li>
+                                <p class="graph_count">50</p>
+                                <div><span data-height="50"></span></div>
+                                <p>4점</p>
+                            </li>
+                            <li>
+                                <p class="graph_count">10</p>
+                                <div><span data-height="10"></span></div>
+                                <p>3점</p>
+                            </li>
+                            <li>
+                                <p class="graph_count">10</p>
+                                <div><span data-height="0"></span></div>
+                                <p>4점</p>
+                            </li>
+                            <li>
+                                <p class="graph_count">13</p>
+                                <div><span data-height="0"></span></div>
+                                <p>3점</p>
+                            </li>
+                        </ul>
+                        <script>
+                            $('.graph span').each(function() {
+                                var heightPercent = $(this).data('height');
+                                $(this).css('height', heightPercent + '%');
+                            });
+                        </script>
+                    </li>
+                </ul>
+            </div>
+            <div class="review">
+                <div class="top_area">
+                    <P class="total">리뷰<span>20</span>건</P>
+                    <ul class="filter">
+                        <li class="on">최신순</li>
+                        <li>평점 높은순</li>
+                        <li>평점 낮은순</li>
+                    </ul>
+                </div>
+                <ul class="review_accordion">
+                        <li class="depth1" data-name="review01">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <!-- 별점은 정렬이 역방향으로 되있습니다 -->
+                                    <div class="star-rating">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                            </div>
+                            <div class="img_area">
+                                <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                            </div>
+                        </li>
+                        <li class="depth2" data-name="review01">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <div class="star-rating">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                                <div class="img_area">
+                                    <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                                </div>
+                            <div>
+                        </li>
+                        <li class="depth1" data-name="review02">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <!-- 별점은 정렬이 역방향으로 되있습니다 -->
+                                    <div class="star-rating">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                            </div>
+                            <div class="img_area">
+                                <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                            </div>
+                        </li>
+                        <li class="depth2" data-name="review02">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <div class="star-rating">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                                <div class="img_area">
+                                    <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                                </div>
+                            <div>
+                        </li>
+                        <li class="depth1" data-name="review03">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <!-- 별점은 정렬이 역방향으로 되있습니다 -->
+                                    <div class="star-rating">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="depth2" data-name="review03">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <div class="star-rating">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                            <div>
+                        </li>
+                    </ul>
+                    <div class="page_wrap">
+                        <ul class="paging_btn">
+                            <li class="side_left"><a><img src="../img/icon_page_prev2.svg"></a></li>
+                            <li class="side_left"><a><img src="../img/icon_page_prev.svg"></i></a></li>
+                            <li><a class="on">1</a></li> 
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                            <li><a>4</a></li>
+                            <li><a>5</a></li>
+                            <li><a>6</a></li>
+                            <li><a>7</a></li>
+                            <li><a>8</a></li>
+                            <li><a>9</a></li>
+                            <li><a>10</a></li>
+                            <li class="side_left"><a><img src="../img/icon_page_next.png"></a></li>
+                            <li class="side_right"><a><img src="../img/icon_page_next2.svg"></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            
+                <script>
+                    $(document).ready(function(){
+                        $('.depth1').click(function(){
+                            var name = $(this).data('name');
+                            $('.depth2[data-name="' + name + '"]').slideToggle();
+                            $(this).toggleClass('rotated');
+                        });
+                    });
+                </script>
+        </div>
+
+
+        <!--상품문의-->
+        <div id="detail03">
+            <p class="tit">상품문의 <span>4</span></p>
+            <div class="top_area">
+                <button class="black_btn" id="inquiry_write">문의 작성하기</button>
+                <div class="filter_wrap">
+                    <div class="filter_slect select ">
+                        <input type="hidden" class="opt_val" value="">
+                        <div class="trigger">
+                            <span class="trigger_txt">답변상태</span>
+                        </div>
+                        <ul class="option">
+                            <li data-value="답변대기">답변대기</li>
+                            <li data-value="답변완료">답변완료</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <table class="table_defalt">
+                <thead>
+                    <tr>
+                        <th width="136px">답변상태</th>
+                        <th>제목</th>
+                        <th width="136px">작성자</th>
+                        <th width="136px">작성일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>답변대기</td>
+                        <td class="text_left"><a href="#">상품 문의</a></td>
+                        <td>abc1234</td>
+                        <td>2024-05-27</td>
+                    </tr>
+                    <tr>
+                        <td>답변완료</td>
+                        <td class="text_left"><a href="#">상품 문의</a></td>
+                        <td>abc1234</td>
+                        <td>2024-05-27</td>
+                    </tr>
+                    <tr class="answer">
+                        <td>&nbsp;</td>
+                        <td class="text_left"><span>답변</span><a href="#">안녕하세요. 밀가루 성분 들어있지 않습니다. 감사합니다 ☺</a></td>
+                        <td >판매완료</td>
+                        <td>2024-05-27</td>
+                    </tr>
+                    <tr>
+                        <td>답변대기</td>
+                        <td class="text_left"><a href="#">상품 문의</a></td>
+                        <td>abc1234</td>
+                        <td>2024-05-27</td>
+                    </tr>
+                    <tr>
+                        <td>답변완료</td>
+                        <td class="text_left"><a href="#">상품 문의</a></td>
+                        <td>abc1234</td>
+                        <td>2024-05-27</td>
+                    </tr>
+                    <tr class="answer">
+                        <td>&nbsp;</td>
+                        <td class="text_left"><span>답변</span><a href="#">안녕하세요. 밀가루 성분 들어있지 않습니다. 감사합니다 ☺</a></td>
+                        <td >판매완료</td>
+                        <td>2024-05-27</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="page_wrap">
+                <ul class="paging_btn">
+                    <li class="side_left"><a><img src="../img/icon_page_prev2.svg"></a></li>
+                    <li class="side_left"><a><img src="../img/icon_page_prev.svg"></i></a></li>
+                    <li><a class="on">1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>4</a></li>
+                    <li><a>5</a></li>
+                    <li><a>6</a></li>
+                    <li><a>7</a></li>
+                    <li><a>8</a></li>
+                    <li><a>9</a></li>
+                    <li><a>10</a></li>
+                    <li class="side_left"><a><img src="../img/icon_page_next.png"></i></a></li>
+                    <li class="side_right"><a><img src="../img/icon_page_next2.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--반품/교환 문의-->
+        <div id="detail04">
+            <p class="tit">반품/교환 정보</p>
+            <table class="table_defalt">
+                <tr>
+                    <th width="250px">판매자 지정 택배사</th>
+                    <td colspan="3">한진택배</td>
+                </tr>
+                <tr>
+                    <th>반품배송비</th>
+                    <td>4,000원</td>
+                    <th>교환배송비</th>
+                    <td>8,000원</td>
+                </tr>
+                <tr>
+                    <th>보내실 곳</th>
+                    <td colspan="3">서울시 강남구 영동대로 644, 3층</td>
+                </tr>
+                <tr>
+                    <th>반품/교환 사유에 <br/>
+                        따른 요청 가능 기간</th>
+                    <td colspan="3">
+                        <ul class="list_style">
+                            <li> 구매자 단순 변심은 상품 수령 후 7일 이내(구매자 반품배송비 부담)</li>
+                            <li> 표시/광고와 상이, 계약 내용과 다르게 이행된 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안 날로부터 30일 이내(판매자 반품 배송비 부담)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>반품/교환 불가능 사유</th>
+                    <td colspan="3">
+                        1. 반품요청기간이 지난 경우<br/>
+                        2. 구매자의 책임 있는 사유로 상품 등이 멸실 또는 훼손된 경우(단, 상품의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외)<br/>
+                        3. 구매자의 책임있는 사유로 포장이 훼손되어 상품 가치가 현저히 상실된 경우(예: 식품, 화장품, 향수류, 음반 등)<br/>
+                        4. 구매자의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우(라벨이 떨어진 의류 또는 태그가 떨어진 명품관 상품인 경우)<br/>
+                        5. 시간의 경과에 의하여 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우<br/>
+                        6. 고객의 요청사항에 맞춰 제작에 들어가는 맞춤제작상품의 경우(판매자에게 회복불가능한 손해가 예상되고,<br/>
+                            그러한 예정으로 청약철회권 행사가 불가하다는 사실을 서면 동의 받은 경우)<br/>
+                        7. 복제가 가능한 상품 등의 포장을 훼손한 경우(CD/DVD/GAME/도서의 경우 포장 개봉 시)
+                    </td>
+                </tr>
+            </table>
+            
+            <p class="tit">판매자 정보</p>
+            <table class="table_defalt">
+                <tr>
+                    <th>상호명</th>
+                    <td>주식회사 미베르</td>
+                    <th>대표자</th>
+                    <td>임형석</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+        $(document).ready(function() {
+            $('.tab_menu li').on('click', function() {
+                $('.tab_menu li').removeClass('on');
+                $(this).addClass('on');
+                
+                var targetId = $(this).data('tabid');
+                
+                // 해당 ID를 가진 요소로 스크롤 이동
+                var $targetElement = $('#' + targetId);
+                if ($targetElement.length) {
+                    $('html, body').animate({
+                        scrollTop: $targetElement.offset().top - 170
+                    }, 600);
+                }
+            });
+
+            var $stickyItem = $('.sticky_item_info');
+            var $tabMenu = $('.item_detail_wrap .tab_menu');
+            var tabMenuOffset = $tabMenu.offset().top + $tabMenu.outerHeight();
+            
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > tabMenuOffset) {
+                    $stickyItem.fadeIn();
+                } else {
+                    $stickyItem.fadeOut();
+                }
+            });
+        });
+        </script>
+        </section>
+    </div>
+
+    <div id="Shopitem_m" class="shopcommon">
+        <section class="item_top_area">
+            <div class="img_wrap">
+                <div class="swiper item_view_m">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/item_img01.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/item_img02.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/item_img03.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/item_img04.png" />
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var swiper2 = new Swiper(".item_view_m", {
+                    spaceBetween: 10,
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                    });
+                </script>
+            </div>
+            <div class="item_info">
+                <div class="info01">
+                    <p class="item_name">마케토 마카다미아 정과 견과류정과 무설탕 키토 비건 다이어트 [원산지:호주]</p>
+                    <p class="price"><span>25,000</span>원</p>
+                </div>
+                <div class="info02">
+                    <p class="tit">배송정보</p>
+                    <div class="delivery">
+                        <p>택배배송 | <b>4,000</b>원<span class="red"> (주문시 결제)</span> · 한진택배</p>
+                        <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
+                    </div>
+                </div>
+                <div class="info02">
+                    <p class="tit">상품정보</p>
+                    <ul class="list_text">
+                        <li><span class="list_tit">상품번호</span> 8097117204</li>
+                        <li><span class="list_tit">제조사</span> 미베르다이어트</li>
+                        <li><span class="list_tit">브랜드</span> 미베르다이어트</li>
+                        <li><span class="list_tit">중량</span> 330g</li>
+                        <li><span class="list_tit">상품상태</span> 베스트</li>
+                        <li><span class="list_tit">모델명</span> 저스트피넛버터</li>
+                        <li><span class="list_tit">원산지</span> 미국</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--상세보기 본문-->
+        <section class="item_detail_wrap ">
+            <!--상세보기 탭메뉴-->
+            <ul class="tab_menu">
+                <li data-tabid="detail01_m" class="on">상세정보</li>
+                <li data-tabid="detail02_m">리뷰<span class="count">&nbsp;133</span></li>
+                <li data-tabid="detail03_m">상품문의<span class="count">&nbsp;4</span></li>
+                <li data-tabid="detail04_m">반품/교환 문의</li>
+            </ul>
+            <!--상품정보-->
+            <div id="detail01_m">
+                <div class="detail_contents detail_contents_m ">
+                <img src="img/item_detail.jpg">
+                </div>
+                <div class="btn_area">
+                    <button id="product_more2" class="white_btn">상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg"></button>
+                </div> 
+            </div>
+
+            <div id="detail02_m">
+                <div class="review_info">
+                    <ul class="review_info_wrap">
+                        <li>
+                            <p class="tit">총 평점</p>
+                            <div class="star_rating">
+                                <img src="../img/star-filled.svg">
+                                <img src="../img/star-filled.svg">
+                                <img src="../img/star-filled.svg">
+                                <img src="../img/star-filled.svg">
+                                <img src="../img/star-filled.svg">
+                            </div>
+                            <p class="rating"><span>4.7</span> / 5</p>
+                        </li>
+                        <li>
+                            <p class="tit">평점 비율</p>
+                            <ul class="graph">
+                                <li>
+                                    <p class="graph_count">50</p>
+                                    <div><span data-height="80" class="red"></span></div>
+                                    <p>5점</p>
+                                </li>
+                                <li>
+                                    <p class="graph_count">50</p>
+                                    <div><span data-height="50"></span></div>
+                                    <p>4점</p>
+                                </li>
+                                <li>
+                                    <p class="graph_count">10</p>
+                                    <div><span data-height="10"></span></div>
+                                    <p>3점</p>
+                                </li>
+                                <li>
+                                    <p class="graph_count">10</p>
+                                    <div><span data-height="0"></span></div>
+                                    <p>4점</p>
+                                </li>
+                                <li>
+                                    <p class="graph_count">13</p>
+                                    <div><span data-height="0"></span></div>
+                                    <p>3점</p>
+                                </li>
+                            </ul>
+                            <script>
+                                $('.graph span').each(function() {
+                                    var heightPercent = $(this).data('height');
+                                    $(this).css('height', heightPercent + '%');
+                                });
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+                <div class="review">
+                    <div class="top_area">
+                        <P class="total">리뷰<span>20</span>건</P>
+                        <div class="filter_wrap">
+                            <div class="filter_slect select ">
+                                <input type="hidden" class="opt_val" value="">
+                                <div class="trigger">
+                                    <span class="trigger_txt">최신순</span>
+                                </div>
+                                <ul class="option">
+                                    <li data-value="최신순">최신순</li>
+                                    <li data-value="평점 높은순">평점 높은순</li>
+                                    <li data-value="평점 낮은순">평점 낮은순</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="review_accordion">
+                        <li class="depth2" data-name="review01">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <div class="star-rating">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                            <div>
+                        </li>
+                        <li class="depth2" data-name="review02">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <div class="star-rating">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                                <div class="img_area">
+                                    <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                                </div>
+                            <div>
+                        </li>
+                        <li class="depth2" data-name="review03">
+                            <div class="product_area">
+                                <div class="txt_area">
+                                    <div class="star-rating">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-empty.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                        <img src="../img/star-filled.svg">
+                                    </div>
+                                    <p class="review_user">홍길동123 <span class="date">24.07.01</span></p>
+                                    <p class="review_product">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                                    <p class="review_preview">칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다! 칼로리도 낮아 안심이고, 맛있습니다!</p>
+                                </div>
+                            <div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="detail03_m">
+                <div class="top_area">
+                    <p class="tit">상품문의 <span>4</span></p>
+                    <div class="filter_wrap">
+                        <div class="filter_slect select ">
+                            <input type="hidden" class="opt_val" value="">
+                            <div class="trigger">
+                                <span class="trigger_txt">답변상태</span>
+                            </div>
+                            <ul class="option">
+                                <li data-value="답변대기">답변대기</li>
+                                <li data-value="답변완료">답변완료</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="white_btn" id="inquiry_write">문의 작성하기</button>
+                <ul class="table_list">
+                    <li>   
+                        <p class="state">답변대기</p>
+                        <div>
+                            <p class="secret">비밀글입니다.</p>
+                            <p class="btm"><span class="user_id">abc1234</span>2024.05.24</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="state">답변완료</p>
+                        <div>
+                            <p>밀가루 성분이 들어가나요?</p>
+                            <p class="btm"><span class="user_id">abc1234</span>2024.05.24</p>
+                        </div>
+                    </li>
+                    <li class="answer">
+                        <div class="text_left"><span>답변</span><a href="#">안녕하세요. 밀가루 성분 들어있지 않습니다. 감사합니다 ☺</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="detail04_m">
+                <p class="tit">반품/교환정보</p>
+                <div class="detail04_txtbox">
+                    판매자 지정 택배사 : 한진택배<br/>
+                    반품배송비 : 4,000원<br/>
+                    교환배송비 : 4,000원<br/>
+                    보내실 곳 : 서울시 강남구 영동대로 644, 3층<br/>
+                </div>
+                <p class="tit">반품/교환 사유에 따른 요청 가능 기간</p>
+                <div class="detail04_txtbox">
+                    <ul>
+                        <li>구매자 단순 변심은 상품 수령 후 7일 이내 (구매자 반품배송비 부담)</li>
+                        <li>표시/광고와 상이, 계약 내용과 다르게 이행된 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안 날로부터 30일 이내(판매자 반품 배송비 부담)</li>
+                    </ul>
+                </div>
+                <p class="tit">반품/교환 불가능 사유</p>
+                <div class="detail04_txtbox">
+                    <ul class="num">
+                    <li><span>1.</span> 반품요청기간이 지난 경우</li>
+                    <li><span>2.</span> 구매자의 책임 있는 사유로 상품 등이 멸실 또는 훼손된 경우(단, 상품의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외)</li>
+                    <li>
+                        <span>3.</span>
+                        구매자의 책임있는 사유로 포장이 훼손되어 상품 가치가 현저히
+                        상실된 경우(예: 식품, 화장품, 향수류, 음반 등)
+                    </li>
+                    <li>
+                        <span>4.</span>
+                        구매자의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 
+                        감소한 경우(라벨이 떨어진 의류 또는 태그가 떨어진 명품관 
+                        상품인 경우)
+                    </li>
+                    <li>
+                        <span>5.</span>
+                        시간의 경과에 의하여 재판매가 곤란할 정도로 상품 등의 가치가 
+                        현저히 감소한 경우
+                    </li>
+                    <li>
+                        <span>6.</span>
+                        고객의 요청사항에 맞춰 제작에 들어가는 맞춤제작상품의 경우
+                        (판매자에게 회복불가능한 손해가 예상되고, 그러한 예정으로 
+                        청약 철회권 행사가 불가하다는 사실을 서면 동의 받은 경우)
+                    </li>
+                    <li>
+                        <span>7.</span>
+                        복제가 가능한 상품 등의 포장을 훼손한 경우
+                        (CD/DVD/GAME/도서의 경우 포장 개봉 시)
+                    </li>
+                    </ul>
+                </div>
+                <p class="tit">판매자 정보</p>
+                <div class="detail04_txtbox">
+                    상호명 : 미베르<br/>
+                    대표자 : 임형석
+                </div>
+            </div>
+            <div>
+                <div class="info03">
+                    <p class="info_tit">상품정보 제공고시</p>
+                    <div class="info_accordion">
+                        <p class="info_tit type02 depth1" data-name="infoMobile01">식품위생법에 따른 조항</p>
+                        <div data-name="infoMobile01" class="info_contents depth2">
+                            제품명 (상품상세 참조)<br/>
+                            식품의 유형 (상품상세 참조)<br/>
+                            생산자 (상품상세 참조)<br/>
+                            소재지 (상품상세 참조)<br/>
+                            제조연월일 (주문일로부터 20일 이내)<br/>
+                            소비기한 또는 품질유지기한 (개봉후5개월)<br/>
+                            포장단위별 내용물의 용량(중량), 수량 (330g)<br/>
+                            포장단위별 수량 (상품상세 참조)<br/>
+                            원재료명 (｢농수산물의 원산지 표시 등에 관한 법률｣에 <br/>
+                            따른 원산지 표시 포함) 및 함량 (마카다미아, 에리스리톨, <br/>
+                            나한과추출물, 아보카도오일, 시나몬파우더, 천일염)<br/>
+                            영양성분 (상품상세 참조)<br/>
+                            유전자변형식품에 해당하는 경우의 표시 (해당사항 없음)<br/>
+                            소비자안전을 위한 주의사항 (상품상세 참조)<br/>
+                            수입식품의 경우 (해당사항 없음)<br/>
+                        </div>
+                        <p class="info_tit type02 depth1" data-name="infoMobile02">전화번호</p>
+                        <div i data-name="infoMobile02" class="info_contents depth2">
+                            상품상세 참조
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="mobile_fiexd">
+            <!--기본-->
+            <div class="btn_area  d-none">
+                <button class="white_btn wish_btn"><img src="../img/icon_wish.svg"></button>
+                <button type="submit">구매하기</button>
+            </div>
+            <!--구매하기 눌렀을때 (옵션X)-->
+            <div class="order_wrap type01 d-none">
+                <ul class="order01">
+                    <li>
+                        <p class="left">수량선택</p>
+                        <div class="right">
+                            <div class="quantity">
+                                <button type="button" class="minus_btn"> <img src="../img/icon_minus.svg" alt="-"> </button>
+                                <div class="count">1</div>
+                                <button type="button" class="plus_btn"> <img src="../img/icon_plus2.svg" alt="+"> </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="left">총 수량 <span class="red">1</span>개</p>
+                        <div class="right">
+                            <p>총 금액</p>
+                            <p class="price"><span>19,500</span>원</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="order02">
+                    <p class="tit">배송정보</p>
+                    <div class="delivery">
+                        <p>택배배송 | <b>4,000</b>원<span class="red"> (주문시 결제)</span> · 한진택배</p>
+                        <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
+                    </div>
+                </div>
+                <div class="btn_area">
+                    <button class="white_btn cart_btn"><img src="../img/icon_cart.svg">장바구니</button>
+                    <button type="submit">구매하기</button>
+                </div>
+            </div>
+            <!--구매하기 눌렀을때 (옵션O)-->
+            <div class="order_wrap type02">
+                <div class="order03">
+                    <div class="filter_slect select">
+                        <input type="hidden" class="opt_val" value="">
+                        <div class="trigger">
+                            <span class="trigger_txt">마케토 옵션</span>
+                        </div>
+                        <ul class="option">
+                            <li data-value="100g"><label><input type="checkbox"> 100g</label></li>
+                            <li data-value="150g" class="soldout"><label><input type="checkbox" disabled> 150g(품절)</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="order01">
+                    <li class="option_more">
+                        <p class="top">100g<span class="close_btn"><img src="../img/icon_close4.svg"></span></p>
+                        <div class="btm">
+                            <div class="left">
+                                <div class="quantity">
+                                    <button type="button" class="minus_btn"> <img src="../img/icon_minus.svg" alt="-"> </button>
+                                    <div class="count">1</div>
+                                    <button type="button" class="plus_btn"> <img src="../img/icon_plus2.svg" alt="+"> </button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p class="price"><span>25,000</span>원</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="left">총 수량 <span class="red">1</span>개</p>
+                        <div class="right">
+                            <p>총 금액</p>
+                            <p class="price"><span>19,500</span>원</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="order02">
+                    <p class="tit">배송정보</p>
+                    <div class="delivery">
+                        <p>택배배송 | <b>4,000</b>원<span class="red"> (주문시 결제)</span> · 한진택배</p>
+                        <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
+                    </div>
+                </div>
+                <div class="btn_area">
+                    <button class="white_btn cart_btn"><img src="../img/icon_cart.svg">장바구니</button>
+                    <button type="submit">구매하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var $btn = $('#product_more2');
+        var $detailContents = $('.detail_contents_m');
+        var isExpanded = false;
+
+        $btn.on('click', function() {
+            if (isExpanded) {
+                // 접기 상태로 변경
+                $detailContents.css('height', '300px');
+                $btn.html('상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg">');
+            } else {
+                // 펼치기 상태로 변경
+                $detailContents.css('height', 'auto');
+                $btn.html('상세정보 접기<img src="../img/icon_dropdown3.svg" class="reverse">');
+            }
+            isExpanded = !isExpanded;
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html> 
