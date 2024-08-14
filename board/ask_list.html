@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>미배르 / 자주하는 질문</title>
+<!-- Bootsliap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootsliap@4.6.0/dist/css/bootsliap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootsliap@4.6.0/dist/js/bootsliap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootsliapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/custom.css" />
+<link rel="stylesheet" href="../css/design.css" />
+<link rel="stylesheet" href="./board.css" />
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="Notice" class="boardcommon">
+    
+        <div class="page_header pc">
+            <h2>고객센터</h2>
+            <ul class="tab">
+                <li><a href="../board/notice_list.html">공지사항</a></li>
+                <li class="on"><a href="../board/ask_list.html">자주하는질문</a></li>
+            </ul>
+        </div>
+
+        <div class="md_contents">
+            <label class="serch">
+                <input type="text" placeholder="검색어를 입력해 주세요.">
+                <img class="serch_icon" src="../img/icon_serch.svg" alt="serch">
+            </label>
+            <ul class="ask_list">
+                <li class="depth1" data-name="ask01">
+                    <p class="tit">Q </p>
+                    <p class="contents">정회원은 어떻게 해야되나요?<img class="dropdown" src="../img/icon_dropdown2.svg"></p>
+                </li>
+                <li  class="depth2" data-name="ask01">
+                    <p class="tit">A</p>
+                    <p class="contents">정회원 되는법</p>
+                </li>
+                <li class="depth1" data-name="ask02">
+                    <p class="tit">Q</p>
+                    <p class="contents">정회원은 어떻게 해야되나요?<img class="dropdown" src="../img/icon_dropdown2.svg"></p>
+                </li>
+                <li  class="depth2" data-name="ask02">
+                    <p class="tit">A</p>
+                    <p class="contents">정회원 되는법</p>
+                </li>
+                <li class="depth1" data-name="ask03">
+                    <p class="tit">Q</p>
+                    <p class="contents">정회원은 어떻게 해야되나요?<img class="dropdown" src="../img/icon_dropdown2.svg"></p>
+                </li>
+                <li  class="depth2" data-name="ask03">
+                    <p class="tit">A</p>
+                    <p class="contents">정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법정회원 되는법</p>
+                </li>
+            </ul>
+            <script>
+                $(document).ready(function(){
+                    $('.depth2').hide()//초기에는 안보이게
+                    $('.depth1').click(function(){
+                        var name = $(this).data('name');
+                        $('.depth2[data-name="' + name + '"]').slideToggle();
+                    });
+                });
+            </script>
+            <div class="page_wrap pc">
+                <ul class="paging_btn">
+                    <li class="side_left"><a><img src="../img/icon_page_prev2.svg"></a></li>
+                    <li class="side_left"><a><img src="../img/icon_page_prev.svg"></a></li>
+                    <li><a class="on">1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>4</a></li>
+                    <li><a>5</a></li>
+                    <li><a>6</a></li>
+                    <li><a>7</a></li>
+                    <li><a>8</a></li>
+                    <li><a>9</a></li>
+                    <li><a>10</a></li>
+                    <li class="side_left"><a><img src="../img/icon_page_next.png"></a></li>
+                    <li class="side_right"><a><img src="../img/icon_page_next2.svg"></a></li>
+                </ul>
+            </div>
+
+            <div class="page_wrap m">
+                <ul class="paging_btn">
+                    <li class="side_left"><a><img src="../img/icon_page_prev2.svg"></a></li>
+                    <li class="side_left"><a><img src="../img/icon_page_prev.svg"></a></li>
+                    <li><a class="on">1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>4</a></li>
+                    <li><a>5</a></li>
+                    <li class="side_left"><a><img src="../img/icon_page_next.png"></a></li>
+                    <li class="side_right"><a><img src="../img/icon_page_next2.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html> 

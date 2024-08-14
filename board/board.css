@@ -1,0 +1,79 @@
+.boardcommon .page_header.pc{display:block;}
+.boardcommon .page_header.pc .tab{display:flex;justify-content:center;align-items:center;gap:10px}
+.boardcommon .page_header .tab li a{display:block;width:260px;height:56px;line-height:56px;text-align:center;background:#f7f7f7;color: #9b9b9b;font-weight:800;font-size:20px;border-radius:500px}
+.boardcommon .page_header .tab li.on a{border:1px solid #DA4E37;color:#DA4E37;background:#fff;}
+.boardcommon .md_contents{width:1200px;margin:0 auto 100px;}
+.boardcommon h2{text-align:center;font-size:32px;font-weight:800;margin:50px auto}
+.boardcommon .serch{position:relative;display:flex;justify-content:flex-end;width:100%;margin:50px 0 20px;height: fit-content;}
+.boardcommon .serch input{max-width:280px;width:100%;font-size:14px}
+.boardcommon .serch .serch_icon{position:absolute;top:10px;right:10px}
+.md_contents.pc{display:block;}
+.md_contents.m{display:none;}
+/*공지사항 목록*/
+#Notice .board_list{margin:0 auto 60px}
+.board_list{width:100%;text-align: center;}
+.board_list th{position:relative;font-size:14px;font-weight: 800;padding:16px 0}
+.board_list th::after{position:absolute;right:0;top:20px;content:'';display:inline-block;width:1px;height:18px;background:#E0E0E2;}
+.board_list th:last-child::after{display:none;}
+.board_list td{padding:26px 0}
+.board_list tr{border-bottom:1px solid #E0E0E2}
+.board_list thead{border-top:2px solid #000}
+.board_list .title_area{text-align:left;cursor: pointer;}
+.board_list .notice .title_area::before{content:'[필독] ';display:inline;color:#DA4E37;}
+.board_list .date{margin-left:10px;font-size:14px;font-weight:700;color:#9B9B9B;}
+.board_list thead .title_area{cursor: auto;}
+
+/*공지사항보기 (PC)*/
+.content_wrap{padding:50px 30px ;border-bottom:1px solid #E0E0E2}
+#Notice_view .board_list{margin:120px auto 60px}
+#Notice_view .black_btn{margin:50px auto}
+
+
+/*자주하는질문*/
+.ask_list .tit{font-size:16px;font-weight:800;color:#DA4E37;}
+.ask_list{width:100%;border-top:2px solid #000;}
+.ask_list li{display:flex;padding:24px 0;width:100%;border-bottom:1px solid #E0E0E2;}
+.ask_list .contents{font-size:16px;font-weight:400;color:#1B1B1B;padding:0 32px;width:100%;;display:flex;justify-content:space-between;align-items:center;}
+.ask_list .tit{width:45px;padding:0 30px}
+.ask_list .depth2{display:flex;align-items:center;background:#f2f2f2;}
+
+/* 반응형 max 1200 md */
+@media (max-width:1200px) {
+    .boardcommon{width:100%;overflow:hidden;}
+    .boardcommon .md_contents{width:100%;}
+    .boardcommon .page_header.m{display:none;}
+    .boardcommon .page_header.pc{display:block;}
+    .boardcommon .page_header .tab li a{width:180px;font-size:16px;height:42px;line-height:42px;}
+    
+
+}
+
+@media (max-width: 767.98px) {
+    .md_contents.pc{display:none;}
+    .md_contents.m{display:block;}
+    .boardcommon{width:100%;}
+    .boardcommon h2{display:none;}
+    .boardcommon .md_contents{width:100%;}
+    .boardcommon .page_header .tab{padding:20px 16px;}
+    .boardcommon .page_header .tab li{width:50%;overflow: hidden;}
+    .boardcommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:16px;font-weight:800;}
+    .boardcommon .serch{padding:0 16px;margin:0 0 20px}
+    .boardcommon .serch input{width:100%;max-width:100%;}
+    .boardcommon .serch .serch_icon{right:30px;}
+
+    /*공지사항(M)*/
+    .notice_list_m.tit{font-size:16px;font-weight:800;color:#DA4E37;}
+    .notice_list_m{width:100%;border-top:2px solid #000;}
+    .notice_list_m li{display:flex;flex-direction:column;padding:24px 0;width:100%;border-bottom:1px solid #E0E0E2;}
+    .notice_list_m .contents{font-size:14px;font-weight:700;color:#1B1B1B;width:100%;;display:flex;justify-content:space-between;align-items:center;}
+    .notice_list_m .date{font-size:12px;color:#999}
+    .notice_list_m .depth1{padding:12px 16px;}
+    .notice_list_m .depth2{display:flex;background:#f2f2f2;padding:21px 16px;font-weight:400;font-size:12px}
+    .notice_list_m .depth1.notice .tit::before{content:'[필독] ';display:inline;color:#DA4E37;}
+
+    /*자주하는질문*/
+    .ask_list li{padding:16px}
+    .ask_list .contents{font-size:14px;padding:0 8px}
+    .ask_list .tit{width:15px;padding:0 4px}
+    .ask_list .depth2 .contents{font-size:12px}
+}
