@@ -182,7 +182,7 @@ header{background:#fff;}
 .header_nav > li > a:after{position:absolute;bottom:0;left:0;width:100%;height:0;content:'';display:block;transition:.3s;background:#3D3935}
 .header_nav > li:hover > a::after{height:4px;}
 
-.nav_depth2_bg{width:100%;height:56px;background: #fff;position:absolute;top:97px;left:0;z-index:0;}
+.nav_depth2_bg{width:100%;height:56px;background: #fff;position:absolute;top:97px;left:0;z-index:3;}
 .header_nav .nav_depth2_ul{display:none;height:56px;position:absolute;bottom:-56px;left:0;z-index:9;gap:40px;justify-content:center;align-items:center;transition:.5s;}
 .header_nav > li:hover .nav_depth2_ul{display:flex;}
 .header_nav .nav_depth2_ul:hover{display:flex;}
@@ -196,6 +196,7 @@ header{background:#fff;}
 
 .user_menu{display:flex;align-items:center;gap:26px}
 .mobile_nav_wrap{z-index:999;;display:none;position:absolute;margin-top:60px;margin-bottom:50px;top:0;left:0;width:100%;background:#f2f2f2;transition:.6s;}
+.mobile_nav_wrap.on{transform:translateX(0);}
 .mobile_nav_wrap .login_area{height:82px;padding:0 16px;display:flex;align-items:center;}
 .login_area div{display:none;}
 .login_area div.on{display:flex;}
