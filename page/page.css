@@ -208,7 +208,7 @@
     #Programs04 .md_contents{padding:0 16px}
     #Programs04 .programs04_content01{margin:32px 0}
     #Programs04 .programs04_content01 img, #Programs04 .programs04_content03 img{display:none;}
-    #Programs04 .programs04_content01 .txt_box, #Programs04 .programs04_content03 .txt_box{padding:32px 16px}
+    #Programs04 .programs04_content01 .txt_box, #Programs04 .programs04_content03 .txt_box{padding:32px 16px;justify-content:flex-start;        align-items: flex-start;}
     #Programs04 .programs04_content01 .tit, #Programs04 .programs04_content03 .tit{font-size:20px;line-height:30px;margin-bottom:16px}
     #Programs04 .programs04_content02{margin:32px 0;gap:16px}
     #Programs04 .programs04_content02 li{width:100%;height:auto;padding-bottom:33px}
