@@ -10,264 +10,321 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/custom.css" />
-  <link rel="stylesheet" href="./css/design.css" />
-  <link rel="stylesheet" href="./css/main.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/custom.css" />
+  <link rel="stylesheet" href="/css/design.css" />
+  <link rel="stylesheet" href="/css/main.css" />
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./js/common.js"></script>
+  <script src="/js/common.js"></script>
 </head>
 <body>
-<header>
-  <div class="header_bar">
-    <div class="header_wrap_pc">
-      <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>
-      <ul class="header_nav">
-        <li><a href="#">미베르소개</a></li>
-        <li><a href="#">프로그램</a></li>
-        <li><a href="#">지점안내</a></li>
-        <li><a href="#">상담신청</a></li>
-        <li><a href="#">M-Box</a></li>
-        <li><a href="#">미베르몰</a></li>
-      </ul> 
-      <ul class="user_menu">
-        <li><a href="#"><img src="./img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
-        <li><a href="#"><img src="./img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
-        <li><a href="#"><img src="./img/icon_user03.svg " alt="문의하기"><span class="soundOnly">문의하기</span></a></li>
-    </ul>
+  <header>
+    <div class="header_bar">
+    
+        <div class="header_wrap_pc">
+            <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>
+            <ul class="header_nav">
+                <li>
+                    <a>미베르 소개</a>
+                    <!--DEPTH 2-->
+                    <ul class="nav_depth2_ul">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">이념과 가치</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>프로그램</a>
+                    <!--DEPTH 2-->
+                    <ul class="nav_depth2_ul">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">프로그램   </a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="">지점안내</a>
+                </li> 
+                <li>
+                    <a href="">상담신청</a>
+                </li>
+                <li>
+                    <a href="">M-Box</a>
+                </li>
+                <li>
+                    <a>미베르몰</span></a>
+                    <!--DEPTH 2-->
+                    <ul class="nav_depth2_ul">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">식품</a></li>
+                        
+                    </ul>
+                </li> 
+            </ul>
+            <div class="nav_depth2_bg"></div>
+            <ul class="user_menu">
+                <li><a href="#"><img src="./img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
+                <li><a href="#"><img src="./img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
+                <li><a href="#"><img src="./img/icon_user03.svg " alt="문의하기"><span class="soundOnly">문의하기</span></a></li>
+            </ul>
+        </div>
+        <script>
+            var hideTimeout;
+            $('.nav_depth2_bg').hide();
+    
+            $(".header_nav li:has(.nav_depth2_ul)").hover(function() {
+                clearTimeout(hideTimeout); 
+                $('.nav_depth2_bg').stop(true, true).slideDown();
+                }, function() {
+                hideTimeout = setTimeout(function() {
+                    $('.nav_depth2_bg').stop(true, true).slideUp(); // 배경을 500ms 후에 숨깁니다.
+                }, 500);
+            });
+        </script>
+        <div class="header_wrap_m">
+            <a id="Menubar"><img src="./img/icon_menubar.svg"><span class="soundOnly">메뉴</span></a>
+            <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>
+            <ul class="user_menu">
+                <li><a href="#"><img src="./img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
+                <li><a href="#"><img src="./img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
+            </ul>
+        </div>
     </div>
-    <div class="header_wrap_m">
-      <a id="Menubar"><img src="./img/icon_menubar.svg"><span class="soundOnly">메뉴</span></a>
-      <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>
-      <ul class="user_menu">
-        <li><a href="#"><img src="./img/icon_user02.svg" alt="장바구니"><span class="soundOnly">장바구니</span></a></li>
-      </ul>
-    </div>
-  </div>
-  </div>
-  <div class="mobile_nav_wrap">
-    <div class="login_area">
-      <!--비로그인시-->
-      <div class="login_type_A">
-        <p><a>로그인</a>이 필요합니다.</p>
-      </div>
-      <!--로그인시-->
-      <div class="login_type_B on">
-        <p><span class="user_name">홍길동</span>고객님</p>
-        <button class="btn_round">로그아웃</button>
-      </div>
-    </div>
-    <div class="md_menu">
-      <ul>
-        <li><a href="#">전체메뉴</a></li>
-        <li><a href="#">회원가입</a></li>
-        <li><a href="#">고객센터</a></li>
-      </ul>
-    </div>
-    <div class="mobile_nav">
-      <ul>
-      <li class="mobile_nav_depth2_group">
-        <p class="mobile_nav_depth1">미베르 소개<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
-        <!--DEPTH 2-->
-        <ul class="mobile_nav_depth2_ul">
-          <li><a href="#">소개</a></li>
-          <li><a href="#">이념과 가치</a></li>
-          
-        </ul>
-      </li>
-      <li class="mobile_nav_depth2_group">
-        <p class="mobile_nav_depth1">프로그램<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
-        <!--DEPTH 2-->
-        <ul class="mobile_nav_depth2_ul">
-          <li><a href="#">소개</a></li>
-          <li><a href="#">프로그램   </a></li>
-          
-        </ul>
-      </li>
-      <li class="mobile_nav_depth2_group">
-        <a class="mobile_nav_depth1" href="">지점안내</a>
-      </li> 
-      <li class="mobile_nav_depth2_group">
-        <a class="mobile_nav_depth1" href="">상담신청</a>
-      </li>
-      <li class="mobile_nav_depth2_group">
-        <a class="mobile_nav_depth1" href="">M-Box</a>
-      </li>
-      <li class="mobile_nav_depth2_group">
-        <p class="mobile_nav_depth1">미베르몰<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
-        <!--DEPTH 2-->
-        <ul class="mobile_nav_depth2_ul">
-          <li><a href="#">전체</a></li>
-          <li><a href="#">식품</a></li>
-          
-        </ul>
-    </ul>
-    </div>
-    <div class="mobile_nav2">
-      <!--정회원만 표시-->
-      <section>
-          <p class="section_tit">나의서비스</p>
-          <ul>
-              <li>변화그래프</li>
-              <li>방문현황</li>
-              <li>프로그램</li>
-              <li>컨시어지</li>
-          </ul>
-      </section>
-      <!--정회원만 표시-->
-      <section>
-          <p class="section_tit">쇼핑활동</p>
-          <ul>
-              <li>주문/배송</li>
-              <li>취소/교환/반품</li>
-              <li>찜목록</li>
-              <li>장바구니</li>
-          </ul>
-      </section>
-      <section>
-          <p class="section_tit">회원정보</p>
-          <ul>
-              <li>정보수정</li>
-              <li>배송지관리</li>
-              <li>회원탈퇴</li>
-          </ul>
-      </section>
-      <section>
-          <p class="section_tit">혜택</p>
-          <ul>
-              <li>적립금</li>
-              <li>마일리지</li>
-              <li>정회원 안내</li>
-          </ul>
-      </section>
-      <section>
-          <p class="section_tit">혜택</p>
-          <ul>
-              <li>적립금</li>
-              <li>마일리지</li>
-              <li>정회원 안내</li>
-          </ul>
-      </section>
-  </div>
-    <script>  
-      $(document).ready(function() {
-        const $navItems = $('.mainVisualNav li');
-        const $sections = $('.mainVisual');
-        
-        // 현재 섹션에 맞는 네비게이션 하이라이트
-        function updateNavHighlight() {
-          let currentIndex = 0;
-          
-          $sections.each(function(index) {
-            const sectionTop = $(this).offset().top;
-            const sectionHeight = $(this).outerHeight();
-
-            if ($(window).scrollTop() >= sectionTop - 50 && $(window).scrollTop() < sectionTop + sectionHeight - 50) {
-              currentIndex = index;
-            }
-          });
-
-          $navItems.removeClass('on');
-          $navItems.eq(currentIndex).addClass('on');
-        }
-
-        // 스크롤 시 하이라이트 업데이트
-        $(window).on('scroll', updateNavHighlight);
-
-        // 네비게이션 클릭 시 스크롤 이동
-        $navItems.on('click', function() {
-          const index = $(this).index();
-          $('html, body').animate({
-            scrollTop: $sections.eq(index).offset().top
-          }, 100); // 애니메이션 시간 조정 가능
-        });
-
-        // 페이지 로드 시 초기 하이라이트 업데이트
-        updateNavHighlight();
-    });
-    </script>
-</header>
+    
+    
+    
+    <div class="mobile_nav_wrap">
+        <div class="login_area">
+            <!--비로그인시-->
+            <div class="login_type_A">
+            <p><a>로그인</a>이 필요합니다.</p>
+            </div>
+            <!--로그인시-->
+            <div class="login_type_B on">
+            <p><span class="user_name">홍길동</span>고객님</p>
+            <button class="btn_round">로그아웃</button>
+            </div>
+        </div>
+        <div class="md_menu">
+            <ul>
+            <li id="menu_all"><a href="#">전체메뉴</a></li>
+            
+            <li><a href="#">회원가입</a></li><!--비로그인시-->
+            <li id="menu_mypage"><a href="#">마이페이지</a></li><!--로그인시-->
+    
+            <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <div class="mobile_nav">
+            <ul>
+                <li class="mobile_nav_depth2_group">
+                    <p class="mobile_nav_depth1">미베르 소개<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
+                    <!--DEPTH 2-->
+                    <ul class="mobile_nav_depth2_ul">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">이념과 가치</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="mobile_nav_depth2_group">
+                    <p class="mobile_nav_depth1">프로그램<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
+                    <!--DEPTH 2-->
+                    <ul class="mobile_nav_depth2_ul">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">프로그램   </a></li>
+                        
+                    </ul>
+                </li>
+                <li class="mobile_nav_depth2_group">
+                <a class="mobile_nav_depth1" href="">지점안내</a>
+                </li> 
+                <li class="mobile_nav_depth2_group">
+                <a class="mobile_nav_depth1" href="">상담신청</a>
+                </li>
+                <li class="mobile_nav_depth2_group">
+                <a class="mobile_nav_depth1" href="">M-Box</a>
+                </li>
+                <li class="mobile_nav_depth2_group">
+                    <p class="mobile_nav_depth1">미베르몰<span class="dropdown_icon"><img src="./img/icon_dropdown2.svg" alt="소분류 더보기"></span></p>
+                    <!--DEPTH 2-->
+                    <ul class="mobile_nav_depth2_ul">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">식품</a></li>
+                        
+                    </ul>
+                </li>  
+            </ul>
+        </div>
+        <div class="mobile_nav2">
+            <!--정회원만 표시-->
+            <section>
+                <p class="section_tit">나의서비스</p>
+                <ul>
+                    <li>변화그래프</li>
+                    <li>방문현황</li>
+                    <li>프로그램</li>
+                    <li>컨시어지</li>
+                </ul>
+            </section>
+            <!--정회원만 표시-->
+            <section>
+                <p class="section_tit">쇼핑활동</p>
+                <ul>
+                    <li>주문/배송</li>
+                    <li>취소/교환/반품</li>
+                    <li>찜목록</li>
+                    <li>장바구니</li>
+                </ul>
+            </section>
+            <section>
+                <p class="section_tit">회원정보</p>
+                <ul>
+                    <li>정보수정</li>
+                    <li>배송지관리</li>
+                    <li>회원탈퇴</li>
+                </ul>
+            </section>
+            <section>
+                <p class="section_tit">혜택</p>
+                <ul>
+                    <li>적립금</li>
+                    <li>마일리지</li>
+                    <li>정회원 안내</li>
+                </ul>
+            </section>
+            <section>
+                <p class="section_tit">혜택</p>
+                <ul>
+                    <li>적립금</li>
+                    <li>마일리지</li>
+                    <li>정회원 안내</li>
+                </ul>
+            </section>
+        </div>
+    </header>
 <!------------------------------------------------------------>
 <section id="mainIndex">
   <div class="mainVisual_wrap">
     <div class="mainVisual pc01">
-      <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+      <div class="txt_wrap" >
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="mainVisual pc02">
       <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="mainVisual pc03">
       <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="mainVisual pc04">
       <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="mainVisual pc05">
       <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="mainVisual pc06">
       <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="mainVisual pc07">
       <div class="txt_wrap">
-        <p class="txt01" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">미베르 프로그램</p>
-        <p class="txt04"  data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">바디 컨디션 최적화</p>
-        <p class="txt02" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1500">Well Aging Diet</p>
-        <span class="line"  data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine"></span>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Tailored Coaching System</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Microbes Therapy</p>
-        <p class="txt03" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine">Personal Conditioning</p>
+        <!--txt01(선택)-->
+        <p class="txt01" data-aos="fade-down" data-aos-duration="3000">건강한 변화를 위한 시작</p>
+        <!--txt02 / txt03 (필수)-->
+        <p class="txt02" data-aos="fade-down" data-aos-duration="3000">SAFE CHANGE, BE BETTER</p>
+        <p class="txt03" data-aos="fade-down" data-aos-duration="3000">한글 제목 자리</p>
+        <!--txt04(선택 최대5개)-->
+        <ul class="txt04">
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="200">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="400">For better vision of me</li>
+          <li  data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">For better vision of me</li>
+        </ul>
       </div>
     </div>
     <div class="main_fiexd">
@@ -287,6 +344,44 @@
       </div>
     </div>
 </section>
+<script>  
+  $(document).ready(function() {
+    AOS.init();
+    const $navItems = $('.mainVisualNav li');
+    const $sections = $('.mainVisual');
+    
+    // 현재 섹션에 맞는 네비게이션 하이라이트
+    function updateNavHighlight() {
+      let currentIndex = 0;
+      
+      $sections.each(function(index) {
+        const sectionTop = $(this).offset().top;
+        const sectionHeight = $(this).outerHeight();
+
+        if ($(window).scrollTop() >= sectionTop - 50 && $(window).scrollTop() < sectionTop + sectionHeight - 50) {
+          currentIndex = index;
+        }
+      });
+
+      $navItems.removeClass('on');
+      $navItems.eq(currentIndex).addClass('on');
+    }
+
+    // 스크롤 시 하이라이트 업데이트
+    $(window).on('scroll', updateNavHighlight);
+
+    // 네비게이션 클릭 시 스크롤 이동
+    $navItems.on('click', function() {
+      const index = $(this).index();
+      $('html, body').animate({
+        scrollTop: $sections.eq(index).offset().top
+      }, 100); // 애니메이션 시간 조정 가능
+    });
+
+    // 페이지 로드 시 초기 하이라이트 업데이트
+    updateNavHighlight();
+});
+</script>
 
 <!------------------------------------------------------------>
 <footer>
@@ -329,5 +424,6 @@
     </ul>
   </div>
 </footer>
+
 </body>
 </html> 
