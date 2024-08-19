@@ -36,6 +36,8 @@
 #About02 .txt_arae p{font-size:16px;font-weight:400;line-height:24px;color:#5C5C5C}
 
 /*프로그램 - Body Styling*/
+#Programs01 img.pc{display:block;}
+#Programs01 img.m{display:none;}
 #Programs01 .page_contents > img{margin-bottom:50px}
 
 /*프로그램 - 3:1코칭*/
