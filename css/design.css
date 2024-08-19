@@ -228,6 +228,12 @@ header{background:#fff;}
 .mobile_nav2 ul{border-bottom:1px solid #f0f0f0}
 .mobile_nav2 {display: none;}
 
+.breadcrumbs{width:100%;max-width:1200px;margin:0 auto;margin-top:24px}
+.breadcrumbs ul{display:flex;gap:8px;align-items:center;}
+.breadcrumbs li{font-size:14px;font-weight:700;color:#9B9B9B}
+.breadcrumbs li::after{content:'〉';display:inline;color:#9B9B9B;margin:0 8px}
+.breadcrumbs li:last-child{color:#3D3935}
+.breadcrumbs li:last-child::after{display:none;}
 
 
 footer{width:100%;background:#3D3935;display:flex;justify-content:center;align-items:center;/*position:absolute;bottom:0;left:0;*/color:#fff}
