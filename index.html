@@ -72,18 +72,53 @@
             </ul>
         </div>
         <script>
-            var hideTimeout;
-            $('.nav_depth2_bg').hide();
-    
-            $(".header_nav li:has(.nav_depth2_ul)").hover(function() {
-                clearTimeout(hideTimeout); 
-                $('.nav_depth2_bg').stop(true, true).slideDown();
-                }, function() {
-                hideTimeout = setTimeout(function() {
-                    $('.nav_depth2_bg').stop(true, true).slideUp(); // 배경을 500ms 후에 숨깁니다.
-                }, 500);
-            });
-        </script>
+          var hideTimeout;
+          var keepBg = false; // 배경을 유지할지 여부를 추적합니다.
+          var currentMenu = null; // 현재 열려 있는 메뉴를 추적합니다.
+      
+          $('.nav_depth2_bg').hide();
+          $('.nav_depth2_ul').hide();
+      
+          $(".header_nav li:has(.nav_depth2_ul)").hover(
+              function() {
+                  clearTimeout(hideTimeout);
+                  keepBg = true; // 배경을 유지하기로 설정합니다.
+                  // 현재 열려 있는 메뉴가 있다면 숨깁니다.
+                  if (currentMenu && currentMenu[0] !== $(this)[0]) {
+                      currentMenu.find('.nav_depth2_ul').stop(true, true).hide();
+                  }
+                  // 현재 메뉴를 업데이트합니다.
+                  currentMenu = $(this);
+                  currentMenu.find('.nav_depth2_ul').stop(true, true).show(200); // 해당 li의 하위 메뉴를 슬라이드 다운
+                  $('.nav_depth2_bg').stop(true, true).slideDown(); // 배경을 슬라이드 다운
+              },
+              function() {
+                  keepBg = false; // 배경을 숨길 수 있도록 설정합니다.
+                  hideTimeout = setTimeout(function() {
+                      if (!keepBg) { // 배경을 숨길 조건 확인
+                          $('.nav_depth2_ul').stop(true, true).hide(); // 모든 하위 메뉴를 슬라이드 업
+                          $('.nav_depth2_bg').stop(true, true).slideUp(); // 배경을 슬라이드 업
+                      }
+                  }, 500);
+              }
+          );
+      
+          // 메뉴를 벗어났을 때
+          $(".header_nav").hover(
+              function() {
+                  clearTimeout(hideTimeout);
+              },
+              function() {
+                  hideTimeout = setTimeout(function() {
+                      if (!keepBg) { // 배경을 숨길 조건 확인
+                          $('.nav_depth2_ul').stop(true, true).hide(); // 모든 하위 메뉴를 슬라이드 업
+                          $('.nav_depth2_bg').stop(true, true).slideUp(); // 배경을 슬라이드 업
+                      }
+                  }, 500);
+              }
+          );
+      </script>
+      
         <div class="header_wrap_m">
             <a id="Menubar"><img src="./img/icon_menubar.svg"><span class="soundOnly">메뉴</span></a>
             <h1><img src="img/logo_b.png" alt="미베르로고">미베르</h1>

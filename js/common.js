@@ -136,3 +136,4 @@ $('.filter_checkbox label').on('click', function() {
 
 
 });
+
