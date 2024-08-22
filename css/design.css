@@ -183,7 +183,7 @@ header{background:#fff;}
 .header_nav > li:hover > a::after{height:4px;}
 
 
-.header_nav > li:has(.nav_depth2_bg):hover .nav_depth2_bg{display:flex;}
+/* .header_nav > li:has(.nav_depth2_bg):hover .nav_depth2_bg{display:flex;} */
 .nav_depth2_bg{display:none;width:100%;height:56px;background: #fff;position:absolute;top:97px;left:0;z-index:3;justify-content:center;align-items:center;}
 .nav_depth2_bg_wrap{width:100%;height: inherit;display:flex;;max-width:700px;margin:0 auto;position:absolute;top:0;left:50%;transform:translateX(-50%);}
 .header_nav .nav_depth2_ul{display:flex;height:56px;z-index:9;gap:40px;justify-content:flex-start;align-items:center;transition:.5s;position:absolute}

@@ -97,7 +97,19 @@
             </ul>
         </div>
     </div>
-    
+    <script>
+      //pc 메뉴 마우스오버 이벤트
+      $(document).ready(function() {
+          $('.header_nav > li').hover(
+              function() {
+                  $(this).find('.nav_depth2_bg').stop(true, true).slideDown(500);
+              },
+              function() {
+                  $(this).find('.nav_depth2_bg').stop(true, true).slideUp(500);
+              }
+          );
+      });
+    </script>
     
     
     <div class="mobile_nav_wrap">
