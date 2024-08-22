@@ -175,7 +175,7 @@ header{background:#fff;}
 .header_wrap_pc{display:flex;max-width:1200px;width:100%;;justify-content: space-between;align-items:center;}
 .header_wrap_m{display:none;}
 .header_nav{display:flex;align-items:center;gap:26px;}
-.header_nav > li{display:flex;align-items:center;gap:26px;}
+.header_nav > li{display:flex;align-items:center;gap:26px;cursor: pointer;}
 .header_nav > li::after{transform:translate(-50%);content:'';width:1px;height:14px;background:#3D3935;display:inline-block;}
 .header_nav > li:last-child::after{display:none;}
 .header_nav > li > a{display:flex;align-items:center;justify-content:center;height:97px;position:relative;transition:.3s;font-size:18px;font-weight:700;}
@@ -202,6 +202,8 @@ header{background:#fff;}
 .shop_mobile_menu li{padding:19px 0;font-size:14px;font-weight:700;color:#5c5c5c}
 
 .user_menu{display:flex;align-items:center;gap:26px}
+.user_menu li{position:relative;}
+.user_menu li:hover::after{display:flex;position:absolute}
 .mobile_nav_wrap{z-index:999;;display:none;position:absolute;margin-top:60px;margin-bottom:50px;top:0;left:0;width:100%;background:#f2f2f2;transition:.6s;}
 .mobile_nav_wrap.on{transform:translateX(0);}
 .mobile_nav_wrap .login_area{height:82px;padding:0 16px;display:flex;align-items:center;}
@@ -265,7 +267,7 @@ address{margin:0;}
 
 /*===========================================================================*/
 /*로그인*/
-#Login_area{display:flex;align-items: center;flex-direction: column;margin-bottom:20px}
+#Login_area{display:flex;align-items: center;flex-direction: column}
 #Login_area .logo{margin-bottom:50px}
 #Login .checkbox{display: block;margin:32px auto;}
 #Login form label:nth-child(2){margin-bottom:0}
