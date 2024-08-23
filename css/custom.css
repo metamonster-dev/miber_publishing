@@ -15,7 +15,7 @@
 
 
 /*===== INITIALIZATION =====*/
-html{font-size:10px;}
+html{font-size:10px;appearance: none;}
 body{font-family:'NanumSquare', sans-serif;font-size:1.6rem;color:#000; font-weight:400;letter-spacing:-0.02em;}
 html, body, h1, h2, h3, h4, h5, h6, p, form, fieldset, img{margin:0; padding:0; border:0;}
 ol, ul, dl, dt, dd, button, input, select, textarea{margin:0; padding:0;}
