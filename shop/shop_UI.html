@@ -29,19 +29,28 @@
             <li>
                 <a>미베르 소개</a>
                 <!--DEPTH 2-->
-                <ul class="nav_depth2_ul">
-                    <li><a href="#">소개</a></li>
-                    <li><a href="#">이념과 가치</a></li>
-                </ul>
+                <div class="nav_depth2_bg">
+                    <div class="nav_depth2_bg_wrap">
+                        <ul class="nav_depth2_ul menu01">
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">이념과가치</a></li>
+                        </ul>
+                    </div>
+                </div>
             </li>
             <li>
                 <a>프로그램</a>
                 <!--DEPTH 2-->
-                <ul class="nav_depth2_ul">
-                    <li><a href="#">소개</a></li>
-                    <li><a href="#">프로그램   </a></li>
-                    
-                </ul>
+                <div class="nav_depth2_bg">
+                    <div class="nav_depth2_bg_wrap">
+                        <ul class="nav_depth2_ul menu02">
+                            <li><a href="#">Body styling</a></li>
+                            <li><a href="#">3:1 코칭</a></li>
+                            <li><a href="#">M-Box</a></li>
+                            <li><a href="#">기기관리</a></li>
+                        </ul>
+                    </div>
+                </div>
             </li>
             <li>
                 <a href="">지점안내</a>
@@ -55,13 +64,29 @@
             <li>
                 <a>미베르몰</span></a>
                 <!--DEPTH 2-->
-                <ul class="nav_depth2_ul">
-                    <li><a href="#">전체</a></li>
-                    <li><a href="#">식품</a></li>
-                    
-                </ul>
+                <div class="nav_depth2_bg">
+                    <div class="nav_depth2_bg_wrap">
+                        <ul class="nav_depth2_ul menu03">
+                            <li><a href="#">전체</a></li>
+                            <li><a href="#">식품</a></li>
+                        </ul>
+                    </div>
+                </div>
             </li> 
         </ul>
+        <script>
+            //pc 메뉴 마우스오버 이벤트
+            $(document).ready(function() {
+                $('.header_nav > li').hover(
+                    function() {
+                        $(this).find('.nav_depth2_bg').stop(true, true).slideDown(500);
+                    },
+                    function() {
+                        $(this).find('.nav_depth2_bg').stop(true, true).slideUp(500);
+                    }
+                );
+            });
+        </script>
         <div class="nav_depth2_bg"></div>
         <ul class="user_menu">
             <li><a href="#"><img src="../img/icon_user01.svg" alt="마이페이지"><span class="soundOnly">마이페이지</span></a></li>
