@@ -338,6 +338,8 @@
     .shoporder .item_list .product_option{font-size:12px}
     .shoporder .text_box{padding:6px;background:#F7F7F7;text-align:center;font-size:12px;color:#666666}
     #ShopOrder .bottom_fixed .submit_wrap{flex-direction:column-reverse;;}
+    #ShopOrder .bottom_fixed .submit_wrap{flex-direction:column-reverse;}
+    #ShopOrder .bottom_fixed .submit_wrap button{width:100%;}
     .bottom_fixed{padding:16px}
     #ShopOrder .submit_wrap button{width:100%;margin-bottom:10px;font-size:16px}
     .bottom_fixed .submit_wrap button{width:48%;margin-bottom:10px;height:46px;line-height:46px;}
