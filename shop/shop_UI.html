@@ -94,19 +94,6 @@
             <li><a href="#"><img src="../img/icon_user03.svg " alt="문의하기"><span class="soundOnly">문의하기</span></a></li>
         </ul>
     </div>
-    <script>
-        var hideTimeout;
-        $('.nav_depth2_bg').hide();
-
-        $(".header_nav li:has(.nav_depth2_ul)").hover(function() {
-            clearTimeout(hideTimeout); 
-            $('.nav_depth2_bg').stop(true, true).slideDown();
-            }, function() {
-            hideTimeout = setTimeout(function() {
-                $('.nav_depth2_bg').stop(true, true).slideUp(); // 배경을 500ms 후에 숨깁니다.
-            }, 500);
-        });
-    </script>
     <div class="header_wrap_m">
         <a id="Menubar"><img src="../img/icon_menubar.svg"><span class="soundOnly">메뉴</span></a>
         <a id="shop_menu_btn">식품</a>
@@ -299,7 +286,6 @@
     <ul>
         <li>개인정보처리방침</li>
         <li>이용약관</li>
-        <li>사이트맵</li>
     </ul>
     </div>
     <div class="footer_2">
