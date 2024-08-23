@@ -999,7 +999,9 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 
 /*로그인*/
 #Login .checkbox{margin:30px 0}
+.hd_tit{font-size:18px;font-weight:800;color:#000;}
 .login_page h2{display:none;}
+.login_header{border-bottom:none}
 .center_contentrs{padding:50px 16px}
 .center_contentrs h2{font-size:18px}
 .center_contentrs2{padding:50px 0}

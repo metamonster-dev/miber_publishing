@@ -53,12 +53,12 @@ input[type="date"],
 input[type="email"],
 html input[type="button"],
 input[type="reset"] {
-  appearance: none;
+  appearance:auto;
   -moz-appearance: none;
   -webkit-appearance: none;
   outline: 0;
 } 
-input[type="radio"],input[type="checkbox"]{appearance:auto;}
+input[type="text"],input[type="radio"],input[type="checkbox"]{appearance:auto;}
 
 :root {
   --defalt:#000;
