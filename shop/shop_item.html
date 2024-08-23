@@ -808,7 +808,7 @@
                 </div>
                 <div class="review">
                     <div class="top_area">
-                        <P class="total">리뷰<span>20</span>건</P>
+                        <P class="total">리뷰 <span>20</span>건</P>
                         <div class="filter_wrap">
                             <div class="filter_slect select ">
                                 <input type="hidden" class="opt_val" value="">
@@ -1040,7 +1040,7 @@
                 </div>
             </div>
             <!--구매하기 눌렀을때 (옵션O)-->
-            <div class="order_wrap type02">
+            <div class="order_wrap type02 d-none">
                 <div class="order03">
                     <div class="filter_slect select">
                         <input type="hidden" class="opt_val" value="">
@@ -1095,6 +1095,24 @@
     <script>
         var $btn = $('#product_more2');
         var $detailContents = $('.detail_contents_m');
+        var isExpanded = false;
+
+        $btn.on('click', function() {
+            if (isExpanded) {
+                // 접기 상태로 변경
+                $detailContents.css('height', '300px');
+                $btn.html('상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg">');
+            } else {
+                // 펼치기 상태로 변경
+                $detailContents.css('height', 'auto');
+                $btn.html('상세정보 접기<img src="../img/icon_dropdown3.svg" class="reverse">');
+            }
+            isExpanded = !isExpanded;
+        });
+    </script>
+    <script>
+        var $btn = $('#product_more');
+        var $detailContents = $('.detail_contents');
         var isExpanded = false;
 
         $btn.on('click', function() {
