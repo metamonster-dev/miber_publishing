@@ -13,7 +13,7 @@
 .pagecommon .step li{font-size:24px;font-weight:700;line-height:36px;color:#666666;}
 .pagecommon .step li .tit{color:#000}
 .section_tit{font-size:24px;font-weight:800;padding-bottom:12px;border-bottom:2px solid #000}
-
+.required::after{width:8px;height:8px;}
 
 /*미베르소개*/
 #About01 .pc{display:block;}
@@ -81,7 +81,9 @@
 #Programs04 .programs04_content03 .tit{font-size:32px;font-weight:800;margin-bottom:50px;line-height:44.8px}
 #Programs04 .programs04_content03 .txt_box > p {max-width:650px;}
 #Programs04 .programs04_content04{display:flex;justify-content:space-between;}
-#Programs04 .programs04_content04 li{font-size:16px;line-height:24px;}
+#Programs04 .programs04_content04 li{font-size:16px;line-height:24px;position:relative}
+#Programs04 .programs04_content04 > li::after{position:absolute;right:-44px;top:0;content: '';display:block;width:1px;height:252px;background:#E0E0E2;}
+#Programs04 .programs04_content04 > li:last-child::after{display:none;}
 #Programs04 .programs04_content04 li .tit_area{display:flex;align-items:center;gap:32px;margin-bottom:32px}
 #Programs04 .programs04_content04 li .tit_area .tit{font-size:24px;font-weight:800;color:#7BA9BE}
 
@@ -89,7 +91,7 @@
 #Location .pc{display:block;}
 #Location .m{display:none;}
 #Location .page_contents{padding:50px 0}
-#Location .img_area{display:flex;justify-content:space-between;align-items:flex-start;gap:50px}
+#Location .img_area{display:flex;justify-content:flex-start;align-items:flex-start;gap:50px}
 #Location .txt_arae{display:flex;flex-direction:column;justify-content:flex-start;}
 #Location .tit{font-size:24px;font-weight:800;margin-bottom:50px;color:#000}
 #Location .location_info{display:flex;flex-direction:column;gap:50px}
@@ -135,7 +137,7 @@
 .service_reservation .Service01_form table{width:100%;max-width:830px;}
 .service_reservation .Service01_form table th,.service_reservation .Service01_form table td{padding:8px}
 .service_reservation .Service01_form table th{width:220px;}
-.service_reservation .Service01_form table td input{width:100%;display:table;}
+.service_reservation .Service01_form table td input{width:100%;display:table;padding:0 16px;font-size:14px}
 .service_reservation .Service01_form table td textarea{height:170px;}
 .service_reservation .submit{max-width:375px;margin:50px auto}
 .service_reservation .select {margin:0 0 8px}
@@ -161,6 +163,7 @@
     .pagecommon .page_header.m{display:none;}
     .pagecommon .page_header.pc{display:block;}
     .pagecommon .page_header .tab li a{width:180px;font-size:16px}
+    
     
     /*미베르소개*/
     #About01 .txt01{font-size:20px;padding:0 16px;font-weight:800;}
@@ -219,6 +222,7 @@
     #Programs04 .programs04_content04{flex-direction:column;gap:32px}
     #Programs04 .programs04_content04 li img{width:64px;}
     #Programs04 .programs04_content04 li .tit_area .tit{font-size:20px;}
+    #Programs04 .programs04_content04 > li::after{display: none;}
     #Programs04 .step li .tit{font-weight:800;}
 
     
@@ -269,13 +273,17 @@
     .pagecommon .md_contents{width:100%;}
     .pagecommon .page_header.m{display:block;width:90%;margin:32px auto}
     .pagecommon .page_header.pc{display: none;}
-    .pagecommon .page_header .tab li{width:fit-content !important;overflow: hidden;}
+    .pagecommon .page_header .tab li{overflow: hidden;}
     .pagecommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:16px;font-weight:800;}
+    .pagecommon .page_header .tab.type02 li{width:160px;}
+    .pagecommon .page_header .tab.type01 li{width:120px;}
     .pagecommon p{font-size:14px;line-height:21px;}
     .pagecommon h3{font-size:20px;line-height:30px;margin:32px 0 16px}
     .pagecommon h3:first-child{margin-top:0}
     .pagecommon h4{font-size:16px}
     .pagecommon .step li{font-size:14px;line-height: 21px;}    
+    .swiper-wrapper.type01 li{width:120px !important;}
+    .swiper-wrapper.type01 li a{padding:0 !important}
 
     /*미베르소개*/
     #About01 .pc{display:none;}

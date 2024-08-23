@@ -6,7 +6,6 @@
 .warnning-txt{color:#FF4242 !important}
 .soundOnly{display:none;}
 .hidden {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
-textarea{resize: none;}
 
 /*(공통) 폼*/
 h1{font-size:0}
@@ -21,7 +20,7 @@ h6{font-size:16px;font-weight:800;margin-bottom:10px}
 .form_defalt .label_name{width:100px;font-size:16px;font-weight:700;margin-top:12px;letter-spacing: -0.02em;flex: none;}
 .form_defalt .input_wrap{width:100%;display:flex;justify-content:space-between;gap:0 10px;position:relative;flex-wrap: wrap;}
 .form_defalt .input_wrap input{flex:1;}
-.form_defalt .input_wrap button{width:115px;height:46px;border:1px solid #3D3935;text-align:center;line-height:46px;font-size:14px;font-weight:700;border-radius:4px;}
+.form_defalt .input_wrap button{width:115px;height:46px;border:1px solid #3D3935;text-align:center;line-height:46px;font-size:14px;font-weight:700;border-radius:4px;color:#3D3935}
 .form_defalt .input_wrap .input_text{position:absolute}
 .radio_area{display:flex;height: 46px;line-height: 46px;gap:20px;}
 .radio_area label{padding-left:8px;color:#B0B0B0;font-weight:400;}
@@ -282,7 +281,7 @@ address{margin:0;}
 .login_sns_wrap ul li a{display:block;text-align:center;width:100%;border:1px solid #e0e0e2;padding:16px;font-size:16px;font-weight:700;}
 .login_sns_wrap ul li a.sns_naver{background:url('../img/naver.svg')16px center no-repeat}
 .login_sns_wrap ul li a.sns_kakao{background:url('../img/kakao.svg')16px center no-repeat}
-.direction_down{width:100%;;display:flex;flex-direction:column;}
+.direction_down{width:100%;;display:flex;flex-direction:column;height: 46px;}
 
 /*회원가입*/
 #signup_form label:nth-child(3){margin-bottom:0}
@@ -752,7 +751,7 @@ table input[type="checkbox"]{width:inherit !important;}
 .header_wrap_m{display:flex;justify-content:space-between;align-items: center;width:100%;}
 .mobile_nav_wrap{display:block;height:100vh;transform:translateX(-100%);transition:.6s;z-index:999;}
 .mobile_nav_wrap.on{display:block;transform:translateX(0);}
-h1 {width:70px;}
+h1 {width:70px;margin:0 auto}
 h1 > img{width:100%;}
 h5{font-size:16px;margin-bottom:16px;}
 
@@ -924,7 +923,8 @@ h5{font-size:16px;margin-bottom:16px;}
 }
 /* 반응형 max 992px lg */
 @media (max-width:880px) {
-.header_bar{height:60px;padding:0 16px}
+.header_bar{height:60px;padding:0 16px;position:relative}
+.header_bar h1{position:absolute;left:50%;transform:translateX(-50%);}
 .header_wrap_pc{display:none;}
 .header_wrap_m{display:flex;justify-content:space-between;align-items: center;width:100%;}
 .mobile_nav_wrap{display:block;height:100vh;transform:translateX(-100%);transition:.6s;z-index:999;}

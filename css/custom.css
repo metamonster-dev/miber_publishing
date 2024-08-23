@@ -57,7 +57,9 @@ input[type="reset"] {
   -moz-appearance: none;
   -webkit-appearance: none;
   outline: 0;
-}
+} 
+input[type="radio"],input[type="checkbox"]{appearance:auto;}
+
 :root {
   --defalt:#000;
   --brand1:#7BA9BE;
