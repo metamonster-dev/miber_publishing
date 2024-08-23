@@ -224,9 +224,9 @@
             <button class="lookup">조회</button>
         </div>
         <script>
-            $('.m .filter_wrap').hide();
-            $('.m .filter_btn').click(function() {
-                $('.m .filter_wrap').slideToggle();
+            $('.top_filter').hide();
+            $('.filter_btn').click(function() {
+                $('top_filter').slideToggle();
                 $(this).find('img').toggleClass('rotate');
             });
         </script>

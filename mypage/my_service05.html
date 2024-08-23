@@ -86,7 +86,7 @@
             <div class="concierge">
                 <ul>
                     <li>
-                        <p class="tit">가게이름</p>
+                        <p class="tit">가게 이름</p>
                         <p>식당이름</p>
                     </li>
                     <li>
@@ -147,7 +147,7 @@
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
         var yyyy = today.getFullYear();
-        today = yyyy + '년' + mm + '월' + dd + '일';
+        today = yyyy + '년 ' + mm + '월 ' + dd + '일';
         $(".select_date_result").val(today);
     </script>
 </section>
