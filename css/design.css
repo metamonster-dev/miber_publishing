@@ -34,7 +34,7 @@ input:read-only{background: #F7F7F7;}
 .checkbox{width:100%;display:flex;align-items:center;font-size:14px;}
 .checkbox input[type="checkbox"]{width:16px;height:16px;margin-right:5px;line-height: 16px;}
 .checkbox input[type="checkbox"]:checked{accent-color:#3D3935;}
-.input_text{font-size:14px;font-weight:400;color:#b0b0b0;top: 50%;left: 114px;transform: translateY(-50%);}
+.input_text{font-size:14px;font-weight:400;color:#b0b0b0;top: 50%;right:140px;transform: translateY(-50%);}
 .input_text .timer{color:#FF4242}
 button[type="submit"], button.next{width:100%;height:56px;line-height:56px;background:#3D3935;color:#fff;font-weight:800;font-size:16px;border-radius:4px;}
 button[type="submit"]:disabled, button.next:disabled{background:#DCDCDC}
@@ -990,7 +990,7 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 .form_defalt .input_wrap button{width:100px;}
 .form_defalt input{font-size:14px}
 .comment{font-size:11px}
-.input_text{font-size:14px;left:74px}
+.input_text{font-size:14px;right:120px}
 .tab_menu{margin-top:32px;padding:0 16px}
 .tab_menu li a{font-size:14px;}
 .filter_checkbox label{padding:0 4px}
