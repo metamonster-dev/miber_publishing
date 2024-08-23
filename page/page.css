@@ -150,8 +150,9 @@
 .service_reservation .select input:disabled+label{background:#a7a7a7;color:#ddd}
 
 
-
-
+/*개인정보처리방침 & 이용약관*/
+#Use .title, #Privacy .title{text-align: center;margin-bottom:40px}
+#Use .section {margin-bottom:50px;}
 
 
 
