@@ -41,26 +41,21 @@ img{display:block; max-width:100%; height:auto;}
 .toastui-editor-contents{font-family:'NanumSquare', sans-serif;}
 input, textarea, button{
   appearance: none;
-  border-radius: 0;
   -moz-apperance:none;
   -webkit-apperance:none;
-  -webkit-border-radius:0;
-  -moz-border-radius:0;
 }
 input[type="text"],
 input[type="password"],
 input[type="submit"],
 input[type="search"],
 input[type="tel"],
+input[type="date"],
 input[type="email"],
 html input[type="button"],
 input[type="reset"] {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   outline: 0;
 }
 :root {
