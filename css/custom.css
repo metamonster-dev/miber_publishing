@@ -39,7 +39,14 @@ p{word-break:break-all;}
 img{display:block; max-width:100%; height:auto;}
 *, :after, :before{box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 .toastui-editor-contents{font-family:'NanumSquare', sans-serif;}
-
+input, textarea, button{
+  appearance: none;
+  border-radius: 0;
+  -moz-apperance:none;
+  -webkit-apperance:none;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+}
 :root {
   --defalt:#000;
   --brand1:#7BA9BE;
