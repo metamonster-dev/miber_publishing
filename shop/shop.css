@@ -146,7 +146,7 @@
 .shoporder .right .red{color:#DA4E37}
 .shoporder .brand{font-size:16px;font-weight: 800;color:#000}
 .shoporder .order_list{margin:20px 0}
-.shoporder .order_list .top_area {border-bottom:none;}
+.shoporder .order_list .top_area {border-bottom:none;padding:0}
 
 .shoporder .item_list li{display:flex;align-items:center;gap:16px}
 .shoporder .item_list li:not(:last-child){border-bottom:1px solid #e0e0e0}
