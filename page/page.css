@@ -110,6 +110,7 @@
 
 /*M-Box*/
 #M-Box .menu_wrap{margin:50px 0}
+#M-Box .menu_wrap ul li .img_area{width:160px;height:160px;}
 #M-Box .menu_wrap .menu_tit{font-size:24px;font-weight:800;padding-bottom:16px;margin-bottom:50px;border-bottom:1px solid #000;color:#000}
 #M-Box .menu_wrap ul{display:flex;justify-content:space-between;flex-wrap:wrap;gap:50px 0}
 #M-Box .menu_wrap ul li{width:50%;display:flex;align-items:flex-start;gap:32px;}
