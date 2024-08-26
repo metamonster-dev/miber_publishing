@@ -144,7 +144,7 @@
     <!--상단 스크롤 고정 구매모달-->
     <section class="sticky_item_info">
         <!--상품에 옵션 없을때 type01 노출-->
-        <div class="info_wrap type01 ">
+        <div class="info_wrap type01 d-none">
             <div class="item_wrap">
                 <div class="img_area">
                     <img src="../img/temp/review2.jpg" alt="상품썸네일">
@@ -156,7 +156,7 @@
             </div>
             <button type="submit" class="black_btn">구매하기</button>
         </div>
-        <!--상품에 옵션 없을때 type02 노출-->
+        <!--상품에 옵션 있을때 type02 노출-->
         <div class="type02 d-none">
             <div class="info_wrap">
                 <div class="item_wrap">
@@ -176,6 +176,71 @@
                     <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
                 </div>
                 <div  class="box02 total">
+                    <div class="total_price_wrap">
+                        <p class="total_tit">총 상품 금액</p>
+                        <div class="right">
+                            <p>총 수량 1개</p>
+                            <p class="total_price"><span>25,000</span>원</p>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <button type="submit">구매하기</button>
+                        <div class="btn_area">
+                            <button class="white_btn wish_btn"><img src="../img/icon_wish.svg">찜하기</button>
+                            <button class="white_btn cart_btn"><img src="../img/icon_cart.svg">장바구니</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--상품에 옵션 있을때 type03 노출-->
+        <div class="type03 ">
+            <div class="info_wrap">
+                <div class="item_wrap">
+                    <div class="img_area">
+                        <img src="../img/temp/review2.jpg" alt="상품썸네일">
+                    </div>
+                    <div class="txt_area">
+                        <p class="product_name">저스트피넛버터 330g 무설탕 글루텐프리 100% 땅콩버터 땅콩잼 [원산지:미국]</p>
+                        <p class="product_price"><span>19,500</span>원</p>
+                    </div>
+                </div>
+                <img src="../img/icon_close2.svg">
+            </div>
+            <div class="product_option_wrap">
+                <div class="box01 delivery">
+                    <p>택배배송 | <b>4,000</b>원<span class="red"> (주문시 결제)</span> · 한진택배</p>
+                    <p>45,000원 이상 구매 시 무료 / 제주 추가 3,000원, 제주 외 도서지역 추가 5,000원</p>
+                </div>
+                <div class="box03">
+                    <div>
+                        <div class="filter_slect select ">
+                            <input type="hidden" class="opt_val" value="">
+                            <div class="trigger">
+                                <span class="trigger_txt">마케토 옵션</span>
+                            </div>
+                            <ul class="option">
+                                <li data-value="마케토옵션">100g</li>
+                                <li data-value="마케토옵션" class="soldout">150g(품절)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div  class="box02 total">
+                    <div class="option_total">
+                        <ul class="option_list">
+                            <li>100g</li>
+                        </ul>
+                        <div class="quantity_wrap">
+                            <div class="quantity">
+                                <button type="button" class="minus_btn"> <img src="../img/icon_minus.svg" alt="-"> </button>
+                                <div class="count">1</div>
+                                <button type="button" class="plus_btn"> <img src="../img/icon_plus2.svg" alt="+"> </button>
+                            </div>
+                            <p class="option_price"><span>19,500</span>원</p>
+                            
+                        </div>
+                    </div>
                     <div class="total_price_wrap">
                         <p class="total_tit">총 상품 금액</p>
                         <div class="right">
