@@ -180,7 +180,7 @@
     .pagecommon.pc{display:none;}
     .pagecommon.mobile{display:block;}
     .pagecommon .md_contents{width:100%;}
-    .pagecommon .page_header.m{display:none;}
+    .pagecommon .page_header.m{display:block}
     .pagecommon .page_header.pc{display:block;}
     .pagecommon .page_header .tab li a{width:180px;font-size:16px}
     
