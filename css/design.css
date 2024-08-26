@@ -813,7 +813,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .table_list .order_price span{font-weight:400;}
 .table_list .order_delivery{display:flex;font-size:14px;font-weight:700;}
 .table_list .delivery_number{text-decoration:underline;margin-left:5px}
-.table_list div:nth-child(2){display:flex;flex-direction:column;gap:5px;}
+.table_list div:nth-child(2){display:flex;flex-direction:column;gap:5px;width:100%;}
 .table_text th,.table_text td{font-size:14px;padding:7px 0}
 .table_list .md_area{display:flex;flex-direction: row !important;gap:12px !important;align-items:flex-start;}
 .table_list .md_area .img_area{width:60px;height:60px;border:1px solid #E0E0E2;flex-shrink: 0;}
