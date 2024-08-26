@@ -145,9 +145,9 @@ label.imgfile img.icon{width:14px;height:14px;position:relative}
 input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
 /* 중앙 560배경 요소*/
 .gray_bg{width:100%;min-height:100vh;background: #F7F7F7;display:flex;justify-content:center;align-items:flex-start;}
-.center_contentrs{width:560px;min-height:100vh;padding:50px 30px;background:#fff;}
+.center_contentrs{width:560px;min-height:100vh;margin:0 auto;padding:50px 30px;background:#fff;}
 .center_contentrs h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
-.center_contentrs2{width:560px;min-height:100vh;padding:50px 0;background:#fff;}
+.center_contentrs2{margin:0 auto;width:560px;min-height:100vh;padding:50px 0;background:#fff;}
 .center_contentrs2 h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
 .center_contentrs2 .padding_wrap{padding:50px 30px 0}
 /*제목-본문 형태의 리스트*/
@@ -200,6 +200,7 @@ header{background:#fff;}
 #shop_menu_btn::after{content:'';display:inline-block;width:20px;height:20px;background: url('../img/icon_dropdown3.svg')no-repeat center;background-size:10px;border:1px solid #ccc;border-radius:50%;}
 .shop_mobile_menu{display:flex;justify-content:center;}
 .shop_mobile_menu li{padding:19px 0;font-size:14px;font-weight:700;color:#5c5c5c}
+
 
 .user_menu{display:flex;align-items:center;gap:26px}
 .user_menu li{position:relative;}
@@ -277,7 +278,7 @@ footer a{color:#fff}
 .login_bt_menu li a::after{content:'';display:inline-block;width:1px;height:10px;background:#E0E0E2;position:absolute;top:50%;right:0;transform:translateY(-50%);}
 .login_bt_menu li:last-child a::after{display:none;}
 .login_sns_wrap{width:100%;;padding-top:32px; border-top:1px solid #E0E0E2;position:relative}
-.login_sns_wrap .or_line{position:absolute;top: -11px;left: 50%;transform: translateX(-50%);text-align:center;display:block;width:20px;height:20px;line-height:20px;background:#fff;color:#DCDCDC;}
+.login_sns_wrap .or_line{position:absolute;top: -10px;left: 50%;transform: translateX(-50%);text-align:center;display:block;width:20px;height:20px;font-size:12px;line-height:20px;background:#fff;color:#DCDCDC;}
 .login_sns_wrap ul{display:flex;flex-direction: column;align-items: center;gap:10px}
 .login_sns_wrap ul li{width:100%;}
 .login_sns_wrap ul li a{display:block;text-align:center;width:100%;border:1px solid #e0e0e2;padding:16px;font-size:16px;font-weight:700;}
@@ -1035,6 +1036,7 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 .center_contentrs h2{font-size:18px;margin-bottom:32px}
 .login_sns_wrap ul li a{font-size:14px}
 .login_sns_wrap{padding:30px 0}
+.center_contentrs2, .center_contentrs{width:100%;}
 .center_contentrs2{padding:32px 0;min-height:0;}
 .center_contentrs2 .padding_wrap{padding:0 16px}
 .center_contentrs2 h2{font-size:18px;margin-bottom:0}
