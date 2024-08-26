@@ -7,7 +7,7 @@
 .pagecommon .page_header.pc .tab{display:flex;justify-content:center;align-items:center;gap:10px}
 .pagecommon .page_header .tab li a{display:block;width:260px;height:56px;line-height:56px;text-align:center;background:#f7f7f7;color: #9b9b9b;font-weight:800;font-size:20px;border-radius:500px}
 .pagecommon .page_header .tab li.on a{border:1px solid #DA4E37;color:#DA4E37;background:#fff;}
-.pagecommon .md_contents{width:1200px;}
+.pagecommon .md_contents{width:1200px;margin:0 auto}
 .pagecommon p{font-size: 18px;font-weight: 400;line-height: 27px;letter-spacing: -0.01em;text-align: left;color:#5C5C5C}
 .pagecommon h3{font-size:32px;font-weight:800;margin:50px 0 16px}
 .pagecommon h4{font-size:24px;font-weight:800;margin:50px 0 16px}
@@ -92,7 +92,7 @@
 /*오시는길*/
 #Location .pc{display:block;}
 #Location .m{display:none;}
-#Location .page_contents{padding:50px 0}
+#Location .page_contents{padding:110px 0 50px}
 #Location .img_area{display:flex;justify-content:flex-start;align-items:flex-start;gap:50px}
 #Location .txt_arae{display:flex;flex-direction:column;justify-content:flex-start;}
 #Location .tit{font-size:24px;font-weight:800;margin-bottom:50px;color:#000}
@@ -106,9 +106,16 @@
 #Location .location_info .tel::before{background:url(./img/icon_location03.svg)no-repeat center;}
 #Location .slect_img_area{width:573px;height:430px;overflow:hidden;border-radius:4px;overflow:hidden;}
 #Location .slect_img_area img{width:100%;}
-#Location .img_select{display:flex;justify-content:space-between;gap:31px;margin:30px 0 50px}
+#Location .img_select{display:flex;justify-content:space-between;gap:31px;margin:30px 0 0}
 #Location .img_select li{width:200px;height:200px;overflow:hidden;border-radius:4px;overflow:hidden;}
 #Location .img_select li img{height:100%;width:fit-content;;}
+#Location .map { position:relative; }
+#map { max-width:1200px;width:100%; height: 500px; margin: 0 auto;}
+#Location .info {display: flex;flex-direction: column;margin: 0 auto 100px;}
+#Location .map-links {position: absolute;top: 50%; /* 상단에서의 위치를 조정 */right: 6%; /* 우측에서의 위치를 유지 */transform: translateY(-50%); /* 수직 정렬을 위해 변환 */z-index: 9999;}
+#Location .map-links > div:nth-child(2){margin-top: 3rem;}
+
+
 
 /*M-Box*/
 #M-Box .menu_wrap{margin:50px 0}
@@ -244,8 +251,13 @@
     #Location .swiper-button-next:after, #Location .swiper-button-prev:after{font-size:12px}
     #Location .swiper-pagination-bullet-active{background:#fff;}
     #Location .swiper-pagination-bullet{background:#FFFFFF99;}
-    #Location .location_info{margin:32px auto;gap:32px;padding:0 16px}
+    #Location .location_info{margin:32px auto 0;gap:32px;padding:0 16px}
     #Location .location_info li span{font-size:16px}
+    #map { width: 100%; height: 400px; }
+    #Location .info {flex-direction: column-reverse;margin: 0 auto 32px;/* padding: 0 16px; */}
+    #Location .map-links div a svg{width: 50px;height: 50px;}
+    #Location .map-links div:nth-child(2){margin-top: 1rem;}
+
 
     /*M-Box*/
     #M-Box .menu_wrap{margin:32px 0;padding:0 16px;}
