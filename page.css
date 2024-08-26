@@ -1,0 +1,386 @@
+.pagecommon{width:100%}
+.pagecommon.pc{display:block;}
+.pagecommon.mobile{display:none;}
+.pagecommon .page_header{margin:50px auto;}
+.pagecommon .page_header.m{display:none;}
+.pagecommon .page_header.pc{display:block;}
+.pagecommon .page_header.pc .tab{display:flex;justify-content:center;align-items:center;gap:10px}
+.pagecommon .page_header .tab li a{display:block;width:260px;height:56px;line-height:56px;text-align:center;background:#f7f7f7;color: #9b9b9b;font-weight:800;font-size:20px;border-radius:500px}
+.pagecommon .page_header .tab li.on a{border:1px solid #DA4E37;color:#DA4E37;background:#fff;}
+.pagecommon .md_contents{width:1200px;margin:0 auto}
+.pagecommon p{font-size: 18px;font-weight: 400;line-height: 27px;letter-spacing: -0.01em;text-align: left;color:#5C5C5C}
+.pagecommon h3{font-size:32px;font-weight:800;margin:50px 0 16px}
+.pagecommon h4{font-size:24px;font-weight:800;margin:50px 0 16px}
+.pagecommon .step ul{display:flex;flex-direction:column;}
+.pagecommon .step li{font-size:24px;font-weight:400;line-height:36px;color:#666666;}
+.pagecommon .step li .tit{color:#000;font-weight:700;}
+.section_tit{font-size:24px;font-weight:800;padding-bottom:12px;border-bottom:2px solid #000}
+.required::after{width:8px;height:8px;}
+
+/*미베르소개*/
+#About01 .pc{display:block;}
+#About01 .m{display:none}
+#About01 .txt01{font-size:32px;font-weight:700;width:100%;max-width:1200px;margin:0 auto 16px;text-align:left;color:#DA4E37;}
+#About01 .txt02{width:100%;max-width:1200px;margin: 0 auto 50px ;}
+#About01 .about_contents{display:flex;flex-direction:column;}
+#About01 .about_contents li:nth-child(2n){background:#fff;}
+#About01 .about_contents li:nth-child(1), #About01 .about_contents li:nth-child(2n+1){background:#CAA68B0F}
+#About01 .content_wrap{width:100%;max-width:1200px;margin:0 auto;padding:100px 0;display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;}
+#About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:row}
+#About01 .count{display:inline-block;font-size:24px;font-weight:800;padding-bottom:8px;border-bottom:2px solid #DA4E37;color:#DA4E37;margin-bottom:20px}
+#About01 .txt_area p{font-size:24px;font-weight:800;color:#3D3935}
+
+/*미베르소개 - 이념과 가치*/
+#About02 .page_contents{background:#CAA68B0F;width:100%;padding:100px;}
+#About02 .content_wrap{width:100%;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+#About02 .txt_arae{max-width: 550px;}
+#About02 .txt_arae .tit{font-size:40px;font-weight:800;color: #3D3935;margin-bottom:20px;line-height: 42px;}
+#About02 .txt_arae p{font-size:16px;font-weight:400;line-height:24px;color:#5C5C5C}
+
+/*프로그램 - Body Styling*/
+#Programs01 img.pc{display:block;}
+#Programs01 img.m{display:none;}
+#Programs01 .page_contents > img{margin-bottom:50px}
+
+/*프로그램 - 3:1코칭*/
+#Programs02 .programs02_steps{margin:50px auto}
+#Programs02 .programs02_steps ul{display:flex;justify-content:flex-start;gap:133px}
+#Programs02 .programs02_steps ul li{display:flex;flex-direction:column;align-items:center;width:200px;position:relative}
+#Programs02 .programs02_steps ul li::after{content:'';display:block;width:20px;height:20px;background:url(./img/icon_step.svg)no-repeat center;position:absolute;left:140%;top:50%;transform:translate(-50%);}
+#Programs02 .programs02_steps ul li:last-child::after{display:none;}
+#Programs02 .programs02_steps ul li .img_wrap_round{width:150px;height:150px;border-radius:50%;background:#F7F7F7;display:flex;justify-content:center;align-items:center;margin:30px auto}
+#Programs02 .programs02_steps p{font-size:20px;font-weight:700;color:#000}
+#Programs02 .programs02_steps .step{font-weight:800;color:#DA4E37;}
+#Programs02 .programs02_content{display:flex;background:#F7F7F7;padding:80px;justify-content: space-between;}
+#Programs02 .programs02_content .tit{font-size:20px;font-weight:700;width:165px;height:46px;line-height:46px;border:1px solid #DA4E37;border-radius:500px;color:#DA4E37;margin-bottom:20px;display:block;text-align:center;}
+#Programs02 .programs02_content ul{display:flex;flex-direction:column;gap:20px;}
+#Programs02 .programs02_content li{display:flex;flex-direction:column;font-size:24px;font-weight:700;}
+#Programs02 .programs02_content li span{font-size:16px;font-weight:800;color:#DA4E37;}
+
+/*프로그램 - M-Box*/
+#Programs03 .programs03_content{display: flex;flex-direction: column;gap:50px;margin:50px 0}
+#Programs03 .programs03_content li{display:flex;justify-content:space-between;align-items:center;}
+#Programs03 .programs03_content li > div{width:50%;}
+#Programs03 .programs03_content li .txt_area{padding:0 50px}
+#Programs03 .programs03_content li:nth-child(2n){flex-direction: row-reverse;}
+#Programs03 .programs03_content .tit{font-size:24px;font-weight:800;color:#DA4E37E5;margin-bottom:16px}
+#Programs03 .programs03_content .pc{display:block;}
+#Programs03 .programs03_content .m{display:none;}
+
+
+/*프로그램 - 기기관리*/
+#Programs04 .programs04_content01{display:flex;justify-content:space-between;align-items: center;position:relative;margin:50px auto}
+#Programs04 .programs04_content01 .txt_box{width:1017px;padding:50px;background:#CAA68B0F}
+#Programs04 .programs04_content01 > img{position:absolute;right:0;}
+#Programs04 .programs04_content01 .tit{font-size:32px;font-weight:800;margin-bottom:50px;line-height:44.8px}
+#Programs04 .programs04_content01 .txt_box > p {max-width:650px;}
+#Programs04 .programs04_content02{margin:50px 0;display:flex;justify-content:space-between;gap:50px 30px;flex-wrap:wrap;}
+#Programs04 .programs04_content02 li{width:380px;height:275px;background:#fff;box-shadow:-1px 1px 12px 0px #0000001a;display:flex;justify-content:flex-start;flex-direction:column;align-items:center;gap:30px;border-radius:8px;overflow:hidden;}
+#Programs04 .programs04_content02 li p{font-size:24px;font-weight:800;color:#000}
+#Programs04 .programs04_content03{display:flex;justify-content:flex-end;align-items: center;position:relative;margin:50px auto}
+#Programs04 .programs04_content03 .txt_box{width: 1017px;padding: 50px;background: #CAA68B0F;display: flex;flex-direction: column;align-items: flex-end;justify-content: center;}
+#Programs04 .programs04_content03 > img{position:absolute;left:0;}
+#Programs04 .programs04_content03 .tit{font-size:32px;font-weight:800;margin-bottom:50px;line-height:44.8px}
+#Programs04 .programs04_content03 .txt_box > p {max-width:650px;}
+#Programs04 .programs04_content04{display:flex;justify-content:space-between;}
+#Programs04 .programs04_content04 li{font-size:16px;line-height:24px;position:relative}
+#Programs04 .programs04_content04 > li::after{position:absolute;right:-44px;top:0;content: '';display:block;width:1px;height:252px;background:#E0E0E2;}
+#Programs04 .programs04_content04 > li:last-child::after{display:none;}
+#Programs04 .programs04_content04 li .tit_area{display:flex;align-items:center;gap:32px;margin-bottom:32px}
+#Programs04 .programs04_content04 li .tit_area .tit{font-size:24px;font-weight:800;color:#7BA9BE}
+
+/*오시는길*/
+#Location .pc{display:block;}
+#Location .m{display:none;}
+#Location .page_contents{padding:110px 0 50px}
+#Location .img_area{display:flex;justify-content:flex-start;align-items:flex-start;gap:50px}
+#Location .txt_arae{display:flex;flex-direction:column;justify-content:flex-start;}
+#Location .tit{font-size:24px;font-weight:800;margin-bottom:50px;color:#000}
+#Location .location_info{display:flex;flex-direction:column;gap:50px}
+#Location .location_info li{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:700;color:#666}
+#Location .location_info li >p{display:flex;flex-direction:column}
+#Location .location_info li span{color:#000;font-size:20px;font-weight:800;}
+#Location .location_info li::before{content:'';display:block;width:32px;height:32px;display:flex;justify-content:center;align-items:center;}
+#Location .location_info .address::before{background:url(./img/icon_location02.svg)no-repeat center;}
+#Location .location_info .transport::before{background:url(./img/icon_location01.svg)no-repeat center;}
+#Location .location_info .tel::before{background:url(./img/icon_location03.svg)no-repeat center;}
+#Location .slect_img_area{width:573px;height:430px;overflow:hidden;border-radius:4px;overflow:hidden;}
+#Location .slect_img_area img{width:100%;}
+#Location .img_select{display:flex;justify-content:space-between;gap:31px;margin:30px 0 0}
+#Location .img_select li{width:200px;height:200px;overflow:hidden;border-radius:4px;overflow:hidden;}
+#Location .img_select li img{height:100%;width:fit-content;;}
+#Location .map { position:relative; }
+#map { max-width:1200px;width:100%; height: 500px; margin: 0 auto;}
+#Location .info {display: flex;flex-direction: column;margin: 0 auto 100px;}
+#Location .map-links {position: absolute;top: 50%; /* 상단에서의 위치를 조정 */right: 6%; /* 우측에서의 위치를 유지 */transform: translateY(-50%); /* 수직 정렬을 위해 변환 */z-index: 9999;}
+#Location .map-links > div:nth-child(2){margin-top: 3rem;}
+
+
+
+/*M-Box*/
+#M-Box .menu_wrap{margin:50px 0}
+#M-Box .menu_wrap ul li .img_area{width:160px;height:160px;}
+#M-Box .menu_wrap .menu_tit{font-size:24px;font-weight:800;padding-bottom:16px;margin-bottom:50px;border-bottom:1px solid #000;color:#000}
+#M-Box .menu_wrap ul{display:flex;justify-content:space-between;flex-wrap:wrap;gap:50px 0}
+#M-Box .menu_wrap ul li{width:50%;display:flex;align-items:flex-start;gap:32px;}
+#M-Box .menu_wrap .txt_area{display:flex;flex-direction:column;gap:10px;}
+#M-Box .menu_wrap .name{font-size:16px;font-weight:700;color:#000}
+#M-Box .menu_wrap .sub{font-size:16px;font-weight:400;}
+#M-Box .menu_wrap .price{font-size:24px;font-weight:800;color:#DA4E37}
+
+
+/*상담신청*/
+.service_reservation table.pc{display:table;}
+.service_reservation table.m{display:none;}
+.service_reservation .reservation_date_time{justify-content:flex-start;margin-bottom:50px}
+.service_reservation .reservation_date_time .calendar_area{width:50%;max-width:450px;}
+.service_reservation .time_select{width: 100%;}
+.service_reservation .comment{font-size:14px;color:#B0B0B0}
+.service_reservation .comment::before{content:'';display: inline-block;width:20px;height:20px;background:url(./img/icon_warnning.svg);}
+.service_reservation .select2 {width:430px;margin:20px 0 8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start;}
+.service_reservation .select2 label input{margin-right:8px;}
+.service_reservation .select_date_result{padding:0}
+.service_reservation .select2 label:has(input[type=radio]){display: inline-block;cursor: pointer;height:56px;width:30%;border: 1px solid #B0B0B0;border-radius:5px;line-height:56px;text-align: center;font-weight:800;font-size:16px;color:#B0B0B0}
+.service_reservation .select2 label:has(input:disabled){background:#a7a7a7;color:#ddd}
+.service_reservation .select2 label:has(input:checked){color:#DA4E37;border:1px solid #DA4E37}
+.service_reservation .select2 input[type=radio]{accent-color:#DA4E37;}
+.service_reservation .Service01_form table{width:100%;max-width:830px;}
+.service_reservation .Service01_form table th,.service_reservation .Service01_form table td{padding:8px}
+.service_reservation .Service01_form table th{width:220px;}
+.service_reservation .Service01_form table td input{width:100%;display:table;padding:0 16px;font-size:14px}
+.service_reservation .Service01_form table td textarea{height:170px;}
+.service_reservation .submit{max-width:375px;margin:50px auto}
+.service_reservation .select {margin:0 0 8px}
+.service_reservation .select input[type=radio]{display: none;}
+.service_reservation .select input[type=radio]+label{display: inline-block;cursor: pointer;height:48px;width:157px;border: 1px solid #ccc;border-radius:5px;line-height:48px;text-align: center;font-weight:bold;font-size:13px;}
+.service_reservation .select input[type=radio]+label{background-color: #fff;color:#000;}
+.service_reservation .select input[type=radio]+label::before{content:'';display:inline-block;width:16px;height:12px;margin-right:8px;background:url(img/icon_check_gray.svg)center no-repeat}
+.service_reservation .select input[type=radio]:checked+label{border:1px solid #DA4E37;color: #DA4E37;}
+.service_reservation .select input[type=radio]:checked+label::before{background:url(img/icon_check.svg)center no-repeat;}
+.service_reservation .select input:disabled+label{background:#a7a7a7;color:#ddd}
+
+
+/*개인정보처리방침 & 이용약관*/
+#Use .title, #Privacy .title{text-align: center;margin-bottom:40px}
+#Use .section {margin-bottom:50px;}
+
+
+
+
+/* 반응형 max 1200 md */
+@media (max-width:1200px) {
+    .pagecommon{width:100%;overflow:hidden;}
+    .pagecommon.pc{display:none;}
+    .pagecommon.mobile{display:block;}
+    .pagecommon .md_contents{width:100%;}
+    .pagecommon .page_header.m{display:none;}
+    .pagecommon .page_header.pc{display:block;}
+    .pagecommon .page_header .tab li a{width:180px;font-size:16px}
+    
+    
+    /*미베르소개*/
+    #About01 .txt01{font-size:20px;padding:0 16px;font-weight:800;}
+    #About01 .txt02{font-size:14px;padding:0 16px;margin-bottom:32px}
+    #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
+    #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
+    #About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:column-reverse}
+    #About01 .txt_area p{font-size:18px;line-height:27px;margin-bottom:16px}
+    #About01.mobile .about_contents{margin-bottom:32px}
+
+    /*미베르소개 - 이념과 가치*/   
+    #About02 .content_wrap{flex-direction:column-reverse;gap:16px}
+    
+    /*프로그램 - Body Styling*/
+    #Programs01 img.pc{display:none;}
+    #Programs01 img.m{display:block;}
+    #Programs01 .page_contents{padding: 0 16px}
+    #Programs01 .page_contents > img{width:100%;margin-bottom:32px}
+
+    /*프로그램 - Body Styling*/
+    #Programs02 .md_contents{padding:0 16px}
+    #Programs02 .programs02_steps ul{flex-wrap:wrap;justify-content:space-between;gap:56px 32px}
+    #Programs02 .programs02_steps ul li{width:44%}
+    #Programs02 .programs02_steps ul li .img_wrap_round{width:92px;height:92px;margin:16px auto}
+    #Programs02 .programs02_steps ul li .img_wrap_round img{width:42px;}
+    #Programs02 .programs02_steps ul li::after{left:115%;top:50%;transform:translate(-50%);background-size: 16px;}
+    #Programs02 .programs02_steps ul li:nth-child(even)::after{display:none;}
+    #Programs02 .programs02_steps .step{font-size:14px}
+    #Programs02 .programs02_steps p{font-size:14px}
+    #Programs02 .programs02_content .tit{margin:0 auto;font-size:16px;width:120px;height:40px;line-height:40px;}
+    #Programs02 .programs02_content{padding:32px 16px;flex-direction: column;}
+    #Programs02 .programs02_content ul{flex-direction:row;flex-wrap:wrap;gap:16px 0;margin:16px auto}
+    #Programs02 .programs02_content ul li{width:50%;text-align: center;font-size:16px;}
+    #Programs02 .programs02_content li span{font-size:14px;margin-bottom:8px}
+
+    /*프로그램 - Body Styling*/
+    #Programs03 .md_contents{padding:0 16px;margin-bottom:32px}
+    #Programs03 .programs03_content{margin:32px auto 0;gap:32px}
+    #Programs03 .programs03_content li, #Programs03 .programs03_content li:nth-child(2n){flex-direction:column-reverse;}
+    #Programs03 .programs03_content li > div{width:100%;}
+    #Programs03 .programs03_content .pc{display:none;}
+    #Programs03 .programs03_content .m{display:block;}
+    #Programs03 .programs03_content li .txt_area{padding:16px 0}
+    #Programs03 .programs03_content .tit{font-size:20px}
+    
+
+    /*프로그램 - 기기관리*/
+    #Programs04 .md_contents{padding:0 16px}
+    #Programs04 .programs04_content01{margin:32px 0}
+    #Programs04 .programs04_content01 img, #Programs04 .programs04_content03 img{display:none;}
+    #Programs04 .programs04_content01 .txt_box, #Programs04 .programs04_content03 .txt_box{padding:32px 16px;justify-content:flex-start;        align-items: flex-start;}
+    #Programs04 .programs04_content01 .tit, #Programs04 .programs04_content03 .tit{font-size:20px;line-height:30px;margin-bottom:16px}
+    #Programs04 .programs04_content02{margin:32px 0;gap:16px}
+    #Programs04 .programs04_content02 li{width:100%;height:auto;padding-bottom:33px}
+    #Programs04 .programs04_content02 li img{width:100%;}
+    #Programs04 .programs04_content02 li p{font-size:20px}
+    #Programs04 .programs04_content04{flex-direction:column;gap:32px}
+    #Programs04 .programs04_content04 li img{width:64px;}
+    #Programs04 .programs04_content04 li .tit_area .tit{font-size:20px;}
+    #Programs04 .programs04_content04 > li::after{display: none;}
+    #Programs04 .step li .tit{font-weight:800;}
+
+    
+    /*오시는길*/
+    #Location .page_contents{padding:32px 0}
+    #Location .pc{display:none;}
+    #Location .m{display:block;}
+    #Location .swiper-slide{height:480px;}
+    #Location .swiper-slide img{width:100%;height:100%;max-width:inherit;}
+    #Location .tit{font-size:20px;font-weight:800;text-align:center;margin-bottom:32px}
+    #Location .swiper-button-next, #Location  .swiper-button-prev{color:#fff;width:28px;height:28px;padding:6px;background: #00000059;border-radius:50%;}
+    #Location .swiper-button-next:after, #Location .swiper-button-prev:after{font-size:12px}
+    #Location .swiper-pagination-bullet-active{background:#fff;}
+    #Location .swiper-pagination-bullet{background:#FFFFFF99;}
+    #Location .location_info{margin:32px auto 0;gap:32px;padding:0 16px}
+    #Location .location_info li span{font-size:16px}
+    #map { width: 100%; height: 400px; }
+    #Location .info {flex-direction: column-reverse;margin: 0 auto 32px;/* padding: 0 16px; */}
+    #Location .map-links div a svg{width: 50px;height: 50px;}
+    #Location .map-links div:nth-child(2){margin-top: 1rem;}
+
+
+    /*M-Box*/
+    #M-Box .menu_wrap{margin:32px 0;padding:0 16px;}
+    #M-Box .menu_wrap .menu_tit{font-size:16px;width:100%;margin-bottom:16px}
+    #M-Box .menu_wrap ul{gap:16px}
+    #M-Box .menu_wrap ul li{width:30%;;flex-direction:column;gap:10px}
+    #M-Box .menu_wrap ul li .img_area{width:100%;height:auto;}
+    #M-Box .menu_wrap ul li .img_area img{width:100%;}
+    #M-Box .menu_wrap .txt_area{gap:8px}
+    #M-Box .menu_wrap .name{font-size:16px}
+    #M-Box .menu_wrap .sub{font-size:14px;line-height:15.6px;}
+    #M-Box .menu_wrap .price{font-size:18px;}
+
+    /*상담신청*/
+    .service_reservation table.pc{display:none;}
+    .service_reservation table.m{display:table;}
+    .service_reservation .submit{width:100%;max-width:100%;margin:32px auto}
+    .service_reservation table.m th, .service_reservation table.m td{padding:8px 0}
+    .service_reservation table.m td:last-child{padding:0}
+    .service_reservation .md_contents{width:100%;max-width:100 ;padding:0 16px}
+    .service_reservation .reservation_date_time{flex-direction:column;}
+    .service_reservation .reservation_date_time .calendar_area{width:100%;max-width:100%;}
+    .service_reservation .comment{font-size:14px;justify-content:center;}
+    .service_reservation .comment::before{width:16px;height:16px;background-size:cover;}
+    .select_date_result{font-size:18px}
+    .service_reservation .select2{width:100%;}
+    .service_reservation .select2 label:has(input[type=radio]){width:33;}
+    .service_reservation .select{display:flex;gap:8px}
+}
+
+
+/* 반응형 max 767px md */
+@media (max-width: 767.98px) {
+    .pagecommon{width:100%;}
+    .pagecommon .md_contents{width:100%;}
+    .pagecommon .page_header.m{display:block;width:100%;margin:32px auto}
+    .pagecommon .page_header.pc{display: none;}
+    .pagecommon .page_header .tab{display:flex;margin:0 auto;justify-content: center;gap:8px}
+    .pagecommon .page_header .tab li{overflow: hidden;}
+    .pagecommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:16px;font-weight:800;}
+    .pagecommon .page_header .tab.type02 li{width:160px;}
+    .pagecommon .page_header .tab.type01 li{width:120px;}
+    .pagecommon p{font-size:14px;line-height:21px;}
+    .pagecommon h3{font-size:20px;line-height:30px;margin:32px 0 16px}
+    .pagecommon h3:first-child{margin-top:0}
+    .pagecommon h4{font-size:16px}
+    .pagecommon .swiper_tab.m{padding:0 16px}
+    .pagecommon .swiper_tab.m ul{width:fit-content;}
+    .pagecommon .step li{font-size:14px;line-height: 21px;}    
+    .swiper-wrapper.type01 li{width:120px !important;}
+    .swiper-wrapper.type01 li a{padding:0 !important}
+
+    /*미베르소개*/
+    #About01 .pc{display:none;}
+    #About01 .mobile{display:block;}
+    #About01 .page_header.pc{display:block !important;margin:32px auto;}
+    #About01 .txt01{font-size:20px;padding:0 16px;font-weight:800;}
+    #About01 .txt02{font-size:14px;padding:0 16px;margin-bottom:32px}
+    #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
+    #About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:column-reverse}
+    #About01 .count{font-size:20px;font-weight:800}
+    #About01 .txt_area p{font-size:18px;line-height:27px;margin-bottom:16px}
+
+    /*미베르소개 - 이념과 가치*/    
+    #About02 .page_header.pc{display:block !important;}
+    #About02 .page_contents{padding:32px 16px;margin-bottom:32px }
+    #About02 .content_wrap{flex-direction:column-reverse;gap:16px}
+    #About02 .txt_arae .tit{font-size:24px}
+    #About02 .txt_arae p{font-size:16px;line-height:24px;}
+    #About02 .img_area{border-radius:8px;overflow:hidden;}
+
+        
+    /*프로그램 - Body Styling*/
+    #Programs01 .pc{display:none;}
+    #Programs01 .m{display:block;}
+    #Programs01 .page_contents{padding: 0 16px;margin-bottom:32px}
+    #Programs01 .page_contents > img{width:100%;margin-bottom:32px}
+
+    /*프로그램 - Body Styling*/
+    #Programs02 .md_contents{padding:0 16px;margin-bottom:32px}
+    #Programs02 .programs02_steps ul{flex-wrap:wrap;justify-content:space-between;gap:56px 32px}
+    #Programs02 .programs02_steps ul li{width:44%}
+    #Programs02 .programs02_steps ul li .img_wrap_round{width:92px;height:92px;margin:16px auto}
+    #Programs02 .programs02_steps ul li .img_wrap_round img{width:42px;}
+    #Programs02 .programs02_steps ul li::after{left:115%;top:50%;transform:translate(-50%);background-size: 16px;}
+    #Programs02 .programs02_steps ul li:nth-child(even)::after{display:none;}
+    #Programs02 .programs02_steps .step{font-size:14px}
+    #Programs02 .programs02_steps p{font-size:14px}
+    #Programs02 .step h4{margin:32px 0 16px;}
+
+    /*프로그램 - M-Box*/
+    #Programs03 .md_contents{margin-bottom:32px}
+
+    /*프로그램 - M-Box*/
+    #Programs04 .md_contents{margin-bottom:32px}
+
+    /*M-Box*/
+    #M-Box .menu_wrap{margin:32px 0;padding:0 16px;}
+    #M-Box .menu_wrap .menu_tit{font-size:16px;width:100%;margin-bottom:16px}
+    #M-Box .menu_wrap ul{gap:16px}
+    #M-Box .menu_wrap ul li{width:47%;;flex-direction:column;gap:10px}
+    #M-Box .menu_wrap ul li .img_area{width:100%;height:auto;}
+    #M-Box .menu_wrap ul li .img_area img{width:100%;}
+    #M-Box .menu_wrap .txt_area{gap:4px}
+    #M-Box .menu_wrap .name{font-size:13px}
+    #M-Box .menu_wrap .sub{font-size:12px;line-height:15.6px;}
+    #M-Box .menu_wrap .price{font-size:16px;}
+
+    /*상담신청*/
+    .service_reservation .md_contents{width:100%;max-width:100 ;padding:0 16px}
+    .service_reservation .reservation_date_time{flex-direction:column;}
+    .service_reservation .reservation_date_time .calendar_area{width:100%;max-width:100%;}
+    .service_reservation .comment{font-size:12px;justify-content:center;}
+    .service_reservation .comment::before{width:16px;height:16px;background-size:cover;}
+    .select_date_result{font-size:16px}
+    .service_reservation .select2{width:100%;}
+    .service_reservation .select2 label:has(input[type=radio]){width:48%;}
+    #Privacy, #Use{padding:0 16px}
+}
+
+/* 반응형 max 360px md */
+@media (max-width: 360px) {
+    /*미베르소개*/
+    #About01 .txt_area p{font-size:16px;line-height:27px;}
+
+}
