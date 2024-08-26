@@ -28,7 +28,7 @@
 #About01 .content_wrap{width:100%;max-width:1200px;margin:0 auto;padding:100px 0;display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;}
 #About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:row}
 #About01 .count{display:inline-block;font-size:24px;font-weight:800;padding-bottom:8px;border-bottom:2px solid #DA4E37;color:#DA4E37;margin-bottom:20px}
-#About01 .txt_area p{font-size:24px;font-weight:800;color:#3D3935}
+#About01 .txt_area p{font-size:24px;font-weight:800;color:#3D3935;line-height:36px;}
 
 /*미베르소개 - 이념과 가치*/
 #About02 .page_contents{background:#CAA68B0F;width:100%;padding:100px;}
@@ -40,9 +40,11 @@
 /*프로그램 - Body Styling*/
 #Programs01 img.pc{display:block;}
 #Programs01 img.m{display:none;}
+#Programs01 .page_contents{margin-bottom:100px}
 #Programs01 .page_contents > img{margin-bottom:50px}
 
 /*프로그램 - 3:1코칭*/
+#Programs02 .md_contents{margin-bottom:100px}
 #Programs02 .programs02_steps{margin:50px auto}
 #Programs02 .programs02_steps ul{display:flex;justify-content:flex-start;gap:133px}
 #Programs02 .programs02_steps ul li{display:flex;flex-direction:column;align-items:center;width:200px;position:relative}
@@ -58,6 +60,7 @@
 #Programs02 .programs02_content li span{font-size:16px;font-weight:800;color:#DA4E37;}
 
 /*프로그램 - M-Box*/
+#Programs03 .md_contents{margin-bottom:100px}
 #Programs03 .programs03_content{display: flex;flex-direction: column;gap:50px;margin:50px 0}
 #Programs03 .programs03_content li{display:flex;justify-content:space-between;align-items:center;}
 #Programs03 .programs03_content li > div{width:50%;}
@@ -69,6 +72,7 @@
 
 
 /*프로그램 - 기기관리*/
+#Programs04 .md_contents{margin-bottom:100px}
 #Programs04 .programs04_content01{display:flex;justify-content:space-between;align-items: center;position:relative;margin:50px auto}
 #Programs04 .programs04_content01 .txt_box{width:1017px;padding:50px;background:#CAA68B0F}
 #Programs04 .programs04_content01 > img{position:absolute;right:0;}
@@ -130,6 +134,7 @@
 
 
 /*상담신청*/
+.service_reservation h4{margin:50px 0 32px !important}
 .service_reservation table.pc{display:table;}
 .service_reservation table.m{display:none;}
 .service_reservation .reservation_date_time{justify-content:flex-start;margin-bottom:50px}
@@ -184,7 +189,7 @@
     #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
     #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
     #About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:column-reverse}
-    #About01 .txt_area p{font-size:18px;line-height:27px;margin-bottom:16px}
+    #About01 .txt_area p{font-size:18px;line-height:27px;margin-bottom:16px;line-height:24px;}
     #About01.mobile .about_contents{margin-bottom:32px}
 
     /*미베르소개 - 이념과 가치*/   
@@ -193,11 +198,11 @@
     /*프로그램 - Body Styling*/
     #Programs01 img.pc{display:none;}
     #Programs01 img.m{display:block;}
-    #Programs01 .page_contents{padding: 0 16px}
+    #Programs01 .page_contents{padding: 0 16px;margin-bottom:0}
     #Programs01 .page_contents > img{width:100%;margin-bottom:32px}
 
     /*프로그램 - Body Styling*/
-    #Programs02 .md_contents{padding:0 16px}
+    #Programs02 .md_contents{padding:0 16px;margin-bottom:32px}
     #Programs02 .programs02_steps ul{flex-wrap:wrap;justify-content:space-between;gap:56px 32px}
     #Programs02 .programs02_steps ul li{width:44%}
     #Programs02 .programs02_steps ul li .img_wrap_round{width:92px;height:92px;margin:16px auto}
@@ -270,9 +275,10 @@
     #M-Box .menu_wrap .txt_area{gap:8px}
     #M-Box .menu_wrap .name{font-size:16px}
     #M-Box .menu_wrap .sub{font-size:14px;line-height:15.6px;}
-    #M-Box .menu_wrap .price{font-size:18px;}
+    #M-Box .menu_wrap .price{font-size:18px;} 
 
     /*상담신청*/
+    .service_reservation h4{margin:20px 0 32px !important}
     .service_reservation table.pc{display:none;}
     .service_reservation table.m{display:table;}
     .service_reservation .submit{width:100%;max-width:100%;margin:32px auto}
