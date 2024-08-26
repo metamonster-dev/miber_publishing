@@ -148,7 +148,7 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .center_contentrs{width:560px;min-height:100vh;margin:0 auto;padding:50px 30px;background:#fff;}
 .center_contentrs h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
 .center_contentrs2{margin:0 auto;width:560px;min-height:100vh;padding:50px 0;background:#fff;}
-.center_contentrs2 h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
+.center_contentrs2 h2{font-size:24px;text-align:center;margin-bottom:50px;font-weight:800;}
 .center_contentrs2 .padding_wrap{padding:50px 30px 0}
 /*제목-본문 형태의 리스트*/
 .list_text{display:flex;flex-direction:column;gap:10px}
