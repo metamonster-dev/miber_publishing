@@ -44,7 +44,7 @@
     .boardcommon .page_header.m{display:none;}
     .boardcommon .page_header.pc{display:block;}
     .boardcommon .page_header .tab li a{width:180px;font-size:16px;height:42px;line-height:42px;}
-    
+    #Notice_view .black_btn{width:100%;}
 
 }
 
