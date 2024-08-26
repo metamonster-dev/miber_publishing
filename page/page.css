@@ -12,8 +12,8 @@
 .pagecommon h3{font-size:32px;font-weight:800;margin:50px 0 16px}
 .pagecommon h4{font-size:24px;font-weight:800;margin:50px 0 16px}
 .pagecommon .step ul{display:flex;flex-direction:column;}
-.pagecommon .step li{font-size:24px;font-weight:700;line-height:36px;color:#666666;}
-.pagecommon .step li .tit{color:#000}
+.pagecommon .step li{font-size:24px;font-weight:400;line-height:36px;color:#666666;}
+.pagecommon .step li .tit{color:#000;font-weight:700;}
 .section_tit{font-size:24px;font-weight:800;padding-bottom:12px;border-bottom:2px solid #000}
 .required::after{width:8px;height:8px;}
 
@@ -262,6 +262,8 @@
     /*상담신청*/
     .service_reservation table.pc{display:none;}
     .service_reservation table.m{display:table;}
+    .service_reservation .submit{width:100%;max-width:100%;}
+    .service_reservation table.m th, .service_reservation table.m td{padding:8px 0}
     .service_reservation .md_contents{width:100%;max-width:100 ;padding:0 16px}
     .service_reservation .reservation_date_time{flex-direction:column;}
     .service_reservation .reservation_date_time .calendar_area{width:100%;max-width:100%;}
@@ -331,8 +333,13 @@
     #Programs02 .programs02_steps ul li:nth-child(even)::after{display:none;}
     #Programs02 .programs02_steps .step{font-size:14px}
     #Programs02 .programs02_steps p{font-size:14px}
-    .programs02_content img{height:218px;}
     #Programs02 .step h4{margin:32px 0 16px;}
+
+    /*프로그램 - M-Box*/
+    #Programs03 .md_contents{margin-bottom:32px}
+
+    /*프로그램 - M-Box*/
+    #Programs04 .md_contents{margin-bottom:32px}
 
     /*M-Box*/
     #M-Box .menu_wrap{margin:32px 0;padding:0 16px;}
