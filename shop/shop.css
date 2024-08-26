@@ -137,7 +137,7 @@
 .sticky_item_info .type03 .product_option_wrap .box03 .filter_slect{width:100%;background:#fff;}
 .sticky_item_info .type03 .box02 .option_total{width:100%;background:#fff;flex-wrap:wrap;padding:12px 16px;border:1px solid #e0e0e2}
 .sticky_item_info .type03 .box02 .option_total .option_list{width:100%;}
-#Totop{position:fixed;right:30px;bottom:30%;z-index:9999;}
+#Totop{position:fixed;right:30px;bottom:30%;z-index:9999;width:60px;height:60px;}
 
 /*상품주문*/
 #ShopOrder .txt_area{width:100%;}
