@@ -979,7 +979,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .System_wranning img{width:64px;height:auto;;margin-bottom:40px}
 .System_wranning .txt01{font-size:18px;margin-bottom:16px}
 .System_wranning .txt02{font-size:11px;line-height: 16.5px;}
-.System_wranning button{position:absolute;bottom:50px;height:46px;line-height:46px;border-radius:4px;font-size:16px;font-weight:800;}
+.System_wranning button{position:absolute;bottom:50px;height:46px;line-height:46px;border-radius:4px;font-size:16 px;font-weight:800;}
 .popup_area{position:absolute;top:20%;left:50%;transform:translate(-50%);width:fit-content;height:auto;padding:14px 14px 9px}
 .img_wrap{width:267px;height:267px;}
 .btm_area{margin-top:15px}
