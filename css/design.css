@@ -462,9 +462,10 @@ td > .in_btn{margin-top:6px}
 .star-rating label:hover,.star-rating label:hover ~ label {background: url('../img/star-filled.svg') no-repeat;background-size:28.83px;}
 /*새창화면(공통)*/
 .window_contents{padding:30px}
-.window_contents h4{font-size:18px;font-weight:800;padding:32px 0 0;border-top:1px solid #E0E0E2}
+.window_contents h4{max-width:480px;margin:0 auto;font-size:18px;font-weight:800;padding:32px 0 0;border-top:1px solid #E0E0E2}
+.window_contents .txt02{font-size:14px;color:#666;margin:40px 0 10px}
 .window_contents .win_head{display:flex;justify-content:center;align-items:center;padding-bottom:16px;border-bottom: 1px solid #E0E0E2;position:relative}
-.window_contents .win_head .close_btn{position:absolute;top:0;right:0;}
+.window_contents .win_head .close_btn{position:absolute;top:-6px;right:0;}
 .window_contents .win_head h3{font-size:24px;font-weight:800;}
 .window_contents .table_text{display:block;padding:32px 0}
 /*상품리뷰 팝업창*/
@@ -472,7 +473,7 @@ td > .in_btn{margin-top:6px}
 #review_write textarea{width:100% !important;height:248px;resize:none;} 
 #review_write .comment{font-size:14px}
 /*카드영수증 팝업창*/
-.receipt_table{width: 100%;}
+.receipt_table{width:fit-content;margin:0 auto;}
 .receipt_table th{font-size:16px;font-weight:800;color:#9B9B9B;vertical-align : top;}
 .receipt_table td{width:75%;text-align: right;font-size:16px;font-weight:700;}
 .receipt_table td.accent{color:#DA4E37}
@@ -480,6 +481,9 @@ td > .in_btn{margin-top:6px}
 #cost_table .cost th{color:#000000}
 #cost_table .cost td{font-size:18px;font-weight:800;}
 #cost_table .cost td span{font-size:24px;}
+/*마케팅 수신동의*/
+#Receive_marketing .win_cont{padding-top:30px;max-width:600px;margin:0 auto;}
+#Receive_marketing table{margin-bottom:16px}
 /*취소신청*/
 #my_order_cancle.pc{display:block;}
 #my_order_cancle.m{display: none;}
@@ -754,7 +758,7 @@ table input[type="checkbox"]{width:inherit !important;}
 .mobile_nav_wrap{display:block;height:100vh;transform:translateX(-100%);transition:.6s;z-index:999;}
 .mobile_nav_wrap.on{display:block;transform:translateX(0);}
 h1 {width:70px;margin:0 auto}
-h1 > img{width:100%;}
+h1 > img{width:100%;max-width:70px;}
 h5{font-size:16px;margin-bottom:16px;}
 .hd_tit{font-size:18px;font-weight:800;color:#000;}
 .login_header{border-bottom:0}
@@ -992,6 +996,7 @@ h5{font-size:16px;margin-bottom:16px;}
 }
 @media (max-width:635px) {
 .filter_wrap input[type="date"]{width:38%;}
+.window_contents .win_head h3{font-size:16px}
 }
 
 
