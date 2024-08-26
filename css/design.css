@@ -144,7 +144,7 @@ label.imgfile img.icon{width:14px;height:14px;position:relative}
 .imgfile img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
 input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
 /* 중앙 560배경 요소*/
-.gray_bg{width:100%;min-height:100vh;background: #F7F7F7;display:flex;justify-content:center;align-items: center;}
+.gray_bg{width:100%;min-height:100vh;background: #F7F7F7;display:flex;justify-content:center;align-items:flex-start;}
 .center_contentrs{width:560px;min-height:100vh;padding:50px 30px;background:#fff;}
 .center_contentrs h2{font-size:24px;text-align:center;margin-bottom:55px;font-weight:800;}
 .center_contentrs2{width:560px;min-height:100vh;padding:50px 0;background:#fff;}
@@ -1027,15 +1027,20 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 
 /*로그인*/
 #Login .checkbox{margin:30px 0}
+.login_sns_wrap .or_line{font-size:12px}
 .hd_tit{font-size:18px;font-weight:800;color:#000;}
 .login_page h2{display:none;}
 .login_header{border-bottom:none}
-.center_contentrs{padding:50px 16px}
-.center_contentrs h2{font-size:18px}
-.center_contentrs2{padding:50px 0}
-.center_contentrs2 .padding_wrap{padding:32px 16px}
+.center_contentrs{padding:32px 16px}
+.center_contentrs h2{font-size:18px;margin-bottom:32px}
+.login_sns_wrap ul li a{font-size:14px}
+.login_sns_wrap{padding:30px 0}
+.center_contentrs2{padding:32px 0;min-height:0;}
+.center_contentrs2 .padding_wrap{padding:0 16px}
 .center_contentrs2 h2{font-size:18px;margin-bottom:0}
 .login_bt_menu li a{font-size:12px;padding: 0 25px;}
+.login_page .tab_menu{margin-top:0}
+.login_page button{font-weight:800 !important;}
 /*회원가입*/
 .all_checked{font-size:14px;font-weight:400;}
 .agreement_list > li > label{width:80%;padding:0 0 0 10px;font-size:12px}

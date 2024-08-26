@@ -51,7 +51,7 @@
 #Programs02 .programs02_steps ul li .img_wrap_round{width:150px;height:150px;border-radius:50%;background:#F7F7F7;display:flex;justify-content:center;align-items:center;margin:30px auto}
 #Programs02 .programs02_steps p{font-size:20px;font-weight:700;color:#000}
 #Programs02 .programs02_steps .step{font-weight:800;color:#DA4E37;}
-#Programs02 .programs02_content{display:flex;background:#F7F7F7;padding:80px;justify-content: space-between;}
+#Programs02 .programs02_content{display:flex;background:#F7F7F7;padding:80px;justify-content: space-between;border-radius:16px;}
 #Programs02 .programs02_content .tit{font-size:20px;font-weight:700;width:165px;height:46px;line-height:46px;border:1px solid #DA4E37;border-radius:500px;color:#DA4E37;margin-bottom:20px;display:block;text-align:center;}
 #Programs02 .programs02_content ul{display:flex;flex-direction:column;gap:20px;}
 #Programs02 .programs02_content li{display:flex;flex-direction:column;font-size:24px;font-weight:700;}
@@ -257,6 +257,7 @@
     #Location .info {flex-direction: column-reverse;margin: 0 auto 32px;/* padding: 0 16px; */}
     #Location .map-links div a svg{width: 50px;height: 50px;}
     #Location .map-links div:nth-child(2){margin-top: 1rem;}
+    #Location .map-links{transform: translateY(0);top:inherit;bottom:16px}
 
 
     /*M-Box*/
@@ -274,8 +275,9 @@
     /*상담신청*/
     .service_reservation table.pc{display:none;}
     .service_reservation table.m{display:table;}
-    .service_reservation .submit{width:100%;max-width:100%;}
+    .service_reservation .submit{width:100%;max-width:100%;margin:32px auto}
     .service_reservation table.m th, .service_reservation table.m td{padding:8px 0}
+    .service_reservation table.m td:last-child{padding:0}
     .service_reservation .md_contents{width:100%;max-width:100 ;padding:0 16px}
     .service_reservation .reservation_date_time{flex-direction:column;}
     .service_reservation .reservation_date_time .calendar_area{width:100%;max-width:100%;}
