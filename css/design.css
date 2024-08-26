@@ -1039,7 +1039,7 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 .center_contentrs2 .padding_wrap{padding:0 16px}
 .center_contentrs2 h2{font-size:18px;margin-bottom:0}
 .login_bt_menu li a{font-size:12px;padding: 0 25px;}
-.login_page .tab_menu{margin-top:0}
+.login_page .tab_menu{margin-top:0;margin-bottom:32px }
 .login_page button{font-weight:800 !important;}
 /*회원가입*/
 .all_checked{font-size:14px;font-weight:400;}
