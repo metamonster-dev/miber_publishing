@@ -756,6 +756,10 @@ table input[type="checkbox"]{width:inherit !important;}
 h1 {width:70px;margin:0 auto}
 h1 > img{width:100%;}
 h5{font-size:16px;margin-bottom:16px;}
+.hd_tit{font-size:18px;font-weight:800;color:#000;}
+.login_header{border-bottom:0}
+.header_bar h1{position:absolute;left:50%;transform:translateX(-50%);top:22px}
+
 
 .product_list01{gap:50px 20px}
 .serch, .serch input{width:100%;}
@@ -941,7 +945,6 @@ h5{font-size:16px;margin-bottom:16px;}
 /* 반응형 max 992px lg */
 @media (max-width:880px) {
 .header_bar{height:60px;padding:0 16px;position:relative}
-.header_bar h1{position:absolute;left:50%;transform:translateX(-50%);}
 .header_wrap_pc{display:none;}
 .header_wrap_m{display:flex;justify-content:space-between;align-items: center;width:100%;}
 .mobile_nav_wrap{display:block;height:100vh;transform:translateX(-100%);transition:.6s;z-index:999;}
