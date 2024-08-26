@@ -144,7 +144,7 @@
     <!--상단 스크롤 고정 구매모달-->
     <section class="sticky_item_info">
         <!--상품에 옵션 없을때 type01 노출-->
-        <div class="info_wrap type01 d-none">
+        <div class="info_wrap type01 ">
             <div class="item_wrap">
                 <div class="img_area">
                     <img src="../img/temp/review2.jpg" alt="상품썸네일">
@@ -194,8 +194,8 @@
             </div>
         </div>
         <!--상품에 옵션 있을때 type03 노출-->
-        <div class="type03 ">
-            <div class="info_wrap">
+        <div class="type03 d-none">
+            <div class="info_wrap ">
                 <div class="item_wrap">
                     <div class="img_area">
                         <img src="../img/temp/review2.jpg" alt="상품썸네일">
@@ -744,6 +744,7 @@
         });
         </script>
         </section>
+        <img src="../img/icon_totop.svg"  id="Totop">
     </div>
 
     <div id="Shopitem_m" class="shopcommon">
@@ -1156,8 +1157,12 @@
             </div>
         </div>
     </div>
-
+    
     <script>
+        // #Totop 버튼 클릭 시 스크롤을 맨 위로 애니메이션
+        $('#Totop').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 600); 
+        });
         var $btn = $('#product_more2');
         var $detailContents = $('.detail_contents_m');
         var isExpanded = false;
@@ -1174,8 +1179,7 @@
             }
             isExpanded = !isExpanded;
         });
-    </script>
-    <script>
+
         var $btn = $('#product_more');
         var $detailContents = $('.detail_contents');
         var isExpanded = false;
