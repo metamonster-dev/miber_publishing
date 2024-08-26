@@ -273,7 +273,7 @@
 @media (max-width: 767.98px) {
     .pagecommon{width:100%;}
     .pagecommon .md_contents{width:100%;}
-    .pagecommon .page_header.m{display:block;width:90%;margin:32px auto}
+    .pagecommon .page_header.m{display:block;width:100%;margin:32px auto}
     .pagecommon .page_header.pc{display: none;}
     .pagecommon .page_header .tab li{overflow: hidden;}
     .pagecommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:16px;font-weight:800;}
