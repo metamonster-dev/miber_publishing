@@ -105,7 +105,7 @@ textarea{width:100%;border:1px solid #e0e0e2;padding:16px;font-size:14px;}
 .paging_btn{display:flex;}
 .paging_btn li a{width:34px;height:34px;border:1px solid #E0E0E2;font-weight:400;font-size:14px;border-right:0;display:flex;justify-content: center;align-items: center;cursor: pointer;}
 .paging_btn li:last-child a{border-right:1px solid #E0E0E2}
-.paging_btn li a.on{color:#DA4E37;background:#F8F9FB;}
+.paging_btn li a.on{color:#000;background:#F8F9FB;}
 .paging_btn li i{color:#999}
 /*table_text*/
 .table_text{width:100%;}
@@ -290,6 +290,7 @@ footer a{color:#fff}
 /*회원가입*/
 #signup_form label:nth-child(3){margin-bottom:0}
 #Signup button.next{margin-top:50px}
+.agreement{font-weight:700;font-size:16px}
 .agreement_area{margin-top:50px;padding:50px 0 0;border-top:1px solid #E0E0E2}
 .all_checked{font-size:16px;font-weight:800;}
 .agreement_list{margin-top:10px}
@@ -603,14 +604,19 @@ table input[type="checkbox"]{width:inherit !important;}
 #my_page01.m{display:none;}
 
 /*모달 - 에디터*/
-.modal_edit{display:flex;background:#fff;flex-direction:column;border-radius:20px;}
-.modal_edit .top_area{width:100%;height:41px;line-height:41px;display:flex;justify-content:space-between;align-items:center;background:#fff;padding:0 20px;border-radius:20px 20px 0 0;transform: translateY(-2px);border-bottom:1px solid #E0E0E2}
+.modal_edit{display:flex;background:#fff;flex-direction:column;border-radius:10px;overflow:hidden;}
+.modal_edit .top_area{width:100%;height:41px;line-height:41px;display:flex;justify-content:space-between;align-items:center;background:#fff;padding:0 20px;transform: translateY(-2px);border-bottom:1px solid #E0E0E2}
 .modal_edit .top_area .tit{font-size:12px;font-weight:800; color:#000;}
-.modal_edit > p {text-align:center;margin:20px auto;font-weight:700;font-size:14px;}
+.modal_edit > p {text-align:center;margin:20px auto 8px;font-weight:700;font-size:14px;}
 .modal_edit form{padding:0 20px 20px}
 .modal_edit label{display:flex;flex-direction:column;gap:8px}
 .modal_edit label input{width:100%;}
 .modal_edit label .input_text{left:104px;width:100%;}
+.modal_edit .close_btn{width:16px;height:16px;}
+.modal_edit button{font-weight:800 !important;}
+
+
+
 /*배송지 관리*/
 .delivery_address{display:flex;flex-direction:column;}
 .delivery_address li{padding:32px 0;border-bottom:6px solid #f7f7f7}
@@ -869,9 +875,10 @@ h5{font-size:16px;margin-bottom:16px;}
 #my_order_change .filter_slect .trigger,.filter_slect .trigger:after{height:46px;line-height:46px;}
 .table_text .img_preview{width:100%;height:100px;}
 
-.list_box{flex-direction:column;width:100%;align-items:center;}
-.list_box .txt_list:first-child{border-right:0;border-bottom:1px solid #E0E0E2 }
-.list_box .txt_list{padding:14px 16px}
+.list_box{flex-direction:column;width:100%;align-items:center;padding:16px;gap:14px}
+.list_box .txt_list:first-child{border-right:0;border-bottom:1px solid #E0E0E2;padding-bottom:14px}
+.list_box .txt_list{padding:0;width:100%;}
+.list_box .txt_list li{width:100%;}
 
 
 #my_page03.pc{display:none;}
@@ -944,6 +951,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .popup_contents .filter_slect .trigger{height:46px;line-height:46px;padding:0 16px;}
 .popup_contents .order_price{font-weight:800;}
 .window_contents .win_head h3{font-size:20px}
+.bottom_btn button{width:100%;}
 }
 
 /* 반응형 max 992px lg */
@@ -1052,6 +1060,7 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 .login_page button{font-weight:800 !important;}
 /*회원가입*/
 .all_checked{font-size:14px;font-weight:400;}
+.agreement{font-weight:700;font-size:14px}
 .agreement_list > li > label{width:80%;padding:0 0 0 10px;font-size:12px}
 .agreement_list > li > label input{margin-left:0}
 .agreement_list li a{font-size:12px}
