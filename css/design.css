@@ -758,7 +758,7 @@ h1 > img{width:100%;}
 h5{font-size:16px;margin-bottom:16px;}
 .hd_tit{font-size:18px;font-weight:800;color:#000;}
 .login_header{border-bottom:0}
-.header_bar h1{position:absolute;left:50%;transform:translateX(-50%);top:22px}
+.header_bar h1{width:fit-content;position:absolute;left:50%;transform:translateX(-50%);top:22px}
 
 
 .product_list01{gap:50px 20px}
