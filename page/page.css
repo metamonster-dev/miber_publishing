@@ -283,6 +283,8 @@
     .pagecommon h3{font-size:20px;line-height:30px;margin:32px 0 16px}
     .pagecommon h3:first-child{margin-top:0}
     .pagecommon h4{font-size:16px}
+    .pagecommon .swiper_tab.m{padding:0 16px}
+    .pagecommon .swiper_tab.m ul{width:fit-content;}
     .pagecommon .step li{font-size:14px;line-height: 21px;}    
     .swiper-wrapper.type01 li{width:120px !important;}
     .swiper-wrapper.type01 li a{padding:0 !important}
