@@ -20,6 +20,7 @@
 /*미베르소개*/
 #About01 .pc{display:block;}
 #About01 .m{display:none}
+#About01.pc .about_contents{margin-bottom:100px}
 #About01 .txt01{font-size:32px;font-weight:700;width:100%;max-width:1200px;margin:0 auto 16px;text-align:left;color:#DA4E37;}
 #About01 .txt02{width:100%;max-width:1200px;margin: 0 auto 50px ;}
 #About01 .about_contents{display:flex;flex-direction:column;}
@@ -31,6 +32,7 @@
 #About01 .txt_area p{font-size:24px;font-weight:800;color:#3D3935;line-height:36px;}
 
 /*미베르소개 - 이념과 가치*/
+#About02.pc .page_contents{margin-bottom:100px}
 #About02 .page_contents{background:#CAA68B0F;width:100%;padding:100px;}
 #About02 .content_wrap{width:100%;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
 #About02 .txt_arae{max-width: 550px;}
