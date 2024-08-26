@@ -706,6 +706,7 @@ table input[type="checkbox"]{width:inherit !important;}
 #my_inquiry02 .table_defalt{margin-top:32px}
 #my_inquiry02 .inquiry_title{font-weight:700;font-size:16px}
 #my_inquiry02  .border_none td{padding:32.5px 16px}
+#my_inquiry02 .img_area{border-radius:4px;}
 .answer td{background:#F7F7F7;border-right:none;;border-left:none;}
 .answer td:nth-child(2) span{margin:0 8px;display:inline-block;background:#3D3935;color:#fff;font-size:11px;line-height:18px;padding:0 5px;height:18px;border-radius:4px;}
 .answer td:nth-child(2)::before{content:'ㄴ';}
