@@ -9,8 +9,9 @@
 
 /*(공통) 폼*/
 h1{font-size:0}
-h5{font-size: 18px;font-weight:800;margin-bottom:20px}
+h5{font-size: 18px;font-weight:800;margin-bottom:10px}
 h6{font-size:16px;font-weight:800;margin-bottom:10px}
+.table_h4{margin-bottom:20px !important}
 .required{display:inline-block;position:relative;}
 .required::after{content:'';display:block;width:6px;height:6px;border-radius:50%;background:#DA4E37;position:absolute;top:-5px;right:-10px;}
 .form_defalt{width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
@@ -49,7 +50,7 @@ input[type="radio"]:checked, input[type="checkbox"]:checked{accent-color:#3D3935
 .table_defalt tbody tr:last-child th, .table_defalt tbody tr:last-child td {border-bottom: 0;}
 .table_defalt th:first-child,.table_defalt td:first-child{border-left:none}
 .table_defalt th:last-child,.table_defalt td:last-child{border-right:none}
-.table_defalt thead{border-top:2px solid #000}
+.table_defalt thead{border:2px solid #000;border-width:2px 0 0 0}
 .table_defalt th {background:#F7F7F7;font-size:14px;font-weight:800;}
 .table_defalt td {background: #fff;color: #000;}
 .table_defalt td.text_left{text-align:left;}
@@ -76,7 +77,7 @@ textarea{width:100%;border:1px solid #e0e0e2;padding:16px;font-size:14px;}
 /*이미지모달*/
 .modal{position:fixed;top:0;left:0;display:none;width:100%;height:100vh;background:#171719BD;justify-content:center;align-items: center;}
 .modal.on{display:flex;}
-.modal .img_veiw{height:fit-content;border:none;position:relative;overflow:hidden;}
+.modal .img_veiw{height:fit-content;border:none;position:relative;overflow:hidden;border-radius:10px;overflow:hidden;}
 .modal .img_veiw .close_btn{position:absolute;top:15px;right:15px;cursor:pointer;}
 .modal .img_veiw img{width:100%;}
 /*필터*/
@@ -305,7 +306,7 @@ footer a{color:#fff}
 
 /*=======마이페이지======*/
 .no_data{display:flex;justify-content:center;align-items:center;margin:50px auto;font-size:16px;}
-.callout{width:100%;margin-bottom:32px;padding:16px 0;text-align:center;font-size:16px;font-weight:800;color:#DA4E37;background: #DA4E370A; }
+.callout{width:100%;margin-bottom:48px;padding:16px 0;text-align:center;font-size:16px;font-weight:800;color:#DA4E37;background: #DA4E370A; }
 .MypageContents .m{display:none;}
 /*마이페이지 레이아웃*/
 .MypageContents_wrap{padding:50px 0;display:flex;justify-content:center;gap:50px;}
@@ -314,6 +315,7 @@ footer a{color:#fff}
 .MypageContents_wrap h3{width:100%;margin-bottom:32px;padding-bottom:12px;font-size:24px;font-weight:800;border-bottom:2px solid #000;}
 .MypageContents_wrap h4{font-size:18px;font-weight:800;margin-bottom:32px;}
 article > h4{margin-bottom:20px !important}
+
 /*마이페이지 - 어사이드 메뉴*/
 .MypageContents_wrap .MypageContents_aside .aside_title{font-size:24px;font-weight:800;height:41px;margin-bottom:20px}
 .MypageContents_wrap .MypageContents_aside .aside_nav_title{font-size:18px;font-weight:800;margin-bottom:16px}
@@ -334,8 +336,10 @@ article > h4{margin-bottom:20px !important}
 /*주소*/
 .address{display:flex;flex-wrap: wrap;width:610px;gap:10px;}
 .address input:nth-child(1){width:397px !important;}
-.address button{width:203px;height:46px !important;border:1px solid #3D3935 !important;font-weight:800 !important;}
-
+.address button{width:100px;height:46px !important;font-weight:800;border:1px solid #3D3935 !important;font-weight:800 !important;}
+.address .add_input01{width:120px !important;}
+.address .add_input02{width:369px !important;}
+.address .add_input03{width:100%;}
 
 
 /*== 마이페이지- 나의서비스==*/
@@ -353,18 +357,20 @@ article > h4{margin-bottom:20px !important}
 .time_select .select input[type=radio]+label{width:120px;padding:0 20px}
 .time_select .pika-single{display:block !important;position:static;z-index: 9999;}
 .mission_top{display:flex;padding-bottom:9px;justify-content:space-between;border-bottom:1px solid #ccc;}
+.mission_top input{padding:0;height:30px;}
 .select_date_result{width:80%;font-size:20px;border:0;font-weight:800;color:#5C5C5C;background:#fff !important;}
-.achievement_rate{font-weight:800;font-size:20px;color:#FF4242}
+.achievement_rate{font-weight:800;font-size:20px;color:#FF4242;display:flex;align-items:center;}
 .mission_list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.mission_list li{height:26px;line-height:26px;font-size:15px;display:flex;justify-content:space-between}
+.mission_list li{height:26px;line-height:26px;font-size:15px;font-weight:700;display:flex;justify-content:space-between}
 .mission_list .status{font-weight:700;display:flex;justify-content:center;align-items:center;}
 .mission_list li.clear .status{color:#FF4242}
 .mission_list li.clear .status::after{content:'';display:inline-block;width:12px;height:12px;margin-left:2px;background:url('../img/icon_mission_clear.svg')no-repeat center;}
 .mission_list li.unclear{background:#B0B0B00F;color:#666666}
 /*상담예약*/
 .reservation_top{display:flex;padding-bottom:9px;justify-content:space-between;border-bottom:1px solid #ccc;}
+.reservation_top input{padding:0;height:30px;}
 .reservation_list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.reservation_list li{height:26px;line-height:26px;font-size:15px;display:flex;justify-content:space-between}
+.reservation_list li{height:26px;line-height:26px;font-size:16px;font-weight: 700;display:flex;justify-content:space-between}
 .reservation_list .status{font-weight:800;display:flex;justify-content:center;align-items:center;}
 .reservation_list .time{font-weight:800;display:flex;justify-content:center;align-items:center;color:#FF4242}
 /* 날짜 선택 캘린더 UI커스텀 */
@@ -420,6 +426,7 @@ article > h4{margin-bottom:20px !important}
 #My_service04 .list_text.m{display:none;}
 /*컨시어지*/
 .concierge_top{padding-bottom:9px;border-bottom:1px solid #ccc;}
+.concierge_top input{padding:0;height:30px;}
 .concierge ul{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .concierge ul li{display:flex;flex-direction:column;justify-content:space-between;}
 .concierge ul li p{font-size:16px;font-weight:400;color:#000}
@@ -780,7 +787,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .reservation_date_time #datepicker2{width:100%;}
 .time_select{width:100%;}
 .select_date_result{font-size:16px;padding:0;line-height:24px;height:24px;}
-.achievement_rate{font-size:16px}
+.achievement_rate{font-size:16px;}
 .mission_list li{font-size:14px;font-weight:700;}
 
 #My_service04 .table_defalt.pc{display:none;}
