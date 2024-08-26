@@ -781,7 +781,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .concierge ul li p,.concierge ul li .tit{font-size:14px}
 
 #My_service05 .reservation_date_time{margin-bottom:16px}
-#My_service05 h5{border-bottom:1px solid #E0E0E2;margin-bottom:10px}
+#My_service05 h5{border-bottom:1px solid #E0E0E2;margin-bottom:10px;padding-bottom:10px;color:#5C5C5C}
 #My_service05 .mySwiper{display:flex;margin-bottom:16px}
 #My_service05 .img_area.pc{display:none;}
 
