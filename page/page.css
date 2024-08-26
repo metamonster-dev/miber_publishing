@@ -1,11 +1,13 @@
 .pagecommon{width:100%}
+.pagecommon.pc{display:block;}
+.pagecommon.mobile{display:none;}
 .pagecommon .page_header{margin:50px auto;}
 .pagecommon .page_header.m{display:none;}
 .pagecommon .page_header.pc{display:block;}
 .pagecommon .page_header.pc .tab{display:flex;justify-content:center;align-items:center;gap:10px}
 .pagecommon .page_header .tab li a{display:block;width:260px;height:56px;line-height:56px;text-align:center;background:#f7f7f7;color: #9b9b9b;font-weight:800;font-size:20px;border-radius:500px}
 .pagecommon .page_header .tab li.on a{border:1px solid #DA4E37;color:#DA4E37;background:#fff;}
-.pagecommon .md_contents{width:1200px;margin:0 auto 100px;}
+.pagecommon .md_contents{width:1200px;}
 .pagecommon p{font-size: 18px;font-weight: 400;line-height: 27px;letter-spacing: -0.01em;text-align: left;color:#5C5C5C}
 .pagecommon h3{font-size:32px;font-weight:800;margin:50px 0 16px}
 .pagecommon h4{font-size:24px;font-weight:800;margin:50px 0 16px}
@@ -161,6 +163,8 @@
 /* 반응형 max 1200 md */
 @media (max-width:1200px) {
     .pagecommon{width:100%;overflow:hidden;}
+    .pagecommon.pc{display:none;}
+    .pagecommon.mobile{display:block;}
     .pagecommon .md_contents{width:100%;}
     .pagecommon .page_header.m{display:none;}
     .pagecommon .page_header.pc{display:block;}
@@ -174,7 +178,8 @@
     #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
     #About01 .about_contents li:nth-child(2n) .content_wrap{flex-direction:column-reverse}
     #About01 .txt_area p{font-size:18px;line-height:27px;margin-bottom:16px}
-    
+    #About01.mobile .about_contents{margin-bottom:32px}
+
     /*미베르소개 - 이념과 가치*/   
     #About02 .content_wrap{flex-direction:column-reverse;gap:16px}
     
@@ -201,8 +206,8 @@
     #Programs02 .programs02_content li span{font-size:14px;margin-bottom:8px}
 
     /*프로그램 - Body Styling*/
-    #Programs03 .md_contents{padding:0 16px}
-    #Programs03 .programs03_content{margin:32px auto 0}
+    #Programs03 .md_contents{padding:0 16px;margin-bottom:32px}
+    #Programs03 .programs03_content{margin:32px auto 0;gap:32px}
     #Programs03 .programs03_content li, #Programs03 .programs03_content li:nth-child(2n){flex-direction:column-reverse;}
     #Programs03 .programs03_content li > div{width:100%;}
     #Programs03 .programs03_content .pc{display:none;}
@@ -275,6 +280,7 @@
     .pagecommon .md_contents{width:100%;}
     .pagecommon .page_header.m{display:block;width:100%;margin:32px auto}
     .pagecommon .page_header.pc{display: none;}
+    .pagecommon .page_header .tab{display:flex;margin:0 auto;justify-content: center;gap:8px}
     .pagecommon .page_header .tab li{overflow: hidden;}
     .pagecommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:16px;font-weight:800;}
     .pagecommon .page_header .tab.type02 li{width:160px;}
@@ -291,8 +297,8 @@
 
     /*미베르소개*/
     #About01 .pc{display:none;}
-    #About01 .m{display:block;}
-    #About01 .page_header.pc{display:block !important;}
+    #About01 .mobile{display:block;}
+    #About01 .page_header.pc{display:block !important;margin:32px auto;}
     #About01 .txt01{font-size:20px;padding:0 16px;font-weight:800;}
     #About01 .txt02{font-size:14px;padding:0 16px;margin-bottom:32px}
     #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
@@ -302,20 +308,21 @@
 
     /*미베르소개 - 이념과 가치*/    
     #About02 .page_header.pc{display:block !important;}
-    #About02 .page_contents{padding:32px 16px;}
+    #About02 .page_contents{padding:32px 16px;margin-bottom:32px }
     #About02 .content_wrap{flex-direction:column-reverse;gap:16px}
     #About02 .txt_arae .tit{font-size:24px}
     #About02 .txt_arae p{font-size:16px;line-height:24px;}
+    #About02 .img_area{border-radius:8px;overflow:hidden;}
 
         
     /*프로그램 - Body Styling*/
     #Programs01 .pc{display:none;}
     #Programs01 .m{display:block;}
-    #Programs01 .page_contents{padding: 0 16px}
+    #Programs01 .page_contents{padding: 0 16px;margin-bottom:32px}
     #Programs01 .page_contents > img{width:100%;margin-bottom:32px}
 
     /*프로그램 - Body Styling*/
-    #Programs02 .md_contents{padding:0 16px}
+    #Programs02 .md_contents{padding:0 16px;margin-bottom:32px}
     #Programs02 .programs02_steps ul{flex-wrap:wrap;justify-content:space-between;gap:56px 32px}
     #Programs02 .programs02_steps ul li{width:44%}
     #Programs02 .programs02_steps ul li .img_wrap_round{width:92px;height:92px;margin:16px auto}
@@ -324,7 +331,8 @@
     #Programs02 .programs02_steps ul li:nth-child(even)::after{display:none;}
     #Programs02 .programs02_steps .step{font-size:14px}
     #Programs02 .programs02_steps p{font-size:14px}
-
+    .programs02_content img{height:218px;}
+    #Programs02 .step h4{margin:32px 0 16px;}
 
     /*M-Box*/
     #M-Box .menu_wrap{margin:32px 0;padding:0 16px;}
