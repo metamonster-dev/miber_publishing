@@ -135,6 +135,7 @@
 
 
 /*상품주문*/
+#ShopOrder .txt_area{width:100%;}
 .shoporder{display:flex;justify-content:flex-start;background:#f7f7f7;flex-direction:column;align-items:center;height:100%;min-height:100dvh;}
 .shoporder h2{font-size:32px;font-weight:800;margin:50px auto;text-align:center;}
 .shoporder .border{width:100%;max-width:832px;margin-bottom:16px;background:#fff;border: none !important;padding:32px;border-radius:8px;}
@@ -214,7 +215,7 @@
     
     .sub_top_area{display: none;}
     .sub_menu{border-top:none;margin:14px 0 0}
-    .sub_menu ul{padding:0 16px;}
+    .sub_menu ul{padding:0 16px;gap:16px}
     .sub_menu ul li{font-size:14px}
     .sub_menu ul .on{padding-bottom:14px}
 }
