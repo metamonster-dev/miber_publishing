@@ -37,7 +37,7 @@ html {scroll-behavior: smooth; /* 부드러운 스크롤 */}
     .mainVisual .txt01{font-size:20px;}
     .mainVisual .txt02{font-size:44px;line-height:52px;margin-bottom:22px;word-break:break-word}
     .mainVisual .txt02 span{font-size:32px}
-    .mainVisual .txt03{font-size:22px;line-height:26px;margin-bottom:8px;}
+    .mainVisual .txt03{font-size:22px;line-height:26px;margin-bottom:16px;}
     .main_fiexd{justify-content:flex-end;align-items:flex-end;height: auto;bottom: 50px;}
     .mainVisualNav{background:#FFFFFF33;}
     .mainVisualNav li{width:12px;height:12px;}
