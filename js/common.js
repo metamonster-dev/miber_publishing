@@ -70,18 +70,30 @@ $('input[name="imgfile"]').on('change', function(event) {
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            const img = $('<img>').attr('src', e.target.result);
+            const img = $('<img>').attr('src', e.target.result).addClass('uploaded_img');
             // 기존의 이미지가 있으면 제거
-            label.find('img').remove();
+            label.find('.uploaded_img').remove();
             // 새 이미지를 추가
             label.append(img);
-            // 아이콘 지우기
-            label.find('i').hide();
+            // 아이콘과 remove_img 표시 상태 조정
+            label.find('.icon').hide();
+            label.find('.remove_img').show();
         };
         reader.readAsDataURL(file);
     }
 });
 
+// Remove image
+$('body').on('click', '.remove_img', function() {
+    const label = $(this).parent();
+    // 이미지를 제거
+    label.find('.uploaded_img').remove();
+    // remove_img와 icon 상태 조정
+    label.find('.remove_img').hide();
+    label.find('.icon').show();
+    // 파일 입력 초기화
+    label.find('input[name="imgfile"]').val('');
+});
 
 //스크롤방지
 function scrollDisable(){

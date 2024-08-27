@@ -114,6 +114,7 @@ textarea{width:100%;border:1px solid #e0e0e2;padding:16px;font-size:14px;}
 .table_text .filter_slect{width:610px;}
 .table_text .trigger{height:46px;line-height:46px;}
 .table_text.type2 th{vertical-align : top;}
+.table_text.type2 tr:first-child th{padding-top:0}
 .table_text input[type="text"], .table_text textarea{width:610px;}
 .table_text .text{font-size:14p;font-weight:400;color:#5C5C5C;}
 .table_text .img_preview{width:500px;height:500px;border:1px solid #e0e0e2;overflow: hidden;}
@@ -139,8 +140,9 @@ textarea{width:100%;border:1px solid #e0e0e2;padding:16px;font-size:14px;}
 .bottom_btn{margin-top:30px}
 .btn_round{padding:0 18px;height:32px;line-height:32px;border:1px solid #E0E0E2;border-radius:100px;font-size:12px;font-weight:700;color:#9B9B9B}
 /*이미지 첨부파일*/
-.imgfile_wrap{display:flex;gap:16px}
-label.imgfile{width:74px;height:74px;display:flex;flex-direction: column;justify-content: center;align-items:center;border:1px solid #E0E0E2;position:relative}
+.imgfile_wrap{display:flex;gap:16px;overflow:hidden;}
+label.imgfile .remove_img{display:none;position:absolute;left:inherit;right:6px;top:6px;width:20px;height:20px;z-index: 999;}
+label.imgfile{width:100px;height:100px;display:flex;flex-direction: column;justify-content: center;align-items:center;border:1px solid #E0E0E2;position:relative}
 label.imgfile img.icon{width:14px;height:14px;position:relative}
 .imgfile img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
 input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
@@ -346,7 +348,7 @@ article > h4{margin-bottom:20px !important}
 
 /*== 마이페이지- 나의서비스==*/
 /*변화그래프*/
-#My_service01 h4{margin-bottom:0}
+#My_service01 h4{margin-bottom:0;border-bottom:none}
 #My_service01 .mypage_table{margin-bottom:32px}
 #My_service01 .mypage_table tr:nth-child(2) {font-weight:700;}
 .chart_wrap{width:480px;height:300px;}
@@ -496,6 +498,7 @@ td > .in_btn{margin-top:6px}
 #Receive_marketing table{margin-bottom:16px}
 /*취소신청*/
 #my_order_cancle.pc{display:block;}
+#my_order_cancle h4{border-bottom:none}
 #my_order_cancle.m{display: none;}
 #my_order_cancle th{font-weight:700;}
 table input[type="checkbox"]{width:inherit !important;}
@@ -653,7 +656,7 @@ table input[type="checkbox"]{width:inherit !important;}
 .review .total{font-size:18px;font-weight:800;margin-bottom:32px;}
 .review_accordion li{padding:32px 16px;border-bottom:2px solid #e0e0e2}
 .review_accordion li:first-child{border-top:2px solid #e0e0e2}
-.review .star-rating {display:flex;justify-content:flex-end;gap:2.5px}
+.review .star-rating {display:flex;justify-content:flex-end;gap:2.5px;padding:10px 0}
 .review_accordion .star-rating > img{width:13px}
 .review_accordion .depth1 .img_area{width:108px;height:108px;flex-shrink: 0;}
 .review_accordion .depth1 .img_area img{width:100%;}
@@ -787,6 +790,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .input_area{width:100%;}
 .login_page h2{display:none;}
 /*마이페이지*/
+article > h4{margin-bottom:16px !important}
 .MypageContents_wrap h3{padding-top:20px;font-size:16px;}
 .MypageContents_wrap h4{font-size:16px;padding-bottom:10px;border-bottom: 1px solid #000000}
 
@@ -813,7 +817,7 @@ h5{font-size:16px;margin-bottom:16px;}
 
 .MypageContents_wrap{padding:0 16px;overflow:hidden;}
 .MypageContents_wrap .MypageContents_aside{width:0;display:none;}
-.MypageContents_wrap .MypageContents{width:100%;margin-bottom:50px}
+.MypageContents_wrap .MypageContents{width:100%;margin-bottom:32px}
 .MypageContents_wrap h3{padding-top:20px}
 .MypageContents .m{display:flex;}
 
@@ -849,9 +853,10 @@ h5{font-size:16px;margin-bottom:16px;}
 .bottom_btn button{height: 46px;line-height:46px;font-size:16px}
 .table_list .text_box{width:100%;text-align:center;background:#F7F7F7;padding:6px 0;font-size:12px;font-weight:800;margin-top:14px}
 .table_text textarea{width: 100%;}
+.reservation_list li{font-size:14px}
 
 .filter_btn img.rotate{transform:rotate(180deg);}
-.MypageContents.m .filter_wrap.top_filter{background:#f7f7f7;display:flex;flex-wrap:wrap;padding:16px;overflow:visible;}
+.MypageContents.m .filter_wrap.top_filter{background:#f7f7f7;display:flex;flex-wrap:wrap;padding:16px;overflow:visible;margin-bottom:0}
 .MypageContents.m .filter_wrap.top_filter .filter_slect{width:100%;background:#fff;z-index: 999;}
 .MypageContents.m .filter_wrap.top_filter .filter_checkbox{width:100%;gap:0}
 .MypageContents.m .filter_wrap.top_filter .filter_checkbox li{width:20%;}
@@ -861,6 +866,8 @@ h5{font-size:16px;margin-bottom:16px;}
 .MypageContents.m .filter_wrap.top_filter button.lookup{background: #fff;}
 .MypageContents.m .filter_wrap.top_filter .filter_slect .trigger{height:36px;line-height:36px;}
 .MypageContents.m .filter_wrap.top_filter .filter_slect .trigger::after{height:36px;}
+.benefits .callout{margin-top:20px}
+
 
 #my_inquiry01 .trigger:after, #my_inquiry02 .trigger:after{height:34px;}
 #My_order02.pc{display: none;}
@@ -869,20 +876,25 @@ h5{font-size:16px;margin-bottom:16px;}
 #my_order_cancle.m{display:block;}
 #my_order_change.pc{display:none;}
 #my_order_change.m{display:block;}
+#my_order_change.m h4{border-bottom:none;margin-bottom:16px;padding-bottom:0}
+#my_order_change.m th{font-weight:700;color:#000}
+#My_order01_detail .pc{display:none;}
+#my_order_change .filter_slect .trigger, .filter_slect .trigger:after{height:46PX;line-height:46px;}
+
+
 .table_text input[type="text"], .table_text textarea{max-width:100%;width:100%}
 .address{width: 100%;justify-content:space-between;}
 .address input:nth-child(1){width:68% !important;}
 .address button{width:28%;}
 .address .full{width:100%;}
 .table_text .filter_slect{width:100%;}
-#my_order_change .filter_slect .trigger,.filter_slect .trigger:after{height:36px;line-height:36px;}
 .table_text .img_preview{width:100%;height:100px;}
-
+.mission_list .status{font-weight:800;}
 .list_box{flex-direction:column;width:100%;align-items:center;padding:16px;gap:14px}
 .list_box .txt_list:first-child{border-right:0;border-bottom:1px solid #E0E0E2;padding-bottom:14px}
 .list_box .txt_list{padding:0;width:100%;}
 .list_box .txt_list li{width:100%;}
-
+.article_line{margin:16px auto}
 
 #my_page03.pc{display:none;}
 #my_page03.m{display:block;}
@@ -912,6 +924,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .benefits_list li .line_01{color:#5C5C5C;font-size:14px}
 .benefits_list li .line_02{font-weight:800;font-size:14px}
 .benefits_list li .txt03{color:#DA4E37}
+.benefits_list .date{text-decoration:underline;font-weight:800;font-size:14px;}
 
 .review.pc{display: none;}
 .review.m{display:block;}
@@ -929,7 +942,7 @@ h5{font-size:16px;margin-bottom:16px;}
 #my_inquiry01.m{display:block;}
 #my_inquiry01 button{height:46px;line-height:46px;padding:0;font-size:14px}
 #my_inquiry01 .top_area{margin-bottom:16px}
-#my_inquiry01 .table_list{gap:16px}
+#my_inquiry01 .table_list{gap:16px;margin-top:16px}
 .table_list .status{font-size:14px}
 .table_list .date{font-weight: 400;font-size:14px;}
 .table_list .inquiry_tit{font-size:14px;font-weight:800;}
@@ -950,11 +963,24 @@ h5{font-size:16px;margin-bottom:16px;}
 #my_inquiry02 li:has(.answer){padding-bottom:0}
 .filter_wrap input[type="date"]{width:44%;}
 
+.review_accordion li{padding:16px 0 ;border-bottom:1px solid #E0E0E2}
+.review_accordion li:first-child{border-top:1px solid #e0e0e2}
 
 .popup_contents .filter_slect .trigger{height:46px;line-height:46px;padding:0 16px;}
 .popup_contents .order_price{font-weight:800;}
 .window_contents .win_head h3{font-size:20px}
 .bottom_btn button{width:100%;}
+.product_list02{border-bottom:1px solid #e0e0e2}
+.product_list02 .product_option{color:#666;font-weight:700;}
+
+.window_contents.pc {display:none;}
+.window_contents.mobile{display:block;}
+.window_contents{padding:32px 16px}
+.star-rating_wrap{gap:0}
+#review_write th{font-size:14px}
+#revie_edit .star-rating label{width:13px;height:13px;background-size:cover;}
+#review_write .star-rating label{width:20px;height:20px;background-size:cover;}
+
 }
 
 /* 반응형 max 992px lg */
@@ -1069,9 +1095,9 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 .agreement_list li a{font-size:12px}
 .inner_checked_list li{font-size:12px;}
 
-.review .total{font-size:14px;margin-bottom:16px}
+.review .total{font-size:14px;margin-bottom:16px;font-weight:700;}
 #my_review02 h5{color:#5C5C5C }
-
+.review_accordion .review_preview{font-size:12px}
 }
 @media (max-width: 390px) {
     .filter_wrap input[type="date"]{width:34%;}
