@@ -141,8 +141,11 @@
 
 /*상품주문*/
 #ShopOrder .txt_area{width:100%;}
+#ShopOrder .border .list_text{gap:4px}
 .shoporder{display:flex;justify-content:flex-start;background:#f7f7f7;flex-direction:column;align-items:center;height:100%;min-height:100dvh;}
 .shoporder h2{font-size:32px;font-weight:800;margin:50px auto;text-align:center;}
+.shoporder h5{font-weight:800;font-size:20px;}
+.shoporder .in_btn{font-weight:800;}
 .shoporder .border{width:100%;max-width:832px;margin-bottom:16px;background:#fff;border: none !important;padding:32px;border-radius:8px;}
 .shoporder .border_tit{font-size:20px;font-weight:800;padding-bottom:20px;border-bottom:1px solid #E0E0E2;color:#000}
 .shoporder .border .txt_area{padding:20px 0}
@@ -158,15 +161,17 @@
 .shoporder .item_list li{display:flex;align-items:center;gap:16px}
 .shoporder .item_list li:not(:last-child){border-bottom:1px solid #e0e0e0}
 .shoporder .item_list .img_area{width:70px;height:70px;border:1px solid #e0e0e0;}
-.shoporder .item_list .product_name{font-size:16px;}
+.shoporder .item_list .product_name{font-size:16px;color:#000}
 .shoporder .item_list .product_option{font-size:14px;display:flex;align-items:center;color:#9B9B9B;}
 .shoporder .item_list .product_option::before{content:'옵션';display:inline-block;padding:0 3px;border:1px solid #e0e0e2;border-radius:4px;color:#9B9B9B;font-size:11px;margin-right:8px;}
-.shoporder .item_list .price{color:#000;font-size:16px}
+.shoporder .item_list .price{color:#000;font-size:16px;font-weight: 800;}
 .shoporder .list_text2.border_btm{padding-bottom:16px;border-bottom:1px solid #E0E0E2}
 .shoporder .list_text2.price_list li{margin-top:20px;font-size:16px;font-weight:800;color:#DA4E37 !important}
 .shoporder .list_text2.price_list span{color:#000}
+.shoporder .list_text2 li{font-weight:700;color: #9B9B9B;}
 .shoporder .list_text2.bold {margin-top:20px;font-size:16px;color:#000;font-weight:800;}
-.shoporder .list_text2.bold span{font-weight:400;color:#000}
+.shoporder .list_text2.bold li{font-weight:800;color:#000;font-size:16px}
+.shoporder .list_text2.bold span{font-weight:400;color:#000;font-size:16px;}
 .savings_wrap{width:100%;margin-top:20px;display:flex;gap:10px;position:relative}
 .savings_wrap input{text-align:right;padding-right:35px;height:46px;line-height:46px;width:inherit;color:#3D3935;font-weight:800;}
 .savings{width:100%;position:relative;display:flex;align-items:center;}
@@ -174,7 +179,7 @@
 .savings_wrap button{height:46px;line-height:46px;width:120px;padding:0 16px;font-size:16px}
 .tab_menu_gray{display: flex;background:#f7f7f7;padding:5px;margin:20px 0 0}
 .tab_menu_gray li{cursor:pointer;width:25%;height:46px;display:flex;justify-content:center;align-items:center;border-radius:8px;font-weight:700;color:#5C5C5C}
-.tab_menu_gray li.on{color:#000;background:#fff;}
+.tab_menu_gray li.on{color:#000;background:#fff;font-weight:800;}
 .bottom_fixed{padding:20px 0;display:flex;justify-content:center;background:#fff;box-shadow:-1px -6px 14px 0px #0000000f;position:fixed;bottom:0;width:100%;}
 .bottom_fixed .submit_wrap{width:100%;max-width: 832px;display:flex;justify-content:space-between;align-items:center;}
 .bottom_fixed .submit_wrap p{font-size:14px;font-weight:700;color:#9B9B9B}
@@ -185,7 +190,7 @@
 /*주문완료*/
 .shoporder .center{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-bottom:50px}
 .shoporder .center .tit{margin-bottom:4px;font-size:20px;font-weight:800;color:#000}
-.shoporder p{font-size:16px; color:#9B9B9B}
+.shoporder p{font-size:16px;}
 .side_list{display:flex;justify-content:space-between;}
 .side_list > div{width:48%;border-bottom:1px solid #E0E0E2;}
 .side_list .border_tit{font-size:16px;padding-bottom:16px;margin-bottom:16px}
