@@ -860,9 +860,9 @@ h5{font-size:16px;margin-bottom:16px;}
 .MypageContents.m .filter_wrap.top_filter .filter_checkbox .checked{border-right: 1px solid #da4e37 !important;}
 .MypageContents.m .filter_wrap.top_filter button.lookup{background: #fff;}
 .MypageContents.m .filter_wrap.top_filter .filter_slect .trigger{height:36px;line-height:36px;}
+.MypageContents.m .filter_wrap.top_filter .filter_slect .trigger::after{height:36px;}
 
 #my_inquiry01 .trigger:after, #my_inquiry02 .trigger:after{height:34px;}
-
 #My_order02.pc{display: none;}
 #My_order02.m{display:block;}
 #my_order_cancle.pc{display: none;}
@@ -875,7 +875,7 @@ h5{font-size:16px;margin-bottom:16px;}
 .address button{width:28%;}
 .address .full{width:100%;}
 .table_text .filter_slect{width:100%;}
-#my_order_change .filter_slect .trigger,.filter_slect .trigger:after{height:46px;line-height:46px;}
+#my_order_change .filter_slect .trigger,.filter_slect .trigger:after{height:36px;line-height:36px;}
 .table_text .img_preview{width:100%;height:100px;}
 
 .list_box{flex-direction:column;width:100%;align-items:center;padding:16px;gap:14px}

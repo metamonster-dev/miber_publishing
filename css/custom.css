@@ -33,7 +33,7 @@ input::-webkit-input-placeholder, input:-ms-input-placeholder{color:#aaa !import
 textarea::-webkit-input-placeholder, textarea:-ms-input-placeholder{color:#9EA0B9 !important;}
 button{display:block; border:0; background-color:transparent; appearance:none; -moz-appearance:none; -webkit-appearance:none; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0;}
 a{color:#000; text-decoration:none;}
-a:hover{text-decoration:none;}
+a:hover{text-decoration:none;color:inherit;}
 button, a, button:hover, a:hover{transition:all 0.1s linear; -webkit-transition:all 0.1s linear; -moz-transition:all 0.1s linear; -ms-transition:all 0.1s linear; -o-transition:all 0.1s linear;}
 p{word-break:break-all;}
 img{display:block; max-width:100%; height:auto;}
