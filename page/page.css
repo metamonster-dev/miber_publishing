@@ -300,7 +300,7 @@
 
     /*개인정보처리방침 & 이용약관*/
     #Use, #Privacy{margin-bottom:50px}
-    #Use .title, #Privacy .title{text-align: center;margin:60px 0}
+    #Use .title, #Privacy .title{text-align: center;margin:32px 0}
     #Use .section{margin-bottom:32px}
 
 }
