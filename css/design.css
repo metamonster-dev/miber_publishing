@@ -250,6 +250,7 @@ header{background:#fff;}
 footer{width:100%;background:#3D3935;display:flex;justify-content:center;align-items:center;/*position:absolute;bottom:0;left:0;*/color:#fff}
 address{margin:0;}
 footer a{color:#fff}
+footer a:hover{color:#fff}
 .footer_wrap{width:100%;max-width:1200px;padding:50px 0;display:flex;justify-content:space-between;flex-wrap: wrap;}
 .footer_wrap .left{display:flex;flex-direction:column;gap:10px;}
 .footer_1 ul{display: flex;font-size:14px;font-weight:800;align-items:center;}
