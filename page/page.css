@@ -169,7 +169,8 @@
 
 /*개인정보처리방침 & 이용약관*/
 #Use .title, #Privacy .title{text-align: center;margin-bottom:40px}
-#Use .section {margin-bottom:50px;}
+#Use, #Privacy{margin-bottom:100px;}
+#Use .section{margin-bottom:32px}
 
 
 
@@ -295,6 +296,12 @@
     .service_reservation .select2{width:100%;}
     .service_reservation .select2 label:has(input[type=radio]){width:33;}
     .service_reservation .select{display:flex;gap:8px}
+
+    /*개인정보처리방침 & 이용약관*/
+    #Use, #Privacy{margin-bottom:50px}
+    #Use .title, #Privacy .title{text-align: center;margin:60px 0}
+    #Use .section{margin-bottom:32px}
+
 }
 
 
