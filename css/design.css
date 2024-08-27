@@ -1055,7 +1055,7 @@ button[type="submit"], button.next{line-height:46px;height:46px;font-size:14px}
 .login_sns_wrap ul li a{font-size:14px}
 .login_sns_wrap{padding:30px 0}
 .center_contentrs2, .center_contentrs{width:100%;}
-.center_contentrs2{padding:32px 0;min-height:0;}
+.center_contentrs2{padding:32px 0;min-height:500px;}
 .center_contentrs2 .padding_wrap{padding:0 16px}
 .center_contentrs2 h2{font-size:18px;margin-bottom:0}
 .login_bt_menu li a{font-size:12px;padding: 0 25px;}
