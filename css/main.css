@@ -37,7 +37,7 @@ html {scroll-behavior: smooth; /* 부드러운 스크롤 */}
     .mainVisual.pc03{background:url('../img/mainVisual07_m.jpg')no-repeat center;background-size:cover}
     .mainVisual.pc04{background:url('../img/mainVisual06_m.jpg')no-repeat center;background-size:cover}
     .mainVisual.pc05{background:url('../img/mainVisual04_m.jpg')no-repeat center;background-size:cover}
-    .mainVisual.pc06{background:url('../img/mainVisual05_m.jpgp')no-repeat center;background-size:cover}
+    .mainVisual.pc06{background:url('../img/mainVisual05_m.jpg')no-repeat center;background-size:cover}
     .mainVisual.pc07{background:url('../img/mainVisual03_m.jpg')no-repeat center;background-size:cover}
 
     .mainVisual .txt_wrap{width:100%;height:100%;}
