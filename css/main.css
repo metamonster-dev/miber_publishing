@@ -7,7 +7,7 @@ html {scroll-behavior: smooth; /* 부드러운 스크롤 */}
 .mainVisual .txt02{font-size:64px;line-height:85px;font-family:'Montserrat', sans-serif;font-weight:800;position:relative;margin-bottom:0px}
 .mainVisual .txt03{font-size:42px;font-weight:800;}
 .mainVisual .line{display:block;width:30px;height:2px;background:#fff;margin-bottom:26px}
-.mainVisual .txt03{font-size:24px;font-family:'Marcellus', sans-serif;line-height:33px;margin-bottom:20px}
+.mainVisual .txt03{font-size:24px;font-family:'NanumSquare';line-height:33px;margin-bottom:20px}
 .mainVisual .txt03:last-child{margin-bottom:0}
 .mainVisual .txt04 li{font-size:24px;line-height:33px;font-weight:400;font-family:'Montserrat', sans-serif;text-transform:uppercase}
 .mainVisual .txt04::before{content:'';display:block;width:30px;height:2px;background:#fff;margin-bottom:26px}
