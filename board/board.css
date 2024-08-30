@@ -56,7 +56,7 @@
     .boardcommon .md_contents{width:100%;}
     .boardcommon .page_header .tab{padding:20px 16px;}
     .boardcommon .page_header .tab li{width:50%;overflow: hidden;}
-    .boardcommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:16px;font-weight:800;}
+    .boardcommon .page_header .tab li a{width:100%;padding:0 20px;height:40px;line-height:40px;font-size:14px;font-weight:700;}
     .boardcommon .serch{padding:0 16px;margin:0 0 20px}
     .boardcommon .serch input{width:100%;max-width:100%;height:40px;line-height:40px;}
     .boardcommon .serch .serch_icon{right:30px;}
