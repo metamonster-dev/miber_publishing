@@ -12,7 +12,7 @@
 .pagecommon h3{font-size:32px;font-weight:800;margin:50px 0 16px}
 .pagecommon h4{font-size:24px;font-weight:800;margin:50px 0 16px}
 .pagecommon .step ul{display:flex;flex-direction:column;}
-.pagecommon .step li{font-size:24px;font-weight:400;line-height:36px;color:#666666;}
+.pagecommon .step li{font-size:20px;font-weight:400;line-height:36px;color:#666666;}
 .pagecommon .step li .tit{color:#000;font-weight:700;}
 .section_tit{font-size:24px;font-weight:800;padding-bottom:12px;border-bottom:2px solid #000}
 .required::after{width:8px;height:8px;}
