@@ -2,8 +2,8 @@
 .pagecommon.pc{display:block;}
 .pagecommon.mobile{display:none;}
 .pagecommon .page_header{margin:50px auto;}
-.pagecommon .page_header.m{display:none;}
 .pagecommon .page_header.pc{display:block;}
+.pagecommon .page_header.m{display:none;}
 .pagecommon .page_header.pc .tab{display:flex;justify-content:center;align-items:center;gap:10px}
 .pagecommon .page_header .tab li a{display:block;width:260px;height:56px;line-height:56px;text-align:center;background:#f7f7f7;color: #9b9b9b;font-weight:800;font-size:20px;border-radius:500px}
 .pagecommon .page_header .tab li.on a{border:1px solid #DA4E37;color:#DA4E37;background:#fff;}
@@ -34,7 +34,7 @@
 /*미베르소개 - 이념과 가치*/
 #About02.pc .page_contents{margin-bottom:100px}
 #About02 .page_contents{background:#CAA68B0F;width:100%;padding:100px;}
-#About02 .content_wrap{width:100%;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+#About02 .content_wrap{width:100%;max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:80px;align-items:center;}
 #About02 .txt_arae{max-width: 550px;}
 #About02 .txt_arae .tit{font-size:40px;font-weight:800;color: #3D3935;margin-bottom:20px;line-height: 42px;}
 #About02 .txt_arae p{font-size:16px;font-weight:400;line-height:24px;color:#5C5C5C}
@@ -182,11 +182,9 @@
     .pagecommon.pc{display:none;}
     .pagecommon.mobile{display:block;}
     .pagecommon .md_contents{width:100%;}
-    .pagecommon .page_header.m{display:block}
-    .pagecommon .page_header.pc{display:block;}
-    .pagecommon .page_header .tab li a{width:180px;font-size:16px}
-    
-    
+    .pagecommon .page_header.m{display:flex;width:100%;margin:50px auto;padding:16px}
+    .pagecommon .page_header.m .tab.type02{display:flex;margin:0 auto;gap:16px}
+
     /*미베르소개*/
     #About01 .txt01{font-size:20px;padding:0 16px;font-weight:800;}
     #About01 .txt02{font-size:14px;padding:0 16px;margin-bottom:32px}
@@ -310,7 +308,7 @@
 @media (max-width: 767.98px) {
     .pagecommon{width:100%;}
     .pagecommon .md_contents{width:100%;}
-    .pagecommon .page_header.m{display:block;width:fit-content;margin:32px auto}
+    .pagecommon .page_header.m{display:flex;width:fit-content;margin:32px auto}
     .pagecommon .page_header.pc{display: none;}
     .pagecommon .page_header .tab{display:flex;margin:0 auto;justify-content: center;gap:8px}
     .pagecommon .page_header .tab li{overflow: hidden;}
