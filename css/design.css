@@ -24,7 +24,7 @@ h6{font-size:16px;font-weight:800;margin-bottom:10px}
 .form_defalt .input_wrap button{width:115px;height:46px;border:1px solid #3D3935;text-align:center;line-height:46px;font-size:14px;font-weight:700;border-radius:4px;color:#3D3935}
 .form_defalt .input_wrap .input_text{position:absolute}
 .radio_area{display:flex;height: 46px;line-height: 46px;gap:20px;padding:0}
-.radio_area label{padding-left:8px;font-weight:400;}
+.radio_area label{padding-left:8px;font-weight:400;width: fit-content;height: fit-content;display: flex;align-items: center;padding: 0;line-height: normal;color:#3D3935}
 .radio_area .checked{color:#3D3935}
 .radio_area li{color:#B0B0B0;width:fit-content;}
 input {height:46px;line-height:46px;padding:0 16px;border:1px solid #E0E0E2;border-radius:4px;}
