@@ -117,10 +117,15 @@
             <li class="swiper-slide"><img src="../img/my_service05.jpg" alt="컨시어지임시이미지"></li>
             <li class="swiper-slide"><img src="../img/my_service05.jpg" alt="컨시어지임시이미지"></li>
         </ul>
+        <div class="swiper-pagination"></div>
         <script>
-            var swiper = new Swiper(".mySwiper", {});
+            var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                el: ".swiper-pagination",
+                },
+            });
         </script>
-    </div>
+    </div> 
 
     <h5 class="mb_8">상세 정보</h5>
     <p>상세 정보 내용 노출 영역 입니다.</p>

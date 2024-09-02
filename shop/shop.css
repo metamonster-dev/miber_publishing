@@ -222,6 +222,7 @@
     #Shopitem_pc .btn_area button {width:50%;}
     .shoporder .border.pc{display:block;}
     .shoporder .border.m{display:none;}
+    
 
     
     .sub_top_area{display: none;}
@@ -289,8 +290,8 @@
     .graph li > div{width:5px;height:36px;}
     .review_accordion .depth2{background:#fff;}
     .review_accordion .review_preview{font-size:12px}
-    .review_accordion li{border-bottom:1px solid #E0E0E2;overflow:hidden;margin:0 auto}
-    .review_accordion li:first-child{border-top:1px solid #E0E0E2}
+    .review_accordion li{padding:16px;border-bottom:1px solid #E0E0E2;overflow:hidden;margin:0 auto}
+    .review_accordion li:first-child{border-top:1px solid #E0E0E2;}
     .review_accordion .depth2 .img_area{width:100%;height:auto;}
     .review_accordion .depth2 .img_area img{width:100%;}
     #detail03_m{padding:0 16px}
@@ -340,7 +341,7 @@
 
 
     .shoporder h5{font-size:16px}
-    .shoporder h2{margin:8px auto 0;padding-top:24px;font-size:16px;background:#fff;width:100%;display:flex;justify-content:center;align-items:center;margin:16px 0 0}
+    .shoporder h2{padding-top:24px;font-size:16px;background:#fff;width:100%;display:flex;justify-content:center;align-items:center;margin:6px 0 0}
     .shoporder .border{margin:3px 0;padding:16px}
     .shoporder .border:nth-child(2){margin-top:0}
     .shoporder .border:last-child{margin-bottom:150px}
@@ -366,6 +367,9 @@
     #ShopOrder .text_box p{font-size:12px}
     #ShopOrder  .item_list .price{font-weight:800;}
     .tab_menu_gray li{font-size:12px;font-weight:800;}
+    #ShopOrder_success.shoporder .center{margin-bottom:0 !important}
+    #ShopOrder_success.shoporder .list_text2 li{color:#000000;font-weight:400;text-align:left;}
+    .list_text2.left li{justify-content:flex-start;}
 
     /*주문완료*/
     .bottom_fixed.m{display:flex;}

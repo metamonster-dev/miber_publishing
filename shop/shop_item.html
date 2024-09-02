@@ -1163,39 +1163,36 @@
         $('#Totop').click(function() {
             $('html, body').animate({ scrollTop: 0 }, 600); 
         });
-        var $btn = $('#product_more2');
-        var $detailContents = $('.detail_contents_m');
-        var isExpanded = false;
+        
 
-        $btn.on('click', function() {
+        $('#product_more').on('click', function() {
             if (isExpanded) {
                 // 접기 상태로 변경
-                $detailContents.css('height', '300px');
-                $btn.html('상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg">');
+                $('.detail_contents').css('height', '300px');
+                $(this).html('상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg">');
             } else {
                 // 펼치기 상태로 변경
-                $detailContents.css('height', 'auto');
-                $btn.html('상세정보 접기<img src="../img/icon_dropdown3.svg" class="reverse">');
+                $('.detail_contents').css('height', 'auto');
+                $(this).html('상세정보 접기<img src="../img/icon_dropdown3.svg" class="reverse">');
             }
             isExpanded = !isExpanded;
         });
 
-        var $btn = $('#product_more');
+        $('#product_more2').on('click', function() {
+            if (isExpanded) {
+                // 접기 상태로 변경
+                $('.detail_contents_m').css('height', '300px');
+                $(this).html('상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg">');
+            } else {
+                // 펼치기 상태로 변경
+                $('.detail_contents_m').css('height', 'auto');
+                $(this).html('상세정보 접기<img src="../img/icon_dropdown3.svg" class="reverse">');
+            }
+            isExpanded = !isExpanded;
+        });
+
         var $detailContents = $('.detail_contents');
         var isExpanded = false;
-
-        $btn.on('click', function() {
-            if (isExpanded) {
-                // 접기 상태로 변경
-                $detailContents.css('height', '300px');
-                $btn.html('상세정보 펼쳐보기<img src="../img/icon_dropdown3.svg">');
-            } else {
-                // 펼치기 상태로 변경
-                $detailContents.css('height', 'auto');
-                $btn.html('상세정보 접기<img src="../img/icon_dropdown3.svg" class="reverse">');
-            }
-            isExpanded = !isExpanded;
-        });
     </script>
 
 

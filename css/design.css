@@ -572,7 +572,7 @@ table input[type="checkbox"]{width:inherit !important;}
 .table_cart{width:100%;}
 .table_cart th, .table_cart td{border:1px solid #E0E0E2;padding:16px }
 .table_cart td:first-child{border-left:none;min-height:183px;position:relative;padding:60px 0}
-.table_cart td:first-child .close_btn{position:absolute;top:10px;right:10px;opacity:.3;width:16px;height:16px;}
+.table_cart td:first-child .close_btn{position:absolute;top:10px;right:10px;opacity:.3;width:24px;height:24px;}
 .table_cart td:last-child{border-right:none}
 .table_cart .txt_area{width:245px;font-size:14px;font-weight:700;}
 .table_cart {font-size:14px;font-weight:400;}
@@ -761,6 +761,9 @@ table input[type="checkbox"]{width:inherit !important;}
 
 /* 반응형 max 1200px xl */
 @media (max-width: 1199.98px) {
+.page_wrap.pc{display:none;}
+.page_wrap.m{display:flex;}
+
 .user_menu{gap:8px}
 .popup_area{position:absolute;top:20%;left:50%;transform:translate(-50%);width:fit-content;height:auto;padding:14px 14px 9px}
 .img_wrap{width:320px;height:320px;}
@@ -809,12 +812,15 @@ article > h4{margin-bottom:16px !important}
 #My_service04 .list_text.m{display:flex;}
 #My_service04 .list_text{padding:16px 0;border-bottom: 1px solid #E0E0E2;font-weight:700;}
 #My_service04 .list_tit{color:#666666}
+#My_service04 .callout{margin-bottom:16px}
 .concierge ul li{justify-content:space-between;flex-direction: row;}
 .concierge ul li p,.concierge ul li .tit{font-size:14px}
 
 #My_service05 .reservation_date_time{margin-bottom:16px}
 #My_service05 h5{border-bottom:1px solid #E0E0E2;margin-bottom:10px;padding-bottom:10px;color:#5C5C5C}
 #My_service05 .mySwiper{display:flex;margin-bottom:16px}
+.mySwiper .swiper-pagination-bullet{width:8px;height:8px;background:#fff;opacity:.6;}
+.mySwiper .swiper-pagination-bullet-active{background:#fff;opacity:1;}
 #My_service05 .img_area.pc{display:none;}
 
 .MypageContents_wrap{padding:0 16px;overflow:hidden;}
@@ -902,11 +908,15 @@ article > h4{margin-bottom:16px !important}
 #my_page03.m{display:block;}
 #my_page03 .callout{margin-bottom:0}
 
+.product_top .total{font-size:14px;font-weight:700;}
+.product_top{margin-bottom:16px}
+
 #My_order04.pc{display:none;}
 #My_order04.m{display:block;padding:0 16px}
 #My_order04 .m{display:block;}
 .MypageContents_wrap:has(#My_order04){background:#f7f7f7;padding:0;flex-direction:column;justify-content:flex-start;position:relative}
 .btn_area.m{display:flex;padding:16px;background:#fff;width:100%}
+#My_order04 .product_top{margin-bottom:16px}
 .product_top .checkbox input{width:16px;height:16px;}
 .product_top .checkbox{font-size:14px}
 #My_order04 .list_text3 {margin-top:16px}
