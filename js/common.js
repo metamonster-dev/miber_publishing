@@ -84,7 +84,8 @@ $('input[name="imgfile"]').on('change', function(event) {
 });
 
 // Remove image
-$('body').on('click', '.remove_img', function() {
+$('.remove_img').on('click', function() {
+    event.stopPropagation();
     const label = $(this).parent();
     // 이미지를 제거
     label.find('.uploaded_img').remove();
