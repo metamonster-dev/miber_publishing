@@ -308,7 +308,7 @@
 @media (max-width: 767.98px) {
     .pagecommon{width:100%;}
     .pagecommon .md_contents{width:100%;}
-    .pagecommon .page_header.m{display:flex;width:fit-content;margin:32px auto}
+    .pagecommon .page_header.m{display:flex;width:fit-content;margin:32px auto;padding:0}
     .pagecommon .page_header.pc{display: none;}
     .pagecommon .page_header .tab{display:flex;margin:0 auto;justify-content: center;gap:8px}
     .pagecommon .page_header .tab li{overflow: hidden;}
@@ -326,6 +326,7 @@
     .swiper-wrapper.type01 li a{padding:0 !important}
 
     /*미베르소개*/
+    #About01 .m{display: block;}
     #About01 .pc{display:none;}
     #About01 .mobile{display:block;}
     #About01 .page_header.pc{display:block !important;margin:32px auto;}
