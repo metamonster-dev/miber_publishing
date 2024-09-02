@@ -95,10 +95,8 @@
                     </li>
                     <li>
                         <p class="tit">옵션선택</p>
-                        <div class="option_wrap type01">
-                            <!--
+                        <div class="option_wrap">
                             <div class="filter_slect select ">
-                                
                                 <input type="hidden" class="opt_val" value="">
                                 <div class="trigger">
                                     <span class="trigger_txt">마케토 옵션</span>
@@ -108,10 +106,10 @@
                                     <li data-value="마케토옵션" class="soldout">150g(품절)</li>
                                 </ul>
                             </div>
-                            -->
+                            
                             <div class="option_total">
                                 <ul class="option_list">
-                                    <li>E.저스트피넛버터 X 3</li>
+                                    <li>100g</li>
                                 </ul>
                                 <div class="quantity_wrap">
                                     <div class="quantity">
@@ -146,7 +144,7 @@
     <!--상단 스크롤 고정 구매모달-->
     <section class="sticky_item_info">
         <!--상품에 옵션 없을때 type01 노출-->
-        <div class="info_wrap type01 ">
+        <div class="info_wrap type01    d-none">
             <div class="item_wrap">
                 <div class="img_area">
                     <img src="../img/temp/review2.jpg" alt="상품썸네일">
@@ -159,7 +157,7 @@
             <button type="submit" class="black_btn">구매하기</button>
         </div>
         <!--상품에 옵션 있을때 type02 노출-->
-        <div class="type02 d-none">
+        <div class="type02">
             <div class="info_wrap">
                 <div class="item_wrap">
                     <div class="img_area">
@@ -1075,7 +1073,7 @@
                 <button type="submit">구매하기</button>
             </div>
             <!--구매하기 눌렀을때 (옵션X)-->
-            <div class="order_wrap type01">
+            <div class="order_wrap type01 d-none">
                 <ul class="order01">
                     <li>
                         <p class="left">수량선택</p>
@@ -1108,7 +1106,7 @@
                 </div>
             </div>
             <!--구매하기 눌렀을때 (옵션O)-->
-            <div class="order_wrap type02  d-none">
+            <div class="order_wrap type02 ">
                 <div class="order03">
                     <div class="filter_slect select">
                         <input type="hidden" class="opt_val" value="">
