@@ -142,7 +142,7 @@
                 <td>
                     <div>
                         <label class="imgfile">
-                        <img class="remove_img" src="../img/icon_imgremove.svg">
+                            <img class="remove_img" src="../img/icon_imgremove.svg">
                             <img class="icon" src="../img/icon_plus.svg">
                             <input name="imgfile" type="file" accept=".png, .jpg">
                         </label>
@@ -195,25 +195,6 @@
         <script>
             $('.close_btn').on('click',function(){
                 window.close();
-            });
-            $('input[name="imgfile"]').on('change', function(event) {
-            const input = event.target;
-            const label = $(input).parent();
-            const file = input.files[0];
-    
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = $('<img>').attr('src', e.target.result);
-                    // 기존의 이미지가 있으면 제거
-                    label.find('img').remove();
-                    // 새 이미지를 추가
-                    label.append(img);
-                    // 아이콘지우기
-                    label.find('i').hide();
-                };
-                reader.readAsDataURL(file);
-            }
             });
         </script>
 
@@ -284,7 +265,7 @@
                     <td>
                         <div>
                             <label class="imgfile">
-                        <img class="remove_img" src="../img/icon_imgremove.svg">
+                                <img class="remove_img" src="../img/icon_imgremove.svg">
                                 <img class="icon" src="../img/icon_plus.svg">
                                 <input name="imgfile" type="file" accept=".png, .jpg">
                             </label>
@@ -345,25 +326,6 @@
             <script>
                 $('.close_btn').on('click',function(){
                     window.close();
-                });
-                $('input[name="imgfile"]').on('change', function(event) {
-                const input = event.target;
-                const label = $(input).parent();
-                const file = input.files[0];
-        
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const img = $('<img>').attr('src', e.target.result);
-                        // 기존의 이미지가 있으면 제거
-                        label.find('img').remove();
-                        // 새 이미지를 추가
-                        label.append(img);
-                        // 아이콘지우기
-                        label.find('i').hide();
-                    };
-                    reader.readAsDataURL(file);
-                }
                 });
             </script>
     
