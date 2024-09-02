@@ -184,8 +184,10 @@
     .pagecommon .md_contents{width:100%;}
     .pagecommon .page_header.m{display:flex;width:100%;margin:50px auto;padding:16px}
     .pagecommon .page_header.m .tab.type02{display:flex;margin:0 auto;gap:16px}
+    .pagecommon .page_header.m{display:flex;width:fit-content;margin:32px auto;padding:0}
 
     /*미베르소개*/
+    #About01 .m{display: block;}
     #About01 .txt01{font-size:20px;padding:0 16px;font-weight:800;}
     #About01 .txt02{font-size:14px;padding:0 16px;margin-bottom:32px}
     #About01 .content_wrap{flex-direction: column-reverse;align-items: flex-start;padding:32px 16px}
