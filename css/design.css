@@ -23,7 +23,7 @@ h6{font-size:16px;font-weight:800;margin-bottom:10px}
 .form_defalt .input_wrap input{flex:1;}
 .form_defalt .input_wrap button{width:115px;height:46px;border:1px solid #3D3935;text-align:center;line-height:46px;font-size:14px;font-weight:700;border-radius:4px;color:#3D3935}
 .form_defalt .input_wrap .input_text{position:absolute}
-.radio_area{display:flex;height: 46px;line-height: 46px;gap:20px;}
+.radio_area{display:flex;height: 46px;line-height: 46px;gap:20px;padding:0}
 .radio_area label{padding-left:8px;color:#B0B0B0;font-weight:400;}
 .radio_area .checked{color:#3D3935}
 .radio_area li{color:#B0B0B0;width:fit-content;}
@@ -114,7 +114,7 @@ textarea{width:100%;border:1px solid #e0e0e2;padding:16px;font-size:14px;}
 .table_text .filter_slect{width:610px;}
 .table_text .trigger{height:46px;line-height:46px;}
 .table_text.type2 th{vertical-align : top;}
-.table_text.type2 tr:first-child th{padding-top:0}
+.table_text.type2 tr:first-child th, .table_text.type2 tr:first-child td{padding-top:0}
 .table_text input[type="text"], .table_text textarea{width:610px;}
 .table_text .text{font-size:14p;font-weight:400;color:#5C5C5C;}
 .table_text .img_preview{width:500px;height:500px;border:1px solid #e0e0e2;overflow: hidden;}
@@ -481,7 +481,7 @@ td > .in_btn{margin-top:6px}
 .window_contents .win_head h3{font-size:24px;font-weight:800;}
 .window_contents .table_text{display:block;padding:32px 0}
 /*상품리뷰 팝업창*/
-#review_write th{width:100px;font-size:16px;font-weight:800;color:#000;vertical-align : top;}
+#review_write th{width:100px;font-size:16px;font-weight:700;color:#000;vertical-align : top;}
 #review_write textarea{width:100% !important;height:248px;resize:none;} 
 #review_write .comment{font-size:14px}
 /*카드영수증 팝업창*/
@@ -645,7 +645,7 @@ table input[type="checkbox"]{width:inherit !important;}
 /*혜택*/
 .benefits.pc{display:block;}
 .benefits.m{display:none;}
-.benefits .callout{text-align:left;padding:0 16px;height:44px;line-height:44px;color:#5C5C5C}
+.benefits .callout{text-align:left;padding:0 16px;height:44px;line-height:44px;color:#5C5C5C;}
 .benefits .callout span{color:#DA4E37}
 .benefits .table_defalt td:first-child{font-weight:700;}
 .benefits .table_defalt td:nth-child(3){font-weight:800;}
@@ -701,6 +701,8 @@ table input[type="checkbox"]{width:inherit !important;}
 #my_inquiry01 .top_area{margin-bottom:32px}
 #my_inquiry01_write.pc{display:block}
 #my_inquiry01_write.m{display:none;}
+#my_inquiry01_write th{font-weight:700;color:#000000}
+
 
 /*상품 문의*/
 #my_inquiry02.pc{display:block;}
@@ -898,6 +900,7 @@ article > h4{margin-bottom:16px !important}
 
 #my_page03.pc{display:none;}
 #my_page03.m{display:block;}
+#my_page03 .callout{margin-bottom:0}
 
 #My_order04.pc{display:none;}
 #My_order04.m{display:block;padding:0 16px}
@@ -918,6 +921,7 @@ article > h4{margin-bottom:16px !important}
 
 .benefits.pc{display:none;}
 .benefits.m{display:block}
+.benefits .callout{margin-bottom:0}
 .benefits_list{display:flex;flex-direction:column;}
 .benefits_list li{padding:16px;border-bottom:1px solid #E0E0E2}
 .benefits_list li > div{display:flex;justify-content:space-between;align-items:center;}
