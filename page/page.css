@@ -125,10 +125,13 @@
 
 /*M-Box*/
 #M-Box .menu_wrap{margin:50px 0}
-#M-Box .menu_wrap ul li .img_area{width:160px;height:160px;}
+
 #M-Box .menu_wrap .menu_tit{font-size:24px;font-weight:800;padding-bottom:16px;margin-bottom:50px;border-bottom:1px solid #000;color:#000}
 #M-Box .menu_wrap ul{display:flex;justify-content:space-between;flex-wrap:wrap;gap:50px 0}
-#M-Box .menu_wrap ul li{width:50%;display:flex;align-items:flex-start;gap:32px;}
+#M-Box .menu_wrap ul li{width:50%;display:flex;align-items:flex-start;gap:32px;overflow:hidden;}
+#M-Box .menu_wrap ul li .img_area{width:100%;max-width:160px;position:relative}
+#M-Box .menu_wrap ul li .img_area::after{display:block;content:"";padding-bottom:100%}
+#M-Box .menu_wrap ul li .img_area img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
 #M-Box .menu_wrap .txt_area{display:flex;flex-direction:column;gap:10px;}
 #M-Box .menu_wrap .name{font-size:16px;font-weight:700;color:#000}
 #M-Box .menu_wrap .sub{font-size:16px;font-weight:400;}
@@ -274,8 +277,7 @@
     #M-Box .menu_wrap .menu_tit{font-size:16px;width:100%;margin-bottom:16px;padding-bottom:4px}
     #M-Box .menu_wrap ul{gap:16px}
     #M-Box .menu_wrap ul li{width:30%;;flex-direction:column;gap:10px}
-    #M-Box .menu_wrap ul li .img_area{width:200px;height:200px;overflow:hidden;}
-    #M-Box .menu_wrap ul li .img_area img{width:100%;}
+    #M-Box .menu_wrap ul li .img_area{width:100%;overflow:hidden;max-width:100%;}
     #M-Box .menu_wrap .txt_area{gap:8px}
     #M-Box .menu_wrap .name{font-size:16px}
     #M-Box .menu_wrap .sub{font-size:14px;line-height:15.6px;}
@@ -377,8 +379,6 @@
     #M-Box .menu_wrap .menu_tit{font-size:16px;width:100%;margin-bottom:16px}
     #M-Box .menu_wrap ul{gap:16px}
     #M-Box .menu_wrap ul li{width:47%;;flex-direction:column;gap:10px}
-    #M-Box .menu_wrap ul li .img_area{width:180px;height:180px;overflow:hidden;}
-    #M-Box .menu_wrap ul li .img_area img{width:100%;}
     #M-Box .menu_wrap .txt_area{gap:4px}
     #M-Box .menu_wrap .name{font-size:13px}
     #M-Box .menu_wrap .sub{font-size:12px;line-height:15.6px;}
@@ -400,8 +400,4 @@
 @media (max-width: 380px) {
     /*미베르소개*/
     #About01 .txt_area p{font-size:16px;line-height:27px;}
-
-    #M-Box .menu_wrap ul li .img_area{width:100%;height:160px;overflow:hidden;}
-    #M-Box .menu_wrap ul li .img_area img{width:100%;}
-
 }
