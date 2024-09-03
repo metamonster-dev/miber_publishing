@@ -280,9 +280,10 @@
     /*프로그램 - 기기관리*/
     #Programs04 .md_contents{padding:0 16px}
     #Programs04 .programs04_content01{margin:32px 0}
-    #Programs04 .programs04_content01 img, #Programs04 .programs04_content03 img{display:none;}
-    #Programs04 .programs04_content01 .txt_box, #Programs04 .programs04_content03 .txt_box{padding:32px 16px;justify-content:flex-start;        align-items: flex-start;}
+    #Programs04 .programs04_content01 img, #Programs04 .programs04_content03 img, #Programs04 .programs04_content05 img{display:none;}
+    #Programs04 .programs04_content01 .txt_box, #Programs04 .programs04_content03 .txt_box, #Programs04 .programs04_content05 .txt_box{padding:32px 16px;justify-content:flex-start;        align-items: flex-start;}
     #Programs04 .programs04_content01 .tit, #Programs04 .programs04_content03 .tit{font-size:20px;line-height:30px;margin-bottom:16px}
+    #Programs04 .programs04_content05 .tit{font-size:20px;line-height:30px;margin-bottom:16px}
     #Programs04 .programs04_content02{margin:32px 0;gap:16px}
     #Programs04 .programs04_content02 li{width:100%;height:auto;padding-bottom:33px}
     #Programs04 .programs04_content02 li img{width:100%;}
@@ -292,8 +293,16 @@
     #Programs04 .programs04_content04 li .tit_area .tit{font-size:20px;}
     #Programs04 .programs04_content04 > li::after{display: none;}
     #Programs04 .step li .tit{font-weight:800;}
+    #Programs04 .programs04_content05{margin:32px 0}
+    #Programs04 .programs04_content06{margin:0 auto;gap:30px}
+    #Programs04 .programs04_content06 li{width:100%;}
+    #Programs04 .programs04_content06 li .box{width:100%;height:auto;gap:33px;padding: 0 0 33px;}
+    #Programs04 .programs04_content06 li .box img{width:100%;}
+    #Programs04 .programs04_content06 li .box p{font-size:20px}
+    #Programs04 .programs04_content06 li .sub_txt{font-size:14px;line-height:21px;color:#5C5C5C;margin-top:16px}
+    #Programs04 .programs04_content07 li{font-size:14px;line-height:21px;}
 
-    
+
     /*오시는길*/
     #Location .page_contents{padding:32px 0}
     #Location .pc{display:none;}
