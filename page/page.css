@@ -261,7 +261,7 @@
     #Programs03 .md_contents{padding:0 16px;margin-bottom:32px}
     #Programs03 .programs03_content{margin:32px auto 0;gap:32px}
     #Programs03 .programs03_content li{display:flex;align-items: flex-start;flex-direction: column;}
-    #Programs03 .programs03_content li > div{width:100%;}
+    #Programs03 .programs03_content li > div{width:100%;margin-top:32px}
     #Programs03 .programs03_content .pc{display:none;}
     #Programs03 .programs03_content .m{display:block;}
     #Programs03 .programs03_content li .txt_area{padding:16px 0}
