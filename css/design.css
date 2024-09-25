@@ -543,7 +543,11 @@ table input[type="checkbox"]{width:inherit !important;}
 .product_top .in_btn{width:93px}
 .sub_menu{width:100%;max-width:1200px;margin:30px auto 26px;display:flex;align-items:center;border-top:2px solid #000;border-bottom:1px solid #E0E0E2}
 .sub_menu ul{display:flex;padding:24px 80px 0;justify-content:flex-start;gap:80px}
+.sub_menu ul li{cursor:pointer;}
 .sub_menu ul .on{border-bottom: 4px solid #3D3935;padding-bottom:24px;font-weight:700;}
+.sub_menu .swiper{padding:24px 80px 0;}
+.sub_menu .swiper ul{padding:0;gap:0;}
+.sub_menu .swiper .swiper-slide{width:fit-content}
 
 .product_list01{display:flex;gap:50px 32px;flex-wrap: wrap;justify-content:flex-start}
 .product_list01 li{width:23%;max-width:297px;}

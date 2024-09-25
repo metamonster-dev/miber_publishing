@@ -232,6 +232,7 @@
     .sub_menu ul{padding:0 16px;gap:16px}
     .sub_menu ul li{font-size:14px}
     .sub_menu ul .on{padding-bottom:14px}
+    .sub_menu .swiper{padding:0 16px;}
 }
 
 

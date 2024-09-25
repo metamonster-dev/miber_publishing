@@ -35,10 +35,43 @@
     </label>
 </div>
 <div class="sub_menu">
-    <ul>
-        <li class="on">잼/시럽</li>
-        <li>과자/베이커리</li>
-    </ul>
+    <div class="swiper menuSlider">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide swiper-slide-active on">잼/시럽</li>
+            <li class="swiper-slide">과자/베이커리</li>
+            <li class="swiper-slide">카테고리1</li>
+            <li class="swiper-slide">카테고리2</li>
+            <li class="swiper-slide">카테고리3</li>
+            <li class="swiper-slide">카테고리4</li>
+            <li class="swiper-slide">카테고리5</li>
+            <li class="swiper-slide">카테고리6</li>
+            <li class="swiper-slide">카테고리7</li>
+        </ul>
+    </div>
+    <script>
+        $(window).on("load", function() {
+            // sub_menu slider
+            const menuSlider = new Swiper(".menuSlider", {
+                slidesPerView: "auto",
+                spaceBetween: 16,
+                breakpoints: {
+                    1200: {
+                        spaceBetween: 80,
+                    },
+                },
+            });
+            /*
+                ※ 탭 클릭 시, 스크립트 같이 넣어주세요!
+                menuSlider.slideTo([li인덱스]); 
+                ex) menuSlider.slideTo(5);
+            */
+            $(".sub_menu ul li").on("click", function() {
+                const index = $(this).index();
+                menuSlider.slideTo(index);
+                $(this).addClass("on").siblings().removeClass("on");
+            });
+        })
+    </script>
 </div>
 <div id="ShopList_pc" class="shopcommon">
     <div class="shop_contents_wrap">
