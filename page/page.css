@@ -148,7 +148,7 @@
 #M-Box .menu_wrap ul li{width:50%;display:flex;align-items:flex-start;gap:32px;overflow:hidden;}
 #M-Box .menu_wrap ul li .img_area{width:100%;max-width:160px;position:relative}
 #M-Box .menu_wrap ul li .img_area::after{display:block;content:"";padding-bottom:100%}
-#M-Box .menu_wrap ul li .img_area img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
+#M-Box .menu_wrap ul li .img_area img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;}
 #M-Box .menu_wrap .txt_area{display:flex;flex-direction:column;gap:10px;}
 #M-Box .menu_wrap .name{font-size:16px;font-weight:700;color:#000}
 #M-Box .menu_wrap .sub{font-size:16px;font-weight:400;}
